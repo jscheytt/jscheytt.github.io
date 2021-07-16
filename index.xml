@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>josia's blog</title><link>https://jscheytt.github.io/</link><description>Recent content on josia's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 16 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jscheytt.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>TIL you can :wq in vim with :x</title><link>https://jscheytt.github.io/p/til-you-can-wq-in-vim-with-x/</link><pubDate>Fri, 16 Jul 2021 00:00:00 +0000</pubDate><guid>https://jscheytt.github.io/p/til-you-can-wq-in-vim-with-x/</guid><description>&lt;p>I have developed quite some muscle memory in terminating vim via &lt;code>:wqa&lt;/code>.
+Now I can save one more character by retraining myself to use &lt;code>:xa&lt;/code>! 😄&lt;/p>
+&lt;p>I also like how &lt;code>:x&lt;/code> sort of symbolizes the close button ❌ of many window managers and their default behavior of saving when you close a file.&lt;/p>
+&lt;p>For more documentation open vim and type &lt;code>:h :x&lt;/code>.&lt;/p>
+&lt;h1 id="wait-now-that-you-say-it-">Wait, now that you say it &amp;hellip;&lt;/h1>
+&lt;p>Well, turns out the documentation mentions there is an even easier way: Just press &lt;code>ZZ&lt;/code> 😴&lt;/p>
+&lt;p>Same goes for closing vim completely: &lt;code>ZQ&lt;/code>&lt;/p>
+&lt;p>Happy vim-ing! 👋&lt;/p></description></item></channel></rss>
