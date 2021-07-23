@@ -1,23 +1,20 @@
 <!doctype html><html lang=en-us>
 <head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="I have developed quite some muscle memory in terminating vim via :wqa. Now I can save one more character by retraining myself to use :xa! 😄
-I also like how :x sort of symbolizes the close button ❌ of many window managers and their default behavior of saving when you close a file.
-For more documentation open vim and type :h :x.
-Wait, now that you mention it &amp;hellip; Well, turns out the documentation mentions an even easier way: Just press ZZ (without the colon) 😴"><title>TIL you can :wq in vim with :x</title>
-<link rel=canonical href=https://jscheytt.github.io/p/til-you-can-wq-in-vim-with-x/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="TIL you can :wq in vim with :x">
-<meta property="og:description" content="I have developed quite some muscle memory in terminating vim via :wqa. Now I can save one more character by retraining myself to use :xa! 😄
-I also like how :x sort of symbolizes the close button ❌ of many window managers and their default behavior of saving when you close a file.
-For more documentation open vim and type :h :x.
-Wait, now that you mention it &amp;hellip; Well, turns out the documentation mentions an even easier way: Just press ZZ (without the colon) 😴">
-<meta property="og:url" content="https://jscheytt.github.io/p/til-you-can-wq-in-vim-with-x/">
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="I really love Docker, and I also come to like security more and more. One advice I have been hearing a lot (e.g. in this Container Security Cheat Sheet from Snyk) is that you should not run your container as a root user.
+&amp;ldquo;Easy thing,&amp;rdquo; I thought to myself, &amp;ldquo;I am just going to put something like USER {app}&amp;rdquo; at the top of my Dockerfile.&amp;quot; Well, think again, because:
+FROMnode:ltsUSERnode# I would have thought that after this point, every action will happen in the name of this user# and also that every created directory and file will belong to this user ."><title>TIL Docker does not really help you a lot trying to get permissions right</title>
+<link rel=canonical href=https://jscheytt.github.io/p/til-docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="TIL Docker does not really help you a lot trying to get permissions right">
+<meta property="og:description" content="I really love Docker, and I also come to like security more and more. One advice I have been hearing a lot (e.g. in this Container Security Cheat Sheet from Snyk) is that you should not run your container as a root user.
+&amp;ldquo;Easy thing,&amp;rdquo; I thought to myself, &amp;ldquo;I am just going to put something like USER {app}&amp;rdquo; at the top of my Dockerfile.&amp;quot; Well, think again, because:
+FROMnode:ltsUSERnode# I would have thought that after this point, every action will happen in the name of this user# and also that every created directory and file will belong to this user .">
+<meta property="og:url" content="https://jscheytt.github.io/p/til-docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/">
 <meta property="og:site_name" content="josia's blog">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="vim"><meta property="article:published_time" content="2021-07-16T00:00:00+00:00"><meta property="article:modified_time" content="2021-07-16T00:00:00+00:00">
-<meta name=twitter:title content="TIL you can :wq in vim with :x">
-<meta name=twitter:description content="I have developed quite some muscle memory in terminating vim via :wqa. Now I can save one more character by retraining myself to use :xa! 😄
-I also like how :x sort of symbolizes the close button ❌ of many window managers and their default behavior of saving when you close a file.
-For more documentation open vim and type :h :x.
-Wait, now that you mention it &amp;hellip; Well, turns out the documentation mentions an even easier way: Just press ZZ (without the colon) 😴">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="docker"><meta property="article:published_time" content="2021-07-23T14:42:07+02:00"><meta property="article:modified_time" content="2021-07-23T14:42:07+02:00">
+<meta name=twitter:title content="TIL Docker does not really help you a lot trying to get permissions right">
+<meta name=twitter:description content="I really love Docker, and I also come to like security more and more. One advice I have been hearing a lot (e.g. in this Container Security Cheat Sheet from Snyk) is that you should not run your container as a root user.
+&amp;ldquo;Easy thing,&amp;rdquo; I thought to myself, &amp;ldquo;I am just going to put something like USER {app}&amp;rdquo; at the top of my Dockerfile.&amp;quot; Well, think again, because:
+FROMnode:ltsUSERnode# I would have thought that after this point, every action will happen in the name of this user# and also that every created directory and file will belong to this user .">
 </head>
 <body class=article-page>
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -73,25 +70,64 @@ today-i-learned
 </a>
 </header>
 <h2 class=article-title>
-<a href=/p/til-you-can-wq-in-vim-with-x/>TIL you can :wq in vim with :x</a>
+<a href=/p/til-docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/>TIL Docker does not really help you a lot trying to get permissions right</a>
 </h2>
 <footer class=article-time><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--published>Jul 16, 2021</time>
+<time class=article-time--published>Jul 23, 2021</time>
 </footer></div>
 </header>
 <section class=article-content>
-<p>I have developed quite some muscle memory in terminating vim via <code>:wqa</code>.
-Now I can save one more character by retraining myself to use <code>:xa</code>! 😄</p>
-<p>I also like how <code>:x</code> sort of symbolizes the close button ❌ of many window managers and their default behavior of saving when you close a file.</p>
-<p>For more documentation open vim and type <code>:h :x</code>.</p>
-<h1 id=wait-now-that-you-mention-it->Wait, now that you mention it &mldr;</h1>
-<p>Well, turns out the documentation mentions an even easier way: Just press <code>ZZ</code> (without the colon) 😴</p>
-<p>Now if only I could combine this to perform <code>:wqa</code> &mldr;</p>
-<p>Happy vim-ing! 👋</p>
+<p>I really love Docker, and I also come to like security more and more.
+One advice I have been hearing a lot (e.g. in this <a class=link href=https://snyk.io/blog/10-docker-image-security-best-practices/ target=_blank rel=noopener>Container Security Cheat Sheet from Snyk</a>) is that <strong>you should not run your container as a root user</strong>.</p>
+<p>&ldquo;Easy thing,&rdquo; I thought to myself, &ldquo;I am just going to put something like <code>USER {app}</code>&rdquo; at the top of my Dockerfile."
+Well, think again, because:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Dockerfile data-lang=Dockerfile><span class=k>FROM</span><span class=s> node:lts</span><span class=err>
+</span><span class=err>
+</span><span class=err></span><span class=k>USER</span><span class=s> node</span><span class=err>
+</span><span class=err></span><span class=c># I would have thought that after this point, every action will happen in the name of this user</span><span class=err>
+</span><span class=err></span><span class=c># and also that every created directory and file will belong to this user ... 😕 But:</span><span class=err>
+</span><span class=err>
+</span><span class=err></span><span class=c># ⚠️ This directory is created by root:root!</span><span class=err>
+</span><span class=err></span><span class=k>WORKDIR</span><span class=s> /app</span><span class=err>
+</span><span class=err>
+</span><span class=err></span><span class=c># ⚠️ These files will be copied over to be owned by root:root!</span><span class=err>
+</span><span class=err></span><span class=k>COPY</span> package*.json ./<span class=err>
+</span><span class=err>
+</span><span class=err></span><span class=c># 💥 This step fails in some (not all!) environments with errors like &#34;Not enough permissions on /app&#34;</span><span class=err>
+</span><span class=err></span><span class=k>RUN</span> npm install <span class=o>&amp;&amp;</span> <span class=se>\
+</span><span class=se></span>    npm run verify<span class=err>
+</span><span class=err>
+</span><span class=err></span><span class=c># ⚠️ If you manage to get to this point, these files, too, will be copied over to be owned by root:root!</span><span class=err>
+</span><span class=err></span><span class=k>COPY</span> . .<span class=err>
+</span><span class=err>
+</span><span class=err></span><span class=k>ENTRYPOINT</span> <span class=p>[</span><span class=s2>&#34;npm&#34;</span><span class=p>]</span><span class=err>
+</span></code></pre></div><p>I ended up fixing it by creating the directory and then <code>chown</code>-ing it.
+Equally I executed the <code>COPY</code> instructions with the <code>--chown</code> flag.
+In the end I refactored it a bit using some <code>ENV</code>s, too:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Dockerfile data-lang=Dockerfile><span class=k>FROM</span><span class=s> node:lts</span><span class=err>
+</span><span class=err>
+</span><span class=err></span><span class=c># Ensure that target WORKDIR exists and is owned by target (non-root) user</span><span class=err>
+</span><span class=err></span><span class=k>ENV</span> <span class=nv>USERNAME</span><span class=o>=</span>node
+<span class=k>ENV</span> <span class=nv>USERID</span><span class=o>=</span><span class=nv>$USERNAME</span>:<span class=nv>$USERNAME</span><span class=err>
+</span><span class=err></span><span class=k>ENV</span> <span class=nv>TARGETDIR</span><span class=o>=</span>/app<span class=err>
+</span><span class=err></span><span class=k>RUN</span> mkdir -p <span class=nv>$TARGETDIR</span> <span class=o>&amp;&amp;</span> chown -R <span class=nv>$USERID</span> <span class=nv>$TARGETDIR</span><span class=err>
+</span><span class=err></span><span class=k>WORKDIR</span><span class=s> $TARGETDIR</span><span class=err>
+</span><span class=err>
+</span><span class=err></span><span class=k>USER</span><span class=s> $USERNAME</span><span class=err>
+</span><span class=err>
+</span><span class=err></span><span class=k>COPY</span> --chown<span class=o>=</span><span class=nv>$USERID</span> package*.json ./<span class=err>
+</span><span class=err>
+</span><span class=err></span><span class=k>RUN</span> npm install <span class=o>&amp;&amp;</span> <span class=se>\
+</span><span class=se></span>    npm run verify<span class=err>
+</span><span class=err>
+</span><span class=err></span><span class=k>COPY</span> --chown<span class=o>=</span><span class=nv>$USERID</span> . .<span class=err>
+</span><span class=err>
+</span><span class=err></span><span class=k>ENTRYPOINT</span> <span class=p>[</span><span class=s2>&#34;npm&#34;</span><span class=p>]</span><span class=err>
+</span></code></pre></div>
 </section>
 <footer class=article-footer>
 <section class=article-tags>
-<a href=/tags/vim/>vim</a>
+<a href=/tags/docker/>docker</a>
 </section>
 <section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
 <span>Licensed under CC BY-NC-SA 4.0</span>
@@ -103,9 +139,9 @@ Now I can save one more character by retraining myself to use <code>:xa</code>! 
 <div class=related-contents>
 <div class="flex article-list--tile">
 <article>
-<a href=/p/til-docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/>
+<a href=/p/til-you-can-wq-in-vim-with-x/>
 <div class=article-details>
-<h2 class=article-title>TIL Docker does not really help you a lot trying to get permissions right</h2>
+<h2 class=article-title>TIL you can :wq in vim with :x</h2>
 </div>
 </a>
 </article>

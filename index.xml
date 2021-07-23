@@ -1,4 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>josia's blog</title><link>https://jscheytt.github.io/</link><description>Recent content on josia's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 16 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jscheytt.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>TIL you can :wq in vim with :x</title><link>https://jscheytt.github.io/p/til-you-can-wq-in-vim-with-x/</link><pubDate>Fri, 16 Jul 2021 00:00:00 +0000</pubDate><guid>https://jscheytt.github.io/p/til-you-can-wq-in-vim-with-x/</guid><description>&lt;p>I have developed quite some muscle memory in terminating vim via &lt;code>:wqa&lt;/code>.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>josia's blog</title><link>https://jscheytt.github.io/</link><description>Recent content on josia's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 23 Jul 2021 14:42:07 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>TIL Docker does not really help you a lot trying to get permissions right</title><link>https://jscheytt.github.io/p/til-docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/</link><pubDate>Fri, 23 Jul 2021 14:42:07 +0200</pubDate><guid>https://jscheytt.github.io/p/til-docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/</guid><description>&lt;p>I really love Docker, and I also come to like security more and more.
+One advice I have been hearing a lot (e.g. in this &lt;a class="link" href="https://snyk.io/blog/10-docker-image-security-best-practices/" target="_blank" rel="noopener"
+>Container Security Cheat Sheet from Snyk&lt;/a>) is that &lt;strong>you should not run your container as a root user&lt;/strong>.&lt;/p>
+&lt;p>&amp;ldquo;Easy thing,&amp;rdquo; I thought to myself, &amp;ldquo;I am just going to put something like &lt;code>USER {app}&lt;/code>&amp;rdquo; at the top of my Dockerfile.&amp;quot;
+Well, think again, because:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-Dockerfile" data-lang="Dockerfile">&lt;span class="k">FROM&lt;/span>&lt;span class="s"> node:lts&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">USER&lt;/span>&lt;span class="s"> node&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="c"># I would have thought that after this point, every action will happen in the name of this user&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="c"># and also that every created directory and file will belong to this user ... 😕 But:&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="c"># ⚠️ This directory is created by root:root!&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">WORKDIR&lt;/span>&lt;span class="s"> /app&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="c"># ⚠️ These files will be copied over to be owned by root:root!&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> package*.json ./&lt;span class="err">
+&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="c"># 💥 This step fails in some (not all!) environments with errors like &amp;#34;Not enough permissions on /app&amp;#34;&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> npm install &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> npm run verify&lt;span class="err">
+&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="c"># ⚠️ If you manage to get to this point, these files, too, will be copied over to be owned by root:root!&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> . .&lt;span class="err">
+&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">ENTRYPOINT&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;npm&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I ended up fixing it by creating the directory and then &lt;code>chown&lt;/code>-ing it.
+Equally I executed the &lt;code>COPY&lt;/code> instructions with the &lt;code>--chown&lt;/code> flag.
+In the end I refactored it a bit using some &lt;code>ENV&lt;/code>s, too:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-Dockerfile" data-lang="Dockerfile">&lt;span class="k">FROM&lt;/span>&lt;span class="s"> node:lts&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="c"># Ensure that target WORKDIR exists and is owned by target (non-root) user&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">ENV&lt;/span> &lt;span class="nv">USERNAME&lt;/span>&lt;span class="o">=&lt;/span>node
+&lt;span class="k">ENV&lt;/span> &lt;span class="nv">USERID&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$USERNAME&lt;/span>:&lt;span class="nv">$USERNAME&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">ENV&lt;/span> &lt;span class="nv">TARGETDIR&lt;/span>&lt;span class="o">=&lt;/span>/app&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> mkdir -p &lt;span class="nv">$TARGETDIR&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> chown -R &lt;span class="nv">$USERID&lt;/span> &lt;span class="nv">$TARGETDIR&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">WORKDIR&lt;/span>&lt;span class="s"> $TARGETDIR&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">USER&lt;/span>&lt;span class="s"> $USERNAME&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> --chown&lt;span class="o">=&lt;/span>&lt;span class="nv">$USERID&lt;/span> package*.json ./&lt;span class="err">
+&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> npm install &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> npm run verify&lt;span class="err">
+&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> --chown&lt;span class="o">=&lt;/span>&lt;span class="nv">$USERID&lt;/span> . .&lt;span class="err">
+&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">ENTRYPOINT&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;npm&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>TIL you can :wq in vim with :x</title><link>https://jscheytt.github.io/p/til-you-can-wq-in-vim-with-x/</link><pubDate>Fri, 16 Jul 2021 00:00:00 +0000</pubDate><guid>https://jscheytt.github.io/p/til-you-can-wq-in-vim-with-x/</guid><description>&lt;p>I have developed quite some muscle memory in terminating vim via &lt;code>:wqa&lt;/code>.
 Now I can save one more character by retraining myself to use &lt;code>:xa&lt;/code>! 😄&lt;/p>
 &lt;p>I also like how &lt;code>:x&lt;/code> sort of symbolizes the close button ❌ of many window managers and their default behavior of saving when you close a file.&lt;/p>
 &lt;p>For more documentation open vim and type &lt;code>:h :x&lt;/code>.&lt;/p>
