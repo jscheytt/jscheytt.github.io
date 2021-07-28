@@ -2,16 +2,16 @@
 <head><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="I really love Docker, and I also come to like security more and more. One advice I have been hearing a lot (e.g. in this Container Security Cheat Sheet from Snyk) is that you should not run your container as a root user.
 &amp;ldquo;Easy thing,&amp;rdquo; I thought to myself, &amp;ldquo;I am just going to put something like USER {app}&amp;rdquo; at the top of my Dockerfile.&amp;quot; Well, think again, because:
-FROMnode:ltsUSERnode# I would have thought that after this point, every action will happen in the name of this user# and also that every created directory and file will belong to this user ."><title>TIL Docker does not really help you a lot trying to get permissions right</title>
-<link rel=canonical href=https://jscheytt.github.io/p/til-docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="TIL Docker does not really help you a lot trying to get permissions right">
+FROMnode:ltsUSERnode# I would have thought that after this point, every action will happen in the name of this user# and also that every created directory and file will belong to this user ."><title>Docker does not really help you a lot trying to get permissions right</title>
+<link rel=canonical href=https://jscheytt.github.io/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Docker does not really help you a lot trying to get permissions right">
 <meta property="og:description" content="I really love Docker, and I also come to like security more and more. One advice I have been hearing a lot (e.g. in this Container Security Cheat Sheet from Snyk) is that you should not run your container as a root user.
 &amp;ldquo;Easy thing,&amp;rdquo; I thought to myself, &amp;ldquo;I am just going to put something like USER {app}&amp;rdquo; at the top of my Dockerfile.&amp;quot; Well, think again, because:
 FROMnode:ltsUSERnode# I would have thought that after this point, every action will happen in the name of this user# and also that every created directory and file will belong to this user .">
-<meta property="og:url" content="https://jscheytt.github.io/p/til-docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/">
-<meta property="og:site_name" content="josia's blog">
+<meta property="og:url" content="https://jscheytt.github.io/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/">
+<meta property="og:site_name" content="Josia's Blog">
 <meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="docker"><meta property="article:published_time" content="2021-07-23T14:42:07+02:00"><meta property="article:modified_time" content="2021-07-23T14:42:07+02:00">
-<meta name=twitter:title content="TIL Docker does not really help you a lot trying to get permissions right">
+<meta name=twitter:title content="Docker does not really help you a lot trying to get permissions right">
 <meta name=twitter:description content="I really love Docker, and I also come to like security more and more. One advice I have been hearing a lot (e.g. in this Container Security Cheat Sheet from Snyk) is that you should not run your container as a root user.
 &amp;ldquo;Easy thing,&amp;rdquo; I thought to myself, &amp;ldquo;I am just going to put something like USER {app}&amp;rdquo; at the top of my Dockerfile.&amp;quot; Well, think again, because:
 FROMnode:ltsUSERnode# I would have thought that after this point, every action will happen in the name of this user# and also that every created directory and file will belong to this user .">
@@ -28,11 +28,10 @@ on-phone--column extended">
 </button>
 <header class=site-info>
 <figure class=site-avatar>
-<img src=/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png width=300 height=300 class=site-logo loading=lazy alt=Avatar>
-<span class=emoji>🍥</span>
+<img src=/img/avatar_huc03cf5da8ed66ec501bd8a2a16b02d66_357222_300x0_resize_q75_box.jpg width=300 height=300 class=site-logo loading=lazy alt=Avatar>
 </figure>
-<h1 class=site-name><a href=https://jscheytt.github.io>josia's blog</a></h1>
-<h2 class=site-description>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+<h1 class=site-name><a href=https://jscheytt.github.io>Josia's Blog</a></h1>
+<h2 class=site-description></h2>
 </header>
 <ol class=menu id=main-menu>
 <li>
@@ -65,15 +64,15 @@ on-phone--column extended">
 <header class=article-header>
 <div class=article-details>
 <header class=article-category>
-<a href=/categories/today-i-learned/>
-today-i-learned
+<a href=/categories/today-i-learned/ style=background-color:#8ea885;color:>
+Today I Learned That ...
 </a>
 </header>
 <h2 class=article-title>
-<a href=/p/til-docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/>TIL Docker does not really help you a lot trying to get permissions right</a>
+<a href=/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/>Docker does not really help you a lot trying to get permissions right</a>
 </h2>
 <footer class=article-time><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--published>Jul 23, 2021</time>
+<time class=article-time--published>2021-07-23</time>
 </footer></div>
 </header>
 <section class=article-content>
@@ -130,7 +129,7 @@ In the end I refactored it a bit using some <code>ENV</code>s, too:</p>
 <a href=/tags/docker/>docker</a>
 </section>
 <section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>Licensed under CC BY-NC-SA 4.0</span>
+<span>Licensed under MIT</span>
 </section>
 </footer>
 </article>
@@ -139,9 +138,9 @@ In the end I refactored it a bit using some <code>ENV</code>s, too:</p>
 <div class=related-contents>
 <div class="flex article-list--tile">
 <article>
-<a href=/p/til-you-can-wq-in-vim-with-x/>
+<a href=/p/you-can-wq-in-vim-with-x/>
 <div class=article-details>
-<h2 class=article-title>TIL you can :wq in vim with :x</h2>
+<h2 class=article-title>You can :wq in vim with :x</h2>
 </div>
 </a>
 </article>
@@ -151,7 +150,7 @@ In the end I refactored it a bit using some <code>ENV</code>s, too:</p>
 <footer class=site-footer>
 <section class=copyright>
 &copy;
-2021 josia's blog
+2021 Josia's Blog
 </section>
 <section class=powerby>
 Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
