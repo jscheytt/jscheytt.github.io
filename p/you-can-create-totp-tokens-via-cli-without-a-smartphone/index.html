@@ -1,23 +1,20 @@
 <!doctype html><html lang=en-us>
 <head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="I have developed quite some muscle memory in terminating vim via :wqa. Now I can save one more character by retraining myself to use :xa! 😄
-I also like how :x sort of symbolizes the close button ❌ of many window managers and their default behavior of saving when you close a file.
-For more documentation open vim and type :h :x.
-Wait, now that you mention it &amp;hellip; Well, turns out the documentation mentions an even easier way: Just press ZZ (without the colon) 😴"><title>You can :wq in vim with :x</title>
-<link rel=canonical href=https://jscheytt.github.io/p/you-can-wq-in-vim-with-x/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="You can :wq in vim with :x">
-<meta property="og:description" content="I have developed quite some muscle memory in terminating vim via :wqa. Now I can save one more character by retraining myself to use :xa! 😄
-I also like how :x sort of symbolizes the close button ❌ of many window managers and their default behavior of saving when you close a file.
-For more documentation open vim and type :h :x.
-Wait, now that you mention it &amp;hellip; Well, turns out the documentation mentions an even easier way: Just press ZZ (without the colon) 😴">
-<meta property="og:url" content="https://jscheytt.github.io/p/you-can-wq-in-vim-with-x/">
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="All you need is the secret of your TOTP.
+The QR code is just a representation of a oath:// URL That URL contains the secret as a query parameter.
+# Install oathtool brew install oathtool # Use your secret, e.g. as a base32-encoded string oathtool --totp --base32 &amp;#34;MFRGCZDTMVRXEZLUBI======&amp;#34; "><title>You can create TOTP tokens via CLI without a smartphone</title>
+<link rel=canonical href=https://jscheytt.github.io/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="You can create TOTP tokens via CLI without a smartphone">
+<meta property="og:description" content="All you need is the secret of your TOTP.
+The QR code is just a representation of a oath:// URL That URL contains the secret as a query parameter.
+# Install oathtool brew install oathtool # Use your secret, e.g. as a base32-encoded string oathtool --totp --base32 &amp;#34;MFRGCZDTMVRXEZLUBI======&amp;#34; ">
+<meta property="og:url" content="https://jscheytt.github.io/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/">
 <meta property="og:site_name" content="Josia's Blog">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="vim"><meta property="article:published_time" content="2021-07-16T00:00:00+00:00"><meta property="article:modified_time" content="2021-07-16T00:00:00+00:00">
-<meta name=twitter:title content="You can :wq in vim with :x">
-<meta name=twitter:description content="I have developed quite some muscle memory in terminating vim via :wqa. Now I can save one more character by retraining myself to use :xa! 😄
-I also like how :x sort of symbolizes the close button ❌ of many window managers and their default behavior of saving when you close a file.
-For more documentation open vim and type :h :x.
-Wait, now that you mention it &amp;hellip; Well, turns out the documentation mentions an even easier way: Just press ZZ (without the colon) 😴">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="security"><meta property="article:published_time" content="2021-08-27T08:20:41+02:00"><meta property="article:modified_time" content="2021-08-27T08:20:41+02:00">
+<meta name=twitter:title content="You can create TOTP tokens via CLI without a smartphone">
+<meta name=twitter:description content="All you need is the secret of your TOTP.
+The QR code is just a representation of a oath:// URL That URL contains the secret as a query parameter.
+# Install oathtool brew install oathtool # Use your secret, e.g. as a base32-encoded string oathtool --totp --base32 &amp;#34;MFRGCZDTMVRXEZLUBI======&amp;#34; ">
 </head>
 <body class=article-page>
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -72,25 +69,25 @@ Today I Learned That ...
 </a>
 </header>
 <h2 class=article-title>
-<a href=/p/you-can-wq-in-vim-with-x/>You can :wq in vim with :x</a>
+<a href=/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/>You can create TOTP tokens via CLI without a smartphone</a>
 </h2>
 <footer class=article-time><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--published>2021-07-16</time>
+<time class=article-time--published>2021-08-27</time>
 </footer></div>
 </header>
 <section class=article-content>
-<p>I have developed quite some muscle memory in terminating vim via <code>:wqa</code>.
-Now I can save one more character by retraining myself to use <code>:xa</code>! 😄</p>
-<p>I also like how <code>:x</code> sort of symbolizes the close button ❌ of many window managers and their default behavior of saving when you close a file.</p>
-<p>For more documentation open vim and type <code>:h :x</code>.</p>
-<h1 id=wait-now-that-you-mention-it->Wait, now that you mention it &mldr;</h1>
-<p>Well, turns out the documentation mentions an even easier way: Just press <code>ZZ</code> (without the colon) 😴</p>
-<p>Now if only I could combine this to perform <code>:wqa</code> &mldr;</p>
-<p>Happy vim-ing! 👋</p>
+<p>All you need is the secret of your TOTP.</p>
+<p>The QR code is just a representation of a <code>oath://</code> URL
+That URL contains the secret as a query parameter.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=c1># Install oathtool</span>
+brew install oathtool
+<span class=c1># Use your secret, e.g. as a base32-encoded string</span>
+oathtool --totp --base32 <span class=s2>&#34;MFRGCZDTMVRXEZLUBI======&#34;</span>
+</code></pre></div>
 </section>
 <footer class=article-footer>
 <section class=article-tags>
-<a href=/tags/vim/>vim</a>
+<a href=/tags/security/>security</a>
 </section>
 <section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
 <span>Licensed under MIT</span>
@@ -102,16 +99,16 @@ Now I can save one more character by retraining myself to use <code>:xa</code>! 
 <div class=related-contents>
 <div class="flex article-list--tile">
 <article>
-<a href=/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/>
+<a href=/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/>
 <div class=article-details>
-<h2 class=article-title>You can create TOTP tokens via CLI without a smartphone</h2>
+<h2 class=article-title>Docker does not really help you a lot trying to get permissions right</h2>
 </div>
 </a>
 </article>
 <article>
-<a href=/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/>
+<a href=/p/you-can-wq-in-vim-with-x/>
 <div class=article-details>
-<h2 class=article-title>Docker does not really help you a lot trying to get permissions right</h2>
+<h2 class=article-title>You can :wq in vim with :x</h2>
 </div>
 </a>
 </article>
