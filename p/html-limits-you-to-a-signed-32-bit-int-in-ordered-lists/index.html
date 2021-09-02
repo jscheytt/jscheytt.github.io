@@ -1,19 +1,19 @@
 <!doctype html><html lang=en-us>
 <head><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="HTML allows you to specify a starting number from which an ordered list (&amp;lt;ol&amp;gt;) should start. I thought &amp;ldquo;Is there an upper bound?&amp;rdquo;.
-Turns out: Yes, there is. It&amp;rsquo;s 2147483647 (i.e. 231-1). No idea why it&amp;rsquo;s not 232-1, though &amp;hellip;
-&amp;lt;ol start=2147483645&amp;gt; &amp;lt;li&amp;gt;I am still in order&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;As am I&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Me too&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Limit reached&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Limit reached&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Limit reached&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; The above snippet will render as the following:"><title>HTML limits you to a 31-bit integer in ordered lists</title>
-<link rel=canonical href=https://jscheytt.github.io/p/html-limits-you-to-a-31-bit-integer-in-ordered-lists/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="HTML limits you to a 31-bit integer in ordered lists">
+Turns out: Yes, there is. It&amp;rsquo;s 2147483647 (i.e. 231-1). Looks like a signed 32-bit integer to me.
+&amp;lt;ol start=2147483645&amp;gt; &amp;lt;li&amp;gt;I am still in order&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;As am I&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Me too&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Limit reached&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Limit reached&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Limit reached&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; The above snippet will render as the following:"><title>HTML limits you to a signed 32-bit int in ordered lists</title>
+<link rel=canonical href=https://jscheytt.github.io/p/html-limits-you-to-a-signed-32-bit-int-in-ordered-lists/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="HTML limits you to a signed 32-bit int in ordered lists">
 <meta property="og:description" content="HTML allows you to specify a starting number from which an ordered list (&amp;lt;ol&amp;gt;) should start. I thought &amp;ldquo;Is there an upper bound?&amp;rdquo;.
-Turns out: Yes, there is. It&amp;rsquo;s 2147483647 (i.e. 231-1). No idea why it&amp;rsquo;s not 232-1, though &amp;hellip;
+Turns out: Yes, there is. It&amp;rsquo;s 2147483647 (i.e. 231-1). Looks like a signed 32-bit integer to me.
 &amp;lt;ol start=2147483645&amp;gt; &amp;lt;li&amp;gt;I am still in order&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;As am I&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Me too&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Limit reached&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Limit reached&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Limit reached&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; The above snippet will render as the following:">
-<meta property="og:url" content="https://jscheytt.github.io/p/html-limits-you-to-a-31-bit-integer-in-ordered-lists/">
+<meta property="og:url" content="https://jscheytt.github.io/p/html-limits-you-to-a-signed-32-bit-int-in-ordered-lists/">
 <meta property="og:site_name" content="Josia's Blog">
 <meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="html"><meta property="article:published_time" content="2021-09-02T08:55:22+02:00"><meta property="article:modified_time" content="2021-09-02T08:55:22+02:00">
-<meta name=twitter:title content="HTML limits you to a 31-bit integer in ordered lists">
+<meta name=twitter:title content="HTML limits you to a signed 32-bit int in ordered lists">
 <meta name=twitter:description content="HTML allows you to specify a starting number from which an ordered list (&amp;lt;ol&amp;gt;) should start. I thought &amp;ldquo;Is there an upper bound?&amp;rdquo;.
-Turns out: Yes, there is. It&amp;rsquo;s 2147483647 (i.e. 231-1). No idea why it&amp;rsquo;s not 232-1, though &amp;hellip;
+Turns out: Yes, there is. It&amp;rsquo;s 2147483647 (i.e. 231-1). Looks like a signed 32-bit integer to me.
 &amp;lt;ol start=2147483645&amp;gt; &amp;lt;li&amp;gt;I am still in order&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;As am I&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Me too&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Limit reached&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Limit reached&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Limit reached&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; The above snippet will render as the following:">
 </head>
 <body class=article-page>
@@ -69,7 +69,7 @@ Today I Learned That ...
 </a>
 </header>
 <h2 class=article-title>
-<a href=/p/html-limits-you-to-a-31-bit-integer-in-ordered-lists/>HTML limits you to a 31-bit integer in ordered lists</a>
+<a href=/p/html-limits-you-to-a-signed-32-bit-int-in-ordered-lists/>HTML limits you to a signed 32-bit int in ordered lists</a>
 </h2>
 <footer class=article-time><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
 <time class=article-time--published>2021-09-02</time>
@@ -80,7 +80,7 @@ Today I Learned That ...
 I thought &ldquo;Is there an upper bound?&rdquo;.</p>
 <p>Turns out: Yes, there is.
 It&rsquo;s 2147483647 (i.e. 231-1).
-No idea why it&rsquo;s not 232-1, though &mldr;</p>
+Looks like a signed 32-bit integer to me.</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>ol</span> <span class=na>start</span><span class=o>=</span><span class=s>2147483645</span><span class=p>&gt;</span>
     <span class=p>&lt;</span><span class=nt>li</span><span class=p>&gt;</span>I am still in order<span class=p>&lt;/</span><span class=nt>li</span><span class=p>&gt;</span>
     <span class=p>&lt;</span><span class=nt>li</span><span class=p>&gt;</span>As am I<span class=p>&lt;/</span><span class=nt>li</span><span class=p>&gt;</span>
