@@ -1,4 +1,288 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Josia's Blog</title><link>https://jscheytt.github.io/</link><description>Recent content on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 02 Sep 2021 08:55:22 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>HTML limits you to a signed 32-bit int in ordered lists</title><link>https://jscheytt.github.io/p/html-limits-you-to-a-signed-32-bit-int-in-ordered-lists/</link><pubDate>Thu, 02 Sep 2021 08:55:22 +0200</pubDate><guid>https://jscheytt.github.io/p/html-limits-you-to-a-signed-32-bit-int-in-ordered-lists/</guid><description>&lt;p>HTML allows you to specify a starting number from which an ordered list (&lt;code>&amp;lt;ol&amp;gt;&lt;/code>) should start.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Josia's Blog</title><link>https://jscheytt.github.io/</link><description>Recent content on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 06 Sep 2021 13:38:15 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>The Story of My First Makefile — Half-Versioned Secrets Management</title><link>https://jscheytt.github.io/p/the-story-of-my-first-makefile-half-versioned-secrets-management/</link><pubDate>Mon, 06 Sep 2021 13:38:15 +0200</pubDate><guid>https://jscheytt.github.io/p/the-story-of-my-first-makefile-half-versioned-secrets-management/</guid><description>&lt;p>As a CloudOps Engineer one key skill is &lt;strong>automating repetitive tasks&lt;/strong>.
+What most people grab for intuitively is writing Shell scripts (be it Bash, zsh, fish or whichever flavor you prefer).
+And there are a lot many good reasons to do so:&lt;/p>
+&lt;ol>
+&lt;li>It is closest to typing commands directly in the terminal.&lt;/li>
+&lt;li>You don&amp;rsquo;t have to learn a dedicated programming language.&lt;/li>
+&lt;li>It is very portable to other platforms like e.g. a CI server.&lt;/li>
+&lt;/ol>
+&lt;p>But once you start managing an increasing number of tasks with your scripts, you start to face another problem:
+How do you &lt;em>manage your scripts&lt;/em>?&lt;/p>
+&lt;p>Personally, I have always loved being able to enter some new place where &lt;strong>conventions&lt;/strong> were already in place.
+It takes away so much work and mental effort at the beginning, and you can just get to work quickly.
+(That might explain why I fell in love with ❤️ &lt;a class="link" href="https://rubyonrails.org/doctrine/#convention-over-configuration" target="_blank" rel="noopener"
+>Ruby on Rails&lt;/a> before I dug into 💎 Ruby.)&lt;/p>
+&lt;p>Shell scripts by their very nature do not pose any restrictions regarding e.g. naming patterns or directory structures.
+Honestly, I think there never will be, and that is ok.
+But what I have come to appreciate a lot recently is &lt;strong>&lt;a class="link" href="https://www.gnu.org/software/make/" target="_blank" rel="noopener"
+>Make&lt;/a>&lt;/strong> as a &lt;strong>companion&lt;/strong> for my Shell scripts.&lt;/p>
+&lt;h2 id="-make-vs--shell-in-a--nutshell">🏗 Make vs. 🐚 Shell in a 🥜 Nutshell&lt;/h2>
+&lt;ul>
+&lt;li>Purpose: Make is good at &lt;strong>creating files&lt;/strong>, Shell is good at &lt;strong>executing scripts&lt;/strong>.&lt;/li>
+&lt;li>Portability: If your system has Bash, chances are pretty high that Make is also available.&lt;/li>
+&lt;li>Developer API: Make has a &lt;strong>clear entrypoint&lt;/strong> (namely &lt;code>make&lt;/code>), Shell can be everything you want it to be.&lt;/li>
+&lt;/ul>
+&lt;p>Make is a tool that has its origin in the world of compiled languages, especially C.
+Compiling source code into binary artifacts (and doing so 🏎 &lt;em>economically&lt;/em>) is what Make was originally designed for.
+I mean, the name of a tool should make its use clear, but let me just state this again for my future self:
+Make is meant to 🏗 make (create) files.&lt;/p>
+&lt;p>&lt;strong>It&amp;rsquo;s all about target files.&lt;/strong>
+That&amp;rsquo;s why it makes sense to approach a Makefile with a mindset of &amp;ldquo;What do I want to create/build?&amp;rdquo; instead of &amp;ldquo;What do I want to perform?&amp;rdquo;
+To me this sounds very reminiscent of the distinction between &lt;em>declarative and imperative&lt;/em> programming.&lt;/p>
+&lt;h2 id="safely-versioned-secrets-management">Safely Versioned Secrets Management&lt;/h2>
+&lt;p>My concrete entrypoint into Make was the following use case I had lately, and it hopefully helps to illustrate the point of target files:&lt;/p>
+&lt;ul>
+&lt;li>☸️ You have 2 AWS accounts with 1 &lt;strong>Kubernetes&lt;/strong> cluster each.
+(One is for running a dev and a staging environment, the other one is running the production environment.)&lt;/li>
+&lt;li>🔑 Secrets are stored in AWS &lt;strong>Secrets Manager&lt;/strong> and synced into the cluster via &lt;a class="link" href="https://github.com/external-secrets/kubernetes-external-secrets" target="_blank" rel="noopener"
+>ExternalSecrets&lt;/a>.&lt;/li>
+&lt;li>⛔️ You are &lt;strong>not allowed&lt;/strong> to store secrets in Git, not even in encrypted form.&lt;/li>
+&lt;li>🪣 The secrets are JSON files and the &lt;strong>key names&lt;/strong> are important, so you want to store them in Git.&lt;/li>
+&lt;/ul>
+&lt;p>What I did as a first step was to create sample secrets files that contained the keys but no valid data (kind of the &lt;em>schema&lt;/em> of the secrets):&lt;/p>
+&lt;pre tabindex="0">&lt;code>secrets
+├── dev # One directory per target environment
+│   └── .keep
+├── staging
+│   └── .keep
+├── prod
+│   └── .keep
+├── config1.sample.json # One sample file per secret
+├── service2.sample.json
+└── service3.sample.json
+&lt;/code>&lt;/pre>&lt;p>I put the keys I needed into the sample files and as a value a description of what to put in (or e.g. from which Password Service to fetch the value from).
+The file &lt;code>service2.sample.json&lt;/code> would e.g. look like this.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;EXTERNAL_API_KEY&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;API Key of EXTERNAL_SERVICE&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;CLOUD_SERVICE_CLIENT_SECRET&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;client secret for accessing CLOUD_SERVICE&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;CLOUD_SERVICE_PASSWORD&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;password for accessing CLOUD_SERVICE&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;BASIC_AUTH_PASSWORD&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;password for sending via Basic Auth&amp;#34;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The target structure I wanted to achieve was this:&lt;/p>
+&lt;pre tabindex="0">&lt;code>secrets
+├── dev
+│   ├── config1.json # This file contains the *keys* of
+│ │ # secrets/config1.sample.json
+│ │ # and the actual secret *values*!
+│   ├── service2.json
+│   ├── service3.json
+│   └── .keep
+├── staging
+│   ├── config1.json # Contains key of sample file and
+│ │ # values for staging environment.
+│   ├── service2.json
+│   ├── service3.json
+│   └── .keep
+├── prod
+│   ├── config1.json
+│   ├── service2.json
+│   ├── service3.json
+│   └── .keep
+├── config1.sample.json
+├── service2.sample.json
+└── service3.sample.json
+&lt;/code>&lt;/pre>&lt;p>In order to not commit any actual secrets into version control, I added the following entries to my &lt;strong>.gitignore&lt;/strong>:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="c1"># Ignore secret data ...&lt;/span>
+secrets/**/*.json
+&lt;span class="c1"># ... but keep the samples&lt;/span>
+!secrets/*.sample.json
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="copying-the-samples">Copying the Samples&lt;/h3>
+&lt;p>Now how do you copy the files to all environment&amp;rsquo;s directories?
+And how do you make sure you copy them &lt;em>exactly once&lt;/em> (so you don&amp;rsquo;t lose the secrets you already entered)?&lt;/p>
+&lt;p>You could create a script with the following logic:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="c1"># For each environment directory:&lt;/span>
+&lt;span class="c1">## For each sample file:&lt;/span>
+&lt;span class="c1">### Extract the service name&lt;/span>
+&lt;span class="c1">### Check if target secret file already exists&lt;/span>
+&lt;span class="c1">### If not, copy sample to target file&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>But now, 🏗 Make to the rescue:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-make" data-lang="make">&lt;span class="c">### Variables
+&lt;/span>&lt;span class="c">&lt;/span>
+&lt;span class="c"># Fetch all sample files.
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nv">secrets_samples&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">$(&lt;/span>wildcard secrets/*.sample.json&lt;span class="k">)&lt;/span>
+&lt;span class="c"># Construct the paths for all dev secrets destinations.
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nv">dev_secrets&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">$(&lt;/span>patsubst secrets/%.sample.json,secrets/dev/%.json,&lt;span class="k">$(&lt;/span>secrets_samples&lt;span class="k">))&lt;/span>
+&lt;span class="c"># Construct the paths for all staging secrets destinations.
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nv">staging_secrets&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">$(&lt;/span>patsubst secrets/dev/%,secrets/staging/%,&lt;span class="k">$(&lt;/span>dev_secrets&lt;span class="k">))&lt;/span>
+&lt;span class="c"># Construct the paths for all staging secrets destinations.
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nv">prod_secrets&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">$(&lt;/span>patsubst secrets/dev/%,secrets/prod/%,&lt;span class="k">$(&lt;/span>dev_secrets&lt;span class="k">))&lt;/span>
+&lt;span class="c"># Gather the paths of all secrets&amp;#39; destinations.
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nv">all_secrets&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">$(&lt;/span>dev_secrets&lt;span class="k">)&lt;/span> &lt;span class="k">$(&lt;/span>staging_secrets&lt;span class="k">)&lt;/span> &lt;span class="k">$(&lt;/span>prod_secrets&lt;span class="k">)&lt;/span>
+&lt;span class="c">### Rules
+&lt;/span>&lt;span class="c">&lt;/span>
+&lt;span class="c"># 🎯 Purpose: &amp;#34;Copy all samples to their destinations.&amp;#34;
+&lt;/span>&lt;span class="c"># 🤓 What Make sees: &amp;#34;When you build the file secrets.copy-templates,
+&lt;/span>&lt;span class="c"># make sure that all files in $(all_secrets) have been built first.&amp;#34;
+&lt;/span>&lt;span class="c"># 👩‍🏫 Explanation: A rule can be empty, and a rule can have prerequisites
+&lt;/span>&lt;span class="c"># on the first line. I like to think of such a rule as a kind of shortcut.
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">secrets.copy-templates&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">$(&lt;/span>&lt;span class="nv">all_secrets&lt;/span>&lt;span class="k">)&lt;/span>
+&lt;span class="c"># 🎯 Purpose: &amp;#34;Ensure that Make still runs the job &amp;#39;secrets.copy-templates&amp;#39;
+&lt;/span>&lt;span class="c"># even if a file called &amp;#39;secrets.copy-templates&amp;#39; is created.&amp;#34;
+&lt;/span>&lt;span class="c"># 🤓 What Make sees: &amp;#34;I am supposed to always build secrets.copy-templates
+&lt;/span>&lt;span class="c"># even if that file already exists.&amp;#34;
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">.PHONY&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>.&lt;span class="n">copy&lt;/span>-&lt;span class="n">templates&lt;/span>
+&lt;span class="c"># 🎯 Purpose: &amp;#34;Copy the file on the right to the file on the left.&amp;#34;
+&lt;/span>&lt;span class="c"># 🤓 What Make sees: &amp;#34;When a file matching the pattern secrets/dev/(.*).json
+&lt;/span>&lt;span class="c"># is built, execute this rule.
+&lt;/span>&lt;span class="c"># Also first make sure that the corresponding file secrets/$1.sample.json
+&lt;/span>&lt;span class="c"># has been built before.
+&lt;/span>&lt;span class="c"># And the rule is: Copy the source file on the right ($&amp;lt;) to the destination
+&lt;/span>&lt;span class="c"># file on the left ($@).&amp;#34;
+&lt;/span>&lt;span class="c"># 👩‍🏫 Explanation: These 3 rules are applied when you call secrets.copy-templates
+&lt;/span>&lt;span class="c"># because it requires $(all_secrets) to be built.
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">secrets/dev/%.json&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>/%.&lt;span class="n">sample&lt;/span>.&lt;span class="n">json&lt;/span>
+cp $&amp;lt; &lt;span class="nv">$@&lt;/span>
+&lt;span class="nf">secrets/staging/%.json&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>/%.&lt;span class="n">sample&lt;/span>.&lt;span class="n">json&lt;/span>
+cp $&amp;lt; &lt;span class="nv">$@&lt;/span>
+&lt;span class="nf">secrets/prod/%.json&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>/%.&lt;span class="n">sample&lt;/span>.&lt;span class="n">json&lt;/span>
+cp $&amp;lt; &lt;span class="nv">$@&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you now execute &lt;code>make secrets.copy-templates&lt;/code>, the sample files will be copied to all environment directories.
+And if you run that same command again, 🙊 &lt;strong>Make will not copy anything&lt;/strong> because it intelligenty detected that the source files have not changed since the last execution.&lt;/p>
+&lt;p>The code above is certainly not optimal - I bet you could abstract away the environment names with bit of metaprogramming, but let&amp;rsquo;s not optimize prematurely.
+I think the result is already impressive, especially if you consider the following:&lt;/p>
+&lt;ul>
+&lt;li>☝️ You don&amp;rsquo;t even have to call the job explicitly to run it.
+As long as &lt;code>secrets.copy-templates&lt;/code> is the first build defined in the Makefile, you can even execute just &lt;code>make&lt;/code> &lt;em>without any parameters&lt;/em>.&lt;/li>
+&lt;li>👨‍💻 Onboarding a new colleague to your repository now sounds a lot more like:
+&amp;ldquo;Yes, do read the README, but above all execute &lt;code>make&lt;/code>.&amp;rdquo;
+&lt;ul>
+&lt;li>⛑ This is especially true if your Makefile contains &lt;strong>&lt;a class="link" href="https://marmelab.com/blog/2016/02/29/auto-documented-makefile.html" target="_blank" rel="noopener"
+>good help texts&lt;/a>&lt;/strong> for every rule.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="how-not-to-shoot-yourself-in-the-foot">How Not To Shoot Yourself in the Foot&lt;/h4>
+&lt;p>Make was made primarily for building binaries from source code.
+The fact that we are able to use it in the way described above comes with a warning:
+If you do the following, you will lose the secret data you already entered into the secret files:&lt;/p>
+&lt;ol>
+&lt;li>Execute &lt;code>make secrets.copy-templates&lt;/code>.&lt;/li>
+&lt;li>Edit a &lt;strong>sample file&lt;/strong>.&lt;/li>
+&lt;li>Execute &lt;code>make secrets.copy-templates&lt;/code>.&lt;/li>
+&lt;li>💥 Make will &lt;strong>copy and overwrite&lt;/strong> the edited sample file to all environment secret files.&lt;/li>
+&lt;/ol>
+&lt;p>Why?
+Make compares timestamps, and when the source has a newer last-modified timestamp than the destination it will execute the rule&lt;/p>
+&lt;p>Can we circumvent this?
+We sure can.
+You can either make sure that you edit each environment file after editing the sample file.
+Or you change the last-modified timestamp &lt;strong>via a build&lt;/strong> in the Makefile 😉:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-make" data-lang="make">&lt;span class="nf">secrets.ensure-copy-once&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="k">for&lt;/span> f in &lt;span class="k">$(&lt;/span>all_secrets&lt;span class="k">)&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">do&lt;/span> &lt;span class="o">[&lt;/span> -f &lt;span class="nv">$$&lt;/span>f &lt;span class="o">]&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> touch &lt;span class="nv">$$&lt;/span>f&lt;span class="p">;&lt;/span> &lt;span class="k">done&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now whenever you edit a sample file &lt;em>after the initial secrets.copy-templates&lt;/em> you run this build via &lt;code>make secrets.ensure-copy-once&lt;/code> and 🛡 your secrets will not be deleted.&lt;/p>
+&lt;h3 id="extension-environment-specific-sample-files">Extension: Environment-specific Sample Files&lt;/h3>
+&lt;p>One implicit assumption in my structure was that the secrets in service2 will always have the same schema &lt;strong>in every environment&lt;/strong>.
+One day it so happened that service2 needed to have additional keys on prod, but they &lt;strong>should not be present&lt;/strong> on dev or staging.&lt;/p>
+&lt;p>I adjusted my desired structure like this:&lt;/p>
+&lt;pre tabindex="0">&lt;code>secrets
+├── dev
+│   ├── config1.json
+│   ├── service2.json # Contains keys from service2.sample.json
+│   ├── service3.json
+│   └── .keep
+├── staging
+│   ├── config1.json
+│   ├── service2.json # Contains keys from service2.sample.json
+│   ├── service3.json
+│   └── .keep
+├── prod
+│   ├── config1.json
+│   ├── service2.json # Contains keys from service2.sample.prod.json
+│   ├── service3.json
+│   └── .keep
+├── config1.sample.json
+├── service2.sample.json # Default sample file
+├── service2.sample.prod.json # Prod-specific sample file
+└── service3.sample.json
+&lt;/code>&lt;/pre>&lt;p>And I wrote my first &lt;strong>Makefile function&lt;/strong>:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-make" data-lang="make">&lt;span class="c"># A Make function can take in an arbitrary number of numbered parameters.
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="err">define&lt;/span> &lt;span class="err">copy_template&lt;/span>
+&lt;span class="err">cp&lt;/span> &lt;span class="k">$(&lt;/span>1&lt;span class="k">)&lt;/span> &lt;span class="k">$(&lt;/span>2&lt;span class="k">)&lt;/span>
+&lt;span class="err">@&lt;/span>&lt;span class="c"># Check if there is a more environment-specific sample file
+&lt;/span>&lt;span class="c">&lt;/span> &lt;span class="k">$(&lt;/span>&lt;span class="nb">eval&lt;/span> ENVIRONMENT :&lt;span class="o">=&lt;/span> &lt;span class="k">$(&lt;/span>shell &lt;span class="nb">echo&lt;/span> &lt;span class="k">$(&lt;/span>2&lt;span class="k">)&lt;/span> &lt;span class="p">|&lt;/span> sed -E &lt;span class="s1">&amp;#39;s#secrets/(.*)/.*#\1#&amp;#39;&lt;/span>&lt;span class="k">))&lt;/span>
+&lt;span class="k">$(&lt;/span>&lt;span class="nb">eval&lt;/span> ENVIRONMENT_SAMPLE_FILE :&lt;span class="o">=&lt;/span> &lt;span class="k">$(&lt;/span>patsubst %.sample.json,%.sample.&lt;span class="k">$(&lt;/span>ENVIRONMENT&lt;span class="k">)&lt;/span>.json,&lt;span class="k">$(&lt;/span>1&lt;span class="k">)))&lt;/span>
+@# If environment-specific file exists, copy it to destination
+&lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> -f &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>ENVIRONMENT_SAMPLE_FILE&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">then&lt;/span> cp &lt;span class="k">$(&lt;/span>ENVIRONMENT_SAMPLE_FILE&lt;span class="k">)&lt;/span> &lt;span class="k">$(&lt;/span>2&lt;span class="k">)&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">fi&lt;/span>
+&lt;span class="err">endef&lt;/span>
+&lt;span class="c"># Calling a Make function works by executing &amp;#39;call&amp;#39;
+&lt;/span>&lt;span class="c"># with the function name and all its parameters as a list.
+&lt;/span>&lt;span class="c"># My previous rules now became this:
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">secrets/dev/%.json&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>/%.&lt;span class="n">sample&lt;/span>.&lt;span class="n">json&lt;/span>
+&lt;span class="k">$(&lt;/span>call copy_template,$&amp;lt;,&lt;span class="nv">$@&lt;/span>&lt;span class="k">)&lt;/span>
+&lt;span class="nf">secrets/staging/%.json&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>/%.&lt;span class="n">sample&lt;/span>.&lt;span class="n">json&lt;/span>
+&lt;span class="k">$(&lt;/span>call copy_template,$&amp;lt;,&lt;span class="nv">$@&lt;/span>&lt;span class="k">)&lt;/span>
+&lt;span class="nf">secrets/prod/%.json&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>/%.&lt;span class="n">sample&lt;/span>.&lt;span class="n">json&lt;/span>
+&lt;span class="k">$(&lt;/span>call copy_template,$&amp;lt;,&lt;span class="nv">$@&lt;/span>&lt;span class="k">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="-perfect-symphony-calling-scripts-from-make">🍣 Perfect Symphony: Calling Scripts From Make&lt;/h3>
+&lt;p>It&amp;rsquo;s all good and nice to have your secrets created, but how do you deploy them to AWS Secrets Manager?
+Of course you write a thin wrapper around the wonderfully verbose AWS CLI:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="cp">#!/usr/bin/env bash
+&lt;/span>&lt;span class="cp">&lt;/span>&lt;span class="nb">set&lt;/span> -euo pipefail
+&lt;span class="c1"># set -x # DEBUG&lt;/span>
+&lt;span class="nv">secret_name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$1&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;span class="c1"># Use second argument or read stdin&lt;/span>
+&lt;span class="nv">secret_value&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">2&lt;/span>&lt;span class="k">:-$(&lt;/span>cat -&lt;span class="k">)&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$secret_value&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="c1"># DEBUG&lt;/span>
+&lt;span class="c1"># Create secret in idempotent way, avoid script from failing&lt;/span>
+&lt;span class="nb">set&lt;/span> +e
+aws secretsmanager create-secret --name &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$secret_name&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="p">&amp;amp;&lt;/span>&amp;gt; /dev/null
+&lt;span class="nb">set&lt;/span> -e
+&lt;span class="c1"># Put secret value and output response to stdout&lt;/span>
+aws secretsmanager put-secret-value --secret-id &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$secret_name&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> --secret-string &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$secret_value&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> cat
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>In your terminal you would call it e.g. like this:&lt;br>
+&lt;code>./helpers/deploy-secret.sh envs/dev/config1-secrets &amp;lt; secrets/dev/config1.json&lt;/code>&lt;/p>
+&lt;p>Let&amp;rsquo;s make a generic rule in Make to execute this script:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-make" data-lang="make">&lt;span class="c"># The dependency on $(all_secrets) is to make sure that the secrets files exist
+&lt;/span>&lt;span class="c"># before deploying them.
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">secret.deploy&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">$(&lt;/span>&lt;span class="nv">all_secrets&lt;/span>&lt;span class="k">)&lt;/span>
+./helpers/deploy-secret.sh &lt;span class="k">$(&lt;/span>name&lt;span class="k">)&lt;/span> &amp;lt; secrets/&lt;span class="k">$(&lt;/span>environment&lt;span class="k">)&lt;/span>/&lt;span class="k">$(&lt;/span>filename&lt;span class="k">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The call to the script that you executed above would become this:&lt;br>
+&lt;code>make secret.deploy name=envs/dev/config1-secrets environment=dev filename=config1&lt;/code>&lt;/p>
+&lt;p>As we have multiple services, let&amp;rsquo;s add one rule per service:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-make" data-lang="make">&lt;span class="c"># The secret values in this one are the same across all environments
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">secret.deploy.config1&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secret.deploy &lt;span class="nv">name&lt;/span>&lt;span class="o">=&lt;/span>envs/config1-secrets &lt;span class="nv">filename&lt;/span>&lt;span class="o">=&lt;/span>config1.json
+&lt;span class="c"># service2 has different secret values on the different environments
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">secret.deploy.service2&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secret.deploy &lt;span class="nv">name&lt;/span>&lt;span class="o">=&lt;/span>envs/&lt;span class="k">$(&lt;/span>environment&lt;span class="k">)&lt;/span>/service2-secrets &lt;span class="nv">filename&lt;/span>&lt;span class="o">=&lt;/span>service2.json
+&lt;span class="c"># service 3 also has environment-specific secret values
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">secret.deploy.service3&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secret.deploy &lt;span class="nv">name&lt;/span>&lt;span class="o">=&lt;/span>envs/&lt;span class="k">$(&lt;/span>environment&lt;span class="k">)&lt;/span>/service3-secrets &lt;span class="nv">filename&lt;/span>&lt;span class="o">=&lt;/span>service3.json
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now we can tie these together into one rule for a whole environment:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-make" data-lang="make">&lt;span class="c"># Deploy all secrets for one environment
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">secrets.deploy.all&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secret.deploy.config1
+&lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secret.deploy.service2
+&lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secret.deploy.service3
+&lt;span class="c"># Deploy all secrets for the dev cluster
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">secrets.deploy.dev&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secrets.deploy.all &lt;span class="nv">environment&lt;/span>&lt;span class="o">=&lt;/span>dev
+&lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secrets.deploy.all &lt;span class="nv">environment&lt;/span>&lt;span class="o">=&lt;/span>staging
+&lt;span class="c"># Deploy all secrets for the prod cluster
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">secrets.deploy.prod&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secrets.deploy.all &lt;span class="nv">environment&lt;/span>&lt;span class="o">=&lt;/span>prod
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>✅ Once you are authenticated to the corresponding AWS account, you can deploy your secrets with either &lt;code>make secrets.deploy.dev&lt;/code> or &lt;code>make secrets.deploy.prod&lt;/code>.&lt;/p>
+&lt;h2 id="summarizing">Summarizing&lt;/h2>
+&lt;ul>
+&lt;li>Make gives you a consistent and clean Developer API.&lt;/li>
+&lt;li>Make is almost universally installed everywhere.&lt;/li>
+&lt;li>Don&amp;rsquo;t decide between either Make &lt;strong>or&lt;/strong> Shell - use both together.
+Refactor more complex logic into separate Shell scripts (like isolated functions) which are called from within Make.&lt;/li>
+&lt;/ul>
+&lt;p>You can check out the entire Makefile (including the secrets structure and scripts) in this &lt;a class="link" href="https://github.com/jscheytt/jscheytt.github.io.hugo/tree/main/content/post/story-first-makefile" target="_blank" rel="noopener"
+>Git repo&lt;/a>.&lt;/p>
+&lt;h2 id="credits">Credits&lt;/h2>
+&lt;p>I am indebted to the following parties in making my start into the world of Make a lot smoother than I expected:&lt;/p>
+&lt;ul>
+&lt;li>Isaac Z. Schlueter for his &lt;a class="link" href="https://gist.github.com/isaacs/62a2d1825d04437c6f08" target="_blank" rel="noopener"
+>interactive Gist&lt;/a>&lt;/li>
+&lt;li>The guys at &lt;a class="link" href="https://www.upbound.io/" target="_blank" rel="noopener"
+>Upbound&lt;/a> for creating &lt;a class="link" href="https://crossplane.io/" target="_blank" rel="noopener"
+>Crossplane&lt;/a> where they use Make in &lt;a class="link" href="https://github.com/crossplane/provider-aws" target="_blank" rel="noopener"
+>their providers&lt;/a> and even distribute &lt;a class="link" href="https://github.com/upbound/build" target="_blank" rel="noopener"
+>common functionality&lt;/a> as a Git submodule&lt;/li>
+&lt;/ul></description></item><item><title>HTML limits you to a signed 32-bit int in ordered lists</title><link>https://jscheytt.github.io/p/html-limits-you-to-a-signed-32-bit-int-in-ordered-lists/</link><pubDate>Thu, 02 Sep 2021 08:55:22 +0200</pubDate><guid>https://jscheytt.github.io/p/html-limits-you-to-a-signed-32-bit-int-in-ordered-lists/</guid><description>&lt;p>HTML allows you to specify a starting number from which an ordered list (&lt;code>&amp;lt;ol&amp;gt;&lt;/code>) should start.
 I thought &amp;ldquo;Is there an upper bound?&amp;rdquo;.&lt;/p>
 &lt;p>Turns out: Yes, there is.
 It&amp;rsquo;s 2147483647 (i.e. &lt;span>2&lt;sup>31&lt;/sup>-1&lt;/span>
