@@ -2,19 +2,19 @@
 <head><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="HTML allows you to specify a starting number from which an ordered list (&amp;lt;ol&amp;gt;) should start. I thought &amp;ldquo;Is there an upper bound?&amp;rdquo;.
 Turns out: Yes, there is. It&amp;rsquo;s 2147483647 (i.e. 231-1). Looks like a signed 32-bit integer to me.
-&amp;lt;ol start=2147483645&amp;gt; &amp;lt;li&amp;gt;I am still in order&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;As am I&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Me too&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Limit reached&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Limit reached&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Limit reached&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; The above snippet will render as the following:"><title>HTML limits you to a signed 32-bit int in ordered lists</title>
+&amp;lt;ol start=2147483645&amp;gt; &amp;lt;li&amp;gt;I am still in order&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;As am I&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Me too&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;💥 Limit reached&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;💥 Limit reached&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;💥 Limit reached&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; The above snippet will render as the following:"><title>HTML limits you to a signed 32-bit int in ordered lists</title>
 <link rel=canonical href=https://jscheytt.github.io/p/html-limits-you-to-a-signed-32-bit-int-in-ordered-lists/>
 <link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="HTML limits you to a signed 32-bit int in ordered lists">
 <meta property="og:description" content="HTML allows you to specify a starting number from which an ordered list (&amp;lt;ol&amp;gt;) should start. I thought &amp;ldquo;Is there an upper bound?&amp;rdquo;.
 Turns out: Yes, there is. It&amp;rsquo;s 2147483647 (i.e. 231-1). Looks like a signed 32-bit integer to me.
-&amp;lt;ol start=2147483645&amp;gt; &amp;lt;li&amp;gt;I am still in order&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;As am I&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Me too&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Limit reached&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Limit reached&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Limit reached&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; The above snippet will render as the following:">
+&amp;lt;ol start=2147483645&amp;gt; &amp;lt;li&amp;gt;I am still in order&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;As am I&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Me too&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;💥 Limit reached&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;💥 Limit reached&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;💥 Limit reached&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; The above snippet will render as the following:">
 <meta property="og:url" content="https://jscheytt.github.io/p/html-limits-you-to-a-signed-32-bit-int-in-ordered-lists/">
 <meta property="og:site_name" content="Josia's Blog">
 <meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="html"><meta property="article:published_time" content="2021-09-02T08:55:22+02:00"><meta property="article:modified_time" content="2021-09-02T08:55:22+02:00">
 <meta name=twitter:title content="HTML limits you to a signed 32-bit int in ordered lists">
 <meta name=twitter:description content="HTML allows you to specify a starting number from which an ordered list (&amp;lt;ol&amp;gt;) should start. I thought &amp;ldquo;Is there an upper bound?&amp;rdquo;.
 Turns out: Yes, there is. It&amp;rsquo;s 2147483647 (i.e. 231-1). Looks like a signed 32-bit integer to me.
-&amp;lt;ol start=2147483645&amp;gt; &amp;lt;li&amp;gt;I am still in order&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;As am I&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Me too&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Limit reached&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Limit reached&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Limit reached&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; The above snippet will render as the following:">
+&amp;lt;ol start=2147483645&amp;gt; &amp;lt;li&amp;gt;I am still in order&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;As am I&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Me too&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;💥 Limit reached&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;💥 Limit reached&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;💥 Limit reached&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; The above snippet will render as the following:">
 </head>
 <body class=article-page>
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -85,11 +85,21 @@ Looks like a signed 32-bit integer to me.</p>
     <span class=p>&lt;</span><span class=nt>li</span><span class=p>&gt;</span>I am still in order<span class=p>&lt;/</span><span class=nt>li</span><span class=p>&gt;</span>
     <span class=p>&lt;</span><span class=nt>li</span><span class=p>&gt;</span>As am I<span class=p>&lt;/</span><span class=nt>li</span><span class=p>&gt;</span>
     <span class=p>&lt;</span><span class=nt>li</span><span class=p>&gt;</span>Me too<span class=p>&lt;/</span><span class=nt>li</span><span class=p>&gt;</span>
-    <span class=p>&lt;</span><span class=nt>li</span><span class=p>&gt;</span>Limit reached<span class=p>&lt;/</span><span class=nt>li</span><span class=p>&gt;</span>
-    <span class=p>&lt;</span><span class=nt>li</span><span class=p>&gt;</span>Limit reached<span class=p>&lt;/</span><span class=nt>li</span><span class=p>&gt;</span>
-    <span class=p>&lt;</span><span class=nt>li</span><span class=p>&gt;</span>Limit reached<span class=p>&lt;/</span><span class=nt>li</span><span class=p>&gt;</span>
+    <span class=p>&lt;</span><span class=nt>li</span><span class=p>&gt;</span>💥 Limit reached<span class=p>&lt;/</span><span class=nt>li</span><span class=p>&gt;</span>
+    <span class=p>&lt;</span><span class=nt>li</span><span class=p>&gt;</span>💥 Limit reached<span class=p>&lt;/</span><span class=nt>li</span><span class=p>&gt;</span>
+    <span class=p>&lt;</span><span class=nt>li</span><span class=p>&gt;</span>💥 Limit reached<span class=p>&lt;/</span><span class=nt>li</span><span class=p>&gt;</span>
 <span class=p>&lt;/</span><span class=nt>ol</span><span class=p>&gt;</span>
 </code></pre></div><p>The above snippet will render as the following:</p>
+<span>
+<ol start=2147483645 style=margin-left:10rem>
+<li>I am still in order</li>
+<li>As am I</li>
+<li>Me too</li>
+<li>💥 Limit reached</li>
+<li>💥 Limit reached</li>
+<li>💥 Limit reached</li>
+</ol>
+</span>
 </section>
 <footer class=article-footer>
 <section class=article-tags>

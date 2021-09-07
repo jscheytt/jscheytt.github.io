@@ -7,12 +7,21 @@ Looks like a signed 32-bit integer to me.&lt;/p>
 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>I am still in order&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>As am I&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Me too&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Limit reached&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Limit reached&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Limit reached&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>💥 Limit reached&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>💥 Limit reached&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>💥 Limit reached&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">ol&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>The above snippet will render as the following:&lt;/p>
-&lt;!-- raw HTML omitted --></description></item><item><title>You can create TOTP tokens via CLI without a smartphone</title><link>https://jscheytt.github.io/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/</link><pubDate>Fri, 27 Aug 2021 08:20:41 +0200</pubDate><guid>https://jscheytt.github.io/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/</guid><description>&lt;p>All you need is the secret of your TOTP.&lt;/p>
+&lt;span>
+&lt;ol start=2147483645 style="margin-left: 10rem;">
+&lt;li>I am still in order&lt;/li>
+&lt;li>As am I&lt;/li>
+&lt;li>Me too&lt;/li>
+&lt;li>💥 Limit reached&lt;/li>
+&lt;li>💥 Limit reached&lt;/li>
+&lt;li>💥 Limit reached&lt;/li>
+&lt;/ol>
+&lt;/span></description></item><item><title>You can create TOTP tokens via CLI without a smartphone</title><link>https://jscheytt.github.io/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/</link><pubDate>Fri, 27 Aug 2021 08:20:41 +0200</pubDate><guid>https://jscheytt.github.io/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/</guid><description>&lt;p>All you need is the secret of your TOTP.&lt;/p>
 &lt;p>The QR code is just a representation of a &lt;code>oath://&lt;/code> URL
 That URL contains the secret as a query parameter.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="c1"># Install oathtool&lt;/span>
