@@ -1,5 +1,4 @@
 # Remove default suffixes as we dont use them
-# How Not To Shoot Yourself in the Foot
 .SUFFIXES:
 
 # Set the shell to bash always
