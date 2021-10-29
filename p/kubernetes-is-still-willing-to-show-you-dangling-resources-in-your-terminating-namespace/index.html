@@ -1,20 +1,14 @@
 <!doctype html><html lang=en-us>
 <head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="All you need is the secret of your TOTP.
-The QR code is just a representation of a oath:// URL That URL contains the secret as a query parameter.
-# Install oathtool brew install oathtool # Use your secret, e.g. as a base32-encoded string oathtool --totp --base32 &amp;#34;MFRGCZDTMVRXEZLUBI======&amp;#34; "><title>You can create TOTP tokens via CLI without a smartphone</title>
-<link rel=canonical href=https://jscheytt.github.io/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="You can create TOTP tokens via CLI without a smartphone">
-<meta property="og:description" content="All you need is the secret of your TOTP.
-The QR code is just a representation of a oath:// URL That URL contains the secret as a query parameter.
-# Install oathtool brew install oathtool # Use your secret, e.g. as a base32-encoded string oathtool --totp --base32 &amp;#34;MFRGCZDTMVRXEZLUBI======&amp;#34; ">
-<meta property="og:url" content="https://jscheytt.github.io/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/">
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="kubectl api-resources --verbs=list --namespaced -o name \  | xargs -n 1 kubectl get --show-kind --ignore-not-found &amp;#34;$NAMESPACE&amp;#34; "><title>Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace</title>
+<link rel=canonical href=https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace">
+<meta property="og:description" content="kubectl api-resources --verbs=list --namespaced -o name \  | xargs -n 1 kubectl get --show-kind --ignore-not-found &amp;#34;$NAMESPACE&amp;#34; ">
+<meta property="og:url" content="https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/">
 <meta property="og:site_name" content="Josia's Blog">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="security"><meta property="article:published_time" content="2021-08-27T08:20:41+02:00"><meta property="article:modified_time" content="2021-08-27T08:20:41+02:00">
-<meta name=twitter:title content="You can create TOTP tokens via CLI without a smartphone">
-<meta name=twitter:description content="All you need is the secret of your TOTP.
-The QR code is just a representation of a oath:// URL That URL contains the secret as a query parameter.
-# Install oathtool brew install oathtool # Use your secret, e.g. as a base32-encoded string oathtool --totp --base32 &amp;#34;MFRGCZDTMVRXEZLUBI======&amp;#34; ">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="kubernetes"><meta property="article:published_time" content="2021-10-29T12:11:47+02:00"><meta property="article:modified_time" content="2021-10-29T12:11:47+02:00">
+<meta name=twitter:title content="Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace">
+<meta name=twitter:description content="kubectl api-resources --verbs=list --namespaced -o name \  | xargs -n 1 kubectl get --show-kind --ignore-not-found &amp;#34;$NAMESPACE&amp;#34; ">
 </head>
 <body class=article-page>
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -69,11 +63,11 @@ Today I Learned That ...
 </a>
 </header>
 <h2 class=article-title>
-<a href=/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/>You can create TOTP tokens via CLI without a smartphone</a>
+<a href=/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/>Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace</a>
 </h2>
 <footer class=article-time>
 <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>2021-08-27</time>
+<time class=article-time--published>2021-10-29</time>
 </div>
 <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
 <time class=article-time--reading>
@@ -84,18 +78,13 @@ Today I Learned That ...
 </div>
 </header>
 <section class=article-content>
-<p>All you need is the secret of your TOTP.</p>
-<p>The QR code is just a representation of a <code>oath://</code> URL
-That URL contains the secret as a query parameter.</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=c1># Install oathtool</span>
-brew install oathtool
-<span class=c1># Use your secret, e.g. as a base32-encoded string</span>
-oathtool --totp --base32 <span class=s2>&#34;MFRGCZDTMVRXEZLUBI======&#34;</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>kubectl api-resources --verbs<span class=o>=</span>list --namespaced -o name <span class=se>\
+</span><span class=se></span>  <span class=p>|</span> xargs -n <span class=m>1</span> kubectl get --show-kind --ignore-not-found <span class=s2>&#34;</span><span class=nv>$NAMESPACE</span><span class=s2>&#34;</span>
 </code></pre></div>
 </section>
 <footer class=article-footer>
 <section class=article-tags>
-<a href=/tags/security/>security</a>
+<a href=/tags/kubernetes/>kubernetes</a>
 </section>
 <section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
 <span>Licensed under MIT</span>
@@ -107,16 +96,16 @@ oathtool --totp --base32 <span class=s2>&#34;MFRGCZDTMVRXEZLUBI======&#34;</span
 <div class=related-contents>
 <div class="flex article-list--tile">
 <article>
-<a href=/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/>
+<a href=/p/html-limits-you-to-a-signed-32-bit-int-in-ordered-lists/>
 <div class=article-details>
-<h2 class=article-title>Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace</h2>
+<h2 class=article-title>HTML limits you to a signed 32-bit int in ordered lists</h2>
 </div>
 </a>
 </article>
 <article>
-<a href=/p/html-limits-you-to-a-signed-32-bit-int-in-ordered-lists/>
+<a href=/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/>
 <div class=article-details>
-<h2 class=article-title>HTML limits you to a signed 32-bit int in ordered lists</h2>
+<h2 class=article-title>You can create TOTP tokens via CLI without a smartphone</h2>
 </div>
 </a>
 </article>
