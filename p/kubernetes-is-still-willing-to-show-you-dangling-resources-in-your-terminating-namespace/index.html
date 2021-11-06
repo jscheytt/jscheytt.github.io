@@ -1,14 +1,14 @@
 <!doctype html><html lang=en-us>
 <head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="kubectl api-resources --verbs=list --namespaced -o name \  | xargs -n 1 kubectl get --show-kind --ignore-not-found &amp;#34;$NAMESPACE&amp;#34; "><title>Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace</title>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="kubectl api-resources --verbs=list --namespaced -o name \  | xargs -n 1 kubectl get --show-kind --ignore-not-found &amp;#34;$NAMESPACE&amp;#34; Props to RedHat."><title>Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace</title>
 <link rel=canonical href=https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/>
 <link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace">
-<meta property="og:description" content="kubectl api-resources --verbs=list --namespaced -o name \  | xargs -n 1 kubectl get --show-kind --ignore-not-found &amp;#34;$NAMESPACE&amp;#34; ">
+<meta property="og:description" content="kubectl api-resources --verbs=list --namespaced -o name \  | xargs -n 1 kubectl get --show-kind --ignore-not-found &amp;#34;$NAMESPACE&amp;#34; Props to RedHat.">
 <meta property="og:url" content="https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/">
 <meta property="og:site_name" content="Josia's Blog">
 <meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="kubernetes"><meta property="article:published_time" content="2021-10-29T12:11:47+02:00"><meta property="article:modified_time" content="2021-10-29T12:11:47+02:00">
 <meta name=twitter:title content="Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace">
-<meta name=twitter:description content="kubectl api-resources --verbs=list --namespaced -o name \  | xargs -n 1 kubectl get --show-kind --ignore-not-found &amp;#34;$NAMESPACE&amp;#34; ">
+<meta name=twitter:description content="kubectl api-resources --verbs=list --namespaced -o name \  | xargs -n 1 kubectl get --show-kind --ignore-not-found &amp;#34;$NAMESPACE&amp;#34; Props to RedHat.">
 </head>
 <body class=article-page>
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -80,7 +80,7 @@ Today I Learned That ...
 <section class=article-content>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>kubectl api-resources --verbs<span class=o>=</span>list --namespaced -o name <span class=se>\
 </span><span class=se></span>  <span class=p>|</span> xargs -n <span class=m>1</span> kubectl get --show-kind --ignore-not-found <span class=s2>&#34;</span><span class=nv>$NAMESPACE</span><span class=s2>&#34;</span>
-</code></pre></div>
+</code></pre></div><p>Props to <a class=link href=https://cloud.redhat.com/blog/the-hidden-dangers-of-terminating-namespaces target=_blank rel=noopener>RedHat</a>.</p>
 </section>
 <footer class=article-footer>
 <section class=article-tags>
