@@ -1,4 +1,90 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Josia's Blog</title><link>https://jscheytt.github.io/</link><description>Recent content on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 29 Oct 2021 12:11:47 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace</title><link>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</link><pubDate>Fri, 29 Oct 2021 12:11:47 +0200</pubDate><guid>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">kubectl api-resources --verbs&lt;span class="o">=&lt;/span>list --namespaced -o name &lt;span class="se">\
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Josia's Blog</title><link>https://jscheytt.github.io/</link><description>Recent content on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 03 Dec 2021 10:43:01 +0100</lastBuildDate><atom:link href="https://jscheytt.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Trying to simplify k8s labels can be dangerous for your routing</title><link>https://jscheytt.github.io/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/</link><pubDate>Fri, 03 Dec 2021 10:43:01 +0100</pubDate><guid>https://jscheytt.github.io/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/</guid><description>&lt;p>Today I was refactoring a bigger configuration setup that is built with &lt;a class="link" href="https://kustomize.io/" target="_blank" rel="noopener"
+>kustomize&lt;/a>.
+I see kustomize as a light-weight way of packaging multiple Kubernetes manifests, together with a little bit of logic.&lt;/p>
+&lt;p>The &lt;strong>base kustomization&lt;/strong> of the application config repo I was refactoring looked something like this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="nt">apiVersion&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">kustomize.config.k8s.io/v1beta1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">kind&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Kustomization&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">resources&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/cronjob-backup.yaml&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/deployment.yaml&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/ingress.yaml&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/pod-disruption-budget.yaml&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/service.yaml&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">commonAnnotations&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">source&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">java&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">tenant&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">acme&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">configMapGenerator&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">acme-app-config&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">files&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="l">configs/10-local.properties&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="l">configs/30-local.properties&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="l">configs/40-local.properties&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I have an almost pathologic tendency to simplify and DRY everything up that I find, especially in configuration code.
+And as I saw a lot of &lt;strong>repeating Labels&lt;/strong> in the manifests, I thought &amp;ldquo;Well, let&amp;rsquo;s just unify them.&amp;rdquo;&lt;/p>
+&lt;p>So I went ahead, removed the repetitive Labels from the manifests and added the following block to the kustomization:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="nt">commonLabels&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">app&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">acme-app&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I knew a bit about Kubernetes Services and that they &lt;em>use Labels to find the Pods to which they should direct their traffic&lt;/em>.
+That&amp;rsquo;s why I thoroughly verified that after my change the Service and the Deployment would still have &lt;strong>the same selector labels&lt;/strong>.
+🤗 Nothing seemed off &amp;hellip;&lt;/p>
+&lt;p>I committed and pushed my changes, and after the Deployment had finished restarting, I clicked through the application.
+👀 Oddly enough some of the requests succeeded as expected, but some kept failing with a 💥 &lt;code>502 Bad Gateway&lt;/code> error!
+At first I tried troubleshooting quickly, but soon I opted for just reverting my changes and pushing the revert commits to undo my changes.&lt;/p>
+&lt;p>For debugging I compared the output of &lt;code>kustomize build&lt;/code> before and after my changes.
+After some scrolling I came across the &lt;strong>CronJobs&lt;/strong> I defined for backup&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>I should probably not have been surprised that the CronJob also had the same Labels I gave it via the kustomization.
+But now a suspicion started sneaking in:&lt;/p>
+&lt;blockquote>
+&lt;p>What if the &lt;strong>completed Pods&lt;/strong> of the CronJob received traffic from the Service because they had &lt;strong>the same Labels&lt;/strong>?&lt;/p>
+&lt;/blockquote>
+&lt;p>Following this idea, I refactored my configs a bit.
+Soon, I was able to ensure that requests to the Service would only point to my target Deployment (and not to any other Pods):&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="gh">diff --git a/base/kustomization.yaml b/base/kustomization.yaml
+&lt;/span>&lt;span class="gh">index 6c1c6f7..b77b0fc 100644
+&lt;/span>&lt;span class="gh">&lt;/span>&lt;span class="gd">--- a/base/kustomization.yaml
+&lt;/span>&lt;span class="gd">&lt;/span>&lt;span class="gi">+++ b/base/kustomization.yaml
+&lt;/span>&lt;span class="gi">&lt;/span>&lt;span class="gu">@@ -15,7 +15,6 @@ commonAnnotations:
+&lt;/span>&lt;span class="gu">&lt;/span> source: java
+tenant: acme
+&lt;span class="gd">-commonLabels:
+&lt;/span>&lt;span class="gd">- app: acme-app
+&lt;/span>&lt;span class="gd">&lt;/span> configMapGenerator:
+- name: acme-app-config
+&lt;span class="gh">diff --git a/base/manifests/deployment.yaml b/base/manifests/deployment.yaml
+&lt;/span>&lt;span class="gh">index 1e4aa3f..a60a798 100644
+&lt;/span>&lt;span class="gh">&lt;/span>&lt;span class="gd">--- a/base/manifests/deployment.yaml
+&lt;/span>&lt;span class="gd">&lt;/span>&lt;span class="gi">+++ b/base/manifests/deployment.yaml
+&lt;/span>&lt;span class="gi">&lt;/span>&lt;span class="gu">@@ -16,6 +16,9 @@ metadata:
+&lt;/span>&lt;span class="gu">&lt;/span> spec:
+replicas: 1
+&lt;span class="gi">+ selector:
+&lt;/span>&lt;span class="gi">+ matchLabels:
+&lt;/span>&lt;span class="gi">+ app: acme-app
+&lt;/span>&lt;span class="gi">&lt;/span> template:
+metadata:
+labels:
+&lt;span class="gi">+ app: acme-app
+&lt;/span>&lt;span class="gi">&lt;/span> spec:
+containers:
+&lt;span class="gh">diff --git a/base/manifests/service.yaml b/base/manifests/service.yaml
+&lt;/span>&lt;span class="gh">index b05d898..89af021 100644
+&lt;/span>&lt;span class="gh">&lt;/span>&lt;span class="gd">--- a/base/manifests/service.yaml
+&lt;/span>&lt;span class="gd">&lt;/span>&lt;span class="gi">+++ b/base/manifests/service.yaml
+&lt;/span>&lt;span class="gi">&lt;/span>&lt;span class="gu">@@ -10,3 +10,5 @@ spec:
+&lt;/span>&lt;span class="gu">&lt;/span> - name: api
+port: 8080
+&lt;span class="gi">+ selector:
+&lt;/span>&lt;span class="gi">+ app: acme-app
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>(Notice that the Deployment needs the Label both in &lt;code>.spec.selector.matchLabels&lt;/code> and &lt;code>.spec.template.metadata.labels&lt;/code>!)&lt;/p>
+&lt;p>And surely enough, after deploying this fix, the request to the application worked flawlessly 😊✅.&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>It does not matter for which purpose I created this CronJob, it could have been any Kubernetes Resource that creates Pods.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace</title><link>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</link><pubDate>Fri, 29 Oct 2021 12:11:47 +0200</pubDate><guid>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">kubectl api-resources --verbs&lt;span class="o">=&lt;/span>list --namespaced -o name &lt;span class="se">\
 &lt;/span>&lt;span class="se">&lt;/span> &lt;span class="p">|&lt;/span> xargs -n &lt;span class="m">1&lt;/span> kubectl get --show-kind --ignore-not-found &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$NAMESPACE&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Props to &lt;a class="link" href="https://cloud.redhat.com/blog/the-hidden-dangers-of-terminating-namespaces" target="_blank" rel="noopener"
 >RedHat&lt;/a>.&lt;/p></description></item><item><title>The Story of My First Makefile — Half-Versioned Secrets Management</title><link>https://jscheytt.github.io/p/the-story-of-my-first-makefile-half-versioned-secrets-management/</link><pubDate>Mon, 06 Sep 2021 13:38:15 +0200</pubDate><guid>https://jscheytt.github.io/p/the-story-of-my-first-makefile-half-versioned-secrets-management/</guid><description>&lt;p>As a CloudOps Engineer one key skill is &lt;strong>automating repetitive tasks&lt;/strong>.
