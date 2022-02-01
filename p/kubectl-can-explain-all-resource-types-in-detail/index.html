@@ -1,20 +1,14 @@
 <!doctype html><html lang=en-us>
 <head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="I really love Docker, and I also come to like security more and more. One advice I have been hearing a lot (e.g. in this Container Security Cheat Sheet from Snyk) is that you should not run your container as a root user.
-&amp;ldquo;Easy thing,&amp;rdquo; I thought to myself, &amp;ldquo;I am just going to put something like USER {app}&amp;rdquo; at the top of my Dockerfile.&amp;quot; Well, think again, because:
-FROMnode:ltsUSERnode# I would have thought that after this point, every action will happen in the name of this user# and also that every created directory and file will belong to this user ."><title>Docker does not really help you a lot trying to get permissions right</title>
-<link rel=canonical href=https://jscheytt.github.io/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Docker does not really help you a lot trying to get permissions right">
-<meta property="og:description" content="I really love Docker, and I also come to like security more and more. One advice I have been hearing a lot (e.g. in this Container Security Cheat Sheet from Snyk) is that you should not run your container as a root user.
-&amp;ldquo;Easy thing,&amp;rdquo; I thought to myself, &amp;ldquo;I am just going to put something like USER {app}&amp;rdquo; at the top of my Dockerfile.&amp;quot; Well, think again, because:
-FROMnode:ltsUSERnode# I would have thought that after this point, every action will happen in the name of this user# and also that every created directory and file will belong to this user .">
-<meta property="og:url" content="https://jscheytt.github.io/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/">
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="$ kubectl explain statefulset KIND: StatefulSet VERSION: apps/v1 DESCRIPTION: StatefulSet represents a set of pods with consistent identities. Identities are defined as: - Network: A single stable DNS and hostname. - Storage: As many VolumeClaims as requested. The StatefulSet guarantees that a given network identity will always map to the same storage identity. FIELDS: apiVersion	&amp;lt;string&amp;gt; APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values."><title>kubectl can explain all resource types in detail</title>
+<link rel=canonical href=https://jscheytt.github.io/p/kubectl-can-explain-all-resource-types-in-detail/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="kubectl can explain all resource types in detail">
+<meta property="og:description" content="$ kubectl explain statefulset KIND: StatefulSet VERSION: apps/v1 DESCRIPTION: StatefulSet represents a set of pods with consistent identities. Identities are defined as: - Network: A single stable DNS and hostname. - Storage: As many VolumeClaims as requested. The StatefulSet guarantees that a given network identity will always map to the same storage identity. FIELDS: apiVersion	&amp;lt;string&amp;gt; APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values.">
+<meta property="og:url" content="https://jscheytt.github.io/p/kubectl-can-explain-all-resource-types-in-detail/">
 <meta property="og:site_name" content="Josia's Blog">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="docker"><meta property="article:published_time" content="2021-07-23T14:42:07+02:00"><meta property="article:modified_time" content="2021-07-23T14:42:07+02:00">
-<meta name=twitter:title content="Docker does not really help you a lot trying to get permissions right">
-<meta name=twitter:description content="I really love Docker, and I also come to like security more and more. One advice I have been hearing a lot (e.g. in this Container Security Cheat Sheet from Snyk) is that you should not run your container as a root user.
-&amp;ldquo;Easy thing,&amp;rdquo; I thought to myself, &amp;ldquo;I am just going to put something like USER {app}&amp;rdquo; at the top of my Dockerfile.&amp;quot; Well, think again, because:
-FROMnode:ltsUSERnode# I would have thought that after this point, every action will happen in the name of this user# and also that every created directory and file will belong to this user .">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="kubernetes"><meta property="article:tag" content="cli"><meta property="article:published_time" content="2022-02-01T14:53:18+01:00"><meta property="article:modified_time" content="2022-02-01T14:53:18+01:00">
+<meta name=twitter:title content="kubectl can explain all resource types in detail">
+<meta name=twitter:description content="$ kubectl explain statefulset KIND: StatefulSet VERSION: apps/v1 DESCRIPTION: StatefulSet represents a set of pods with consistent identities. Identities are defined as: - Network: A single stable DNS and hostname. - Storage: As many VolumeClaims as requested. The StatefulSet guarantees that a given network identity will always map to the same storage identity. FIELDS: apiVersion	&amp;lt;string&amp;gt; APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values.">
 </head>
 <body class=article-page>
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -68,11 +62,11 @@ Today I Learned That ...
 </a>
 </header>
 <h2 class=article-title>
-<a href=/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/>Docker does not really help you a lot trying to get permissions right</a>
+<a href=/p/kubectl-can-explain-all-resource-types-in-detail/>kubectl can explain all resource types in detail</a>
 </h2>
 <footer class=article-time>
 <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>2021-07-23</time>
+<time class=article-time--published>2022-02-01</time>
 </div>
 <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
 <time class=article-time--reading>
@@ -83,57 +77,84 @@ Today I Learned That ...
 </div>
 </header>
 <section class=article-content>
-<p>I really love Docker, and I also come to like security more and more.
-One advice I have been hearing a lot (e.g. in this <a class=link href=https://snyk.io/blog/10-docker-image-security-best-practices/ target=_blank rel=noopener>Container Security Cheat Sheet from Snyk</a>) is that <strong>you should not run your container as a root user</strong>.</p>
-<p>&ldquo;Easy thing,&rdquo; I thought to myself, &ldquo;I am just going to put something like <code>USER {app}</code>&rdquo; at the top of my Dockerfile."
-Well, think again, because:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-Dockerfile data-lang=Dockerfile><span class=k>FROM</span><span class=s> node:lts</span><span class=err>
-</span><span class=err>
-</span><span class=err></span><span class=k>USER</span><span class=s> node</span><span class=err>
-</span><span class=err></span><span class=c># I would have thought that after this point, every action will happen in the name of this user</span><span class=err>
-</span><span class=err></span><span class=c># and also that every created directory and file will belong to this user ... 😕 But:</span><span class=err>
-</span><span class=err>
-</span><span class=err></span><span class=c># ⚠️ This directory is created by root:root!</span><span class=err>
-</span><span class=err></span><span class=k>WORKDIR</span><span class=s> /app</span><span class=err>
-</span><span class=err>
-</span><span class=err></span><span class=c># ⚠️ These files will be copied over to be owned by root:root!</span><span class=err>
-</span><span class=err></span><span class=k>COPY</span> package*.json ./<span class=err>
-</span><span class=err>
-</span><span class=err></span><span class=c># 💥 This step fails in some (not all!) environments with errors like &#34;Not enough permissions on /app&#34;</span><span class=err>
-</span><span class=err></span><span class=k>RUN</span> npm install <span class=o>&amp;&amp;</span> <span class=se>\
-</span><span class=se></span>    npm run verify<span class=err>
-</span><span class=err>
-</span><span class=err></span><span class=c># ⚠️ If you manage to get to this point, these files, too, will be copied over to be owned by root:root!</span><span class=err>
-</span><span class=err></span><span class=k>COPY</span> . .<span class=err>
-</span><span class=err>
-</span><span class=err></span><span class=k>ENTRYPOINT</span> <span class=p>[</span><span class=s2>&#34;npm&#34;</span><span class=p>]</span><span class=err>
-</span></code></pre></div><p>I ended up fixing it by creating the directory and then <code>chown</code>-ing it.
-Equally I executed the <code>COPY</code> instructions with the <code>--chown</code> flag.
-In the end I refactored it a bit using some <code>ENV</code>s, too:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-Dockerfile data-lang=Dockerfile><span class=k>FROM</span><span class=s> node:lts</span><span class=err>
-</span><span class=err>
-</span><span class=err></span><span class=c># Ensure that target WORKDIR exists and is owned by target (non-root) user</span><span class=err>
-</span><span class=err></span><span class=k>ENV</span> <span class=nv>USERNAME</span><span class=o>=</span>node
-<span class=k>ENV</span> <span class=nv>USERID</span><span class=o>=</span><span class=nv>$USERNAME</span>:<span class=nv>$USERNAME</span><span class=err>
-</span><span class=err></span><span class=k>ENV</span> <span class=nv>TARGETDIR</span><span class=o>=</span>/app<span class=err>
-</span><span class=err></span><span class=k>RUN</span> mkdir -p <span class=nv>$TARGETDIR</span> <span class=o>&amp;&amp;</span> chown -R <span class=nv>$USERID</span> <span class=nv>$TARGETDIR</span><span class=err>
-</span><span class=err></span><span class=k>WORKDIR</span><span class=s> $TARGETDIR</span><span class=err>
-</span><span class=err>
-</span><span class=err></span><span class=k>USER</span><span class=s> $USERNAME</span><span class=err>
-</span><span class=err>
-</span><span class=err></span><span class=k>COPY</span> --chown<span class=o>=</span><span class=nv>$USERID</span> package*.json ./<span class=err>
-</span><span class=err>
-</span><span class=err></span><span class=k>RUN</span> npm install <span class=o>&amp;&amp;</span> <span class=se>\
-</span><span class=se></span>    npm run verify<span class=err>
-</span><span class=err>
-</span><span class=err></span><span class=k>COPY</span> --chown<span class=o>=</span><span class=nv>$USERID</span> . .<span class=err>
-</span><span class=err>
-</span><span class=err></span><span class=k>ENTRYPOINT</span> <span class=p>[</span><span class=s2>&#34;npm&#34;</span><span class=p>]</span><span class=err>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-console data-lang=console><span class=gp>$ </span>kubectl explain statefulset
+<span class=go>KIND:     StatefulSet
+</span><span class=go>VERSION:  apps/v1
+</span><span class=go></span><span class=err>
+</span><span class=err></span><span class=go>DESCRIPTION:
+</span><span class=go>     StatefulSet represents a set of pods with consistent identities. Identities
+</span><span class=go>     are defined as:
+</span><span class=go>     - Network: A single stable DNS and hostname.
+</span><span class=go>     - Storage: As many VolumeClaims as requested. The StatefulSet guarantees
+</span><span class=go>     that a given network identity will always map to the same storage identity.
+</span><span class=go></span><span class=err>
+</span><span class=err></span><span class=go>FIELDS:
+</span><span class=go>   apiVersion	&lt;string&gt;
+</span><span class=go>     APIVersion defines the versioned schema of this representation of an
+</span><span class=go>     object. Servers should convert recognized schemas to the latest internal
+</span><span class=go>     value, and may reject unrecognized values. More info:
+</span><span class=go>     https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+</span><span class=go></span><span class=err>
+</span><span class=err></span><span class=go>   kind	&lt;string&gt;
+</span><span class=go>     Kind is a string value representing the REST resource this object
+</span><span class=go>     represents. Servers may infer this from the endpoint the client submits
+</span><span class=go>     requests to. Cannot be updated. In CamelCase. More info:
+</span><span class=go>     https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+</span><span class=go></span><span class=err>
+</span><span class=err></span><span class=go>   metadata	&lt;Object&gt;
+</span><span class=go></span><span class=err>
+</span><span class=err></span><span class=go>   spec	&lt;Object&gt;
+</span><span class=go>     Spec defines the desired identities of pods in this set.
+</span><span class=go></span><span class=err>
+</span><span class=err></span><span class=go>   status	&lt;Object&gt;
+</span><span class=go>     Status is the current status of Pods in this StatefulSet. This data may be
+</span><span class=go>     out of date by some window of time.
+</span></code></pre></div><p>I guess this will reduce a lot of my googling in future.</p>
+<p>And it even works on nested fields!</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-console data-lang=console><span class=gp>$ </span>kubectl explain deployment.spec.template.spec.containers
+<span class=go>KIND:     Deployment
+</span><span class=go>VERSION:  apps/v1
+</span><span class=go></span><span class=err>
+</span><span class=err></span><span class=go>RESOURCE: containers &lt;[]Object&gt;
+</span><span class=go></span><span class=err>
+</span><span class=err></span><span class=go>DESCRIPTION:
+</span><span class=go>     List of containers belonging to the pod. Containers cannot currently be
+</span><span class=go>     added or removed. There must be at least one container in a Pod. Cannot be
+</span><span class=go>     updated.
+</span><span class=go></span><span class=err>
+</span><span class=err></span><span class=go>     A single application container that you want to run within a pod.
+</span><span class=go></span><span class=err>
+</span><span class=err></span><span class=go>FIELDS:
+</span><span class=go>   args	&lt;[]string&gt;
+</span><span class=go>     Arguments to the entrypoint. The docker image&#39;s CMD is used if this is not
+</span><span class=go>     provided. Variable references $(VAR_NAME) are expanded using the
+</span><span class=go>     container&#39;s environment. If a variable cannot be resolved, the reference in
+</span><span class=go>     the input string will be unchanged. The $(VAR_NAME) syntax can be escaped
+</span><span class=go>     with a double $$, ie: $$(VAR_NAME). Escaped references will never be
+</span><span class=go>     expanded, regardless of whether the variable exists or not. Cannot be
+</span><span class=go>     updated. More info:
+</span><span class=go>     https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+</span><span class=go></span><span class=err>
+</span><span class=err></span><span class=go>   command	&lt;[]string&gt;
+</span><span class=go>     Entrypoint array. Not executed within a shell. The docker image&#39;s
+</span><span class=go>     ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME)
+</span><span class=go>     are expanded using the container&#39;s environment. If a variable cannot be
+</span><span class=go>     resolved, the reference in the input string will be unchanged. The
+</span><span class=go>     $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME).
+</span><span class=go>     Escaped references will never be expanded, regardless of whether the
+</span><span class=go>     variable exists or not. Cannot be updated. More info:
+</span><span class=go>     https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+</span><span class=go></span><span class=err>
+</span><span class=err></span><span class=go>   env	&lt;[]Object&gt;
+</span><span class=go>     List of environment variables to set in the container. Cannot be updated.
+</span><span class=go></span><span class=err>
+</span><span class=err></span><span class=go>   ...
 </span></code></pre></div>
 </section>
 <footer class=article-footer>
 <section class=article-tags>
-<a href=/tags/docker/>docker</a>
+<a href=/tags/kubernetes/>kubernetes</a>
+<a href=/tags/cli/>cli</a>
 </section>
 <section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
 <span>Licensed under MIT</span>
@@ -144,13 +165,6 @@ In the end I refactored it a bit using some <code>ENV</code>s, too:</p>
 <h2 class=section-title>Related contents</h2>
 <div class=related-contents>
 <div class="flex article-list--tile">
-<article>
-<a href=/p/kubectl-can-explain-all-resource-types-in-detail/>
-<div class=article-details>
-<h2 class=article-title>kubectl can explain all resource types in detail</h2>
-</div>
-</a>
-</article>
 <article>
 <a href=/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/>
 <div class=article-details>
@@ -176,6 +190,13 @@ In the end I refactored it a bit using some <code>ENV</code>s, too:</p>
 <a href=/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/>
 <div class=article-details>
 <h2 class=article-title>You can create TOTP tokens via CLI without a smartphone</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/>
+<div class=article-details>
+<h2 class=article-title>Docker does not really help you a lot trying to get permissions right</h2>
 </div>
 </a>
 </article>

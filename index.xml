@@ -1,4 +1,76 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Josia's Blog</title><link>https://jscheytt.github.io/</link><description>Recent content on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 03 Dec 2021 10:43:01 +0100</lastBuildDate><atom:link href="https://jscheytt.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Trying to simplify k8s labels can be dangerous for your routing</title><link>https://jscheytt.github.io/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/</link><pubDate>Fri, 03 Dec 2021 10:43:01 +0100</pubDate><guid>https://jscheytt.github.io/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/</guid><description>&lt;p>Today I was refactoring a bigger configuration setup that is built with &lt;a class="link" href="https://kustomize.io/" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Josia's Blog</title><link>https://jscheytt.github.io/</link><description>Recent content on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 01 Feb 2022 14:53:18 +0100</lastBuildDate><atom:link href="https://jscheytt.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>kubectl can explain all resource types in detail</title><link>https://jscheytt.github.io/p/kubectl-can-explain-all-resource-types-in-detail/</link><pubDate>Tue, 01 Feb 2022 14:53:18 +0100</pubDate><guid>https://jscheytt.github.io/p/kubectl-can-explain-all-resource-types-in-detail/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="gp">$ &lt;/span>kubectl explain statefulset
+&lt;span class="go">KIND: StatefulSet
+&lt;/span>&lt;span class="go">VERSION: apps/v1
+&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go">DESCRIPTION:
+&lt;/span>&lt;span class="go"> StatefulSet represents a set of pods with consistent identities. Identities
+&lt;/span>&lt;span class="go"> are defined as:
+&lt;/span>&lt;span class="go"> - Network: A single stable DNS and hostname.
+&lt;/span>&lt;span class="go"> - Storage: As many VolumeClaims as requested. The StatefulSet guarantees
+&lt;/span>&lt;span class="go"> that a given network identity will always map to the same storage identity.
+&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go">FIELDS:
+&lt;/span>&lt;span class="go"> apiVersion &amp;lt;string&amp;gt;
+&lt;/span>&lt;span class="go"> APIVersion defines the versioned schema of this representation of an
+&lt;/span>&lt;span class="go"> object. Servers should convert recognized schemas to the latest internal
+&lt;/span>&lt;span class="go"> value, and may reject unrecognized values. More info:
+&lt;/span>&lt;span class="go"> https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go"> kind &amp;lt;string&amp;gt;
+&lt;/span>&lt;span class="go"> Kind is a string value representing the REST resource this object
+&lt;/span>&lt;span class="go"> represents. Servers may infer this from the endpoint the client submits
+&lt;/span>&lt;span class="go"> requests to. Cannot be updated. In CamelCase. More info:
+&lt;/span>&lt;span class="go"> https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go"> metadata &amp;lt;Object&amp;gt;
+&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go"> spec &amp;lt;Object&amp;gt;
+&lt;/span>&lt;span class="go"> Spec defines the desired identities of pods in this set.
+&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go"> status &amp;lt;Object&amp;gt;
+&lt;/span>&lt;span class="go"> Status is the current status of Pods in this StatefulSet. This data may be
+&lt;/span>&lt;span class="go"> out of date by some window of time.
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I guess this will reduce a lot of my googling in future.&lt;/p>
+&lt;p>And it even works on nested fields!&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="gp">$ &lt;/span>kubectl explain deployment.spec.template.spec.containers
+&lt;span class="go">KIND: Deployment
+&lt;/span>&lt;span class="go">VERSION: apps/v1
+&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go">RESOURCE: containers &amp;lt;[]Object&amp;gt;
+&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go">DESCRIPTION:
+&lt;/span>&lt;span class="go"> List of containers belonging to the pod. Containers cannot currently be
+&lt;/span>&lt;span class="go"> added or removed. There must be at least one container in a Pod. Cannot be
+&lt;/span>&lt;span class="go"> updated.
+&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go"> A single application container that you want to run within a pod.
+&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go">FIELDS:
+&lt;/span>&lt;span class="go"> args &amp;lt;[]string&amp;gt;
+&lt;/span>&lt;span class="go"> Arguments to the entrypoint. The docker image&amp;#39;s CMD is used if this is not
+&lt;/span>&lt;span class="go"> provided. Variable references $(VAR_NAME) are expanded using the
+&lt;/span>&lt;span class="go"> container&amp;#39;s environment. If a variable cannot be resolved, the reference in
+&lt;/span>&lt;span class="go"> the input string will be unchanged. The $(VAR_NAME) syntax can be escaped
+&lt;/span>&lt;span class="go"> with a double $$, ie: $$(VAR_NAME). Escaped references will never be
+&lt;/span>&lt;span class="go"> expanded, regardless of whether the variable exists or not. Cannot be
+&lt;/span>&lt;span class="go"> updated. More info:
+&lt;/span>&lt;span class="go"> https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go"> command &amp;lt;[]string&amp;gt;
+&lt;/span>&lt;span class="go"> Entrypoint array. Not executed within a shell. The docker image&amp;#39;s
+&lt;/span>&lt;span class="go"> ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME)
+&lt;/span>&lt;span class="go"> are expanded using the container&amp;#39;s environment. If a variable cannot be
+&lt;/span>&lt;span class="go"> resolved, the reference in the input string will be unchanged. The
+&lt;/span>&lt;span class="go"> $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME).
+&lt;/span>&lt;span class="go"> Escaped references will never be expanded, regardless of whether the
+&lt;/span>&lt;span class="go"> variable exists or not. Cannot be updated. More info:
+&lt;/span>&lt;span class="go"> https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go"> env &amp;lt;[]Object&amp;gt;
+&lt;/span>&lt;span class="go"> List of environment variables to set in the container. Cannot be updated.
+&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go"> ...
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Trying to simplify k8s labels can be dangerous for your routing</title><link>https://jscheytt.github.io/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/</link><pubDate>Fri, 03 Dec 2021 10:43:01 +0100</pubDate><guid>https://jscheytt.github.io/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/</guid><description>&lt;p>Today I was refactoring a bigger configuration setup that is built with &lt;a class="link" href="https://kustomize.io/" target="_blank" rel="noopener"
 >kustomize&lt;/a>.
 I see kustomize as a light-weight way of packaging multiple Kubernetes manifests, together with a little bit of logic.&lt;/p>
 &lt;p>The &lt;strong>base kustomization&lt;/strong> of the application config repo I was refactoring looked something like this:&lt;/p>
