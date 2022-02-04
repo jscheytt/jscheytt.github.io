@@ -159,7 +159,48 @@ port: 8080
 &lt;/section></description></item><item><title>Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace</title><link>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</link><pubDate>Fri, 29 Oct 2021 12:11:47 +0200</pubDate><guid>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">kubectl api-resources --verbs&lt;span class="o">=&lt;/span>list --namespaced -o name &lt;span class="se">\
 &lt;/span>&lt;span class="se">&lt;/span> &lt;span class="p">|&lt;/span> xargs -n &lt;span class="m">1&lt;/span> kubectl get --show-kind --ignore-not-found &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$NAMESPACE&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Props to &lt;a class="link" href="https://cloud.redhat.com/blog/the-hidden-dangers-of-terminating-namespaces" target="_blank" rel="noopener"
->RedHat&lt;/a>.&lt;/p></description></item><item><title>The Story of My First Makefile — Half-Versioned Secrets Management</title><link>https://jscheytt.github.io/p/the-story-of-my-first-makefile-half-versioned-secrets-management/</link><pubDate>Mon, 06 Sep 2021 13:38:15 +0200</pubDate><guid>https://jscheytt.github.io/p/the-story-of-my-first-makefile-half-versioned-secrets-management/</guid><description>&lt;p>As a CloudOps Engineer one key skill is &lt;strong>automating repetitive tasks&lt;/strong>.
+>RedHat&lt;/a>.&lt;/p></description></item><item><title>Transitioning from Android to iOS — The Good, the Bad, and the Ugly</title><link>https://jscheytt.github.io/p/transitioning-from-android-to-ios-the-good-the-bad-and-the-ugly/</link><pubDate>Sat, 25 Sep 2021 17:13:18 +0200</pubDate><guid>https://jscheytt.github.io/p/transitioning-from-android-to-ios-the-good-the-bad-and-the-ugly/</guid><description>&lt;p>This year I have switched from an Android smartphone (Samsung Galaxy J3 (2016)) to an iPhone (SE 2020).&lt;/p>
+&lt;p>When switching, these things stood out to me:&lt;/p>
+&lt;ul>
+&lt;li>There is &lt;strong>no really usable calendar app&lt;/strong>.
+&lt;ul>
+&lt;li>I was using &lt;a class="link" href="https://play.google.com/store/apps/details?id=netgenius.bizcal" target="_blank" rel="noopener"
+>Business Calendar&lt;/a> before and I still miss the month widget.&lt;/li>
+&lt;li>I have settled with &lt;a class="link" href="https://apps.apple.com/de/app/google-kalender-terminplaner/id909319292" target="_blank" rel="noopener"
+>Google Calendar&lt;/a> for now.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>The &lt;strong>swipe gestures&lt;/strong> from all possible sides of the screen instead of the 1-dimensional top drawer menu are really interesting, and I have grown very fond of them.&lt;/li>
+&lt;li>The &lt;strong>emergency contact&lt;/strong> feature is well thought out.&lt;/li>
+&lt;li>&lt;strong>Migrating WhatsApp chats&lt;/strong> is only possible via paid 3rd party apps.
+&lt;ul>
+&lt;li>I paid 30 USD for &lt;a class="link" href="https://drfone.wondershare.com/buy/drfone-mac-restore-social-app.html" target="_blank" rel="noopener"
+>Dr. Fone&lt;/a>, connecting both devices to a Desktop/Laptop computer, and it worked flawlessly (missing only the read/unread markers).&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>The &lt;strong>mobile internet usage&lt;/strong> from the stock system is higher than on Android and I have no way reducing it. It used up 17 out of my precious 100 MB monthly quota for system &amp;ldquo;software updates&amp;rdquo; although I deactivated that on the App Store.&lt;/li>
+&lt;li>&lt;strong>Privacy&lt;/strong> is probably a lot better than on Android. See &lt;a class="link" href="https://arstechnica.com/gadgets/2021/03/android-sends-20x-more-data-to-google-than-ios-sends-to-apple-study-says/" target="_blank" rel="noopener"
+>this article&lt;/a>. Makes sense as Apple is a hardware company and Google is a data company.&lt;/li>
+&lt;li>I have a &lt;strong>lot more space&lt;/strong> on my phone now and I don&amp;rsquo;t have to worry about deleting apps for space.&lt;/li>
+&lt;li>Many of the &lt;strong>default apps&lt;/strong> and settings work really well for me - just I expected also from the MacOS experience.
+&lt;ul>
+&lt;li>But I deactivated all Office-ish apps&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>I am &lt;strong>extremely disappointed&lt;/strong> and shocked that there is no solution (not even a paid one) to &lt;strong>activate Do Not Disturb (DND) during calendar events&lt;/strong>.
+&lt;ul>
+&lt;li>I used a small Android app called &lt;a class="link" href="https://play.google.com/store/apps/details?id=me.camsteffen.polite" target="_blank" rel="noopener"
+>Polite&lt;/a> before and there is no equivalent for it, not even by a long shot!&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Automatic dark/light mode depending on daytime is very nice.&lt;/li>
+&lt;/ul>
+&lt;p>And some iPhone SE-specific things I appreciate:&lt;/p>
+&lt;ul>
+&lt;li>Fingerprint/TouchID was a very good choice. It&amp;rsquo;s kind of sad though that you can add only up to 3 fingerprints (just like on MacOS).&lt;/li>
+&lt;li>The size is a great relief as it&amp;rsquo;s smaller than most gigantic smartphones from basically all brands nowadays.&lt;/li>
+&lt;li>The camera is really good even though it&amp;rsquo;s just one lens.&lt;/li>
+&lt;/ul></description></item><item><title>The Story of My First Makefile — Half-Versioned Secrets Management</title><link>https://jscheytt.github.io/p/the-story-of-my-first-makefile-half-versioned-secrets-management/</link><pubDate>Mon, 06 Sep 2021 13:38:15 +0200</pubDate><guid>https://jscheytt.github.io/p/the-story-of-my-first-makefile-half-versioned-secrets-management/</guid><description>&lt;p>As a CloudOps Engineer one key skill is &lt;strong>automating repetitive tasks&lt;/strong>.
 What most people grab for intuitively is writing Shell scripts (be it Bash, zsh, fish or whichever flavor you prefer).
 And there are a lot many good reasons to do so:&lt;/p>
 &lt;ol>
