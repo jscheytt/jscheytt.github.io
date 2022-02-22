@@ -159,7 +159,52 @@ port: 8080
 &lt;/section></description></item><item><title>Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace</title><link>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</link><pubDate>Fri, 29 Oct 2021 12:11:47 +0200</pubDate><guid>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">kubectl api-resources --verbs&lt;span class="o">=&lt;/span>list --namespaced -o name &lt;span class="se">\
 &lt;/span>&lt;span class="se">&lt;/span> &lt;span class="p">|&lt;/span> xargs -n &lt;span class="m">1&lt;/span> kubectl get --show-kind --ignore-not-found &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$NAMESPACE&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Props to &lt;a class="link" href="https://cloud.redhat.com/blog/the-hidden-dangers-of-terminating-namespaces" target="_blank" rel="noopener"
->RedHat&lt;/a>.&lt;/p></description></item><item><title>Transitioning from Android to iOS — The Good, the Bad, and the Ugly</title><link>https://jscheytt.github.io/p/transitioning-from-android-to-ios-the-good-the-bad-and-the-ugly/</link><pubDate>Sat, 25 Sep 2021 17:13:18 +0200</pubDate><guid>https://jscheytt.github.io/p/transitioning-from-android-to-ios-the-good-the-bad-and-the-ugly/</guid><description>&lt;p>This year I have switched from an Android smartphone (Samsung Galaxy J3 (2016)) to an iPhone (SE 2020).&lt;/p>
+>RedHat&lt;/a>.&lt;/p></description></item><item><title>Guessing UUIDs would actually take very long</title><link>https://jscheytt.github.io/p/guessing-uuids-would-actually-take-very-long/</link><pubDate>Wed, 06 Oct 2021 08:32:23 +0200</pubDate><guid>https://jscheytt.github.io/p/guessing-uuids-would-actually-take-very-long/</guid><description>&lt;p>UUIDs are 128-bit numbers.
+That means they have $2^{128}$ possible values which is roughly $3 \cdot 10^{38}$ (or in scientific notation, 3e38).&lt;/p>
+&lt;p>Does this range make it safe for cryptographic purposes?
+Most people on the internet say an emphatic &amp;ldquo;No!&amp;rdquo;, so I am just keeping this here as a 🚨 disclaimer.&lt;/p>
+&lt;p>But is it at least &lt;strong>collision-safe&lt;/strong>?
+I think definitely yes.
+And is it also &lt;strong>guess-safe&lt;/strong>?
+Let&amp;rsquo;s explore that question with a bit of maths:&lt;/p>
+&lt;h1 id="example-scenario">Example Scenario&lt;/h1>
+&lt;p>Let&amp;rsquo;s say you have an API and you know the records are referenced by their UUID.
+And let&amp;rsquo;s say you wanted to guess any valid record (because &lt;a class="link" href="https://stackoverflow.com/questions/3652944/how-securely-unguessable-are-guids" target="_blank" rel="noopener"
+>💰 money&lt;/a>).&lt;/p>
+&lt;p>What is a realistic scenario, i.e. a reasonably expectable time it would take you to find a valid record?
+Let&amp;rsquo;s just naively assume you find a valid UUID after randomly iterating over half of all possible UUIDs.&lt;/p>
+&lt;h1 id="how-long-would-that-take-you">How long would that take you?&lt;/h1>
+&lt;p>Imagine you had started firing requests at your hypothetical API &lt;strong>at the beginning of the observable universe&lt;/strong>, i.e. about 1.3772e10 years (or 4.3437e17 seconds) ago.
+And you send requests at a rate of &lt;strong>1 trillion (1e12) requests per second&lt;/strong> (and, of course, your target API responds at the same rate 😉).
+(You would have to be &lt;em>very&lt;/em> physically close to the API server - at a trillionth of a second, light and therefore information travels only a measly 0.3 millimeters &amp;hellip;)&lt;/p>
+&lt;p>How many UUIDs would you have covered?
+You would have processed barely &lt;strong>1 billionth of all possible UUIDs&lt;/strong> (to be precise: 1e12 * 4,3437e17 / 2^128 ≈ 1.2765e-9).
+That is not even remotely close to half of all UUIDs.
+To cover half of all possible UUIDs you would have to continue for another &amp;hellip; how many years?&lt;/p>
+&lt;p>$$
+\frac{(1.2765 \cdot 10^{9} - 1) \cdot 4.3437 \cdot 10^{17} \ seconds}{2} = 2.7725 \cdot 10^{26} \ seconds = 8.786 \cdot 10^{18} \ years
+$$&lt;/p>
+&lt;p>And these roughly 10 quintillion years are roughly &lt;strong>1 billion times the age of the universe&lt;/strong>.
+So you would very probably never live to see the matching of the UUID.&lt;/p>
+&lt;p>But, just hypothetically assuming you have started your client&amp;rsquo;s requests at the dawn of time and can continue to run it on this Earth unattended for as long as this planet exists:
+Would you still &lt;strong>physically have enough time&lt;/strong> to execute your requests (for half of all UUIDs)?&lt;/p>
+&lt;p>We are going into &lt;a class="link" href="https://en.wikipedia.org/wiki/Timeline_of_the_far_future" target="_blank" rel="noopener"
+>lots of speculation&lt;/a> now, but:&lt;/p>
+&lt;ul>
+&lt;li>In latest 2e9 years, all life will have vanished from Earth, the oceans have evaporated, the surface temperature will reach around 150 ° C.
+&lt;ul>
+&lt;li>You better build your client and API servers very temperature robust 🏜 &amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>In 1e14 years, all stars will have exhausted their fuel.&lt;/li>
+&lt;li>Assuming the Earth has not been completely engulfed by the Sun during its red giant phase,
+&lt;ul>
+&lt;li>and assuming the Earth was not already ejected from its orbit into outer space (not another galaxy),&lt;/li>
+&lt;li>then the Earth would surely collide with the then black dwarf Sun in 10e20 years.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>So yes, with a bit of preparation (temperature hardening, robust solar panels, radiation shielding) your client server would probably finish &lt;em>just in time&lt;/em> before the Earth itself becomes mere history 😉.&lt;/p></description></item><item><title>Transitioning from Android to iOS — The Good, the Bad, and the Ugly</title><link>https://jscheytt.github.io/p/transitioning-from-android-to-ios-the-good-the-bad-and-the-ugly/</link><pubDate>Sat, 25 Sep 2021 17:13:18 +0200</pubDate><guid>https://jscheytt.github.io/p/transitioning-from-android-to-ios-the-good-the-bad-and-the-ugly/</guid><description>&lt;p>This year I have switched from an Android smartphone (Samsung Galaxy J3 (2016)) to an iPhone (SE 2020).&lt;/p>
 &lt;p>When switching, these things stood out to me:&lt;/p>
 &lt;ul>
 &lt;li>There is &lt;strong>no really usable calendar app&lt;/strong>.
