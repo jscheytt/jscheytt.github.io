@@ -1,102 +1,125 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Josia's Blog</title><link>https://jscheytt.github.io/</link><description>Recent content on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 01 Feb 2022 14:53:18 +0100</lastBuildDate><atom:link href="https://jscheytt.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>kubectl can explain all resource types in detail</title><link>https://jscheytt.github.io/p/kubectl-can-explain-all-resource-types-in-detail/</link><pubDate>Tue, 01 Feb 2022 14:53:18 +0100</pubDate><guid>https://jscheytt.github.io/p/kubectl-can-explain-all-resource-types-in-detail/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="gp">$ &lt;/span>kubectl explain statefulset
-&lt;span class="go">KIND: StatefulSet
-&lt;/span>&lt;span class="go">VERSION: apps/v1
-&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go">DESCRIPTION:
-&lt;/span>&lt;span class="go"> StatefulSet represents a set of pods with consistent identities. Identities
-&lt;/span>&lt;span class="go"> are defined as:
-&lt;/span>&lt;span class="go"> - Network: A single stable DNS and hostname.
-&lt;/span>&lt;span class="go"> - Storage: As many VolumeClaims as requested. The StatefulSet guarantees
-&lt;/span>&lt;span class="go"> that a given network identity will always map to the same storage identity.
-&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go">FIELDS:
-&lt;/span>&lt;span class="go"> apiVersion &amp;lt;string&amp;gt;
-&lt;/span>&lt;span class="go"> APIVersion defines the versioned schema of this representation of an
-&lt;/span>&lt;span class="go"> object. Servers should convert recognized schemas to the latest internal
-&lt;/span>&lt;span class="go"> value, and may reject unrecognized values. More info:
-&lt;/span>&lt;span class="go"> https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go"> kind &amp;lt;string&amp;gt;
-&lt;/span>&lt;span class="go"> Kind is a string value representing the REST resource this object
-&lt;/span>&lt;span class="go"> represents. Servers may infer this from the endpoint the client submits
-&lt;/span>&lt;span class="go"> requests to. Cannot be updated. In CamelCase. More info:
-&lt;/span>&lt;span class="go"> https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go"> metadata &amp;lt;Object&amp;gt;
-&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go"> spec &amp;lt;Object&amp;gt;
-&lt;/span>&lt;span class="go"> Spec defines the desired identities of pods in this set.
-&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go"> status &amp;lt;Object&amp;gt;
-&lt;/span>&lt;span class="go"> Status is the current status of Pods in this StatefulSet. This data may be
-&lt;/span>&lt;span class="go"> out of date by some window of time.
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I guess this will reduce a lot of my googling in future.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Josia's Blog</title><link>https://jscheytt.github.io/</link><description>Recent content on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 01 Mar 2022 08:34:20 +0100</lastBuildDate><atom:link href="https://jscheytt.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>You can Gitopsify your Ansible</title><link>https://jscheytt.github.io/p/you-can-gitopsify-your-ansible/</link><pubDate>Tue, 01 Mar 2022 08:34:20 +0100</pubDate><guid>https://jscheytt.github.io/p/you-can-gitopsify-your-ansible/</guid><description>&lt;p>I have a &lt;a class="link" href="https://github.com/jscheytt/dotfiles" target="_blank" rel="noopener"
+>dotfiles repository&lt;/a> for setting up my MacOS machine easily and reproducibly.
+For this I am mostly using Ansible, just slightly wrapping it with Make and seasoning it with a pinch of Shell.&lt;/p>
+&lt;p>The core piece of this repository is a &lt;code>Brewfile&lt;/code> and a collection of &lt;a class="link" href="https://github.com/jscheytt/dotfiles/blob/main/files/dotfiles/.oh-my-zsh/custom/aliases.zsh" target="_blank" rel="noopener"
+>Shell aliases&lt;/a> and &lt;a class="link" href="https://github.com/jscheytt/dotfiles/blob/main/files/dotfiles/.oh-my-zsh/custom/functions.sh" target="_blank" rel="noopener"
+>functions&lt;/a>.
+I don&amp;rsquo;t regularly run the Ansible playbook itself because I created it for initially setting up a machine.
+The only thing I run very frequently is the &lt;a class="link" href="https://github.com/jscheytt/dotfiles/blob/main/files/dotfiles/.oh-my-zsh/custom/functions.sh#L107" target="_blank" rel="noopener"
+>upgrade&lt;/a> command which includes persisting new Brew formulae to the &lt;code>Brewfile&lt;/code>.&lt;/p>
+&lt;p>At the same time I have come to love applying &lt;a class="link" href="https://opengitops.dev/" target="_blank" rel="noopener"
+>GitOps principles&lt;/a> to everything I work with.
+Just the other day I was &lt;a class="link" href="https://github.com/jscheytt/dotfiles/commit/c4278a0b8bbe1f4875efd56ceffc43459d919d1f" target="_blank" rel="noopener"
+>moving some commands&lt;/a> (in the vein of &amp;ldquo;global Git pull&amp;rdquo;) out of said &lt;code>upgrade&lt;/code> command into a cronjob.&lt;/p>
+&lt;p>And then it hit me:
+If I create a cronjob for running my Ansible playbook &lt;em>through the playbook itself&lt;/em>, I have GitOps-like reconciliation!&lt;/p>
+&lt;p>Let&amp;rsquo;s do it in just a few lines of yaml:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Ensure dotfiles are applied&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">cron&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Ensure dotfiles are applied&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">minute&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;0&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">hour&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;9&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">weekday&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;1-5&amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># on workdays&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">job&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">make -f &amp;#34;{{ ansible_env.PWD }}&amp;#34;/Makefile build&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>kubectl can explain all resource types in detail</title><link>https://jscheytt.github.io/p/kubectl-can-explain-all-resource-types-in-detail/</link><pubDate>Tue, 01 Feb 2022 14:53:18 +0100</pubDate><guid>https://jscheytt.github.io/p/kubectl-can-explain-all-resource-types-in-detail/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> kubectl explain statefulset
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">KIND: StatefulSet
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">VERSION: apps/v1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go">DESCRIPTION:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> StatefulSet represents a set of pods with consistent identities. Identities
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> are defined as:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> - Network: A single stable DNS and hostname.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> - Storage: As many VolumeClaims as requested. The StatefulSet guarantees
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> that a given network identity will always map to the same storage identity.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go">FIELDS:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> apiVersion &amp;lt;string&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> APIVersion defines the versioned schema of this representation of an
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> object. Servers should convert recognized schemas to the latest internal
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> value, and may reject unrecognized values. More info:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> kind &amp;lt;string&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> Kind is a string value representing the REST resource this object
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> represents. Servers may infer this from the endpoint the client submits
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> requests to. Cannot be updated. In CamelCase. More info:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> metadata &amp;lt;Object&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> spec &amp;lt;Object&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> Spec defines the desired identities of pods in this set.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> status &amp;lt;Object&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> Status is the current status of Pods in this StatefulSet. This data may be
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> out of date by some window of time.
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I guess this will reduce a lot of my googling in future.&lt;/p>
 &lt;p>And it even works on nested fields!&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="gp">$ &lt;/span>kubectl explain deployment.spec.template.spec.containers
-&lt;span class="go">KIND: Deployment
-&lt;/span>&lt;span class="go">VERSION: apps/v1
-&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go">RESOURCE: containers &amp;lt;[]Object&amp;gt;
-&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go">DESCRIPTION:
-&lt;/span>&lt;span class="go"> List of containers belonging to the pod. Containers cannot currently be
-&lt;/span>&lt;span class="go"> added or removed. There must be at least one container in a Pod. Cannot be
-&lt;/span>&lt;span class="go"> updated.
-&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go"> A single application container that you want to run within a pod.
-&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go">FIELDS:
-&lt;/span>&lt;span class="go"> args &amp;lt;[]string&amp;gt;
-&lt;/span>&lt;span class="go"> Arguments to the entrypoint. The docker image&amp;#39;s CMD is used if this is not
-&lt;/span>&lt;span class="go"> provided. Variable references $(VAR_NAME) are expanded using the
-&lt;/span>&lt;span class="go"> container&amp;#39;s environment. If a variable cannot be resolved, the reference in
-&lt;/span>&lt;span class="go"> the input string will be unchanged. The $(VAR_NAME) syntax can be escaped
-&lt;/span>&lt;span class="go"> with a double $$, ie: $$(VAR_NAME). Escaped references will never be
-&lt;/span>&lt;span class="go"> expanded, regardless of whether the variable exists or not. Cannot be
-&lt;/span>&lt;span class="go"> updated. More info:
-&lt;/span>&lt;span class="go"> https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
-&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go"> command &amp;lt;[]string&amp;gt;
-&lt;/span>&lt;span class="go"> Entrypoint array. Not executed within a shell. The docker image&amp;#39;s
-&lt;/span>&lt;span class="go"> ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME)
-&lt;/span>&lt;span class="go"> are expanded using the container&amp;#39;s environment. If a variable cannot be
-&lt;/span>&lt;span class="go"> resolved, the reference in the input string will be unchanged. The
-&lt;/span>&lt;span class="go"> $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME).
-&lt;/span>&lt;span class="go"> Escaped references will never be expanded, regardless of whether the
-&lt;/span>&lt;span class="go"> variable exists or not. Cannot be updated. More info:
-&lt;/span>&lt;span class="go"> https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
-&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go"> env &amp;lt;[]Object&amp;gt;
-&lt;/span>&lt;span class="go"> List of environment variables to set in the container. Cannot be updated.
-&lt;/span>&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="go"> ...
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Trying to simplify k8s labels can be dangerous for your routing</title><link>https://jscheytt.github.io/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/</link><pubDate>Fri, 03 Dec 2021 10:43:01 +0100</pubDate><guid>https://jscheytt.github.io/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/</guid><description>&lt;p>Today I was refactoring a bigger configuration setup that is built with &lt;a class="link" href="https://kustomize.io/" target="_blank" rel="noopener"
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> kubectl explain deployment.spec.template.spec.containers
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">KIND: Deployment
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">VERSION: apps/v1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go">RESOURCE: containers &amp;lt;[]Object&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go">DESCRIPTION:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> List of containers belonging to the pod. Containers cannot currently be
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> added or removed. There must be at least one container in a Pod. Cannot be
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> updated.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> A single application container that you want to run within a pod.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go">FIELDS:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> args &amp;lt;[]string&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> Arguments to the entrypoint. The docker image&amp;#39;s CMD is used if this is not
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> provided. Variable references $(VAR_NAME) are expanded using the
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> container&amp;#39;s environment. If a variable cannot be resolved, the reference in
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> the input string will be unchanged. The $(VAR_NAME) syntax can be escaped
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> with a double $$, ie: $$(VAR_NAME). Escaped references will never be
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> expanded, regardless of whether the variable exists or not. Cannot be
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> updated. More info:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> command &amp;lt;[]string&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> Entrypoint array. Not executed within a shell. The docker image&amp;#39;s
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME)
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> are expanded using the container&amp;#39;s environment. If a variable cannot be
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> resolved, the reference in the input string will be unchanged. The
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME).
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> Escaped references will never be expanded, regardless of whether the
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> variable exists or not. Cannot be updated. More info:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> env &amp;lt;[]Object&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> List of environment variables to set in the container. Cannot be updated.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> ...
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Trying to simplify k8s labels can be dangerous for your routing</title><link>https://jscheytt.github.io/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/</link><pubDate>Fri, 03 Dec 2021 10:43:01 +0100</pubDate><guid>https://jscheytt.github.io/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/</guid><description>&lt;p>Today I was refactoring a bigger configuration setup that is built with &lt;a class="link" href="https://kustomize.io/" target="_blank" rel="noopener"
 >kustomize&lt;/a>.
 I see kustomize as a light-weight way of packaging multiple Kubernetes manifests, together with a little bit of logic.&lt;/p>
 &lt;p>The &lt;strong>base kustomization&lt;/strong> of the application config repo I was refactoring looked something like this:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="nt">apiVersion&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">kustomize.config.k8s.io/v1beta1&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">kind&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Kustomization&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">resources&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/cronjob-backup.yaml&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/deployment.yaml&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/ingress.yaml&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/pod-disruption-budget.yaml&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/service.yaml&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">commonAnnotations&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">source&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">java&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">tenant&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">acme&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">configMapGenerator&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">acme-app-config&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">files&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="l">configs/10-local.properties&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="l">configs/30-local.properties&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="l">configs/40-local.properties&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I have an almost pathologic tendency to simplify and DRY everything up that I find, especially in configuration code.
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">apiVersion&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">kustomize.config.k8s.io/v1beta1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">kind&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Kustomization&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">resources&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/cronjob-backup.yaml&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/deployment.yaml&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/ingress.yaml&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/pod-disruption-budget.yaml&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/service.yaml&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">commonAnnotations&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">source&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">java&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">tenant&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">acme&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">configMapGenerator&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">acme-app-config&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">files&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">configs/10-local.properties&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">configs/30-local.properties&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">configs/40-local.properties&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I have an almost pathologic tendency to simplify and DRY everything up that I find, especially in configuration code.
 And as I saw a lot of &lt;strong>repeating Labels&lt;/strong> in the manifests, I thought &amp;ldquo;Well, let&amp;rsquo;s just unify them.&amp;rdquo;&lt;/p>
 &lt;p>So I went ahead, removed the repetitive Labels from the manifests and added the following block to the kustomization:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="nt">commonLabels&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">app&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">acme-app&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I knew a bit about Kubernetes Services and that they &lt;em>use Labels to find the Pods to which they should direct their traffic&lt;/em>.
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">commonLabels&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">app&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">acme-app&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I knew a bit about Kubernetes Services and that they &lt;em>use Labels to find the Pods to which they should direct their traffic&lt;/em>.
 That&amp;rsquo;s why I thoroughly verified that after my change the Service and the Deployment would still have &lt;strong>the same selector labels&lt;/strong>.
 🤗 Nothing seemed off &amp;hellip;&lt;/p>
 &lt;p>I committed and pushed my changes, and after the Deployment had finished restarting, I clicked through the application.
@@ -111,43 +134,43 @@ But now a suspicion started sneaking in:&lt;/p>
 &lt;/blockquote>
 &lt;p>Following this idea, I refactored my configs a bit.
 Soon, I was able to ensure that requests to the Service would only point to my target Deployment (and not to any other Pods):&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="gh">diff --git a/base/kustomization.yaml b/base/kustomization.yaml
-&lt;/span>&lt;span class="gh">index 6c1c6f7..b77b0fc 100644
-&lt;/span>&lt;span class="gh">&lt;/span>&lt;span class="gd">--- a/base/kustomization.yaml
-&lt;/span>&lt;span class="gd">&lt;/span>&lt;span class="gi">+++ b/base/kustomization.yaml
-&lt;/span>&lt;span class="gi">&lt;/span>&lt;span class="gu">@@ -15,7 +15,6 @@ commonAnnotations:
-&lt;/span>&lt;span class="gu">&lt;/span> source: java
-tenant: acme
-&lt;span class="gd">-commonLabels:
-&lt;/span>&lt;span class="gd">- app: acme-app
-&lt;/span>&lt;span class="gd">&lt;/span> configMapGenerator:
-- name: acme-app-config
-&lt;span class="gh">diff --git a/base/manifests/deployment.yaml b/base/manifests/deployment.yaml
-&lt;/span>&lt;span class="gh">index 1e4aa3f..a60a798 100644
-&lt;/span>&lt;span class="gh">&lt;/span>&lt;span class="gd">--- a/base/manifests/deployment.yaml
-&lt;/span>&lt;span class="gd">&lt;/span>&lt;span class="gi">+++ b/base/manifests/deployment.yaml
-&lt;/span>&lt;span class="gi">&lt;/span>&lt;span class="gu">@@ -16,6 +16,9 @@ metadata:
-&lt;/span>&lt;span class="gu">&lt;/span> spec:
-replicas: 1
-&lt;span class="gi">+ selector:
-&lt;/span>&lt;span class="gi">+ matchLabels:
-&lt;/span>&lt;span class="gi">+ app: acme-app
-&lt;/span>&lt;span class="gi">&lt;/span> template:
-metadata:
-labels:
-&lt;span class="gi">+ app: acme-app
-&lt;/span>&lt;span class="gi">&lt;/span> spec:
-containers:
-&lt;span class="gh">diff --git a/base/manifests/service.yaml b/base/manifests/service.yaml
-&lt;/span>&lt;span class="gh">index b05d898..89af021 100644
-&lt;/span>&lt;span class="gh">&lt;/span>&lt;span class="gd">--- a/base/manifests/service.yaml
-&lt;/span>&lt;span class="gd">&lt;/span>&lt;span class="gi">+++ b/base/manifests/service.yaml
-&lt;/span>&lt;span class="gi">&lt;/span>&lt;span class="gu">@@ -10,3 +10,5 @@ spec:
-&lt;/span>&lt;span class="gu">&lt;/span> - name: api
-port: 8080
-&lt;span class="gi">+ selector:
-&lt;/span>&lt;span class="gi">+ app: acme-app
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>(Notice that the Deployment needs the Label both in &lt;code>.spec.selector.matchLabels&lt;/code> and &lt;code>.spec.template.metadata.labels&lt;/code>!)&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl">&lt;span class="gh">diff --git a/base/kustomization.yaml b/base/kustomization.yaml
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">index 6c1c6f7..b77b0fc 100644
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">&lt;/span>&lt;span class="gd">--- a/base/kustomization.yaml
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">&lt;/span>&lt;span class="gi">+++ b/base/kustomization.yaml
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">&lt;/span>&lt;span class="gu">@@ -15,7 +15,6 @@ commonAnnotations:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span> source: java
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> tenant: acme
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">-commonLabels:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">- app: acme-app
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">&lt;/span> configMapGenerator:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: acme-app-config
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">diff --git a/base/manifests/deployment.yaml b/base/manifests/deployment.yaml
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">index 1e4aa3f..a60a798 100644
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">&lt;/span>&lt;span class="gd">--- a/base/manifests/deployment.yaml
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">&lt;/span>&lt;span class="gi">+++ b/base/manifests/deployment.yaml
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">&lt;/span>&lt;span class="gu">@@ -16,6 +16,9 @@ metadata:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span> spec:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> replicas: 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ selector:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ matchLabels:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ app: acme-app
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">&lt;/span> template:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> metadata:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> labels:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ app: acme-app
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">&lt;/span> spec:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> containers:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">diff --git a/base/manifests/service.yaml b/base/manifests/service.yaml
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">index b05d898..89af021 100644
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">&lt;/span>&lt;span class="gd">--- a/base/manifests/service.yaml
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">&lt;/span>&lt;span class="gi">+++ b/base/manifests/service.yaml
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">&lt;/span>&lt;span class="gu">@@ -10,3 +10,5 @@ spec:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span> - name: api
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> port: 8080
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ selector:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ app: acme-app
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>(Notice that the Deployment needs the Label both in &lt;code>.spec.selector.matchLabels&lt;/code> and &lt;code>.spec.template.metadata.labels&lt;/code>!)&lt;/p>
 &lt;p>And surely enough, after deploying this fix, the request to the application worked flawlessly 😊✅.&lt;/p>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
@@ -156,9 +179,9 @@ port: 8080
 &lt;p>It does not matter for which purpose I created this CronJob, it could have been any Kubernetes Resource that creates Pods.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace</title><link>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</link><pubDate>Fri, 29 Oct 2021 12:11:47 +0200</pubDate><guid>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">kubectl api-resources --verbs&lt;span class="o">=&lt;/span>list --namespaced -o name &lt;span class="se">\
-&lt;/span>&lt;span class="se">&lt;/span> &lt;span class="p">|&lt;/span> xargs -n &lt;span class="m">1&lt;/span> kubectl get --show-kind --ignore-not-found &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$NAMESPACE&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>Props to &lt;a class="link" href="https://cloud.redhat.com/blog/the-hidden-dangers-of-terminating-namespaces" target="_blank" rel="noopener"
+&lt;/section></description></item><item><title>Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace</title><link>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</link><pubDate>Fri, 29 Oct 2021 12:11:47 +0200</pubDate><guid>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">kubectl api-resources --verbs&lt;span class="o">=&lt;/span>list --namespaced -o name &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="p">|&lt;/span> xargs -n &lt;span class="m">1&lt;/span> kubectl get --show-kind --ignore-not-found &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$NAMESPACE&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Props to &lt;a class="link" href="https://cloud.redhat.com/blog/the-hidden-dangers-of-terminating-namespaces" target="_blank" rel="noopener"
 >RedHat&lt;/a>.&lt;/p></description></item><item><title>Guessing UUIDs would actually take very long</title><link>https://jscheytt.github.io/p/guessing-uuids-would-actually-take-very-long/</link><pubDate>Wed, 06 Oct 2021 08:32:23 +0200</pubDate><guid>https://jscheytt.github.io/p/guessing-uuids-would-actually-take-very-long/</guid><description>&lt;p>UUIDs are 128-bit numbers.
 That means they have $2^{128}$ possible values which is roughly $3 \cdot 10^{38}$ (or in scientific notation, 3e38).&lt;/p>
 &lt;p>Does this range make it safe for cryptographic purposes?
@@ -299,13 +322,13 @@ To me this sounds very reminiscent of the distinction between &lt;em>declarative
 └── service3.sample.json
 &lt;/code>&lt;/pre>&lt;p>I put the keys I needed into the sample files and as a value a description of what to put in (or e.g. from which Password Service to fetch the value from).
 The file &lt;code>service2.sample.json&lt;/code> would e.g. look like this.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
-&lt;span class="nt">&amp;#34;EXTERNAL_API_KEY&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;API Key of EXTERNAL_SERVICE&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nt">&amp;#34;CLOUD_SERVICE_CLIENT_SECRET&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;client secret for accessing CLOUD_SERVICE&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nt">&amp;#34;CLOUD_SERVICE_PASSWORD&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;password for accessing CLOUD_SERVICE&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="nt">&amp;#34;BASIC_AUTH_PASSWORD&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;password for sending via Basic Auth&amp;#34;&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>The target structure I wanted to achieve was this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;EXTERNAL_API_KEY&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;API Key of EXTERNAL_SERVICE&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;CLOUD_SERVICE_CLIENT_SECRET&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;client secret for accessing CLOUD_SERVICE&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;CLOUD_SERVICE_PASSWORD&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;password for accessing CLOUD_SERVICE&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;BASIC_AUTH_PASSWORD&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;password for sending via Basic Auth&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The target structure I wanted to achieve was this:&lt;/p>
 &lt;pre tabindex="0">&lt;code>secrets
 ├── dev
 │   ├── config1.json # This file contains the *keys* of
@@ -329,61 +352,64 @@ The file &lt;code>service2.sample.json&lt;/code> would e.g. look like this.&lt;/
 ├── service2.sample.json
 └── service3.sample.json
 &lt;/code>&lt;/pre>&lt;p>In order to not commit any actual secrets into version control, I added the following entries to my &lt;strong>.gitignore&lt;/strong>:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="c1"># Ignore secret data ...&lt;/span>
-secrets/**/*.json
-&lt;span class="c1"># ... but keep the samples&lt;/span>
-!secrets/*.sample.json
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="copying-the-samples">Copying the Samples&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Ignore secret data ...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">secrets/**/*.json
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># ... but keep the samples&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">!secrets/*.sample.json
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="copying-the-samples">Copying the Samples&lt;/h3>
 &lt;p>Now how do you copy the files to all environment&amp;rsquo;s directories?
 And how do you make sure you copy them &lt;em>exactly once&lt;/em> (so you don&amp;rsquo;t lose the secrets you already entered)?&lt;/p>
 &lt;p>You could create a script with the following logic:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="c1"># For each environment directory:&lt;/span>
-&lt;span class="c1">## For each sample file:&lt;/span>
-&lt;span class="c1">### Extract the service name&lt;/span>
-&lt;span class="c1">### Check if target secret file already exists&lt;/span>
-&lt;span class="c1">### If not, copy sample to target file&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>But now, 🏗 Make to the rescue:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-make" data-lang="make">&lt;span class="c">### Variables
-&lt;/span>&lt;span class="c">&lt;/span>
-&lt;span class="c"># Fetch all sample files.
-&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nv">secrets_samples&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">$(&lt;/span>wildcard secrets/*.sample.json&lt;span class="k">)&lt;/span>
-&lt;span class="c"># Construct the paths for all dev secrets destinations.
-&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nv">dev_secrets&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">$(&lt;/span>patsubst secrets/%.sample.json,secrets/dev/%.json,&lt;span class="k">$(&lt;/span>secrets_samples&lt;span class="k">))&lt;/span>
-&lt;span class="c"># Construct the paths for all staging secrets destinations.
-&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nv">staging_secrets&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">$(&lt;/span>patsubst secrets/dev/%,secrets/staging/%,&lt;span class="k">$(&lt;/span>dev_secrets&lt;span class="k">))&lt;/span>
-&lt;span class="c"># Construct the paths for all staging secrets destinations.
-&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nv">prod_secrets&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">$(&lt;/span>patsubst secrets/dev/%,secrets/prod/%,&lt;span class="k">$(&lt;/span>dev_secrets&lt;span class="k">))&lt;/span>
-&lt;span class="c"># Gather the paths of all secrets&amp;#39; destinations.
-&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nv">all_secrets&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">$(&lt;/span>dev_secrets&lt;span class="k">)&lt;/span> &lt;span class="k">$(&lt;/span>staging_secrets&lt;span class="k">)&lt;/span> &lt;span class="k">$(&lt;/span>prod_secrets&lt;span class="k">)&lt;/span>
-&lt;span class="c">### Rules
-&lt;/span>&lt;span class="c">&lt;/span>
-&lt;span class="c"># 🎯 Purpose: &amp;#34;Copy all samples to their destinations.&amp;#34;
-&lt;/span>&lt;span class="c"># 🤓 What Make sees: &amp;#34;When you build the file secrets.copy-templates,
-&lt;/span>&lt;span class="c"># make sure that all files in $(all_secrets) have been built first.&amp;#34;
-&lt;/span>&lt;span class="c"># 👩‍🏫 Explanation: A rule can be empty, and a rule can have prerequisites
-&lt;/span>&lt;span class="c"># on the first line. I like to think of such a rule as a kind of shortcut.
-&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">secrets.copy-templates&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">$(&lt;/span>&lt;span class="nv">all_secrets&lt;/span>&lt;span class="k">)&lt;/span>
-&lt;span class="c"># 🎯 Purpose: &amp;#34;Ensure that Make still runs the job &amp;#39;secrets.copy-templates&amp;#39;
-&lt;/span>&lt;span class="c"># even if a file called &amp;#39;secrets.copy-templates&amp;#39; is created.&amp;#34;
-&lt;/span>&lt;span class="c"># 🤓 What Make sees: &amp;#34;I am supposed to always build secrets.copy-templates
-&lt;/span>&lt;span class="c"># even if that file already exists.&amp;#34;
-&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">.PHONY&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>.&lt;span class="n">copy&lt;/span>-&lt;span class="n">templates&lt;/span>
-&lt;span class="c"># 🎯 Purpose: &amp;#34;Copy the file on the right to the file on the left.&amp;#34;
-&lt;/span>&lt;span class="c"># 🤓 What Make sees: &amp;#34;When a file matching the pattern secrets/dev/(.*).json
-&lt;/span>&lt;span class="c"># is built, execute this rule.
-&lt;/span>&lt;span class="c"># Also first make sure that the corresponding file secrets/$1.sample.json
-&lt;/span>&lt;span class="c"># has been built before.
-&lt;/span>&lt;span class="c"># And the rule is: Copy the source file on the right ($&amp;lt;) to the destination
-&lt;/span>&lt;span class="c"># file on the left ($@).&amp;#34;
-&lt;/span>&lt;span class="c"># 👩‍🏫 Explanation: These 3 rules are applied when you call secrets.copy-templates
-&lt;/span>&lt;span class="c"># because it requires $(all_secrets) to be built.
-&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">secrets/dev/%.json&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>/%.&lt;span class="n">sample&lt;/span>.&lt;span class="n">json&lt;/span>
-cp $&amp;lt; &lt;span class="nv">$@&lt;/span>
-&lt;span class="nf">secrets/staging/%.json&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>/%.&lt;span class="n">sample&lt;/span>.&lt;span class="n">json&lt;/span>
-cp $&amp;lt; &lt;span class="nv">$@&lt;/span>
-&lt;span class="nf">secrets/prod/%.json&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>/%.&lt;span class="n">sample&lt;/span>.&lt;span class="n">json&lt;/span>
-cp $&amp;lt; &lt;span class="nv">$@&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you now execute &lt;code>make secrets.copy-templates&lt;/code>, the sample files will be copied to all environment directories.
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># For each environment directory:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">## For each sample file:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### Extract the service name&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### Check if target secret file already exists&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">### If not, copy sample to target file&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>But now, 🏗 Make to the rescue:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-make" data-lang="make">&lt;span class="line">&lt;span class="cl">&lt;span class="c">### Variables
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Fetch all sample files.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nv">secrets_samples&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">$(&lt;/span>wildcard secrets/*.sample.json&lt;span class="k">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Construct the paths for all dev secrets destinations.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nv">dev_secrets&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">$(&lt;/span>patsubst secrets/%.sample.json,secrets/dev/%.json,&lt;span class="k">$(&lt;/span>secrets_samples&lt;span class="k">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Construct the paths for all staging secrets destinations.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nv">staging_secrets&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">$(&lt;/span>patsubst secrets/dev/%,secrets/staging/%,&lt;span class="k">$(&lt;/span>dev_secrets&lt;span class="k">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Construct the paths for all staging secrets destinations.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nv">prod_secrets&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">$(&lt;/span>patsubst secrets/dev/%,secrets/prod/%,&lt;span class="k">$(&lt;/span>dev_secrets&lt;span class="k">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Gather the paths of all secrets&amp;#39; destinations.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nv">all_secrets&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">$(&lt;/span>dev_secrets&lt;span class="k">)&lt;/span> &lt;span class="k">$(&lt;/span>staging_secrets&lt;span class="k">)&lt;/span> &lt;span class="k">$(&lt;/span>prod_secrets&lt;span class="k">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">### Rules
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 🎯 Purpose: &amp;#34;Copy all samples to their destinations.&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 🤓 What Make sees: &amp;#34;When you build the file secrets.copy-templates,
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># make sure that all files in $(all_secrets) have been built first.&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 👩‍🏫 Explanation: A rule can be empty, and a rule can have prerequisites
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># on the first line. I like to think of such a rule as a kind of shortcut.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nf">secrets.copy-templates&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">$(&lt;/span>&lt;span class="nv">all_secrets&lt;/span>&lt;span class="k">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 🎯 Purpose: &amp;#34;Ensure that Make still runs the job &amp;#39;secrets.copy-templates&amp;#39;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># even if a file called &amp;#39;secrets.copy-templates&amp;#39; is created.&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 🤓 What Make sees: &amp;#34;I am supposed to always build secrets.copy-templates
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># even if that file already exists.&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nf">.PHONY&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>.&lt;span class="n">copy&lt;/span>-&lt;span class="n">templates&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 🎯 Purpose: &amp;#34;Copy the file on the right to the file on the left.&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 🤓 What Make sees: &amp;#34;When a file matching the pattern secrets/dev/(.*).json
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># is built, execute this rule.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Also first make sure that the corresponding file secrets/$1.sample.json
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># has been built before.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># And the rule is: Copy the source file on the right ($&amp;lt;) to the destination
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># file on the left ($@).&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 👩‍🏫 Explanation: These 3 rules are applied when you call secrets.copy-templates
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># because it requires $(all_secrets) to be built.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nf">secrets/dev/%.json&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>/%.&lt;span class="n">sample&lt;/span>.&lt;span class="n">json&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cp $&amp;lt; &lt;span class="nv">$@&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">secrets/staging/%.json&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>/%.&lt;span class="n">sample&lt;/span>.&lt;span class="n">json&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cp $&amp;lt; &lt;span class="nv">$@&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">secrets/prod/%.json&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>/%.&lt;span class="n">sample&lt;/span>.&lt;span class="n">json&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cp $&amp;lt; &lt;span class="nv">$@&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you now execute &lt;code>make secrets.copy-templates&lt;/code>, the sample files will be copied to all environment directories.
 And if you run that same command again, 🙊 &lt;strong>Make will not copy anything&lt;/strong> because it intelligenty detected that the source files have not changed since the last execution.&lt;/p>
 &lt;p>The code above is certainly not optimal - I bet you could abstract away the environment names with bit of metaprogramming, but let&amp;rsquo;s not optimize prematurely.
 I think the result is already impressive, especially if you consider the following:&lt;/p>
@@ -414,9 +440,9 @@ Make compares timestamps, and when the source has a newer last-modified timestam
 We sure can.
 You can either make sure that you edit each environment file after editing the sample file.
 Or you change the last-modified timestamp &lt;strong>via a build&lt;/strong> in the Makefile 😉:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-make" data-lang="make">&lt;span class="nf">secrets.ensure-copy-once&lt;/span>&lt;span class="o">:&lt;/span>
-&lt;span class="k">for&lt;/span> f in &lt;span class="k">$(&lt;/span>all_secrets&lt;span class="k">)&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">do&lt;/span> &lt;span class="o">[&lt;/span> -f &lt;span class="nv">$$&lt;/span>f &lt;span class="o">]&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> touch &lt;span class="nv">$$&lt;/span>f&lt;span class="p">;&lt;/span> &lt;span class="k">done&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now whenever you edit a sample file &lt;em>after the initial secrets.copy-templates&lt;/em> you run this build via &lt;code>make secrets.ensure-copy-once&lt;/code> and 🛡 your secrets will not be deleted.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-make" data-lang="make">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">secrets.ensure-copy-once&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> f in &lt;span class="k">$(&lt;/span>all_secrets&lt;span class="k">)&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">do&lt;/span> &lt;span class="o">[&lt;/span> -f &lt;span class="nv">$$&lt;/span>f &lt;span class="o">]&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> touch &lt;span class="nv">$$&lt;/span>f&lt;span class="p">;&lt;/span> &lt;span class="k">done&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now whenever you edit a sample file &lt;em>after the initial secrets.copy-templates&lt;/em> you run this build via &lt;code>make secrets.ensure-copy-once&lt;/code> and 🛡 your secrets will not be deleted.&lt;/p>
 &lt;h3 id="extension-environment-specific-sample-files">Extension: Environment-specific Sample Files&lt;/h3>
 &lt;p>One implicit assumption in my structure was that the secrets in service2 will always have the same schema &lt;strong>in every environment&lt;/strong>.
 One day it so happened that service2 needed to have additional keys on prod, but they &lt;strong>should not be present&lt;/strong> on dev or staging.&lt;/p>
@@ -442,74 +468,79 @@ One day it so happened that service2 needed to have additional keys on prod, but
 ├── service2.sample.prod.json # Prod-specific sample file
 └── service3.sample.json
 &lt;/code>&lt;/pre>&lt;p>And I wrote my first &lt;strong>Makefile function&lt;/strong>:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-make" data-lang="make">&lt;span class="c"># A Make function can take in an arbitrary number of numbered parameters.
-&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="err">define&lt;/span> &lt;span class="err">copy_template&lt;/span>
-&lt;span class="err">cp&lt;/span> &lt;span class="k">$(&lt;/span>1&lt;span class="k">)&lt;/span> &lt;span class="k">$(&lt;/span>2&lt;span class="k">)&lt;/span>
-&lt;span class="err">@&lt;/span>&lt;span class="c"># Check if there is a more environment-specific sample file
-&lt;/span>&lt;span class="c">&lt;/span> &lt;span class="k">$(&lt;/span>&lt;span class="nb">eval&lt;/span> ENVIRONMENT :&lt;span class="o">=&lt;/span> &lt;span class="k">$(&lt;/span>shell &lt;span class="nb">echo&lt;/span> &lt;span class="k">$(&lt;/span>2&lt;span class="k">)&lt;/span> &lt;span class="p">|&lt;/span> sed -E &lt;span class="s1">&amp;#39;s#secrets/(.*)/.*#\1#&amp;#39;&lt;/span>&lt;span class="k">))&lt;/span>
-&lt;span class="k">$(&lt;/span>&lt;span class="nb">eval&lt;/span> ENVIRONMENT_SAMPLE_FILE :&lt;span class="o">=&lt;/span> &lt;span class="k">$(&lt;/span>patsubst %.sample.json,%.sample.&lt;span class="k">$(&lt;/span>ENVIRONMENT&lt;span class="k">)&lt;/span>.json,&lt;span class="k">$(&lt;/span>1&lt;span class="k">)))&lt;/span>
-@# If environment-specific file exists, copy it to destination
-&lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> -f &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>ENVIRONMENT_SAMPLE_FILE&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">then&lt;/span> cp &lt;span class="k">$(&lt;/span>ENVIRONMENT_SAMPLE_FILE&lt;span class="k">)&lt;/span> &lt;span class="k">$(&lt;/span>2&lt;span class="k">)&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">fi&lt;/span>
-&lt;span class="err">endef&lt;/span>
-&lt;span class="c"># Calling a Make function works by executing &amp;#39;call&amp;#39;
-&lt;/span>&lt;span class="c"># with the function name and all its parameters as a list.
-&lt;/span>&lt;span class="c"># My previous rules now became this:
-&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">secrets/dev/%.json&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>/%.&lt;span class="n">sample&lt;/span>.&lt;span class="n">json&lt;/span>
-&lt;span class="k">$(&lt;/span>call copy_template,$&amp;lt;,&lt;span class="nv">$@&lt;/span>&lt;span class="k">)&lt;/span>
-&lt;span class="nf">secrets/staging/%.json&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>/%.&lt;span class="n">sample&lt;/span>.&lt;span class="n">json&lt;/span>
-&lt;span class="k">$(&lt;/span>call copy_template,$&amp;lt;,&lt;span class="nv">$@&lt;/span>&lt;span class="k">)&lt;/span>
-&lt;span class="nf">secrets/prod/%.json&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>/%.&lt;span class="n">sample&lt;/span>.&lt;span class="n">json&lt;/span>
-&lt;span class="k">$(&lt;/span>call copy_template,$&amp;lt;,&lt;span class="nv">$@&lt;/span>&lt;span class="k">)&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="-perfect-symphony-calling-scripts-from-make">🍣 Perfect Symphony: Calling Scripts From Make&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-make" data-lang="make">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># A Make function can take in an arbitrary number of numbered parameters.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="err">define&lt;/span> &lt;span class="err">copy_template&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">cp&lt;/span> &lt;span class="k">$(&lt;/span>1&lt;span class="k">)&lt;/span> &lt;span class="k">$(&lt;/span>2&lt;span class="k">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">@&lt;/span>&lt;span class="c"># Check if there is a more environment-specific sample file
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span> &lt;span class="k">$(&lt;/span>&lt;span class="nb">eval&lt;/span> ENVIRONMENT :&lt;span class="o">=&lt;/span> &lt;span class="k">$(&lt;/span>shell &lt;span class="nb">echo&lt;/span> &lt;span class="k">$(&lt;/span>2&lt;span class="k">)&lt;/span> &lt;span class="p">|&lt;/span> sed -E &lt;span class="s1">&amp;#39;s#secrets/(.*)/.*#\1#&amp;#39;&lt;/span>&lt;span class="k">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">$(&lt;/span>&lt;span class="nb">eval&lt;/span> ENVIRONMENT_SAMPLE_FILE :&lt;span class="o">=&lt;/span> &lt;span class="k">$(&lt;/span>patsubst %.sample.json,%.sample.&lt;span class="k">$(&lt;/span>ENVIRONMENT&lt;span class="k">)&lt;/span>.json,&lt;span class="k">$(&lt;/span>1&lt;span class="k">)))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @# If environment-specific file exists, copy it to destination
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> -f &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>ENVIRONMENT_SAMPLE_FILE&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">then&lt;/span> cp &lt;span class="k">$(&lt;/span>ENVIRONMENT_SAMPLE_FILE&lt;span class="k">)&lt;/span> &lt;span class="k">$(&lt;/span>2&lt;span class="k">)&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">endef&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Calling a Make function works by executing &amp;#39;call&amp;#39;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># with the function name and all its parameters as a list.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># My previous rules now became this:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nf">secrets/dev/%.json&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>/%.&lt;span class="n">sample&lt;/span>.&lt;span class="n">json&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">$(&lt;/span>call copy_template,$&amp;lt;,&lt;span class="nv">$@&lt;/span>&lt;span class="k">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">secrets/staging/%.json&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>/%.&lt;span class="n">sample&lt;/span>.&lt;span class="n">json&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">$(&lt;/span>call copy_template,$&amp;lt;,&lt;span class="nv">$@&lt;/span>&lt;span class="k">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">secrets/prod/%.json&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>/%.&lt;span class="n">sample&lt;/span>.&lt;span class="n">json&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">$(&lt;/span>call copy_template,$&amp;lt;,&lt;span class="nv">$@&lt;/span>&lt;span class="k">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="-perfect-symphony-calling-scripts-from-make">🍣 Perfect Symphony: Calling Scripts From Make&lt;/h3>
 &lt;p>It&amp;rsquo;s all good and nice to have your secrets created, but how do you deploy them to AWS Secrets Manager?
 Of course you write a thin wrapper around the wonderfully verbose AWS CLI:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="cp">#!/usr/bin/env bash
-&lt;/span>&lt;span class="cp">&lt;/span>&lt;span class="nb">set&lt;/span> -euo pipefail
-&lt;span class="c1"># set -x # DEBUG&lt;/span>
-&lt;span class="nv">secret_name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$1&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
-&lt;span class="c1"># Use second argument or read stdin&lt;/span>
-&lt;span class="nv">secret_value&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">2&lt;/span>&lt;span class="k">:-$(&lt;/span>cat -&lt;span class="k">)&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
-&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$secret_value&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="c1"># DEBUG&lt;/span>
-&lt;span class="c1"># Create secret in idempotent way, avoid script from failing&lt;/span>
-&lt;span class="nb">set&lt;/span> +e
-aws secretsmanager create-secret --name &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$secret_name&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="p">&amp;amp;&lt;/span>&amp;gt; /dev/null
-&lt;span class="nb">set&lt;/span> -e
-&lt;span class="c1"># Put secret value and output response to stdout&lt;/span>
-aws secretsmanager put-secret-value --secret-id &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$secret_name&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="se">\
-&lt;/span>&lt;span class="se">&lt;/span> --secret-string &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$secret_value&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> cat
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>In your terminal you would call it e.g. like this:&lt;br>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/usr/bin/env bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="nb">set&lt;/span> -euo pipefail
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># set -x # DEBUG&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">secret_name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$1&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Use second argument or read stdin&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">secret_value&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">2&lt;/span>&lt;span class="k">:-$(&lt;/span>cat -&lt;span class="k">)&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$secret_value&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="c1"># DEBUG&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Create secret in idempotent way, avoid script from failing&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> +e
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">aws secretsmanager create-secret --name &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$secret_name&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="p">&amp;amp;&lt;/span>&amp;gt; /dev/null
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> -e
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Put secret value and output response to stdout&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">aws secretsmanager put-secret-value --secret-id &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$secret_name&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --secret-string &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$secret_value&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> cat
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In your terminal you would call it e.g. like this:&lt;br>
 &lt;code>./helpers/deploy-secret.sh envs/dev/config1-secrets &amp;lt; secrets/dev/config1.json&lt;/code>&lt;/p>
 &lt;p>Let&amp;rsquo;s make a generic rule in Make to execute this script:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-make" data-lang="make">&lt;span class="c"># The dependency on $(all_secrets) is to make sure that the secrets files exist
-&lt;/span>&lt;span class="c"># before deploying them.
-&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">secret.deploy&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">$(&lt;/span>&lt;span class="nv">all_secrets&lt;/span>&lt;span class="k">)&lt;/span>
-./helpers/deploy-secret.sh &lt;span class="k">$(&lt;/span>name&lt;span class="k">)&lt;/span> &amp;lt; secrets/&lt;span class="k">$(&lt;/span>environment&lt;span class="k">)&lt;/span>/&lt;span class="k">$(&lt;/span>filename&lt;span class="k">)&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>The call to the script that you executed above would become this:&lt;br>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-make" data-lang="make">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># The dependency on $(all_secrets) is to make sure that the secrets files exist
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># before deploying them.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nf">secret.deploy&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">$(&lt;/span>&lt;span class="nv">all_secrets&lt;/span>&lt;span class="k">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ./helpers/deploy-secret.sh &lt;span class="k">$(&lt;/span>name&lt;span class="k">)&lt;/span> &amp;lt; secrets/&lt;span class="k">$(&lt;/span>environment&lt;span class="k">)&lt;/span>/&lt;span class="k">$(&lt;/span>filename&lt;span class="k">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The call to the script that you executed above would become this:&lt;br>
 &lt;code>make secret.deploy name=envs/dev/config1-secrets environment=dev filename=config1&lt;/code>&lt;/p>
 &lt;p>As we have multiple services, let&amp;rsquo;s add one rule per service:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-make" data-lang="make">&lt;span class="c"># The secret values in this one are the same across all environments
-&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">secret.deploy.config1&lt;/span>&lt;span class="o">:&lt;/span>
-&lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secret.deploy &lt;span class="nv">name&lt;/span>&lt;span class="o">=&lt;/span>envs/config1-secrets &lt;span class="nv">filename&lt;/span>&lt;span class="o">=&lt;/span>config1.json
-&lt;span class="c"># service2 has different secret values on the different environments
-&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">secret.deploy.service2&lt;/span>&lt;span class="o">:&lt;/span>
-&lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secret.deploy &lt;span class="nv">name&lt;/span>&lt;span class="o">=&lt;/span>envs/&lt;span class="k">$(&lt;/span>environment&lt;span class="k">)&lt;/span>/service2-secrets &lt;span class="nv">filename&lt;/span>&lt;span class="o">=&lt;/span>service2.json
-&lt;span class="c"># service 3 also has environment-specific secret values
-&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">secret.deploy.service3&lt;/span>&lt;span class="o">:&lt;/span>
-&lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secret.deploy &lt;span class="nv">name&lt;/span>&lt;span class="o">=&lt;/span>envs/&lt;span class="k">$(&lt;/span>environment&lt;span class="k">)&lt;/span>/service3-secrets &lt;span class="nv">filename&lt;/span>&lt;span class="o">=&lt;/span>service3.json
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now we can tie these together into one rule for a whole environment:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-make" data-lang="make">&lt;span class="c"># Deploy all secrets for one environment
-&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">secrets.deploy.all&lt;/span>&lt;span class="o">:&lt;/span>
-&lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secret.deploy.config1
-&lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secret.deploy.service2
-&lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secret.deploy.service3
-&lt;span class="c"># Deploy all secrets for the dev cluster
-&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">secrets.deploy.dev&lt;/span>&lt;span class="o">:&lt;/span>
-&lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secrets.deploy.all &lt;span class="nv">environment&lt;/span>&lt;span class="o">=&lt;/span>dev
-&lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secrets.deploy.all &lt;span class="nv">environment&lt;/span>&lt;span class="o">=&lt;/span>staging
-&lt;span class="c"># Deploy all secrets for the prod cluster
-&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">secrets.deploy.prod&lt;/span>&lt;span class="o">:&lt;/span>
-&lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secrets.deploy.all &lt;span class="nv">environment&lt;/span>&lt;span class="o">=&lt;/span>prod
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>✅ Once you are authenticated to the corresponding AWS account, you can deploy your secrets with either &lt;code>make secrets.deploy.dev&lt;/code> or &lt;code>make secrets.deploy.prod&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-make" data-lang="make">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># The secret values in this one are the same across all environments
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nf">secret.deploy.config1&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secret.deploy &lt;span class="nv">name&lt;/span>&lt;span class="o">=&lt;/span>envs/config1-secrets &lt;span class="nv">filename&lt;/span>&lt;span class="o">=&lt;/span>config1.json
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># service2 has different secret values on the different environments
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nf">secret.deploy.service2&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secret.deploy &lt;span class="nv">name&lt;/span>&lt;span class="o">=&lt;/span>envs/&lt;span class="k">$(&lt;/span>environment&lt;span class="k">)&lt;/span>/service2-secrets &lt;span class="nv">filename&lt;/span>&lt;span class="o">=&lt;/span>service2.json
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># service 3 also has environment-specific secret values
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nf">secret.deploy.service3&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secret.deploy &lt;span class="nv">name&lt;/span>&lt;span class="o">=&lt;/span>envs/&lt;span class="k">$(&lt;/span>environment&lt;span class="k">)&lt;/span>/service3-secrets &lt;span class="nv">filename&lt;/span>&lt;span class="o">=&lt;/span>service3.json
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now we can tie these together into one rule for a whole environment:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-make" data-lang="make">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Deploy all secrets for one environment
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nf">secrets.deploy.all&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secret.deploy.config1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secret.deploy.service2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secret.deploy.service3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Deploy all secrets for the dev cluster
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nf">secrets.deploy.dev&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secrets.deploy.all &lt;span class="nv">environment&lt;/span>&lt;span class="o">=&lt;/span>dev
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secrets.deploy.all &lt;span class="nv">environment&lt;/span>&lt;span class="o">=&lt;/span>staging
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Deploy all secrets for the prod cluster
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nf">secrets.deploy.prod&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secrets.deploy.all &lt;span class="nv">environment&lt;/span>&lt;span class="o">=&lt;/span>prod
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>✅ Once you are authenticated to the corresponding AWS account, you can deploy your secrets with either &lt;code>make secrets.deploy.dev&lt;/code> or &lt;code>make secrets.deploy.prod&lt;/code>.&lt;/p>
 &lt;h2 id="summarizing">Summarizing&lt;/h2>
 &lt;ul>
 &lt;li>Make gives you a consistent and clean Developer API.&lt;/li>
@@ -535,15 +566,15 @@ I thought &amp;ldquo;Is there an upper bound?&amp;rdquo;.&lt;/p>
 It&amp;rsquo;s 2147483647 (i.e. &lt;span>2&lt;sup>31&lt;/sup>-1&lt;/span>
 ).
 Looks like a signed 32-bit integer to me.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ol&lt;/span> &lt;span class="na">start&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">2147483645&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>I am still in order&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>As am I&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Me too&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>💥 Limit reached&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>💥 Limit reached&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>💥 Limit reached&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">ol&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>The above snippet will render as the following:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ol&lt;/span> &lt;span class="na">start&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">2147483645&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>I am still in order&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>As am I&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Me too&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>💥 Limit reached&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>💥 Limit reached&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>💥 Limit reached&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">ol&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The above snippet will render as the following:&lt;/p>
 &lt;span>
 &lt;ol start=2147483645 style="margin-left: 10rem;">
 &lt;li>I am still in order&lt;/li>
@@ -556,58 +587,58 @@ Looks like a signed 32-bit integer to me.&lt;/p>
 &lt;/span></description></item><item><title>You can create TOTP tokens via CLI without a smartphone</title><link>https://jscheytt.github.io/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/</link><pubDate>Fri, 27 Aug 2021 08:20:41 +0200</pubDate><guid>https://jscheytt.github.io/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/</guid><description>&lt;p>All you need is the secret of your TOTP.&lt;/p>
 &lt;p>The QR code is just a representation of a &lt;code>oath://&lt;/code> URL
 That URL contains the secret as a query parameter.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="c1"># Install oathtool&lt;/span>
-brew install oathtool
-&lt;span class="c1"># Use your secret, e.g. as a base32-encoded string&lt;/span>
-oathtool --totp --base32 &lt;span class="s2">&amp;#34;MFRGCZDTMVRXEZLUBI======&amp;#34;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docker does not really help you a lot trying to get permissions right</title><link>https://jscheytt.github.io/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/</link><pubDate>Fri, 23 Jul 2021 14:42:07 +0200</pubDate><guid>https://jscheytt.github.io/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/</guid><description>&lt;p>I really love Docker, and I also come to like security more and more.
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Install oathtool&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">brew install oathtool
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Use your secret, e.g. as a base32-encoded string&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">oathtool --totp --base32 &lt;span class="s2">&amp;#34;MFRGCZDTMVRXEZLUBI======&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docker does not really help you a lot trying to get permissions right</title><link>https://jscheytt.github.io/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/</link><pubDate>Fri, 23 Jul 2021 14:42:07 +0200</pubDate><guid>https://jscheytt.github.io/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/</guid><description>&lt;p>I really love Docker, and I also come to like security more and more.
 One advice I have been hearing a lot (e.g. in this &lt;a class="link" href="https://snyk.io/blog/10-docker-image-security-best-practices/" target="_blank" rel="noopener"
 >Container Security Cheat Sheet from Snyk&lt;/a>) is that &lt;strong>you should not run your container as a root user&lt;/strong>.&lt;/p>
 &lt;p>&amp;ldquo;Easy thing,&amp;rdquo; I thought to myself, &amp;ldquo;I am just going to put something like &lt;code>USER {app}&lt;/code>&amp;rdquo; at the top of my Dockerfile.&amp;quot;
 Well, think again, because:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-Dockerfile" data-lang="Dockerfile">&lt;span class="k">FROM&lt;/span>&lt;span class="s"> node:lts&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">USER&lt;/span>&lt;span class="s"> node&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="c"># I would have thought that after this point, every action will happen in the name of this user&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="c"># and also that every created directory and file will belong to this user ... 😕 But:&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="c"># ⚠️ This directory is created by root:root!&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">WORKDIR&lt;/span>&lt;span class="s"> /app&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="c"># ⚠️ These files will be copied over to be owned by root:root!&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> package*.json ./&lt;span class="err">
-&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="c"># 💥 This step fails in some (not all!) environments with errors like &amp;#34;Not enough permissions on /app&amp;#34;&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> npm install &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="se">\
-&lt;/span>&lt;span class="se">&lt;/span> npm run verify&lt;span class="err">
-&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="c"># ⚠️ If you manage to get to this point, these files, too, will be copied over to be owned by root:root!&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> . .&lt;span class="err">
-&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">ENTRYPOINT&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;npm&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I ended up fixing it by creating the directory and then &lt;code>chown&lt;/code>-ing it.
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-Dockerfile" data-lang="Dockerfile">&lt;span class="line">&lt;span class="cl">&lt;span class="k">FROM&lt;/span>&lt;span class="s"> node:lts&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">USER&lt;/span>&lt;span class="s"> node&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># I would have thought that after this point, every action will happen in the name of this user&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># and also that every created directory and file will belong to this user ... 😕 But:&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># ⚠️ This directory is created by root:root!&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">WORKDIR&lt;/span>&lt;span class="s"> /app&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># ⚠️ These files will be copied over to be owned by root:root!&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> package*.json ./&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># 💥 This step fails in some (not all!) environments with errors like &amp;#34;Not enough permissions on /app&amp;#34;&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> npm install &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> npm run verify&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># ⚠️ If you manage to get to this point, these files, too, will be copied over to be owned by root:root!&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> . .&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">ENTRYPOINT&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;npm&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I ended up fixing it by creating the directory and then &lt;code>chown&lt;/code>-ing it.
 Equally I executed the &lt;code>COPY&lt;/code> instructions with the &lt;code>--chown&lt;/code> flag.
 In the end I refactored it a bit using some &lt;code>ENV&lt;/code>s, too:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-Dockerfile" data-lang="Dockerfile">&lt;span class="k">FROM&lt;/span>&lt;span class="s"> node:lts&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="c"># Ensure that target WORKDIR exists and is owned by target (non-root) user&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">ENV&lt;/span> &lt;span class="nv">USERNAME&lt;/span>&lt;span class="o">=&lt;/span>node
-&lt;span class="k">ENV&lt;/span> &lt;span class="nv">USERID&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$USERNAME&lt;/span>:&lt;span class="nv">$USERNAME&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">ENV&lt;/span> &lt;span class="nv">TARGETDIR&lt;/span>&lt;span class="o">=&lt;/span>/app&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> mkdir -p &lt;span class="nv">$TARGETDIR&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> chown -R &lt;span class="nv">$USERID&lt;/span> &lt;span class="nv">$TARGETDIR&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">WORKDIR&lt;/span>&lt;span class="s"> $TARGETDIR&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">USER&lt;/span>&lt;span class="s"> $USERNAME&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> --chown&lt;span class="o">=&lt;/span>&lt;span class="nv">$USERID&lt;/span> package*.json ./&lt;span class="err">
-&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> npm install &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="se">\
-&lt;/span>&lt;span class="se">&lt;/span> npm run verify&lt;span class="err">
-&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> --chown&lt;span class="o">=&lt;/span>&lt;span class="nv">$USERID&lt;/span> . .&lt;span class="err">
-&lt;/span>&lt;span class="err">
-&lt;/span>&lt;span class="err">&lt;/span>&lt;span class="k">ENTRYPOINT&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;npm&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>You can :wq in vim with :x</title><link>https://jscheytt.github.io/p/you-can-wq-in-vim-with-x/</link><pubDate>Fri, 16 Jul 2021 00:00:00 +0000</pubDate><guid>https://jscheytt.github.io/p/you-can-wq-in-vim-with-x/</guid><description>&lt;p>I have developed quite some muscle memory in terminating vim via &lt;code>:wqa&lt;/code>.
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-Dockerfile" data-lang="Dockerfile">&lt;span class="line">&lt;span class="cl">&lt;span class="k">FROM&lt;/span>&lt;span class="s"> node:lts&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># Ensure that target WORKDIR exists and is owned by target (non-root) user&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">ENV&lt;/span> &lt;span class="nv">USERNAME&lt;/span>&lt;span class="o">=&lt;/span>node
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">ENV&lt;/span> &lt;span class="nv">USERID&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$USERNAME&lt;/span>:&lt;span class="nv">$USERNAME&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">ENV&lt;/span> &lt;span class="nv">TARGETDIR&lt;/span>&lt;span class="o">=&lt;/span>/app&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> mkdir -p &lt;span class="nv">$TARGETDIR&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> chown -R &lt;span class="nv">$USERID&lt;/span> &lt;span class="nv">$TARGETDIR&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">WORKDIR&lt;/span>&lt;span class="s"> $TARGETDIR&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">USER&lt;/span>&lt;span class="s"> $USERNAME&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> --chown&lt;span class="o">=&lt;/span>&lt;span class="nv">$USERID&lt;/span> package*.json ./&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> npm install &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> npm run verify&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> --chown&lt;span class="o">=&lt;/span>&lt;span class="nv">$USERID&lt;/span> . .&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">ENTRYPOINT&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;npm&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>You can :wq in vim with :x</title><link>https://jscheytt.github.io/p/you-can-wq-in-vim-with-x/</link><pubDate>Fri, 16 Jul 2021 00:00:00 +0000</pubDate><guid>https://jscheytt.github.io/p/you-can-wq-in-vim-with-x/</guid><description>&lt;p>I have developed quite some muscle memory in terminating vim via &lt;code>:wqa&lt;/code>.
 Now I can save one more character by retraining myself to use &lt;code>:xa&lt;/code>! 😄&lt;/p>
 &lt;p>I also like how &lt;code>:x&lt;/code> sort of symbolizes the close button ❌ of many window managers and their default behavior of saving when you close a file.&lt;/p>
 &lt;p>For more documentation open vim and type &lt;code>:h :x&lt;/code>.&lt;/p>

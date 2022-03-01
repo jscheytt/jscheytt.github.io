@@ -2,9 +2,8 @@
 <head><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Today I was refactoring a bigger configuration setup that is built with kustomize. I see kustomize as a light-weight way of packaging multiple Kubernetes manifests, together with a little bit of logic.
 The base kustomization of the application config repo I was refactoring looked something like this:
-apiVersion:kustomize.config.k8s.io/v1beta1kind:Kustomizationresources:- manifests/cronjob-backup.yaml- manifests/deployment.yaml- manifests/ingress.yaml- manifests/pod-disruption-budget.yaml- manifests/service.yamlcommonAnnotations:source:javatenant:acmeconfigMapGenerator:- name:acme-app-configfiles:- configs/10-local.properties- configs/30-local.properties- configs/40-local.propertiesI have an almost pathologic tendency to simplify and DRY everything up that I find, especially in configuration code."><title>Trying to simplify k8s labels can be dangerous for your routing</title>
-<link rel=canonical href=https://jscheytt.github.io/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Trying to simplify k8s labels can be dangerous for your routing">
+apiVersion:kustomize.config.k8s.io/v1beta1kind:Kustomizationresources:- manifests/cronjob-backup.yaml- manifests/deployment.yaml- manifests/ingress.yaml- manifests/pod-disruption-budget.yaml- manifests/service.yamlcommonAnnotations:source:javatenant:acmeconfigMapGenerator:- name:acme-app-configfiles:- configs/10-local.properties- configs/30-local.properties- configs/40-local.propertiesI have an almost pathologic tendency to simplify and DRY everything up that I find, especially in configuration code."><title>Trying to simplify k8s labels can be dangerous for your routing</title><link rel=canonical href=https://jscheytt.github.io/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/>
+<link rel=stylesheet href=/scss/style.min.1b167e2cb0123f4ab756c1f7b38280839833cb553987f96fa7aaeacb7f4f71de.css><meta property="og:title" content="Trying to simplify k8s labels can be dangerous for your routing">
 <meta property="og:description" content="Today I was refactoring a bigger configuration setup that is built with kustomize. I see kustomize as a light-weight way of packaging multiple Kubernetes manifests, together with a little bit of logic.
 The base kustomization of the application config repo I was refactoring looked something like this:
 apiVersion:kustomize.config.k8s.io/v1beta1kind:Kustomizationresources:- manifests/cronjob-backup.yaml- manifests/deployment.yaml- manifests/ingress.yaml- manifests/pod-disruption-budget.yaml- manifests/service.yamlcommonAnnotations:source:javatenant:acmeconfigMapGenerator:- name:acme-app-configfiles:- configs/10-local.properties- configs/30-local.properties- configs/40-local.propertiesI have an almost pathologic tendency to simplify and DRY everything up that I find, especially in configuration code.">
@@ -15,12 +14,9 @@ apiVersion:kustomize.config.k8s.io/v1beta1kind:Kustomizationresources:- manifest
 <meta name=twitter:description content="Today I was refactoring a bigger configuration setup that is built with kustomize. I see kustomize as a light-weight way of packaging multiple Kubernetes manifests, together with a little bit of logic.
 The base kustomization of the application config repo I was refactoring looked something like this:
 apiVersion:kustomize.config.k8s.io/v1beta1kind:Kustomizationresources:- manifests/cronjob-backup.yaml- manifests/deployment.yaml- manifests/ingress.yaml- manifests/pod-disruption-budget.yaml- manifests/service.yamlcommonAnnotations:source:javatenant:acmeconfigMapGenerator:- name:acme-app-configfiles:- configs/10-local.properties- configs/30-local.properties- configs/40-local.propertiesI have an almost pathologic tendency to simplify and DRY everything up that I find, especially in configuration code.">
-</head>
-<body class=article-page>
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
-<div class="container main-container flex
-on-phone--column extended">
-<aside class="sidebar left-sidebar sticky">
+</head><body class=article-page>
+<script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky">
 <button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
 <span class=hamburger-box>
 <span class=hamburger-inner></span>
@@ -28,37 +24,30 @@ on-phone--column extended">
 </button>
 <header class=site-info>
 <figure class=site-avatar>
+<a href=/>
 <img src=/img/avatar_huc03cf5da8ed66ec501bd8a2a16b02d66_357222_300x0_resize_q75_box.jpg width=300 height=300 class=site-logo loading=lazy alt=Avatar>
-</figure>
-<h1 class=site-name><a href=/>Josia's Blog</a></h1>
-<h2 class=site-description></h2></header>
-<ol class=menu id=main-menu>
+</a>
+</figure><h1 class=site-name><a href=/>Josia's Blog</a></h1><h2 class=site-description></h2></header><ol class=menu id=main-menu>
 <li>
 <a href=/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
 <span>Home</span>
 </a>
-</li>
-<li>
+</li><li>
 <a href=/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
 <span>About</span>
 </a>
-</li>
-<li>
+</li><li>
 <a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
 <span>Archives</span>
 </a>
-</li>
-<li>
+</li><li>
 <a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
 <span>Search</span>
 </a>
-</li>
+</li><div class=menu-bottom-section>
 <li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
 <span>Dark Mode</span>
-</li>
-</ol>
-</aside>
-<main class="main full-width">
+</li></div></ol></aside><main class="main full-width">
 <article class=main-article>
 <header class=article-header>
 <div class=article-details>
@@ -66,211 +55,140 @@ on-phone--column extended">
 <a href=/categories/today-i-learned/ style=background-color:#8ea885;color:>
 Today I Learned That ...
 </a>
-</header>
-<h2 class=article-title>
+</header><h2 class=article-title>
 <a href=/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/>Trying to simplify k8s labels can be dangerous for your routing</a>
-</h2>
-<footer class=article-time>
+</h2><footer class=article-time>
 <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
 <time class=article-time--published>2021-12-03</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+</div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
 <time class=article-time--reading>
 3 minute read
 </time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
+</div></footer></div></header><section class=article-content>
 <p>Today I was refactoring a bigger configuration setup that is built with <a class=link href=https://kustomize.io/ target=_blank rel=noopener>kustomize</a>.
-I see kustomize as a light-weight way of packaging multiple Kubernetes manifests, together with a little bit of logic.</p>
-<p>The <strong>base kustomization</strong> of the application config repo I was refactoring looked something like this:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=nt>apiVersion</span><span class=p>:</span><span class=w> </span><span class=l>kustomize.config.k8s.io/v1beta1</span><span class=w>
-</span><span class=w></span><span class=nt>kind</span><span class=p>:</span><span class=w> </span><span class=l>Kustomization</span><span class=w>
-</span><span class=w></span><span class=nt>resources</span><span class=p>:</span><span class=w>
-</span><span class=w>  </span>- <span class=l>manifests/cronjob-backup.yaml</span><span class=w>
-</span><span class=w>  </span>- <span class=l>manifests/deployment.yaml</span><span class=w>
-</span><span class=w>  </span>- <span class=l>manifests/ingress.yaml</span><span class=w>
-</span><span class=w>  </span>- <span class=l>manifests/pod-disruption-budget.yaml</span><span class=w>
-</span><span class=w>  </span>- <span class=l>manifests/service.yaml</span><span class=w>
-</span><span class=w></span><span class=nt>commonAnnotations</span><span class=p>:</span><span class=w>
-</span><span class=w>  </span><span class=nt>source</span><span class=p>:</span><span class=w> </span><span class=l>java</span><span class=w>
-</span><span class=w>  </span><span class=nt>tenant</span><span class=p>:</span><span class=w> </span><span class=l>acme</span><span class=w>
-</span><span class=w></span><span class=nt>configMapGenerator</span><span class=p>:</span><span class=w>
-</span><span class=w>  </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>acme-app-config</span><span class=w>
-</span><span class=w>    </span><span class=nt>files</span><span class=p>:</span><span class=w>
-</span><span class=w>      </span>- <span class=l>configs/10-local.properties</span><span class=w>
-</span><span class=w>      </span>- <span class=l>configs/30-local.properties</span><span class=w>
-</span><span class=w>      </span>- <span class=l>configs/40-local.properties</span><span class=w>
-</span></code></pre></div><p>I have an almost pathologic tendency to simplify and DRY everything up that I find, especially in configuration code.
-And as I saw a lot of <strong>repeating Labels</strong> in the manifests, I thought &ldquo;Well, let&rsquo;s just unify them.&rdquo;</p>
-<p>So I went ahead, removed the repetitive Labels from the manifests and added the following block to the kustomization:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=nt>commonLabels</span><span class=p>:</span><span class=w>
-</span><span class=w>  </span><span class=nt>app</span><span class=p>:</span><span class=w> </span><span class=l>acme-app</span><span class=w>
-</span></code></pre></div><p>I knew a bit about Kubernetes Services and that they <em>use Labels to find the Pods to which they should direct their traffic</em>.
+I see kustomize as a light-weight way of packaging multiple Kubernetes manifests, together with a little bit of logic.</p><p>The <strong>base kustomization</strong> of the application config repo I was refactoring looked something like this:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl><span class=nt>apiVersion</span><span class=p>:</span><span class=w> </span><span class=l>kustomize.config.k8s.io/v1beta1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>kind</span><span class=p>:</span><span class=w> </span><span class=l>Kustomization</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>resources</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span>- <span class=l>manifests/cronjob-backup.yaml</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span>- <span class=l>manifests/deployment.yaml</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span>- <span class=l>manifests/ingress.yaml</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span>- <span class=l>manifests/pod-disruption-budget.yaml</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span>- <span class=l>manifests/service.yaml</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>commonAnnotations</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>source</span><span class=p>:</span><span class=w> </span><span class=l>java</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>tenant</span><span class=p>:</span><span class=w> </span><span class=l>acme</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>configMapGenerator</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>acme-app-config</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>files</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=l>configs/10-local.properties</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=l>configs/30-local.properties</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=l>configs/40-local.properties</span><span class=w>
+</span></span></span></code></pre></div><p>I have an almost pathologic tendency to simplify and DRY everything up that I find, especially in configuration code.
+And as I saw a lot of <strong>repeating Labels</strong> in the manifests, I thought &ldquo;Well, let&rsquo;s just unify them.&rdquo;</p><p>So I went ahead, removed the repetitive Labels from the manifests and added the following block to the kustomization:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl><span class=nt>commonLabels</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>app</span><span class=p>:</span><span class=w> </span><span class=l>acme-app</span><span class=w>
+</span></span></span></code></pre></div><p>I knew a bit about Kubernetes Services and that they <em>use Labels to find the Pods to which they should direct their traffic</em>.
 That&rsquo;s why I thoroughly verified that after my change the Service and the Deployment would still have <strong>the same selector labels</strong>.
-🤗 Nothing seemed off &mldr;</p>
-<p>I committed and pushed my changes, and after the Deployment had finished restarting, I clicked through the application.
+🤗 Nothing seemed off &mldr;</p><p>I committed and pushed my changes, and after the Deployment had finished restarting, I clicked through the application.
 👀 Oddly enough some of the requests succeeded as expected, but some kept failing with a 💥 <code>502 Bad Gateway</code> error!
-At first I tried troubleshooting quickly, but soon I opted for just reverting my changes and pushing the revert commits to undo my changes.</p>
-<p>For debugging I compared the output of <code>kustomize build</code> before and after my changes.
-After some scrolling I came across the <strong>CronJobs</strong> I defined for backup<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>.</p>
-<p>I should probably not have been surprised that the CronJob also had the same Labels I gave it via the kustomization.
-But now a suspicion started sneaking in:</p>
-<blockquote>
-<p>What if the <strong>completed Pods</strong> of the CronJob received traffic from the Service because they had <strong>the same Labels</strong>?</p>
-</blockquote>
-<p>Following this idea, I refactored my configs a bit.
-Soon, I was able to ensure that requests to the Service would only point to my target Deployment (and not to any other Pods):</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-diff data-lang=diff><span class=gh>diff --git a/base/kustomization.yaml b/base/kustomization.yaml
-</span><span class=gh>index 6c1c6f7..b77b0fc 100644
-</span><span class=gh></span><span class=gd>--- a/base/kustomization.yaml
-</span><span class=gd></span><span class=gi>+++ b/base/kustomization.yaml
-</span><span class=gi></span><span class=gu>@@ -15,7 +15,6 @@ commonAnnotations:
-</span><span class=gu></span>   source: java
-   tenant: acme
-<span class=gd>-commonLabels:
-</span><span class=gd>-  app: acme-app
-</span><span class=gd></span> configMapGenerator:
-   - name: acme-app-config
-<span class=gh>diff --git a/base/manifests/deployment.yaml b/base/manifests/deployment.yaml
-</span><span class=gh>index 1e4aa3f..a60a798 100644
-</span><span class=gh></span><span class=gd>--- a/base/manifests/deployment.yaml
-</span><span class=gd></span><span class=gi>+++ b/base/manifests/deployment.yaml
-</span><span class=gi></span><span class=gu>@@ -16,6 +16,9 @@ metadata:
-</span><span class=gu></span> spec:
-   replicas: 1
-<span class=gi>+  selector:
-</span><span class=gi>+    matchLabels:
-</span><span class=gi>+      app: acme-app
-</span><span class=gi></span>   template:
-     metadata:
-       labels:
-<span class=gi>+        app: acme-app
-</span><span class=gi></span>     spec:
-       containers:
-<span class=gh>diff --git a/base/manifests/service.yaml b/base/manifests/service.yaml
-</span><span class=gh>index b05d898..89af021 100644
-</span><span class=gh></span><span class=gd>--- a/base/manifests/service.yaml
-</span><span class=gd></span><span class=gi>+++ b/base/manifests/service.yaml
-</span><span class=gi></span><span class=gu>@@ -10,3 +10,5 @@ spec:
-</span><span class=gu></span>     - name: api
-       port: 8080
-<span class=gi>+  selector:
-</span><span class=gi>+    app: acme-app
-</span></code></pre></div><p>(Notice that the Deployment needs the Label both in <code>.spec.selector.matchLabels</code> and <code>.spec.template.metadata.labels</code>!)</p>
-<p>And surely enough, after deploying this fix, the request to the application worked flawlessly 😊✅.</p>
-<section class=footnotes role=doc-endnotes>
+At first I tried troubleshooting quickly, but soon I opted for just reverting my changes and pushing the revert commits to undo my changes.</p><p>For debugging I compared the output of <code>kustomize build</code> before and after my changes.
+After some scrolling I came across the <strong>CronJobs</strong> I defined for backup<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>.</p><p>I should probably not have been surprised that the CronJob also had the same Labels I gave it via the kustomization.
+But now a suspicion started sneaking in:</p><blockquote>
+<p>What if the <strong>completed Pods</strong> of the CronJob received traffic from the Service because they had <strong>the same Labels</strong>?</p></blockquote><p>Following this idea, I refactored my configs a bit.
+Soon, I was able to ensure that requests to the Service would only point to my target Deployment (and not to any other Pods):</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-diff data-lang=diff><span class=line><span class=cl><span class=gh>diff --git a/base/kustomization.yaml b/base/kustomization.yaml
+</span></span></span><span class=line><span class=cl><span class=gh>index 6c1c6f7..b77b0fc 100644
+</span></span></span><span class=line><span class=cl><span class=gh></span><span class=gd>--- a/base/kustomization.yaml
+</span></span></span><span class=line><span class=cl><span class=gd></span><span class=gi>+++ b/base/kustomization.yaml
+</span></span></span><span class=line><span class=cl><span class=gi></span><span class=gu>@@ -15,7 +15,6 @@ commonAnnotations:
+</span></span></span><span class=line><span class=cl><span class=gu></span>   source: java
+</span></span><span class=line><span class=cl>   tenant: acme
+</span></span><span class=line><span class=cl><span class=gd>-commonLabels:
+</span></span></span><span class=line><span class=cl><span class=gd>-  app: acme-app
+</span></span></span><span class=line><span class=cl><span class=gd></span> configMapGenerator:
+</span></span><span class=line><span class=cl>   - name: acme-app-config
+</span></span><span class=line><span class=cl><span class=gh>diff --git a/base/manifests/deployment.yaml b/base/manifests/deployment.yaml
+</span></span></span><span class=line><span class=cl><span class=gh>index 1e4aa3f..a60a798 100644
+</span></span></span><span class=line><span class=cl><span class=gh></span><span class=gd>--- a/base/manifests/deployment.yaml
+</span></span></span><span class=line><span class=cl><span class=gd></span><span class=gi>+++ b/base/manifests/deployment.yaml
+</span></span></span><span class=line><span class=cl><span class=gi></span><span class=gu>@@ -16,6 +16,9 @@ metadata:
+</span></span></span><span class=line><span class=cl><span class=gu></span> spec:
+</span></span><span class=line><span class=cl>   replicas: 1
+</span></span><span class=line><span class=cl><span class=gi>+  selector:
+</span></span></span><span class=line><span class=cl><span class=gi>+    matchLabels:
+</span></span></span><span class=line><span class=cl><span class=gi>+      app: acme-app
+</span></span></span><span class=line><span class=cl><span class=gi></span>   template:
+</span></span><span class=line><span class=cl>     metadata:
+</span></span><span class=line><span class=cl>       labels:
+</span></span><span class=line><span class=cl><span class=gi>+        app: acme-app
+</span></span></span><span class=line><span class=cl><span class=gi></span>     spec:
+</span></span><span class=line><span class=cl>       containers:
+</span></span><span class=line><span class=cl><span class=gh>diff --git a/base/manifests/service.yaml b/base/manifests/service.yaml
+</span></span></span><span class=line><span class=cl><span class=gh>index b05d898..89af021 100644
+</span></span></span><span class=line><span class=cl><span class=gh></span><span class=gd>--- a/base/manifests/service.yaml
+</span></span></span><span class=line><span class=cl><span class=gd></span><span class=gi>+++ b/base/manifests/service.yaml
+</span></span></span><span class=line><span class=cl><span class=gi></span><span class=gu>@@ -10,3 +10,5 @@ spec:
+</span></span></span><span class=line><span class=cl><span class=gu></span>     - name: api
+</span></span><span class=line><span class=cl>       port: 8080
+</span></span><span class=line><span class=cl><span class=gi>+  selector:
+</span></span></span><span class=line><span class=cl><span class=gi>+    app: acme-app
+</span></span></span></code></pre></div><p>(Notice that the Deployment needs the Label both in <code>.spec.selector.matchLabels</code> and <code>.spec.template.metadata.labels</code>!)</p><p>And surely enough, after deploying this fix, the request to the application worked flawlessly 😊✅.</p><section class=footnotes role=doc-endnotes>
 <hr>
 <ol>
 <li id=fn:1 role=doc-endnote>
-<p>It does not matter for which purpose I created this CronJob, it could have been any Kubernetes Resource that creates Pods.&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>
-</section>
-<footer class=article-footer>
+<p>It does not matter for which purpose I created this CronJob, it could have been any Kubernetes Resource that creates Pods.&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></section></section><footer class=article-footer>
 <section class=article-tags>
 <a href=/tags/kubernetes/>kubernetes</a>
-</section>
-<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+</section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
 <span>Licensed under MIT</span>
-</section>
-</footer>
-</article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title>Related contents</h2>
-<div class=related-contents>
+</section></footer></article><aside class=related-contents--wrapper>
+<h2 class=section-title>Related contents</h2><div class=related-contents>
 <div class="flex article-list--tile">
 <article>
 <a href=/p/kubectl-can-explain-all-resource-types-in-detail/>
 <div class=article-details>
-<h2 class=article-title>kubectl can explain all resource types in detail</h2>
-</div>
-</a>
-</article>
-<article>
+<h2 class=article-title>kubectl can explain all resource types in detail</h2></div></a>
+</article><article>
 <a href=/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/>
 <div class=article-details>
-<h2 class=article-title>Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace</h2>
-</div>
-</a>
-</article>
-<article>
+<h2 class=article-title>Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace</h2></div></a>
+</article><article>
+<a href=/p/you-can-gitopsify-your-ansible/>
+<div class=article-details>
+<h2 class=article-title>You can Gitopsify your Ansible</h2></div></a>
+</article><article>
 <a href=/p/html-limits-you-to-a-signed-32-bit-int-in-ordered-lists/>
 <div class=article-details>
-<h2 class=article-title>HTML limits you to a signed 32-bit int in ordered lists</h2>
-</div>
-</a>
-</article>
-<article>
+<h2 class=article-title>HTML limits you to a signed 32-bit int in ordered lists</h2></div></a>
+</article><article>
 <a href=/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/>
 <div class=article-details>
-<h2 class=article-title>You can create TOTP tokens via CLI without a smartphone</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/>
-<div class=article-details>
-<h2 class=article-title>Docker does not really help you a lot trying to get permissions right</h2>
-</div>
-</a>
-</article>
-</div>
-</div>
-</aside>
-<footer class=site-footer>
+<h2 class=article-title>You can create TOTP tokens via CLI without a smartphone</h2></div></a>
+</article></div></div></aside><footer class=site-footer>
 <section class=copyright>
 &copy;
 2021 -
 2022 Josia's Blog
-</section>
-<section class=powerby>
+</section><section class=powerby>
 Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
-Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.5.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
-</section>
-</footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.8.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div><div class=pswp__scroll-wrap>
 <div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden">
 <div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
 <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
 <div class=pswp__preloader>
 <div class=pswp__preloader__icn>
 <div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+<div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
 </button>
 <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
 </button>
 <div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
-</html>
+<div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script>
+</body></html>
