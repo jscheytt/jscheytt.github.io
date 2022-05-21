@@ -1,4 +1,145 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Josia's Blog</title><link>https://jscheytt.github.io/</link><description>Recent content on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 01 Mar 2022 08:34:20 +0100</lastBuildDate><atom:link href="https://jscheytt.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>You can Gitopsify your Ansible</title><link>https://jscheytt.github.io/p/you-can-gitopsify-your-ansible/</link><pubDate>Tue, 01 Mar 2022 08:34:20 +0100</pubDate><guid>https://jscheytt.github.io/p/you-can-gitopsify-your-ansible/</guid><description>&lt;p>I have a &lt;a class="link" href="https://github.com/jscheytt/dotfiles" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Josia's Blog</title><link>https://jscheytt.github.io/</link><description>Recent content on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 20 May 2022 12:23:53 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>My First KubeCon/CloudNativeCon Experience</title><link>https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/</link><pubDate>Fri, 20 May 2022 12:23:53 +0200</pubDate><guid>https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/</guid><description>&lt;img src="https://events.linuxfoundation.org/wp-content/uploads/2022/03/kubecon-eu-2022-web-021621_snackable.jpg" alt="Featured image of post My First KubeCon/CloudNativeCon Experience" />&lt;p>&lt;img src="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/team-entry.jpg"
+width="348"
+height="465"
+srcset="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/team-entry_hu1aeeb017ee02b96e9ed5387cac258de9_69964_480x0_resize_q75_box.jpg 480w, https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/team-entry_hu1aeeb017ee02b96e9ed5387cac258de9_69964_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Me and 4 colleagues standing in front of the main KubeCon entry"
+class="gallery-image"
+data-flex-grow="74"
+data-flex-basis="179px"
+>&lt;/p>
+&lt;p>This week I went to KubeCon/CloudNativeCon in Valencia, Spain, together with four of my colleagues, both from mimacom Germany and mimacom Spain.&lt;/p>
+&lt;blockquote>
+&lt;p>Thanks a lot to mimacom for sponsoring our attending!&lt;/p>
+&lt;/blockquote>
+&lt;p>What I want to talk about in this blog post is not a summary of talks or topics but just how I experienced the whole event.
+Is was the first KubeCon I have ever attended, and we came on Monday, left on Friday, so we effectively only attended Tuesday through Thursday (the middle 3 of the 5 days).&lt;/p>
+&lt;h1 id="about-kubecon">About KubeCon&lt;/h1>
+&lt;p>KubeCon is &lt;em>the&lt;/em> regular conference for all things Kubernetes and everything happening in the Cloud Native space.
+Since the last few years, it has been held 2 times a year, always alternating between Europe and North America.&lt;/p>
+&lt;p>It is &lt;strong>massive&lt;/strong>.
+Really massive.
+Imagine the biggest fair venue you know of, maybe double that area, and then fill it (and the surrounding city) with more than 6,000 developers - that&amp;rsquo;s how massive it is.&lt;/p>
+&lt;p>But this mass of people only comes from day 3 to day 5 (Wednesday through Friday).
+On the first two days it is &lt;em>a lot less crowded&lt;/em> because that is the time where the so called &amp;ldquo;&lt;strong>Co-located Events&lt;/strong>&amp;rdquo; take place.
+These are smaller sub-conferences within KubeCon which focus on a specific topic.
+Some of these events this time were: Service Mesh Con, Cloud Native Security Con, Kubernetes on Edge Day, and GitOpsCon.
+(I think there were about 15 distinct events in total.)&lt;/p>
+&lt;h1 id="disclaimers">Disclaimers&lt;/h1>
+&lt;p>To be completely honest up-front, &lt;em>GitOpsCon was the main reason&lt;/em> I wanted to attend KubeCon at all in the first place, so my view on KubeCon as a whole is biased.&lt;/p>
+&lt;p>Additionally, I am the type of person who easily gets overwhelmed when staying in very crowded places for longer periods of time.
+I can handle it, but not without proper self-care and not very well for multiple days in a row.
+This does, admittedly, not put me in a very well-equipped position for a fair like this - just wanted to mention this so you know which color the glasses have through which you now get a view unto this event 😉.&lt;/p>
+&lt;p>&lt;img src="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/gitopscon-slide.jpg"
+width="4032"
+height="3024"
+srcset="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/gitopscon-slide_hufa08c22d9d0206fd7cf4355dc2976988_7323907_480x0_resize_q75_box.jpg 480w, https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/gitopscon-slide_hufa08c22d9d0206fd7cf4355dc2976988_7323907_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="The first slide of GitOpsCon"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+>&lt;/p>
+&lt;h1 id="gitopscon">GitOpsCon&lt;/h1>
+&lt;p>One lesson I have drawn from my first KubeCon is that &lt;strong>the Co-located Events are the real thing&lt;/strong>.
+That, of course, only applies if there is a Co-located Event in which you have a deep interest 😉.&lt;/p>
+&lt;p>My heart beats for GitOps and its much wider adoption, so I attended GitOpsCon, which is organized by &lt;a class="link" href="https://opengitops.dev/" target="_blank" rel="noopener"
+>OpenGitOps&lt;/a> (or the GitOps Working Group (WG), which is sort of the official committee behind it).
+GitOpsCon was one of the bigger Co-located Events and even offered multiple talks in parallel during some slots.&lt;/p>
+&lt;p>One person I was very much looking forward to meeting was Chris Short from AWS EKS (formerly RedHat).
+If you have not heard of him before, do check out his newsletter &lt;a class="link" href="https://devopsish.com/" target="_blank" rel="noopener"
+>DevOps&amp;rsquo;ish&lt;/a>!
+It is one of the three weekly newsletters I regularly read, and I do read very few.&lt;/p>
+&lt;p>And &amp;hellip; it worked out!
+He was holding the first keynote together with Dan Garfield (from Codefresh, ArgoCD maintainer) and Scott Rigby (from Weaveworks, both a Helm and a FluxCD maintainer), and I was able to just walk up to him in the time between two sessions and express my gratitude for his curating that newsletter 🤗!&lt;/p>
+&lt;p>There were very interesting talks, but sometimes it&amp;rsquo;s funny how the things that stick with you after a talk are not what the talk was actually all about.
+I was for instance sitting in a talk by Michael Irwin about creating a platform for campus students to run workloads in Kubernetes, but what the talk really did for me was losing my fair of Helm - simply because of the fast and uncomplicated way he ran &lt;code>helm create&lt;/code> during a demo in that talk.&lt;/p>
+&lt;p>What was especially rewarding, engaging, and exciting was getting into conversation with the speakers after their talks.
+I am convinced it really makes a huge difference that the barrier to asking is so low when you are together in one room in-person.
+Sometimes you can easily get clarifications on unclear points, sometimes you discover together that something is not yet known for both of you, sometimes you discuss about the industry as a whole and in which direction it evolves or should evolve.
+One speaker (Andrew Block from RedHat, he talked about Secrets Management with GitOps) even photographed my badge in order to contact me after the event because he could not yet answer a detail question I had!
+I am deeply grateful for the opportunity of diving into the community of people in the Cloud Native space.&lt;/p>
+&lt;h1 id="new-ideas">New Ideas&lt;/h1>
+&lt;p>Luckily, not only GitOpsCon exposed me to new ideas - that also happened (and happened a lot!) with the talks during the other two days:
+I heard about the &lt;a class="link" href="https://kccnceu2022.sched.com/event/ytpE/reproducing-production-issues-in-your-ci-pipeline-using-ebpf-matthew-leray-speedscale-omid-azizi-new-relic" target="_blank" rel="noopener"
+>Kernel-intercepting eBPF technology&lt;/a>, something like &amp;ldquo;Serverless CloudFoundry&amp;rdquo; with Knative, and using machine learning to optimize resource requests and limits for SLOs, among many others.
+If you want to see which (few) talks I attended, see &lt;a class="link" href="https://kccnceu2022.sched.com/jscheytt?iframe=no" target="_blank" rel="noopener"
+>my schedule in Sched&lt;/a>.&lt;/p>
+&lt;p>The cool thing with something like Kubernetes and its ecosystem is that you can very quickly &lt;strong>experiment without a big setup investment&lt;/strong>.
+I e.g. heard about Tekton as a side note and decided to directly give it a go during one of the other talks, and I was directly able to walk through the Getting Started guide to verify how nicely it works!&lt;/p>
+&lt;h1 id="starting-to-see-patterns">Starting To See Patterns&lt;/h1>
+&lt;p>Let me note down a few things I found remarkable and where we as an industry can maybe find better ways of achieving things:&lt;/p>
+&lt;ul>
+&lt;li>Not only do we have many tools in the Cloud Native ecosystem (I will not make the next joke about the &lt;a class="link" href="https://landscape.cncf.io/" target="_blank" rel="noopener"
+>CNCF Landscape&lt;/a>, you can invent one yourself 😄), it also seems to me that everybody starts to create another copy-paste version of the &lt;a class="link" href="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/" target="_blank" rel="noopener"
+>standard Kubernetes Dashboard&lt;/a> but just filtered down to their CRDs.
+&lt;ul>
+&lt;li>The &lt;a class="link" href="https://github.com/tektoncd/dashboard/blob/main/docs/dashboard-ui.jpg" target="_blank" rel="noopener"
+>Tekton Dashboard&lt;/a> is a prime example of this, but they are not the only ones who are either actively doing this or considering building their own UI.&lt;/li>
+&lt;li>The Kubernetes Dashboard seems to have a &lt;a class="link" href="https://github.com/kubernetes/dashboard/blob/master/docs/plugins/README.md" target="_blank" rel="noopener"
+>plugin system&lt;/a>, so why don&amp;rsquo;t we all use more of this?&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>I have never used ArgoCD because I thought &amp;ldquo;well, I have learned how to use FluxCD and use it, why should I learn another CD tool?&amp;rdquo;
+&lt;ul>
+&lt;li>And like many people, I have been living in a &lt;em>false dichotomy&lt;/em> that GitOps is &lt;em>either Flux or Argo&lt;/em> - but that misses the point!&lt;/li>
+&lt;li>&lt;a class="link" href="https://gitopsconeu22.sched.com/event/zrqT/implementing-preview-environments-with-gitops-in-kubernetes-francois-le-pape-remazing" target="_blank" rel="noopener"
+>One talk at GitOpsCon&lt;/a> showed pretty nicely how you can &lt;strong>use both together&lt;/strong>: Use FluxCD as a platform team to deploy your infrastructure, and deploy Argo for your developers to deploy and manage their applications.&lt;/li>
+&lt;li>Just one example: I love Flux, but managing preview environments from PRs is a lot of work (mostly YAML generation), but Argo has a dedicated &lt;a class="link" href="https://argocd-applicationset.readthedocs.io/en/stable/Generators-Pull-Request/" target="_blank" rel="noopener"
+>Pull Request Generator&lt;/a> to solve this in just about 10 lines of code.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="meeting-maintainers">Meeting Maintainers&lt;/h1>
+&lt;p>If you go to KubeCon only for the talks, you are probably doing it wrong - watch the talks virtually, it is a lot less effort.
+There is a whole big area with booths from all kinds of vendors in the Cloud Native space.
+One corner of this space is reserved for maintainers of a few Open Source tools.&lt;/p>
+&lt;p>I especially enjoyed going up to these people and more than anything &lt;strong>thanking them&lt;/strong> for the tremendous work they are doing and how grateful I am for getting to work with these tools (almost) every day!
+Among these there were especially &lt;a class="link" href="https://fluxcd.io/" target="_blank" rel="noopener"
+>FluxCD&lt;/a> and &lt;a class="link" href="https://crossplane.io/" target="_blank" rel="noopener"
+>Crossplane&lt;/a>, but also the often overlooked &lt;a class="link" href="https://cert-manager.io/" target="_blank" rel="noopener"
+>cert-manager&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/cert-manager-booth.jpg"
+width="2016"
+height="1512"
+srcset="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/cert-manager-booth_hue4c5f4b9a6b472ff07f3829d9cffe956_1872984_480x0_resize_q75_box.jpg 480w, https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/cert-manager-booth_hue4c5f4b9a6b472ff07f3829d9cffe956_1872984_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="At the cert-manager booth"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+> &lt;img src="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/certificate.jpg"
+width="1008"
+height="756"
+srcset="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/certificate_hue9aff69b27501b946e0598f4970b7f66_474581_480x0_resize_q75_box.jpg 480w, https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/certificate_hue9aff69b27501b946e0598f4970b7f66_474581_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="My certificate - so cute 🤗"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+>&lt;/p>
+&lt;p>The folks at the cert-manager booth were especially creative in creating an actual SSL certificate for your email address and then printing and even &lt;em>stamping it with a wax seal&lt;/em>!
+Btw do go and check out &lt;a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSfLX4SQEC0phxVLB2shSzv2s__IDCB6GmlnvsqQ06CD0IYOeA/viewform" target="_blank" rel="noopener"
+>their short survey about usage in production clusters&lt;/a> to enable them to become a graduated CNCF project.&lt;/p>
+&lt;p>Some of the tools represented in the maintainers&amp;rsquo; area were still somewhat new to me.
+The great thing was that I could just walk up to them and ask them for a short demo to understand the usage and the difference to other tools.
+Special thanks to the folks at the ArgoCD, Backstage, and Buildpacks booths!&lt;/p>
+&lt;h1 id="favorite-quotes">Favorite Quotes&lt;/h1>
+&lt;p>I am going to close with some wise words people have said on this conference:&lt;/p>
+&lt;blockquote>
+&lt;p>If it&amp;rsquo;s not in Git, it&amp;rsquo;s just a rumor.&lt;/p>
+&lt;/blockquote>
+&lt;p>RedHat printed T-shirts for GitOpsCon with this saying - they were gone quicker than you could queue in at their booth (I did not get one unfortunately &amp;hellip;).&lt;/p>
+&lt;blockquote>
+&lt;p>What is software? Software is code while it is running, code with electricity applied to it.&lt;/p>
+&lt;/blockquote>
+&lt;p>Justin Garrison in the context of &amp;ldquo;&lt;a class="link" href="https://gitopsconeu22.sched.com/event/zrr3/infrastructure-as-software-with-gitops-justin-garrison-amazon" target="_blank" rel="noopener"
+>Infrastructure as Software&lt;/a>&amp;rdquo; and why GitOps is such a breakthrough for this.&lt;/p>
+&lt;blockquote>
+&lt;p>Kubernetes is the industrial revolution for server computing, that&amp;rsquo;s how fundamental it is.&lt;/p>
+&lt;/blockquote>
+&lt;p>Lucas Käldström in his talk &amp;ldquo;&lt;a class="link" href="https://kccnceu2022.sched.com/event/ytr4/understanding-kubernetes-through-real-world-phenomena-and-analogies-lucas-kaldstrom" target="_blank" rel="noopener"
+>Understanding Kubernetes Through Real-World Penomena&lt;/a>&amp;rdquo; (very recommended!).&lt;/p></description></item><item><title>You can Gitopsify your Ansible</title><link>https://jscheytt.github.io/p/you-can-gitopsify-your-ansible/</link><pubDate>Tue, 01 Mar 2022 08:34:20 +0100</pubDate><guid>https://jscheytt.github.io/p/you-can-gitopsify-your-ansible/</guid><description>&lt;p>I have a &lt;a class="link" href="https://github.com/jscheytt/dotfiles" target="_blank" rel="noopener"
 >dotfiles repository&lt;/a> for setting up my MacOS machine easily and reproducibly.
 For this I am mostly using Ansible, just slightly wrapping it with Make and seasoning it with a pinch of Shell.&lt;/p>
 &lt;p>The core piece of this repository is a &lt;code>Brewfile&lt;/code> and a collection of &lt;a class="link" href="https://github.com/jscheytt/dotfiles/blob/main/files/dotfiles/.oh-my-zsh/custom/aliases.zsh" target="_blank" rel="noopener"
@@ -692,7 +833,19 @@ That URL contains the secret as a query parameter.&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">brew install oathtool
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Use your secret, e.g. as a base32-encoded string&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">oathtool --totp --base32 &lt;span class="s2">&amp;#34;MFRGCZDTMVRXEZLUBI======&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docker does not really help you a lot trying to get permissions right</title><link>https://jscheytt.github.io/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/</link><pubDate>Fri, 23 Jul 2021 14:42:07 +0200</pubDate><guid>https://jscheytt.github.io/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/</guid><description>&lt;p>I really love Docker, and I also come to like security more and more.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>About</title><link>https://jscheytt.github.io/about/</link><pubDate>Wed, 28 Jul 2021 08:32:37 +0200</pubDate><guid>https://jscheytt.github.io/about/</guid><description>&lt;p>Hey,&lt;/p>
+&lt;p>My name is Josia Scheytt ([josˈiːa ʃaɪ̯t]), 28 years old, living in Germany.&lt;/p>
+&lt;p>I am interested in all things DevOps and Cloud Automation.&lt;/p>
+&lt;p>This blog serves mostly as a small utility to keep track of things I have learned, but also as a way of sharing knowledge.
+For me this is a vital part of living DevOps.&lt;/p>
+&lt;p>You can find me on:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.linkedin.com/in/josiascheytt/" target="_blank" rel="noopener"
+>LinkedIn&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/jscheytt" target="_blank" rel="noopener"
+>GitHub&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;!-- raw HTML omitted --></description></item><item><title>Docker does not really help you a lot trying to get permissions right</title><link>https://jscheytt.github.io/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/</link><pubDate>Fri, 23 Jul 2021 14:42:07 +0200</pubDate><guid>https://jscheytt.github.io/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/</guid><description>&lt;p>I really love Docker, and I also come to like security more and more.
 One advice I have been hearing a lot (e.g. in this &lt;a class="link" href="https://snyk.io/blog/10-docker-image-security-best-practices/" target="_blank" rel="noopener"
 >Container Security Cheat Sheet from Snyk&lt;/a>) is that &lt;strong>you should not run your container as a root user&lt;/strong>.&lt;/p>
 &lt;p>&amp;ldquo;Easy thing,&amp;rdquo; I thought to myself, &amp;ldquo;I am just going to put something like &lt;code>USER {app}&lt;/code>&amp;rdquo; at the top of my Dockerfile.&amp;quot;
@@ -746,4 +899,4 @@ Now I can save one more character by retraining myself to use &lt;code>:xa&lt;/c
 &lt;h1 id="wait-now-that-you-mention-it-">Wait, now that you mention it &amp;hellip;&lt;/h1>
 &lt;p>Well, turns out the documentation mentions an even easier way: Just press &lt;code>ZZ&lt;/code> (without the colon) 😴&lt;/p>
 &lt;p>Now if only I could combine this to perform &lt;code>:wqa&lt;/code> &amp;hellip;&lt;/p>
-&lt;p>Happy vim-ing! 👋&lt;/p></description></item></channel></rss>
+&lt;p>Happy vim-ing! 👋&lt;/p></description></item><item><title>Archives</title><link>https://jscheytt.github.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://jscheytt.github.io/archives/</guid><description/></item><item><title>Search</title><link>https://jscheytt.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://jscheytt.github.io/search/</guid><description/></item></channel></rss>

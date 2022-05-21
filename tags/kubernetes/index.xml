@@ -1,3 +1,303 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>kubernetes on Josia's Blog</title><link>https://jscheytt.github.io/tags/kubernetes/</link><description>Recent content in kubernetes on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 01 Feb 2022 14:53:18 +0100</lastBuildDate><atom:link href="https://jscheytt.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml"/><item><title>kubectl can explain all resource types in detail</title><link>https://jscheytt.github.io/p/kubectl-can-explain-all-resource-types-in-detail/</link><pubDate>Tue, 01 Feb 2022 14:53:18 +0100</pubDate><guid>https://jscheytt.github.io/p/kubectl-can-explain-all-resource-types-in-detail/</guid><description>$ kubectl explain statefulset KIND: StatefulSet VERSION: apps/v1 DESCRIPTION: StatefulSet represents a set of pods with consistent identities. Identities are defined as: - Network: A single stable DNS and hostname. - Storage: As many VolumeClaims as requested. The StatefulSet guarantees that a given network identity will always map to the same storage identity. FIELDS: apiVersion &amp;lt;string&amp;gt; APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values.</description></item><item><title>Trying to simplify k8s labels can be dangerous for your routing</title><link>https://jscheytt.github.io/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/</link><pubDate>Fri, 03 Dec 2021 10:43:01 +0100</pubDate><guid>https://jscheytt.github.io/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/</guid><description>Today I was refactoring a bigger configuration setup that is built with kustomize. I see kustomize as a light-weight way of packaging multiple Kubernetes manifests, together with a little bit of logic.
-The base kustomization of the application config repo I was refactoring looked something like this:
-apiVersion:kustomize.config.k8s.io/v1beta1kind:Kustomizationresources:- manifests/cronjob-backup.yaml- manifests/deployment.yaml- manifests/ingress.yaml- manifests/pod-disruption-budget.yaml- manifests/service.yamlcommonAnnotations:source:javatenant:acmeconfigMapGenerator:- name:acme-app-configfiles:- configs/10-local.properties- configs/30-local.properties- configs/40-local.propertiesI have an almost pathologic tendency to simplify and DRY everything up that I find, especially in configuration code.</description></item><item><title>Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace</title><link>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</link><pubDate>Fri, 29 Oct 2021 12:11:47 +0200</pubDate><guid>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</guid><description>kubectl api-resources --verbs=list --namespaced -o name \ | xargs -n 1 kubectl get --show-kind --ignore-not-found -n &amp;#34;$NAMESPACE&amp;#34; Props to RedHat.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>kubernetes on Josia's Blog</title><link>https://jscheytt.github.io/tags/kubernetes/</link><description>Recent content in kubernetes on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 20 May 2022 12:23:53 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml"/><item><title>My First KubeCon/CloudNativeCon Experience</title><link>https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/</link><pubDate>Fri, 20 May 2022 12:23:53 +0200</pubDate><guid>https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/</guid><description>&lt;img src="https://events.linuxfoundation.org/wp-content/uploads/2022/03/kubecon-eu-2022-web-021621_snackable.jpg" alt="Featured image of post My First KubeCon/CloudNativeCon Experience" />&lt;p>&lt;img src="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/team-entry.jpg"
+width="348"
+height="465"
+srcset="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/team-entry_hu1aeeb017ee02b96e9ed5387cac258de9_69964_480x0_resize_q75_box.jpg 480w, https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/team-entry_hu1aeeb017ee02b96e9ed5387cac258de9_69964_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Me and 4 colleagues standing in front of the main KubeCon entry"
+class="gallery-image"
+data-flex-grow="74"
+data-flex-basis="179px"
+>&lt;/p>
+&lt;p>This week I went to KubeCon/CloudNativeCon in Valencia, Spain, together with four of my colleagues, both from mimacom Germany and mimacom Spain.&lt;/p>
+&lt;blockquote>
+&lt;p>Thanks a lot to mimacom for sponsoring our attending!&lt;/p>
+&lt;/blockquote>
+&lt;p>What I want to talk about in this blog post is not a summary of talks or topics but just how I experienced the whole event.
+Is was the first KubeCon I have ever attended, and we came on Monday, left on Friday, so we effectively only attended Tuesday through Thursday (the middle 3 of the 5 days).&lt;/p>
+&lt;h1 id="about-kubecon">About KubeCon&lt;/h1>
+&lt;p>KubeCon is &lt;em>the&lt;/em> regular conference for all things Kubernetes and everything happening in the Cloud Native space.
+Since the last few years, it has been held 2 times a year, always alternating between Europe and North America.&lt;/p>
+&lt;p>It is &lt;strong>massive&lt;/strong>.
+Really massive.
+Imagine the biggest fair venue you know of, maybe double that area, and then fill it (and the surrounding city) with more than 6,000 developers - that&amp;rsquo;s how massive it is.&lt;/p>
+&lt;p>But this mass of people only comes from day 3 to day 5 (Wednesday through Friday).
+On the first two days it is &lt;em>a lot less crowded&lt;/em> because that is the time where the so called &amp;ldquo;&lt;strong>Co-located Events&lt;/strong>&amp;rdquo; take place.
+These are smaller sub-conferences within KubeCon which focus on a specific topic.
+Some of these events this time were: Service Mesh Con, Cloud Native Security Con, Kubernetes on Edge Day, and GitOpsCon.
+(I think there were about 15 distinct events in total.)&lt;/p>
+&lt;h1 id="disclaimers">Disclaimers&lt;/h1>
+&lt;p>To be completely honest up-front, &lt;em>GitOpsCon was the main reason&lt;/em> I wanted to attend KubeCon at all in the first place, so my view on KubeCon as a whole is biased.&lt;/p>
+&lt;p>Additionally, I am the type of person who easily gets overwhelmed when staying in very crowded places for longer periods of time.
+I can handle it, but not without proper self-care and not very well for multiple days in a row.
+This does, admittedly, not put me in a very well-equipped position for a fair like this - just wanted to mention this so you know which color the glasses have through which you now get a view unto this event 😉.&lt;/p>
+&lt;p>&lt;img src="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/gitopscon-slide.jpg"
+width="4032"
+height="3024"
+srcset="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/gitopscon-slide_hufa08c22d9d0206fd7cf4355dc2976988_7323907_480x0_resize_q75_box.jpg 480w, https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/gitopscon-slide_hufa08c22d9d0206fd7cf4355dc2976988_7323907_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="The first slide of GitOpsCon"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+>&lt;/p>
+&lt;h1 id="gitopscon">GitOpsCon&lt;/h1>
+&lt;p>One lesson I have drawn from my first KubeCon is that &lt;strong>the Co-located Events are the real thing&lt;/strong>.
+That, of course, only applies if there is a Co-located Event in which you have a deep interest 😉.&lt;/p>
+&lt;p>My heart beats for GitOps and its much wider adoption, so I attended GitOpsCon, which is organized by &lt;a class="link" href="https://opengitops.dev/" target="_blank" rel="noopener"
+>OpenGitOps&lt;/a> (or the GitOps Working Group (WG), which is sort of the official committee behind it).
+GitOpsCon was one of the bigger Co-located Events and even offered multiple talks in parallel during some slots.&lt;/p>
+&lt;p>One person I was very much looking forward to meeting was Chris Short from AWS EKS (formerly RedHat).
+If you have not heard of him before, do check out his newsletter &lt;a class="link" href="https://devopsish.com/" target="_blank" rel="noopener"
+>DevOps&amp;rsquo;ish&lt;/a>!
+It is one of the three weekly newsletters I regularly read, and I do read very few.&lt;/p>
+&lt;p>And &amp;hellip; it worked out!
+He was holding the first keynote together with Dan Garfield (from Codefresh, ArgoCD maintainer) and Scott Rigby (from Weaveworks, both a Helm and a FluxCD maintainer), and I was able to just walk up to him in the time between two sessions and express my gratitude for his curating that newsletter 🤗!&lt;/p>
+&lt;p>There were very interesting talks, but sometimes it&amp;rsquo;s funny how the things that stick with you after a talk are not what the talk was actually all about.
+I was for instance sitting in a talk by Michael Irwin about creating a platform for campus students to run workloads in Kubernetes, but what the talk really did for me was losing my fair of Helm - simply because of the fast and uncomplicated way he ran &lt;code>helm create&lt;/code> during a demo in that talk.&lt;/p>
+&lt;p>What was especially rewarding, engaging, and exciting was getting into conversation with the speakers after their talks.
+I am convinced it really makes a huge difference that the barrier to asking is so low when you are together in one room in-person.
+Sometimes you can easily get clarifications on unclear points, sometimes you discover together that something is not yet known for both of you, sometimes you discuss about the industry as a whole and in which direction it evolves or should evolve.
+One speaker (Andrew Block from RedHat, he talked about Secrets Management with GitOps) even photographed my badge in order to contact me after the event because he could not yet answer a detail question I had!
+I am deeply grateful for the opportunity of diving into the community of people in the Cloud Native space.&lt;/p>
+&lt;h1 id="new-ideas">New Ideas&lt;/h1>
+&lt;p>Luckily, not only GitOpsCon exposed me to new ideas - that also happened (and happened a lot!) with the talks during the other two days:
+I heard about the &lt;a class="link" href="https://kccnceu2022.sched.com/event/ytpE/reproducing-production-issues-in-your-ci-pipeline-using-ebpf-matthew-leray-speedscale-omid-azizi-new-relic" target="_blank" rel="noopener"
+>Kernel-intercepting eBPF technology&lt;/a>, something like &amp;ldquo;Serverless CloudFoundry&amp;rdquo; with Knative, and using machine learning to optimize resource requests and limits for SLOs, among many others.
+If you want to see which (few) talks I attended, see &lt;a class="link" href="https://kccnceu2022.sched.com/jscheytt?iframe=no" target="_blank" rel="noopener"
+>my schedule in Sched&lt;/a>.&lt;/p>
+&lt;p>The cool thing with something like Kubernetes and its ecosystem is that you can very quickly &lt;strong>experiment without a big setup investment&lt;/strong>.
+I e.g. heard about Tekton as a side note and decided to directly give it a go during one of the other talks, and I was directly able to walk through the Getting Started guide to verify how nicely it works!&lt;/p>
+&lt;h1 id="starting-to-see-patterns">Starting To See Patterns&lt;/h1>
+&lt;p>Let me note down a few things I found remarkable and where we as an industry can maybe find better ways of achieving things:&lt;/p>
+&lt;ul>
+&lt;li>Not only do we have many tools in the Cloud Native ecosystem (I will not make the next joke about the &lt;a class="link" href="https://landscape.cncf.io/" target="_blank" rel="noopener"
+>CNCF Landscape&lt;/a>, you can invent one yourself 😄), it also seems to me that everybody starts to create another copy-paste version of the &lt;a class="link" href="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/" target="_blank" rel="noopener"
+>standard Kubernetes Dashboard&lt;/a> but just filtered down to their CRDs.
+&lt;ul>
+&lt;li>The &lt;a class="link" href="https://github.com/tektoncd/dashboard/blob/main/docs/dashboard-ui.jpg" target="_blank" rel="noopener"
+>Tekton Dashboard&lt;/a> is a prime example of this, but they are not the only ones who are either actively doing this or considering building their own UI.&lt;/li>
+&lt;li>The Kubernetes Dashboard seems to have a &lt;a class="link" href="https://github.com/kubernetes/dashboard/blob/master/docs/plugins/README.md" target="_blank" rel="noopener"
+>plugin system&lt;/a>, so why don&amp;rsquo;t we all use more of this?&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>I have never used ArgoCD because I thought &amp;ldquo;well, I have learned how to use FluxCD and use it, why should I learn another CD tool?&amp;rdquo;
+&lt;ul>
+&lt;li>And like many people, I have been living in a &lt;em>false dichotomy&lt;/em> that GitOps is &lt;em>either Flux or Argo&lt;/em> - but that misses the point!&lt;/li>
+&lt;li>&lt;a class="link" href="https://gitopsconeu22.sched.com/event/zrqT/implementing-preview-environments-with-gitops-in-kubernetes-francois-le-pape-remazing" target="_blank" rel="noopener"
+>One talk at GitOpsCon&lt;/a> showed pretty nicely how you can &lt;strong>use both together&lt;/strong>: Use FluxCD as a platform team to deploy your infrastructure, and deploy Argo for your developers to deploy and manage their applications.&lt;/li>
+&lt;li>Just one example: I love Flux, but managing preview environments from PRs is a lot of work (mostly YAML generation), but Argo has a dedicated &lt;a class="link" href="https://argocd-applicationset.readthedocs.io/en/stable/Generators-Pull-Request/" target="_blank" rel="noopener"
+>Pull Request Generator&lt;/a> to solve this in just about 10 lines of code.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="meeting-maintainers">Meeting Maintainers&lt;/h1>
+&lt;p>If you go to KubeCon only for the talks, you are probably doing it wrong - watch the talks virtually, it is a lot less effort.
+There is a whole big area with booths from all kinds of vendors in the Cloud Native space.
+One corner of this space is reserved for maintainers of a few Open Source tools.&lt;/p>
+&lt;p>I especially enjoyed going up to these people and more than anything &lt;strong>thanking them&lt;/strong> for the tremendous work they are doing and how grateful I am for getting to work with these tools (almost) every day!
+Among these there were especially &lt;a class="link" href="https://fluxcd.io/" target="_blank" rel="noopener"
+>FluxCD&lt;/a> and &lt;a class="link" href="https://crossplane.io/" target="_blank" rel="noopener"
+>Crossplane&lt;/a>, but also the often overlooked &lt;a class="link" href="https://cert-manager.io/" target="_blank" rel="noopener"
+>cert-manager&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/cert-manager-booth.jpg"
+width="2016"
+height="1512"
+srcset="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/cert-manager-booth_hue4c5f4b9a6b472ff07f3829d9cffe956_1872984_480x0_resize_q75_box.jpg 480w, https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/cert-manager-booth_hue4c5f4b9a6b472ff07f3829d9cffe956_1872984_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="At the cert-manager booth"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+> &lt;img src="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/certificate.jpg"
+width="1008"
+height="756"
+srcset="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/certificate_hue9aff69b27501b946e0598f4970b7f66_474581_480x0_resize_q75_box.jpg 480w, https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/certificate_hue9aff69b27501b946e0598f4970b7f66_474581_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="My certificate - so cute 🤗"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+>&lt;/p>
+&lt;p>The folks at the cert-manager booth were especially creative in creating an actual SSL certificate for your email address and then printing and even &lt;em>stamping it with a wax seal&lt;/em>!
+Btw do go and check out &lt;a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSfLX4SQEC0phxVLB2shSzv2s__IDCB6GmlnvsqQ06CD0IYOeA/viewform" target="_blank" rel="noopener"
+>their short survey about usage in production clusters&lt;/a> to enable them to become a graduated CNCF project.&lt;/p>
+&lt;p>Some of the tools represented in the maintainers&amp;rsquo; area were still somewhat new to me.
+The great thing was that I could just walk up to them and ask them for a short demo to understand the usage and the difference to other tools.
+Special thanks to the folks at the ArgoCD, Backstage, and Buildpacks booths!&lt;/p>
+&lt;h1 id="favorite-quotes">Favorite Quotes&lt;/h1>
+&lt;p>I am going to close with some wise words people have said on this conference:&lt;/p>
+&lt;blockquote>
+&lt;p>If it&amp;rsquo;s not in Git, it&amp;rsquo;s just a rumor.&lt;/p>
+&lt;/blockquote>
+&lt;p>RedHat printed T-shirts for GitOpsCon with this saying - they were gone quicker than you could queue in at their booth (I did not get one unfortunately &amp;hellip;).&lt;/p>
+&lt;blockquote>
+&lt;p>What is software? Software is code while it is running, code with electricity applied to it.&lt;/p>
+&lt;/blockquote>
+&lt;p>Justin Garrison in the context of &amp;ldquo;&lt;a class="link" href="https://gitopsconeu22.sched.com/event/zrr3/infrastructure-as-software-with-gitops-justin-garrison-amazon" target="_blank" rel="noopener"
+>Infrastructure as Software&lt;/a>&amp;rdquo; and why GitOps is such a breakthrough for this.&lt;/p>
+&lt;blockquote>
+&lt;p>Kubernetes is the industrial revolution for server computing, that&amp;rsquo;s how fundamental it is.&lt;/p>
+&lt;/blockquote>
+&lt;p>Lucas Käldström in his talk &amp;ldquo;&lt;a class="link" href="https://kccnceu2022.sched.com/event/ytr4/understanding-kubernetes-through-real-world-phenomena-and-analogies-lucas-kaldstrom" target="_blank" rel="noopener"
+>Understanding Kubernetes Through Real-World Penomena&lt;/a>&amp;rdquo; (very recommended!).&lt;/p></description></item><item><title>kubectl can explain all resource types in detail</title><link>https://jscheytt.github.io/p/kubectl-can-explain-all-resource-types-in-detail/</link><pubDate>Tue, 01 Feb 2022 14:53:18 +0100</pubDate><guid>https://jscheytt.github.io/p/kubectl-can-explain-all-resource-types-in-detail/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> kubectl explain statefulset
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">KIND: StatefulSet
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">VERSION: apps/v1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go">DESCRIPTION:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> StatefulSet represents a set of pods with consistent identities. Identities
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> are defined as:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> - Network: A single stable DNS and hostname.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> - Storage: As many VolumeClaims as requested. The StatefulSet guarantees
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> that a given network identity will always map to the same storage identity.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go">FIELDS:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> apiVersion &amp;lt;string&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> APIVersion defines the versioned schema of this representation of an
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> object. Servers should convert recognized schemas to the latest internal
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> value, and may reject unrecognized values. More info:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> kind &amp;lt;string&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> Kind is a string value representing the REST resource this object
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> represents. Servers may infer this from the endpoint the client submits
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> requests to. Cannot be updated. In CamelCase. More info:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> metadata &amp;lt;Object&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> spec &amp;lt;Object&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> Spec defines the desired identities of pods in this set.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> status &amp;lt;Object&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> Status is the current status of Pods in this StatefulSet. This data may be
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> out of date by some window of time.
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I guess this will reduce a lot of my googling in future.&lt;/p>
+&lt;p>And it even works on nested fields!&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> kubectl explain deployment.spec.template.spec.containers
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">KIND: Deployment
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">VERSION: apps/v1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go">RESOURCE: containers &amp;lt;[]Object&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go">DESCRIPTION:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> List of containers belonging to the pod. Containers cannot currently be
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> added or removed. There must be at least one container in a Pod. Cannot be
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> updated.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> A single application container that you want to run within a pod.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go">FIELDS:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> args &amp;lt;[]string&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> Arguments to the entrypoint. The docker image&amp;#39;s CMD is used if this is not
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> provided. Variable references $(VAR_NAME) are expanded using the
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> container&amp;#39;s environment. If a variable cannot be resolved, the reference in
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> the input string will be unchanged. The $(VAR_NAME) syntax can be escaped
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> with a double $$, ie: $$(VAR_NAME). Escaped references will never be
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> expanded, regardless of whether the variable exists or not. Cannot be
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> updated. More info:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> command &amp;lt;[]string&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> Entrypoint array. Not executed within a shell. The docker image&amp;#39;s
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME)
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> are expanded using the container&amp;#39;s environment. If a variable cannot be
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> resolved, the reference in the input string will be unchanged. The
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME).
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> Escaped references will never be expanded, regardless of whether the
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> variable exists or not. Cannot be updated. More info:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> env &amp;lt;[]Object&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> List of environment variables to set in the container. Cannot be updated.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> ...
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Trying to simplify k8s labels can be dangerous for your routing</title><link>https://jscheytt.github.io/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/</link><pubDate>Fri, 03 Dec 2021 10:43:01 +0100</pubDate><guid>https://jscheytt.github.io/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/</guid><description>&lt;p>Today I was refactoring a bigger configuration setup that is built with &lt;a class="link" href="https://kustomize.io/" target="_blank" rel="noopener"
+>kustomize&lt;/a>.
+I see kustomize as a light-weight way of packaging multiple Kubernetes manifests, together with a little bit of logic.&lt;/p>
+&lt;p>The &lt;strong>base kustomization&lt;/strong> of the application config repo I was refactoring looked something like this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">apiVersion&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">kustomize.config.k8s.io/v1beta1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">kind&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Kustomization&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">resources&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/cronjob-backup.yaml&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/deployment.yaml&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/ingress.yaml&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/pod-disruption-budget.yaml&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/service.yaml&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">commonAnnotations&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">source&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">java&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">tenant&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">acme&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">configMapGenerator&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">acme-app-config&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">files&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">configs/10-local.properties&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">configs/30-local.properties&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">configs/40-local.properties&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I have an almost pathologic tendency to simplify and DRY everything up that I find, especially in configuration code.
+And as I saw a lot of &lt;strong>repeating Labels&lt;/strong> in the manifests, I thought &amp;ldquo;Well, let&amp;rsquo;s just unify them.&amp;rdquo;&lt;/p>
+&lt;p>So I went ahead, removed the repetitive Labels from the manifests and added the following block to the kustomization:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">commonLabels&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">app&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">acme-app&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I knew a bit about Kubernetes Services and that they &lt;em>use Labels to find the Pods to which they should direct their traffic&lt;/em>.
+That&amp;rsquo;s why I thoroughly verified that after my change the Service and the Deployment would still have &lt;strong>the same selector labels&lt;/strong>.
+🤗 Nothing seemed off &amp;hellip;&lt;/p>
+&lt;p>I committed and pushed my changes, and after the Deployment had finished restarting, I clicked through the application.
+👀 Oddly enough some of the requests succeeded as expected, but some kept failing with a 💥 &lt;code>502 Bad Gateway&lt;/code> error!
+At first I tried troubleshooting quickly, but soon I opted for just reverting my changes and pushing the revert commits to undo my changes.&lt;/p>
+&lt;p>For debugging I compared the output of &lt;code>kustomize build&lt;/code> before and after my changes.
+After some scrolling I came across the &lt;strong>CronJobs&lt;/strong> I defined for backup&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>I should probably not have been surprised that the CronJob also had the same Labels I gave it via the kustomization.
+But now a suspicion started sneaking in:&lt;/p>
+&lt;blockquote>
+&lt;p>What if the &lt;strong>completed Pods&lt;/strong> of the CronJob received traffic from the Service because they had &lt;strong>the same Labels&lt;/strong>?&lt;/p>
+&lt;/blockquote>
+&lt;p>Following this idea, I refactored my configs a bit.
+Soon, I was able to ensure that requests to the Service would only point to my target Deployment (and not to any other Pods):&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl">&lt;span class="gh">diff --git a/base/kustomization.yaml b/base/kustomization.yaml
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">index 6c1c6f7..b77b0fc 100644
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">&lt;/span>&lt;span class="gd">--- a/base/kustomization.yaml
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">&lt;/span>&lt;span class="gi">+++ b/base/kustomization.yaml
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">&lt;/span>&lt;span class="gu">@@ -15,7 +15,6 @@ commonAnnotations:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span> source: java
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> tenant: acme
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">-commonLabels:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">- app: acme-app
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">&lt;/span> configMapGenerator:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: acme-app-config
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">diff --git a/base/manifests/deployment.yaml b/base/manifests/deployment.yaml
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">index 1e4aa3f..a60a798 100644
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">&lt;/span>&lt;span class="gd">--- a/base/manifests/deployment.yaml
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">&lt;/span>&lt;span class="gi">+++ b/base/manifests/deployment.yaml
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">&lt;/span>&lt;span class="gu">@@ -16,6 +16,9 @@ metadata:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span> spec:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> replicas: 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ selector:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ matchLabels:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ app: acme-app
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">&lt;/span> template:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> metadata:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> labels:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ app: acme-app
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">&lt;/span> spec:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> containers:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">diff --git a/base/manifests/service.yaml b/base/manifests/service.yaml
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">index b05d898..89af021 100644
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">&lt;/span>&lt;span class="gd">--- a/base/manifests/service.yaml
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">&lt;/span>&lt;span class="gi">+++ b/base/manifests/service.yaml
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">&lt;/span>&lt;span class="gu">@@ -10,3 +10,5 @@ spec:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span> - name: api
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> port: 8080
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ selector:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ app: acme-app
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>(Notice that the Deployment needs the Label both in &lt;code>.spec.selector.matchLabels&lt;/code> and &lt;code>.spec.template.metadata.labels&lt;/code>!)&lt;/p>
+&lt;p>And surely enough, after deploying this fix, the request to the application worked flawlessly 😊✅.&lt;/p>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>It does not matter for which purpose I created this CronJob, it could have been any Kubernetes Resource that creates Pods.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace</title><link>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</link><pubDate>Fri, 29 Oct 2021 12:11:47 +0200</pubDate><guid>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">kubectl api-resources --verbs&lt;span class="o">=&lt;/span>list --namespaced -o name &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="p">|&lt;/span> xargs -n &lt;span class="m">1&lt;/span> kubectl get --show-kind --ignore-not-found -n &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$NAMESPACE&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Props to &lt;a class="link" href="https://cloud.redhat.com/blog/the-hidden-dangers-of-terminating-namespaces" target="_blank" rel="noopener"
+>RedHat&lt;/a>.&lt;/p></description></item></channel></rss>
