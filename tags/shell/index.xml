@@ -31,7 +31,7 @@ I first considered performing it through the GitHub API, but then I decided to t
 &lt;strong>Git Aliases&lt;/strong>.
 These are Git commands you can define yourself, either via CLI or in the Gitconfig file.&lt;/p>
 &lt;p>With this article, I want to introduce what I learned about Git aliases – and in the process, you get all the aliases I defined for my cleanup 😉&lt;/p>
-&lt;h1 id="defining-shortcuts">Defining Shortcuts&lt;/h1>
+&lt;h2 id="defining-shortcuts">Defining Shortcuts&lt;/h2>
 &lt;p>Many articles about Git aliases explain only the &lt;strong>shortcut side&lt;/strong>.
 They show e.g. how you can abbreviate &lt;code>git checkout&lt;/code> to &lt;code>git co&lt;/code> by running &lt;code>git config --global alias.co checkout&lt;/code>.
 Alternatively to the CLI command, you can add this section to your &lt;code>~/.gitconfig&lt;/code> file:&lt;/p>
@@ -40,14 +40,14 @@ Alternatively to the CLI command, you can add this section to your &lt;code>~/.g
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nowadays, with the &lt;a class="link" href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git" target="_blank" rel="noopener"
 >Git plugin of oh-my-zsh&lt;/a>, I don&amp;rsquo;t feel there is a great need for such shortcuts.
 Let&amp;rsquo;s instead talk about &lt;strong>actual custom commands&lt;/strong>:&lt;/p>
-&lt;h1 id="with-parameters">With Parameters&lt;/h1>
+&lt;h2 id="with-parameters">With Parameters&lt;/h2>
 &lt;p>If you use an &lt;em>exclamation mark&lt;/em> before your command, you can run any Shell command you want, even with parameters.
 The following example will let you do e.g. &lt;code>git cat 2eea778 package.json&lt;/code> to get the file contents of a file at a certain revision:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ini" data-lang="ini">&lt;span class="line">&lt;span class="cl">&lt;span class="k">[alias]&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">; Output file contents from any revision&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">; See https://stackoverflow.com/a/54819889/6435726&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">cat&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">!git show &amp;#34;$1:$2&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="pass-it-on">Pass It On&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="pass-it-on">Pass It On&lt;/h2>
 &lt;p>Piping output into other commands is available out of the box.
 Executing multiple commands is just a &lt;code>&amp;amp;&amp;amp;&lt;/code> away.&lt;/p>
 &lt;p>You may want to break your command into &lt;em>multiple lines&lt;/em>:
@@ -61,7 +61,7 @@ Do so by wrapping your command into &lt;strong>quotes&lt;/strong> and prepending
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can also use &lt;em>subshells&lt;/em>:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ini" data-lang="ini">&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">; Switch to the default branch.&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">switch-default&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">!git switch $(git default-branch)&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="escaping-can-be-tricky">Escaping Can Be Tricky&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="escaping-can-be-tricky">Escaping Can Be Tricky&lt;/h2>
 &lt;p>If you want to have a &lt;em>literal backslash&lt;/em> in the resulting Shell command, you have to escape it.
 Pay attention to the &lt;code>grep&lt;/code> patterns in the following aliases:
 Every double backslash of this pattern becomes a single backslash when Git passes the command to the Shell.&lt;/p>
@@ -86,7 +86,7 @@ Every double backslash of this pattern becomes a single backslash when Git passe
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I think these are the dangers of every templating language:
 You have to account for special characters - but if these special characters happen to be special in someone else&amp;rsquo;s language, things can become unexpectedly complicated.
 (Think about Makefiles and &lt;code>$(variables)&lt;/code> vs. &lt;code>$$variables&lt;/code> in rules.)&lt;/p>
-&lt;h1 id="parameters-pt-2-default-values">Parameters Pt. 2: Default Values&lt;/h1>
+&lt;h2 id="parameters-pt-2-default-values">Parameters Pt. 2: Default Values&lt;/h2>
 &lt;p>As with any other Shell function, you can not only have positional parameters but you can also give them default values.
 The following alias has a &lt;em>delete flag&lt;/em> that defaults to the safe behavior, but you can overwrite it with &lt;code>git delete-local-branches-without-remote -D&lt;/code>:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ini" data-lang="ini">&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">; Delete local branches that are not present on the remote&lt;/span>
@@ -105,11 +105,11 @@ It also demonstrates nicely how you can use &lt;em>xargs&lt;/em> to run every Sh
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> git switch-default &amp;amp;&amp;amp; \
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> git remotely-merged-branches \
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> | xargs -I {} git push origin --delete {}&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="debugging">Debugging&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="debugging">Debugging&lt;/h2>
 &lt;p>If you encounter an error message, you can increase the verbosity with this environment variable:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">GIT_TRACE&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Deactivate it afterward by closing your terminal session or explicitly with &lt;code>unset GIT_TRACE&lt;/code>.&lt;/p>
-&lt;h1 id="bringing-it-all-together-multiple-repositories">Bringing It All Together: Multiple Repositories&lt;/h1>
+&lt;h2 id="bringing-it-all-together-multiple-repositories">Bringing It All Together: Multiple Repositories&lt;/h2>
 &lt;p>As a developer, chances are high you have &lt;em>more than just one&lt;/em> Git repository on your machine.
 For many everyday use cases (like keeping all your local clones up-to-date), I have been using &lt;a class="link" href="https://github.com/earwig/git-repo-updater" target="_blank" rel="noopener"
 >git-repo-updater&lt;/a> with a lot of success and ease.&lt;/p>

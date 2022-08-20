@@ -63,7 +63,7 @@ data-flex-basis="179px"
 &lt;/blockquote>
 &lt;p>What I want to talk about in this blog post is not a summary of talks or topics but just how I experienced the whole event.
 Is was the first KubeCon I have ever attended, and we came on Monday, left on Friday, so we effectively only attended Tuesday through Thursday (the middle 3 of the 5 days).&lt;/p>
-&lt;h1 id="about-kubecon">About KubeCon&lt;/h1>
+&lt;h2 id="about-kubecon">About KubeCon&lt;/h2>
 &lt;p>KubeCon is &lt;em>the&lt;/em> regular conference for all things Kubernetes and everything happening in the Cloud Native space.
 Since the last few years, it has been held 2 times a year, always alternating between Europe and North America.&lt;/p>
 &lt;p>It is &lt;strong>massive&lt;/strong>.
@@ -74,7 +74,7 @@ On the first two days it is &lt;em>a lot less crowded&lt;/em> because that is th
 These are smaller sub-conferences within KubeCon which focus on a specific topic.
 Some of these events this time were: Service Mesh Con, Cloud Native Security Con, Kubernetes on Edge Day, and GitOpsCon.
 (I think there were about 15 distinct events in total.)&lt;/p>
-&lt;h1 id="disclaimers">Disclaimers&lt;/h1>
+&lt;h2 id="disclaimers">Disclaimers&lt;/h2>
 &lt;p>To be completely honest up-front, &lt;em>GitOpsCon was the main reason&lt;/em> I wanted to attend KubeCon at all in the first place, so my view on KubeCon as a whole is biased.&lt;/p>
 &lt;p>Additionally, I am the type of person who easily gets overwhelmed when staying in very crowded places for longer periods of time.
 I can handle it, but not without proper self-care and not very well for multiple days in a row.
@@ -89,7 +89,7 @@ class="gallery-image"
 data-flex-grow="133"
 data-flex-basis="320px"
 >&lt;/p>
-&lt;h1 id="gitopscon">GitOpsCon&lt;/h1>
+&lt;h2 id="gitopscon">GitOpsCon&lt;/h2>
 &lt;p>One lesson I have drawn from my first KubeCon is that &lt;strong>the Co-located Events are the real thing&lt;/strong>.
 That, of course, only applies if there is a Co-located Event in which you have a deep interest 😉.&lt;/p>
 &lt;p>My heart beats for GitOps and its much wider adoption, so I attended GitOpsCon, which is organized by &lt;a class="link" href="https://opengitops.dev/" target="_blank" rel="noopener"
@@ -108,7 +108,7 @@ I am convinced it really makes a huge difference that the barrier to asking is s
 Sometimes you can easily get clarifications on unclear points, sometimes you discover together that something is not yet known for both of you, sometimes you discuss about the industry as a whole and in which direction it evolves or should evolve.
 One speaker (Andrew Block from RedHat, he talked about Secrets Management with GitOps) even photographed my badge in order to contact me after the event because he could not yet answer a detail question I had!
 I am deeply grateful for the opportunity of diving into the community of people in the Cloud Native space.&lt;/p>
-&lt;h1 id="new-ideas">New Ideas&lt;/h1>
+&lt;h2 id="new-ideas">New Ideas&lt;/h2>
 &lt;p>Luckily, not only GitOpsCon exposed me to new ideas - that also happened (and happened a lot!) with the talks during the other two days:
 I heard about the &lt;a class="link" href="https://kccnceu2022.sched.com/event/ytpE/reproducing-production-issues-in-your-ci-pipeline-using-ebpf-matthew-leray-speedscale-omid-azizi-new-relic" target="_blank" rel="noopener"
 >Kernel-intercepting eBPF technology&lt;/a>, something like &amp;ldquo;Serverless CloudFoundry&amp;rdquo; with Knative, and using machine learning to optimize resource requests and limits for SLOs, among many others.
@@ -116,7 +116,7 @@ If you want to see which (few) talks I attended, see &lt;a class="link" href="ht
 >my schedule in Sched&lt;/a>.&lt;/p>
 &lt;p>The cool thing with something like Kubernetes and its ecosystem is that you can very quickly &lt;strong>experiment without a big setup investment&lt;/strong>.
 I e.g. heard about Tekton as a side note and decided to directly give it a go during one of the other talks, and I was directly able to walk through the Getting Started guide to verify how nicely it works!&lt;/p>
-&lt;h1 id="starting-to-see-patterns">Starting To See Patterns&lt;/h1>
+&lt;h2 id="starting-to-see-patterns">Starting To See Patterns&lt;/h2>
 &lt;p>Let me note down a few things I found remarkable and where we as an industry can maybe find better ways of achieving things:&lt;/p>
 &lt;ul>
 &lt;li>Not only do we have many tools in the Cloud Native ecosystem (I will not make the next joke about the &lt;a class="link" href="https://landscape.cncf.io/" target="_blank" rel="noopener"
@@ -139,7 +139,7 @@ I e.g. heard about Tekton as a side note and decided to directly give it a go du
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;h1 id="meeting-maintainers">Meeting Maintainers&lt;/h1>
+&lt;h2 id="meeting-maintainers">Meeting Maintainers&lt;/h2>
 &lt;p>If you go to KubeCon only for the talks, you are probably doing it wrong - watch the talks virtually, it is a lot less effort.
 There is a whole big area with booths from all kinds of vendors in the Cloud Native space.
 One corner of this space is reserved for maintainers of a few Open Source tools.&lt;/p>
@@ -173,7 +173,7 @@ Btw do go and check out &lt;a class="link" href="https://docs.google.com/forms/d
 &lt;p>Some of the tools represented in the maintainers&amp;rsquo; area were still somewhat new to me.
 The great thing was that I could just walk up to them and ask them for a short demo to understand the usage and the difference to other tools.
 Special thanks to the folks at the ArgoCD, Backstage, and Buildpacks booths!&lt;/p>
-&lt;h1 id="favorite-quotes">Favorite Quotes&lt;/h1>
+&lt;h2 id="favorite-quotes">Favorite Quotes&lt;/h2>
 &lt;p>I am going to close with some wise words people have said on this conference:&lt;/p>
 &lt;blockquote>
 &lt;p>If it&amp;rsquo;s not in Git, it&amp;rsquo;s just a rumor.&lt;/p>
@@ -217,7 +217,7 @@ I first considered performing it through the GitHub API, but then I decided to t
 &lt;strong>Git Aliases&lt;/strong>.
 These are Git commands you can define yourself, either via CLI or in the Gitconfig file.&lt;/p>
 &lt;p>With this article, I want to introduce what I learned about Git aliases – and in the process, you get all the aliases I defined for my cleanup 😉&lt;/p>
-&lt;h1 id="defining-shortcuts">Defining Shortcuts&lt;/h1>
+&lt;h2 id="defining-shortcuts">Defining Shortcuts&lt;/h2>
 &lt;p>Many articles about Git aliases explain only the &lt;strong>shortcut side&lt;/strong>.
 They show e.g. how you can abbreviate &lt;code>git checkout&lt;/code> to &lt;code>git co&lt;/code> by running &lt;code>git config --global alias.co checkout&lt;/code>.
 Alternatively to the CLI command, you can add this section to your &lt;code>~/.gitconfig&lt;/code> file:&lt;/p>
@@ -226,14 +226,14 @@ Alternatively to the CLI command, you can add this section to your &lt;code>~/.g
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nowadays, with the &lt;a class="link" href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git" target="_blank" rel="noopener"
 >Git plugin of oh-my-zsh&lt;/a>, I don&amp;rsquo;t feel there is a great need for such shortcuts.
 Let&amp;rsquo;s instead talk about &lt;strong>actual custom commands&lt;/strong>:&lt;/p>
-&lt;h1 id="with-parameters">With Parameters&lt;/h1>
+&lt;h2 id="with-parameters">With Parameters&lt;/h2>
 &lt;p>If you use an &lt;em>exclamation mark&lt;/em> before your command, you can run any Shell command you want, even with parameters.
 The following example will let you do e.g. &lt;code>git cat 2eea778 package.json&lt;/code> to get the file contents of a file at a certain revision:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ini" data-lang="ini">&lt;span class="line">&lt;span class="cl">&lt;span class="k">[alias]&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">; Output file contents from any revision&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">; See https://stackoverflow.com/a/54819889/6435726&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">cat&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">!git show &amp;#34;$1:$2&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="pass-it-on">Pass It On&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="pass-it-on">Pass It On&lt;/h2>
 &lt;p>Piping output into other commands is available out of the box.
 Executing multiple commands is just a &lt;code>&amp;amp;&amp;amp;&lt;/code> away.&lt;/p>
 &lt;p>You may want to break your command into &lt;em>multiple lines&lt;/em>:
@@ -247,7 +247,7 @@ Do so by wrapping your command into &lt;strong>quotes&lt;/strong> and prepending
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can also use &lt;em>subshells&lt;/em>:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ini" data-lang="ini">&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">; Switch to the default branch.&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">switch-default&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">!git switch $(git default-branch)&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="escaping-can-be-tricky">Escaping Can Be Tricky&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="escaping-can-be-tricky">Escaping Can Be Tricky&lt;/h2>
 &lt;p>If you want to have a &lt;em>literal backslash&lt;/em> in the resulting Shell command, you have to escape it.
 Pay attention to the &lt;code>grep&lt;/code> patterns in the following aliases:
 Every double backslash of this pattern becomes a single backslash when Git passes the command to the Shell.&lt;/p>
@@ -272,7 +272,7 @@ Every double backslash of this pattern becomes a single backslash when Git passe
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I think these are the dangers of every templating language:
 You have to account for special characters - but if these special characters happen to be special in someone else&amp;rsquo;s language, things can become unexpectedly complicated.
 (Think about Makefiles and &lt;code>$(variables)&lt;/code> vs. &lt;code>$$variables&lt;/code> in rules.)&lt;/p>
-&lt;h1 id="parameters-pt-2-default-values">Parameters Pt. 2: Default Values&lt;/h1>
+&lt;h2 id="parameters-pt-2-default-values">Parameters Pt. 2: Default Values&lt;/h2>
 &lt;p>As with any other Shell function, you can not only have positional parameters but you can also give them default values.
 The following alias has a &lt;em>delete flag&lt;/em> that defaults to the safe behavior, but you can overwrite it with &lt;code>git delete-local-branches-without-remote -D&lt;/code>:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ini" data-lang="ini">&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">; Delete local branches that are not present on the remote&lt;/span>
@@ -291,11 +291,11 @@ It also demonstrates nicely how you can use &lt;em>xargs&lt;/em> to run every Sh
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> git switch-default &amp;amp;&amp;amp; \
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> git remotely-merged-branches \
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> | xargs -I {} git push origin --delete {}&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="debugging">Debugging&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="debugging">Debugging&lt;/h2>
 &lt;p>If you encounter an error message, you can increase the verbosity with this environment variable:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">GIT_TRACE&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Deactivate it afterward by closing your terminal session or explicitly with &lt;code>unset GIT_TRACE&lt;/code>.&lt;/p>
-&lt;h1 id="bringing-it-all-together-multiple-repositories">Bringing It All Together: Multiple Repositories&lt;/h1>
+&lt;h2 id="bringing-it-all-together-multiple-repositories">Bringing It All Together: Multiple Repositories&lt;/h2>
 &lt;p>As a developer, chances are high you have &lt;em>more than just one&lt;/em> Git repository on your machine.
 For many everyday use cases (like keeping all your local clones up-to-date), I have been using &lt;a class="link" href="https://github.com/earwig/git-repo-updater" target="_blank" rel="noopener"
 >git-repo-updater&lt;/a> with a lot of success and ease.&lt;/p>
@@ -481,13 +481,13 @@ Most people on the internet say an emphatic &amp;ldquo;No!&amp;rdquo;, so I am j
 I think definitely yes.
 And is it also &lt;strong>guess-safe&lt;/strong>?
 Let&amp;rsquo;s explore that question with a bit of maths:&lt;/p>
-&lt;h1 id="example-scenario">Example Scenario&lt;/h1>
+&lt;h2 id="example-scenario">Example Scenario&lt;/h2>
 &lt;p>Let&amp;rsquo;s say you have an API and you know the records are referenced by their UUID.
 And let&amp;rsquo;s say you wanted to guess any valid record (because &lt;a class="link" href="https://stackoverflow.com/questions/3652944/how-securely-unguessable-are-guids" target="_blank" rel="noopener"
 >💰 money&lt;/a>).&lt;/p>
 &lt;p>What is a realistic scenario, i.e. a reasonably expectable time it would take you to find a valid record?
 Let&amp;rsquo;s just naively assume you find a valid UUID after randomly iterating over half of all possible UUIDs.&lt;/p>
-&lt;h1 id="how-long-would-that-take-you">How long would that take you?&lt;/h1>
+&lt;h2 id="how-long-would-that-take-you">How long would that take you?&lt;/h2>
 &lt;p>Imagine you had started firing requests at your hypothetical API &lt;strong>at the beginning of the observable universe&lt;/strong>, i.e. about 1.3772e10 years (or 4.3437e17 seconds) ago.
 And you send requests at a rate of &lt;strong>1 trillion (1e12) requests per second&lt;/strong> (and, of course, your target API responds at the same rate 😉).
 (You would have to be &lt;em>very&lt;/em> physically close to the API server - at a trillionth of a second, light and therefore information travels only a measly 0.3 millimeters &amp;hellip;)&lt;/p>
