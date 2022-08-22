@@ -470,7 +470,100 @@ Soon, I was able to ensure that requests to the Service would only point to my t
 &lt;p>It does not matter for which purpose I created this CronJob, it could have been any Kubernetes Resource that creates Pods.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description></item><item><title>Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace</title><link>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</link><pubDate>Fri, 29 Oct 2021 12:11:47 +0200</pubDate><guid>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">kubectl api-resources --verbs&lt;span class="o">=&lt;/span>list --namespaced -o name &lt;span class="se">\
+&lt;/div></description></item><item><title>The Universe is Very Big</title><link>https://jscheytt.github.io/p/the-universe-is-very-big/</link><pubDate>Thu, 11 Nov 2021 08:18:44 +0100</pubDate><guid>https://jscheytt.github.io/p/the-universe-is-very-big/</guid><description>&lt;h2 id="what-can-we-compare-the-size-of-the-universe-to">What can we compare the size of the universe to?&lt;/h2>
+&lt;p>I was recently starting to wonder about the size of the universe.
+It&amp;rsquo;s not like I thought I could really get down to imagining this kind of gargantuan extent.
+But I wanted to find a good analogy, so here it goes:&lt;/p>
+&lt;p>Imagine the distance furthest distance humans will soon travel: the &lt;strong>distance from Earth to Mars&lt;/strong>.
+If you are lucky with planning, the shortest route takes almost an entire year (9 months) in a spaceship.&lt;/p>
+&lt;p>Now let&amp;rsquo;s compare this distance to the &lt;strong>size of the observable universe&lt;/strong>.
+The ratio between these two distances is in the order of &lt;strong>$10^{16}$&lt;/strong>.
+That means there are 16 orders of magnitude in difference between these two lengths.&lt;/p>
+&lt;p>What can we compare this to?
+Let&amp;rsquo;s scale this down:
+We will pretend our planet Earth is the universe.
+Now imagine we wanted to drill a hole through the whole planet from one extreme to the other (e.g. from the North Pole to the South Pole).&lt;/p>
+&lt;p>If we had started drilling the equivalent of the Earth-Mars distance, how far would we have gotten?
+One meter?
+A millimeter?
+The width of a human hair?&lt;/p>
+&lt;p>It turns out, we would have only gotten as far as the size of &lt;strong>one atom&lt;/strong>.&lt;/p>
+&lt;h2 id="can-we-even-imagine-this-at-all">Can we even imagine this at all?&lt;/h2>
+&lt;p>For me this only starts to scratch the surface of trying to understand the sheer scale of the universe and the God behind it.
+The problem with this analogy?
+It still does not help a lot because I believe we humans cannot even really imagine the distance between Earth and Mars yet.&lt;/p>
+&lt;p>On Earth we comfortably handle thousands, sometimes maybe tens of thousands of kilometers in our brains.
+On our beautiful planet, this is the order of magnitude we are (gladly) confined to.
+But the travel from Earth to Mars (i.e. the shortest path) is in the 10s of &lt;strong>millions&lt;/strong> of kilometers.
+That is three orders of magnitude above what we normally deal with in daily life!
+(If all the fuss around &amp;ldquo;orders of magnitude&amp;rdquo; sounds foreign to you, maybe the well-known video &lt;a class="link" href="https://www.youtube.com/watch?v=0fKBhvDjuy0" target="_blank" rel="noopener"
+>&amp;ldquo;Powers of Ten&amp;rdquo;&lt;/a> can help you out.)&lt;/p>
+&lt;p>I will just state a hypothesis:
+&lt;strong>I believe we humans cannot handle more than 12 orders of magnitude.&lt;/strong>
+Everything beyond that will just not fit into our brains.&lt;/p>
+&lt;p>In everyday life we normally handle about 10 orders of magnitude in space and time.
+For space, that is e.g. from 10µm ($10^{-5}$ m) (about the width of a hair) to 10,000 km ($10^{5}$ m) (the &lt;a class="link" href="https://en.wikipedia.org/wiki/10,000_km" target="_blank" rel="noopener"
+>distance between Barcelona and LA&lt;/a>).
+For time, that is e.g. from 100 ms (a tenth of a second) to 100 years (about $10^{9}$ s).&lt;/p>
+&lt;p>If we stretch our imaginations we can go towards tens of thousands of kilometers (now we reach 12 orders of magnitude), and maybe we can begin to imagine 1,000 years and tens of milliseconds.
+But I think beyond that we are just lost.
+If any object is outside of these ranges we need to scale it up or down and compare it to things within this $10^{12}$ scale.
+But if we try to compare things where their ratio is greater than $10^{12}$, our brains are just to tiny to fit these in.&lt;/p>
+&lt;h2 id="how-big-is-the-universe-really">How big is the universe really?&lt;/h2>
+&lt;p>Now that we start to find words and numbers to describe the limits of our imagination, I think we start to really become capable of talking about how big the universe really is.&lt;/p>
+&lt;p>The size of the universe is estimated at multiple tens of billions ($10^{10}$) of lightyears.
+One lightyear is roughly $10^{16}$ m, so the size of our universe is in the ballpark of $10^{26}$.
+On the other hand, the smallest length that currently fits into our model of the universe is the Planck length at about $10^{-35}$ m.
+If we add the absolute values of the exponents, we get the so to speak &amp;ldquo;range of existence&amp;rdquo; of our universe:&lt;/p>
+&lt;p>$$
+10^{(26+35)} = 10^{61}
+$$&lt;/p>
+&lt;p>That means our universe exists at about &lt;strong>60 orders of magnitude&lt;/strong>.&lt;/p>
+&lt;p>As per my above claim, none of us can even begin to imagine this number.
+Just try it and keep in mind that 1 order of magnitude means &lt;em>multiply or divide by 10&lt;/em>.
+In analogy, 3 orders of magnitude does not mean &lt;em>multiply or divide by 30&lt;/em> but &lt;em>multiply or divide by 1000&lt;/em>.
+That means going from 10 orders of magnitude to 15 means &lt;strong>multiplying by 10,000&lt;/strong>.
+You can start to see where this is going — but I bet none of us will ever by able to fully grasp such sizes.&lt;/p>
+&lt;p>The above numbers are for space only, but (if I understand that correctly) time is analogous because we are basing it on the same measurements, on the same speed of light (for the upper bound), and the same &lt;a class="link" href="https://en.wikipedia.org/wiki/Planck_constant" target="_blank" rel="noopener"
+>Planck constant&lt;/a> (for the lower bound).
+At the same time, we have to keep in mind that these 60 orders of magnitude come from limited measurements:
+We were only able to discover them because of the finite speed of light and the current age of the universe, so it is likely that our universe is &lt;strong>even bigger&lt;/strong>.&lt;/p>
+&lt;p>Our human imagination cannot even begin to nibble at these sizes.
+I think our perception is even more logarithmic than linear, so we are already pretty well equipped to perceive and compare these orders of magnitude — our range is just ever so narrow.&lt;/p>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Observable_universe_logarithmic_illustration.png"
+loading="lazy"
+alt="An artistic rendition of our universe, drawn at a logarithmic scale with our Sun at the center"
+>
+&lt;em>An artistic rendition of our universe, drawn at a logarithmic scale with our Sun at the center&lt;/em>&lt;/p>
+&lt;h2 id="how-do-we-fit-into-all-this">How do we fit into all this?&lt;/h2>
+&lt;p>I have another number with me, a very simple one:
+&lt;strong>5 percent&lt;/strong>.
+Or, in other words, 0.05.
+(Or $5\cdot10^{-2}$ if you like 😉.)&lt;/p>
+&lt;p>This is a rough estimation on &lt;em>the amount of actual matter in the universe&lt;/em>.
+When looking at the size and distribution of mass and energy in our universe, then typical baryonic matter makes up less than 5 percent of it.&lt;/p>
+&lt;p>Savor that slowly:
+You and me, animals, atoms, the planets, the stars, even all the galaxies, all these account for &lt;strong>not even one twentieth&lt;/strong> of the universe!
+And the rest of it is not even empty:
+The universe is said to be filled by &lt;a class="link" href="https://science.nasa.gov/astrophysics/focus-areas/what-is-dark-energy" target="_blank" rel="noopener"
+>Dark Energy and Dark Matter&lt;/a>.
+(If I could recoin them I would choose the names &lt;em>Invisible Matter&lt;/em> and &lt;em>Invisible Energy&lt;/em>.)&lt;/p>
+&lt;p>Of course this makes one feel very small as a human.
+The crazy thing is:
+The God who made all this (all matter visible and invisible), the loving Creator of The Heavens and The Earth, the one who is even bigger than 60 orders of magnitude, chose to reduce Himself &lt;em>drastically&lt;/em>.&lt;/p>
+&lt;p>Imagine this:
+He created a universe full of wonderful stuff on which most humans will never even lay eyes on (and still they have a right to exist because He rejoices in them!), formed an inhabitable planet with healthy conditions for living, brought all kinds of nature and animals into existence — and then He started making humans &lt;strong>in His own likeness&lt;/strong>.
+Hybrid beings, half dust, half Holy Breath, with their own will and therefore a capability to desire and &lt;strong>love Him back&lt;/strong>.&lt;/p>
+&lt;p>But He did not stop there:
+Because He wanted to subvert all evil in this world with good, He wanted to show us His character and His way of living in the most direct way possible.
+So He — became one of us.
+The Uncreated and Eternal One laid aside all His privileges and folded up Himself, down to a miniscule body of atoms and molecules to live and breathe on this very planet.&lt;/p>
+&lt;p>And not only that:
+Although nobobdy even recognized Him (at least in public), He decided to let the verdict for all our betrayal against Him and one another fall upon Himself ✝️.
+And in Him the eternal life that He joyfully lives together with His Father, became available to us — to everyone who puts their complete trust in the Son.&lt;/p>
+&lt;hr>
+&lt;p>So that is what you look at when you contemplate the universe:
+The Perfect Father in all His overflowing beauty and richness and complexity — and at the same time His Son, Jesus, the One who made this loving God visible and touchable for us small humans ❤️.&lt;/p></description></item><item><title>Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace</title><link>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</link><pubDate>Fri, 29 Oct 2021 12:11:47 +0200</pubDate><guid>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">kubectl api-resources --verbs&lt;span class="o">=&lt;/span>list --namespaced -o name &lt;span class="se">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="p">|&lt;/span> xargs -n &lt;span class="m">1&lt;/span> kubectl get --show-kind --ignore-not-found -n &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$NAMESPACE&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Props to &lt;a class="link" href="https://cloud.redhat.com/blog/the-hidden-dangers-of-terminating-namespaces" target="_blank" rel="noopener"
 >RedHat&lt;/a>.&lt;/p></description></item><item><title>Guessing UUIDs would actually take very long</title><link>https://jscheytt.github.io/p/guessing-uuids-would-actually-take-very-long/</link><pubDate>Wed, 06 Oct 2021 08:32:23 +0200</pubDate><guid>https://jscheytt.github.io/p/guessing-uuids-would-actually-take-very-long/</guid><description>&lt;p>UUIDs are 128-bit numbers.
@@ -883,7 +976,8 @@ That URL contains the secret as a query parameter.&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Use your secret, e.g. as a base32-encoded string&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">oathtool --totp --base32 &lt;span class="s2">&amp;#34;MFRGCZDTMVRXEZLUBI======&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>About</title><link>https://jscheytt.github.io/about/</link><pubDate>Wed, 28 Jul 2021 08:32:37 +0200</pubDate><guid>https://jscheytt.github.io/about/</guid><description>&lt;p>Hey there,&lt;/p>
-&lt;p>My name is Josia Scheytt ([josˈiːa ʃaɪ̯t]).
+&lt;p>My name is Josia Scheytt ([&lt;a class="link" href="https://namedrop.io/josiascheytt" target="_blank" rel="noopener"
+>josˈiːa ʃaɪ̯t&lt;/a>]).
 I live in the South of Germany near Stuttgart.&lt;/p>
 &lt;p>Technically, I am interested in all things DevOps and Cloud Automation.
 My life as a whole is about following The One and Only, Jesus.&lt;/p>
