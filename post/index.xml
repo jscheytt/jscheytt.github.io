@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Josia's Blog</title><link>https://jscheytt.github.io/post/</link><description>Recent content in Posts on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 15 Aug 2022 18:24:33 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Rediscovering Our Hidden Life In God</title><link>https://jscheytt.github.io/p/rediscovering-our-hidden-life-in-god/</link><pubDate>Mon, 15 Aug 2022 18:24:33 +0200</pubDate><guid>https://jscheytt.github.io/p/rediscovering-our-hidden-life-in-god/</guid><description>&lt;img src="https://vhx.imgix.net/studygateway/assets/7df85841-6e5b-4ba7-8e58-4563785d7aa6-0fcda344.jpg" alt="Featured image of post Rediscovering Our Hidden Life In God" />&lt;p>How can our lives really change?
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Josia's Blog</title><link>https://jscheytt.github.io/post/</link><description>Recent content in Posts on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 25 Aug 2022 15:00:09 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>ArgoCD is like the Kubernetes Dashboard but for GitOps</title><link>https://jscheytt.github.io/p/argocd-is-like-the-kubernetes-dashboard-but-for-gitops/</link><pubDate>Thu, 25 Aug 2022 15:00:09 +0200</pubDate><guid>https://jscheytt.github.io/p/argocd-is-like-the-kubernetes-dashboard-but-for-gitops/</guid><description>&lt;p>FluxCD was my first love in the GitOps space.
+I worked with it when it was still v1, had no chance to use, and since about a year I returned to using it in its glorious, rewritten v2.&lt;/p>
+&lt;p>I haven&amp;rsquo;t given ArgoCD a try so far until this week somebody suggested trying out &lt;a class="link" href="https://argocd-autopilot.readthedocs.io/en/stable/" target="_blank" rel="noopener"
+>ArgoCD Autopilot&lt;/a>.
+The process was super smooth and in less than 10 minutes I had a running ArgoCD dashboard in my local minikube cluster.&lt;/p>
+&lt;p>And holy moly I have to say:
+ArgoCD is awesome!
+In the less than one hour I have seen it close up now, I already see so many possibilities that are hard to do when you try to scale Flux:&lt;/p>
+&lt;ol>
+&lt;li>Having a UI at all&lt;/li>
+&lt;li>Managing applications in multiple clusters from 1 Git repo &lt;em>with explicit assignment to these clusters&lt;/em>&lt;/li>
+&lt;li>The UI is basically the better &lt;a class="link" href="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/" target="_blank" rel="noopener"
+>Default Kubernetes Dashboard&lt;/a> but for GitOps:
+&lt;ul>
+&lt;li>The Kubernetes Dashboard gives you a very &amp;ldquo;relational&amp;rdquo; view of your resources, much like &lt;a class="link" href="https://k9scli.io/" target="_blank" rel="noopener"
+>k9s&lt;/a> does (albeit with fewer resource types).&lt;/li>
+&lt;li>I tried &lt;a class="link" href="https://github.com/kubevious/kubevious" target="_blank" rel="noopener"
+>Kubevious&lt;/a> in some projects because it allows you to view &lt;strong>related resources hierarchically together&lt;/strong>.
+&lt;ul>
+&lt;li>But it is pretty buggy (especially the mysql DB deployed with it) and has not fulfilled its promise for me.&lt;/li>
+&lt;li>Additionally, it&amp;rsquo;s read-only and does not show you a Events or container logs.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>ArgoCD however gives us the &lt;strong>best of both worlds&lt;/strong>:
+&lt;ul>
+&lt;li>Related resources are &lt;strong>shown hierarchically&lt;/strong> (e.g. Deployments create ReplicaSets create Pods).&lt;/li>
+&lt;li>You can even group them into Apps, ApplicationSets, and Projects.&lt;/li>
+&lt;li>If you open a Resource (e.g. Pod), you can see its Events and also its logs!&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a class="link" href="https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/Generators-Pull-Request/" target="_blank" rel="noopener"
+>Preview Environments&lt;/a> seem relatively straightforward.&lt;/li>
+&lt;li>I have heard many rumors that Progressive Delivery is easier with ArgoCD (or at least involves less manually scripted yaml generation pipelines).&lt;/li>
+&lt;/ol>
+&lt;p>As a Cloud Automation Engineer, one of my main missions is to &lt;strong>deliver stable apps&lt;/strong>.
+And this highly involves &lt;strong>stable processes&lt;/strong> for my team.
+ArgoCD feels like the perfect fit:
+I can deploy my apps with ArgoCD and everybody with access to it can debug resources, see which versions are currently deployed, and maybe even promote apps to the next environment!&lt;/p>
+&lt;p>There also seem to be use cases (probably especially in a setup with separate platform and app dev teams) where &lt;a class="link" href="https://youtu.be/QNAiIJRIVWA?t=731" target="_blank" rel="noopener"
+>deploying FluxCD and ArgoCD together&lt;/a> makes sense.
+But I am definitively going to give ArgoCD a shot in some important environment soon.&lt;/p></description></item><item><title>Rediscovering Our Hidden Life In God</title><link>https://jscheytt.github.io/p/rediscovering-our-hidden-life-in-god/</link><pubDate>Mon, 15 Aug 2022 18:24:33 +0200</pubDate><guid>https://jscheytt.github.io/p/rediscovering-our-hidden-life-in-god/</guid><description>&lt;img src="https://vhx.imgix.net/studygateway/assets/7df85841-6e5b-4ba7-8e58-4563785d7aa6-0fcda344.jpg" alt="Featured image of post Rediscovering Our Hidden Life In God" />&lt;p>How can our lives really change?
 How can we actually become good (and not only talk about being good)?
 Is deep transformation of our characters on this side of eternity even possible?&lt;/p>
 &lt;p>I was raised Charismatic/Pentecostal-Christian but the majority of my life often did not exhibit Christlikeness or actual trust in The One.
