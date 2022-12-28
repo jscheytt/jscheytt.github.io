@@ -1,4 +1,79 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>automating on Josia's Blog</title><link>https://jscheytt.github.io/tags/automating/</link><description>Recent content in automating on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 06 Sep 2021 13:38:15 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/tags/automating/index.xml" rel="self" type="application/rss+xml"/><item><title>The Story of My First Makefile — Half-Versioned Secrets Management</title><link>https://jscheytt.github.io/p/the-story-of-my-first-makefile-half-versioned-secrets-management/</link><pubDate>Mon, 06 Sep 2021 13:38:15 +0200</pubDate><guid>https://jscheytt.github.io/p/the-story-of-my-first-makefile-half-versioned-secrets-management/</guid><description>&lt;p>As a CloudOps Engineer one key skill is &lt;strong>automating repetitive tasks&lt;/strong>.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>automating on Josia's Blog</title><link>https://jscheytt.github.io/tags/automating/</link><description>Recent content in automating on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 04 Oct 2022 14:30:29 +0100</lastBuildDate><atom:link href="https://jscheytt.github.io/tags/automating/index.xml" rel="self" type="application/rss+xml"/><item><title>I Install Washing Machines (My Latest Job Metaphor)</title><link>https://jscheytt.github.io/p/i-install-washing-machines-my-latest-job-metaphor/</link><pubDate>Tue, 04 Oct 2022 14:30:29 +0100</pubDate><guid>https://jscheytt.github.io/p/i-install-washing-machines-my-latest-job-metaphor/</guid><description>&lt;h2 id="so-what-exactly-do-you-do-for-a-living">So What Exactly Do You Do For A Living?&lt;/h2>
+&lt;p>Whenever we meet new people (or good friends, it sometimes doesn&amp;rsquo;t make a big difference 😄), the above question will come up.
+My wife (who is a doctor and has understably fewer problems explaining her job) is always excited to get yet another chance to &amp;ldquo;finally understand&amp;rdquo; what it is that I am doing at work as a &lt;strong>Cloud Automation Engineer&lt;/strong>.&lt;/p>
+&lt;p>That is the fancy title we at &lt;a class="link" href="https://flowable.wd3.myworkdayjobs.com/de-DE/mimacom/details/Cloud-Automation-Engineer--m-f-d-_JR100074?q=cloud%20automation%20engineer" target="_blank" rel="noopener"
+>mimacom&lt;/a> give to people working in &lt;em>Site Reliability Engineering&lt;/em> and &lt;em>DevOps Engineering&lt;/em>, and I have grown to really like it because it starts to convey a lot of meaning right away.
+Unfortunately, it&amp;rsquo;s also long and not particularly established (yet).&lt;/p>
+&lt;p>In this blog post I will explore one analogy that came to my mind recently.
+I have not tried it out in the wild yet, but I am fascinated by the similarities between deploying washing machines and deploying web applications.&lt;/p>
+&lt;h2 id="my-latest-metaphor">My Latest Metaphor&lt;/h2>
+&lt;p>Let&amp;rsquo;s say I work in a company that builds, delivers, and maintains washing machines for laundromats.
+The colleagues in my team whom I work most closely with design new washing machine models.
+You could say they design or &amp;ldquo;develop&amp;rdquo; the washing machines.&lt;/p>
+&lt;p>They do this very frequently — even so frequently, that they tweak the current model mostly on a daily basis.
+Whenever they change the model, we want to bring these improvements to our customers as quickly as possible.&lt;/p>
+&lt;p>And here begins my responsibility as Laundry Automation Engineer™️.&lt;/p>
+&lt;h3 id="delivering-new-washing-machines">Delivering New Washing Machines&lt;/h3>
+&lt;p>There are several steps that now need to happen in succession until the new model lands at our customers (the laundromats).
+We also call this a &lt;strong>pipeline&lt;/strong>:&lt;/p>
+&lt;ol>
+&lt;li>The designers/developers wrote some simulations to check if the models they produce really work as they should.
+I run these simulations on a computer.&lt;/li>
+&lt;li>I send the model to the factory to let some construction robots assemble it.&lt;/li>
+&lt;li>I take the assembled model, plug it into current and water and run some standard washing programs and test for potential leaks and similar problems.&lt;/li>
+&lt;li>I package up the assembled model (together with its necessary accessories) and put it into a van.&lt;/li>
+&lt;li>And finally, I drive the new washing machine to the customer, connect the new washing machine, disconnect the old one and dispose of it.&lt;/li>
+&lt;/ol>
+&lt;p>But a good Laundry Automation Engineer™️ will normally not do any of these steps above themselves.
+Instead, he or she will build robots to do it for them.
+Robots are a lot more reliable, faster, and cheaper when it comes to repetitive tasks.&lt;/p>
+&lt;p>So, in short:
+&lt;strong>I build robots that automate all the above steps.&lt;/strong>&lt;/p>
+&lt;p>And if there is an error during any of the above steps, the pipeline for the current model change will stop (so we don&amp;rsquo;t deliver broken machines).
+I will then look what caused the error and fix it.&lt;/p>
+&lt;p>Let&amp;rsquo;s zoom in on a few details around the last step when the robots install the new machines:&lt;/p>
+&lt;h3 id="zero-downtime">Zero-Downtime&lt;/h3>
+&lt;p>Our laundromats are very highly frequented, basically around the clock, even on weekends.
+People come and go all the time.
+They put their clothes into a machine, select a program, pay with coins or by card, set it off running, and return when their laundry is supposed to be ready.&lt;/p>
+&lt;p>For simplicity, I will now switch back to me as the one doing the actual work (instead of the robots).
+Whenever I install a new washing machine to replace a currently running one, I have to be very careful:
+The people running the laundromat want to have as few interruptions as possible so that people can start washing programs all the time.
+They know that if they have to many interruptions, potential customers will get annoyed because a queue will form, and if they have to wait for too long they will go elsewhere.&lt;/p>
+&lt;p>So normally, I will install the new washing machine first (connect to current and water), mark the old machine as &amp;ldquo;stale&amp;rdquo; (so customers can only get their laundry from it but not start any new programs), then disconnect the old one.
+This does introduce a little bit of energy and water overhead for the laundromat, but they happily pay that price.
+And good for me that in reality I have robots managing all this for me.&lt;/p>
+&lt;h2 id="behind-the-scenes-a-glossary">Behind The Scenes: A Glossary&lt;/h2>
+&lt;dl>
+&lt;dt>Washing Machine:&lt;/dt>
+&lt;dd>A web application that communicates over HTTP.
+It receives requests (dirty laundry and some program parameters) and delivers responses (clean laundry in the happy path).&lt;/dd>
+&lt;dt>Laundromat:&lt;/dt>
+&lt;dd>A company that makes most of its business value through running web applications and processing data in a value-adding way.&lt;/dd>
+&lt;dt>Designer/Developer:&lt;/dt>
+&lt;dd>An application developer writing code in a programming language.&lt;/dd>
+&lt;dt>Bringing Improvements To The Customer Asap:&lt;/dt>
+&lt;dd>We call this Continuous Delivery or Continuous Deployment.&lt;/dd>
+&lt;dt>Laundry Automation Engineer:&lt;/dt>
+&lt;dd>Just made this up. This would be the Cloud Automation Engineer / DevOps Engineer.&lt;/dd>
+&lt;dt>Pipeline:&lt;/dt>
+&lt;dd>The above example describes a Continuous Integration pipeline that also deploys at the end.&lt;/dd>
+&lt;dt>Pipeline Step 1:&lt;/dt>
+&lt;dd>This step could map to linting, unit testing, and static code analysis.&lt;/dd>
+&lt;dt>Pipeline Step 2:&lt;/dt>
+&lt;dd>This is a &amp;ldquo;build&amp;rdquo; or &amp;ldquo;compile&amp;rdquo; step.&lt;/dd>
+&lt;dt>Pipeline Step 3:&lt;/dt>
+&lt;dd>This step could map to integration testing, end-to-end-testing, fuzzying, and security testing of sorts.&lt;/dd>
+&lt;dt>Pipeline Step 4:&lt;/dt>
+&lt;dd>This is a &amp;ldquo;container image build&amp;rdquo; step.&lt;/dd>
+&lt;dt>Pipeline Step 5:&lt;/dt>
+&lt;dd>This is a &amp;ldquo;deploy&amp;rdquo; or &amp;ldquo;release&amp;rdquo; step.&lt;/dd>
+&lt;dt>Robot:&lt;/dt>
+&lt;dd>A script with prescribed steps which is executed automatically whenever a new change is published.&lt;/dd>
+&lt;dt>Zero-Downtime:&lt;/dt>
+&lt;dd>This is just a rough description of how I understand the default &lt;code>Deployment.spec.strategy.type=RollingUpdate&lt;/code>.
+I think it&amp;rsquo;s not perfect but still fits good because in both situations you have the (somewhat conflicting) unbroken, continuous streams of requests/people and electricity.&lt;/dd>
+&lt;/dl></description></item><item><title>The Story of My First Makefile — Half-Versioned Secrets Management</title><link>https://jscheytt.github.io/p/the-story-of-my-first-makefile-half-versioned-secrets-management/</link><pubDate>Mon, 06 Sep 2021 13:38:15 +0200</pubDate><guid>https://jscheytt.github.io/p/the-story-of-my-first-makefile-half-versioned-secrets-management/</guid><description>&lt;p>As a DevOps Engineer one key skill is &lt;strong>automating repetitive tasks&lt;/strong>.
 What most people grab for intuitively is writing Shell scripts (be it Bash, zsh, fish or whichever flavor you prefer).
 And there are a lot many good reasons to do so:&lt;/p>
 &lt;ol>
