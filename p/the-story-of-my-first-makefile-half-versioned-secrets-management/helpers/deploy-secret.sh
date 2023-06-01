@@ -10,9 +10,9 @@ echo "$secret_value" # DEBUG
 
 # Create secret in idempotent way, avoid script from failing
 set +e
-aws secretsmanager create-secret --name "$secret_name" &> /dev/null
+aws secretsmanager create-secret --name "$secret_name" &>/dev/null
 set -e
 
 # Put secret value and output response to stdout
 aws secretsmanager put-secret-value --secret-id "$secret_name" \
-  --secret-string "$secret_value" | cat
+	--secret-string "$secret_value" | cat
