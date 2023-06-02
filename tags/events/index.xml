@@ -71,7 +71,8 @@ I e.g. heard about Tekton as a side note and decided to directly give it a go du
 &lt;p>Let me note down a few things I found remarkable and where we as an industry can maybe find better ways of achieving things:&lt;/p>
 &lt;ul>
 &lt;li>Not only do we have many tools in the Cloud Native ecosystem (I will not make the next joke about the &lt;a class="link" href="https://landscape.cncf.io/" target="_blank" rel="noopener"
->CNCF Landscape&lt;/a>, you can invent one yourself 😄), it also seems to me that everybody starts to create another copy-paste version of the &lt;a class="link" href="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/" target="_blank" rel="noopener"
+>CNCF Landscape&lt;/a>, you can invent one yourself 😄),
+it also seems to me that everybody starts to create another copy-paste version of the &lt;a class="link" href="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/" target="_blank" rel="noopener"
 >standard Kubernetes Dashboard&lt;/a> but just filtered down to their CRDs.
 &lt;ul>
 &lt;li>The &lt;a class="link" href="https://github.com/tektoncd/dashboard/blob/main/docs/dashboard-ui.jpg" target="_blank" rel="noopener"
