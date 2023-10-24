@@ -1,4 +1,206 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Josia's Blog</title><link>https://jscheytt.github.io/post/</link><description>Recent content in Posts on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Josia Scheytt</copyright><lastBuildDate>Sat, 21 Oct 2023 13:28:49 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Eine neue Psalmen-Liturgie</title><link>https://jscheytt.github.io/p/eine-neue-psalmen-liturgie/</link><pubDate>Sat, 21 Oct 2023 13:28:49 +0200</pubDate><guid>https://jscheytt.github.io/p/eine-neue-psalmen-liturgie/</guid><description>&lt;p>&lt;em>In diesem Post stelle ich eine 2-Wochen-Liturgie basierend auf den Psalmen vor.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Josia's Blog</title><link>https://jscheytt.github.io/post/</link><description>Recent content in Posts on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Josia Scheytt</copyright><lastBuildDate>Tue, 24 Oct 2023 08:21:20 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Documentation as Scaled Communication</title><link>https://jscheytt.github.io/p/documentation-as-scaled-communication/</link><pubDate>Tue, 24 Oct 2023 08:21:20 +0200</pubDate><guid>https://jscheytt.github.io/p/documentation-as-scaled-communication/</guid><description>&lt;p>Technical documentation is important, but almost no one enjoys writing it.
+At least, I have yet to meet anyone who shares my passion for writing docs.
+To me, documentation is not just a chore you do to check a compliance box.
+In fact, I believe it can even be a rewarding experience.&lt;/p>
+&lt;p>I am also convinced that writing documentation is a &lt;em>core skill for Platform Engineers&lt;/em> running any &lt;a class="link" href="https://internaldeveloperplatform.org" target="_blank" rel="noopener"
+>Internal Developer Platforms&lt;/a>.
+Developer Platforms need a product mindset, and products need documentation so that users can understand usage and discover features.
+And I believe that &lt;strong>technical documentation is a means to scale up your communication&lt;/strong>, especially in the platform context.&lt;/p>
+&lt;p>Let me explain with an example:
+If someone pings me directly and asks about a specific technical problem in using the platform (e.g. &amp;ldquo;How do I restart my application in staging?&amp;rdquo;), I could respond via a video call (most expensive option, but sometimes necessary) or by giving them the necessary steps directly.
+As an alternative, I could also take a few extra minutes to write a documentation article (e.g. a runbook) about it and send the person a link to the article.
+The next time someone asks about this specific problem, I can &lt;em>save a lot of time&lt;/em> by not writing out the steps in all detail again.
+Instead, I can get into the habit of responding to common questions with links to documentation.&lt;/p>
+&lt;p>This can not only reduce the time &lt;em>you alone&lt;/em> spend handling requests:
+If your documentation platform has a good search functionality, you may eventually be able to &lt;em>teach people to search through the docs&lt;/em> before making requests, saving time for both Platform Engineers and Developers.
+If your documentation tools are configured as openly as possible for contributions, you might even get people to &lt;em>actively participate&lt;/em> in improving your articles, perhaps even writing new ones themselves.&lt;/p>
+&lt;p>I have witnessed some of these effects firsthand.
+Let me name this observation &lt;strong>Documentation as Scaled Communication&lt;/strong> (or DASC, if you feel like using acronyms).
+I am sure that this principle applies very broadly, but I want to keep the focus of this post on &lt;em>technical documentation&lt;/em> and on &lt;em>Platform Engineers&lt;/em> because that is my primary background.&lt;/p>
+&lt;h2 id="challenges">Challenges&lt;/h2>
+&lt;p>So why is writing docs so &lt;em>hard&lt;/em>?
+From my point of view, we have several challenges to address:&lt;/p>
+&lt;ol>
+&lt;li>We need to learn &lt;strong>communication&lt;/strong> through practice, review, and feedback.&lt;/li>
+&lt;li>We also need to learn &lt;strong>writing&lt;/strong> (again, through practice, review, and feedback).&lt;/li>
+&lt;li>Documentation tools need &lt;strong>extremely low friction&lt;/strong> (i.e. very good UX).&lt;/li>
+&lt;li>Tools need to be &lt;strong>configured as wide open&lt;/strong> as possible for contributions.&lt;/li>
+&lt;/ol>
+&lt;h3 id="practicing-communication">Practicing Communication&lt;/h3>
+&lt;p>How can you communicate effectively?
+Effectiveness is always determined by the goals of your communication.
+Let&amp;rsquo;s say we have the following goals for platform engineering:&lt;/p>
+&lt;ul>
+&lt;li>Enable developers to be highly productive&lt;/li>
+&lt;li>Enable development teams to deploy to production quickly and with confidence&lt;/li>
+&lt;/ul>
+&lt;p>These goals put us in a position where &lt;strong>empathy&lt;/strong> plays a critical role.
+I am not talking specifically about &lt;em>technical means&lt;/em> like surveys or specific SLOs.
+What I am talking about is a certain &lt;em>attitude&lt;/em> towards the consumers of our services.&lt;/p>
+&lt;p>Raw data and measurements are helpful, and they can certainly guide us as we try to learn from incidents or understand certain usage patterns.
+But numbers have their limits, and the people who use our services are not distant technical entities, but &lt;em>blood and flesh humans struggling to deploy features and fix bugs&lt;/em>.
+Learning to empathize with our users can include the following:&lt;/p>
+&lt;ul>
+&lt;li>Sit down with a user (maybe even in person, if possible) and ask for feedback on how they use the platform.
+&lt;ul>
+&lt;li>&lt;strong>Asking proactively&lt;/strong> is radically different from waiting for bug tickets and incident reports.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Listen actively:
+&lt;ul>
+&lt;li>First, listen (you may even want to take notes).
+Then keep asking questions to find out what the user is &lt;em>really&lt;/em> trying to accomplish.&lt;/li>
+&lt;li>Your primary focus should not be to get fodder for your bug tracker.
+(Take notes, though, if something comes up that you did not know about.)
+Instead, **focus on understanding the user&amp;rsquo;s overall interaction with your services:&lt;/li>
+&lt;li>How do they develop and generally work as a team?
+What is their workflow like?
+Where are they least productive?
+Are they using tools outside your platform that could or should be integrated?&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Don&amp;rsquo;t insist on your preferences&lt;/strong>.
+The platform is not there for its own sake, but to enable the developers.
+&lt;ul>
+&lt;li>This is most evident when I answer complaints with &amp;ldquo;But that&amp;rsquo;s not how the system is supposed to be used! Did you even read xyz?&amp;rdquo;&lt;/li>
+&lt;li>I struggle with this point a lot.
+When you build a platform, you design for certain usage patterns.
+But you can never anticipate how those needs might change in the future.
+And if those needs change drastically, you may have to refactor your platform to a greater extent (which will cause you a lot of work).&lt;/li>
+&lt;li>I&amp;rsquo;m not advocating blindly following every user suggestion &amp;mdash; your product owner will have to prioritize things anyway.
+I am also not discouraging helping people understand how to use the existing platform effectively.
+My point is:
+If you scold people for trying to get things done, you will discourage them.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>There are a few more resources I recommend for learning to communicate effectively as a Platform Engineer:&lt;/p>
+&lt;ul>
+&lt;li>Watch this talk about &amp;ldquo;&lt;a class="link" href="https://www.infoq.com/presentations/incidents-investigation" target="_blank" rel="noopener"
+>How did it make sense at the time?&lt;/a>&amp;rdquo; (HDIMSATT).
+It is focused on incidents but the same reasoning is helpful for learning empathy with your users.&lt;/li>
+&lt;li>&lt;em>&lt;a class="link" href="https://sre.google/sre-book/operational-overload" target="_blank" rel="noopener"
+>SRE Embedding&lt;/a>&lt;/em>:
+Sometimes, you can take empathy to a more extreme level by embedding a Platform Engineer into an app dev team for a period of time.
+You as a Platform Engineer will put on your SRE hat and work alongside the developer team in their everyday challenges.&lt;/li>
+&lt;li>Read about and learn from some of the great models of empathy, such as Jesus of Nazareth (e.g. in the first four books of the New Testament), the God who became human (this allowed Him to empathize more with us, but also us to empathize more with Him).&lt;/li>
+&lt;/ul>
+&lt;h3 id="practicing-writing">Practicing Writing&lt;/h3>
+&lt;p>Everyone at work communicates all the time.
+Working remotely has forced us to do so in more written form than ever before &amp;mdash; and I think this is a good thing overall!
+Sure, it&amp;rsquo;s faster to work together in the office, where it&amp;rsquo;s super easy to quickly ask questions and show things, but asynchronous written communication is much more inclusive and promotes transparency.&lt;/p>
+&lt;p>There are many ways to improve your written communication (e.g. &lt;a class="link" href="https://nohello.net" target="_blank" rel="noopener"
+>don&amp;rsquo;t make people wait&lt;/a>).
+Your written communication will always be better the more you &lt;em>empathize&lt;/em> with the other person(s) (see previous point).
+Still, you can practice the following skills to improve your writing in chats:&lt;/p>
+&lt;ol>
+&lt;li>Write &lt;strong>complete sentences&lt;/strong> by default.&lt;/li>
+&lt;li>Adhere to &lt;strong>basic grammar and syntax&lt;/strong> (just as you would when writing code).
+&lt;ul>
+&lt;li>You can use AI assistance for this like &lt;a class="link" href="https://www.deepl.com/de/write" target="_blank" rel="noopener"
+>DeepL Write&lt;/a>.
+(Hint: I refined this blog post using DeepL Write.)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Write &lt;strong>short and clear sentences&lt;/strong>.
+&lt;ul>
+&lt;li>If your message gets longer, use bullets and headings to break your message into more readable chunks.&lt;/li>
+&lt;li>Familiarize yourself with the &lt;strong>formatting options&lt;/strong> your chat tool offers.
+Some tools allow Markdown, for example.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;em>In group chats&lt;/em> (i.e. when communicating with several people at once):
+&lt;ol>
+&lt;li>Avoid using &lt;strong>literal backreferences&lt;/strong> (&amp;ldquo;this thing&amp;rdquo;, &amp;ldquo;that&amp;rdquo;).
+Use the &amp;ldquo;reply to&amp;rdquo; feature (or better yet, if available, start a &lt;strong>thread&lt;/strong>) to maintain/restore context.&lt;/li>
+&lt;li>Use @-&lt;strong>mentions&lt;/strong> to notify a subset of people in the current chat, if your message does not address everyone.&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;p>In the spirit of SRE and &lt;a class="link" href="https://www.learningfromincidents.io" target="_blank" rel="noopener"
+>Learning From Incidents&lt;/a>, we can also look back at past communications and learn from them.
+Feel free to try these steps as an example:&lt;/p>
+&lt;ol>
+&lt;li>Search through your chat history, especially group chats where there are a lot of people and a lot of communication.&lt;/li>
+&lt;li>Try to find situations where misunderstandings occurred.
+Pick a situation and think about the following questions:
+&lt;ol>
+&lt;li>What were the basic assumptions that the different people involved had?&lt;/li>
+&lt;li>To what extent were the different mental models of these people wrong? Why?&lt;/li>
+&lt;li>How could the mismatch between mental model and reality have been uncovered earlier?&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;h3 id="low-friction-editing">Low-Friction Editing&lt;/h3>
+&lt;p>Now we turn briefly to the tool side of things:
+If you do not make editing pages and creating documents &lt;em>as fast and convenient as possible&lt;/em>, you will frustrate people and lose potential editors.
+Those editors could be people on the platform team &lt;em>and&lt;/em> on the development teams!&lt;/p>
+&lt;p>I see this as a very limiting factor when trying to choose a documentation tool.
+One category of documentation tools I have specifically avoided &lt;em>for internal development platforms&lt;/em> are &lt;em>Static Site Generators (SSGs) fed from a Git repo&lt;/em>.&lt;/p>
+&lt;p>Let me be clear about this:
+I am a huge fan of Git!
+&lt;a class="link" href="https://www.linkedin.com/feed/update/urn:li:activity:7120420743795892225" target="_blank" rel="noopener"
+>My writing a book about GitOps&lt;/a> should leave no doubt about that.
+But even if you have a template where editing any single page is just a click away &lt;em>and&lt;/em> you link directly to a web IDE &lt;em>and&lt;/em> you can enable automerge on the instantly created feature branch, you still have to wait for a green build to pass.
+(Allowing commits directly to the default branch would be careless, because it might break the build &amp;mdash; and you will never get around waiting for the build pipeline on the default branch anyway).
+And that wait is (I think) still way too long, and makes the barrier to contributing way too high.&lt;/p>
+&lt;p>My current preference is Confluence Cloud (Cloud, not self-hosted!), but my experience is very limited.
+Please send suggestions!&lt;/p>
+&lt;h3 id="a-culture-of-contributing">A Culture of Contributing&lt;/h3>
+&lt;p>Whenever I see organizations talking about &lt;em>approval processes in documentation tools&lt;/em>, I get sad.
+Because sure enough, they will get exactly what they asked for:
+Documentation that is picture perfect and set in stone &amp;mdash; it cannot be changed unless you explicitly ask for permission.
+But at the same time they &lt;strong>lose everything that makes documentation valuable&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>Documentation becomes &lt;strong>outdated&lt;/strong> extremly quickly because you cannot live a &lt;em>Culture of Contributing&lt;/em>.&lt;/li>
+&lt;li>&lt;strong>RBAC&lt;/strong> becomes difficult, and those who maintain it may not always be available.
+This will make even users who have permission to edit and manage certain parts of the content to feel reluctant to write shareable documentation instead of directly responding to requests.&lt;/li>
+&lt;li>People will &lt;strong>always make direct requests&lt;/strong> because they can get a faster response.
+&lt;ul>
+&lt;li>They may &lt;em>not always&lt;/em> get it faster because everyone is busy, but by texting a human you at least have a small chance that someone will respond faster than you will find something in the potentially outdated docs.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>When documentation becomes outdated and permissions are complex to obtain, you end up with &lt;em>shadow documentation&lt;/em> (e.g. in Word documents on shared drives) or (by default and by far the worst) &lt;em>no documentation at all&lt;/em> happens and &lt;strong>valuable knowledge is lost&lt;/strong>.&lt;/li>
+&lt;/ul>
+&lt;p>I have never seen an organization suffer from vandalism or other malicious overuse of documentation tools.
+The only organizations I have encountered are those with typical people who are just trying to do their jobs well and are naturally reluctant to write anything down unless they are forced to.&lt;/p>
+&lt;p>For this reason, I believe that &lt;strong>documentation tools should be configured with maximum editability&lt;/strong> to encourage a Culture of Contributing.
+You may want to disable deletion and only allow archiving to protect content from disappearing accidentally, but otherwise everything should be as &lt;em>welcoming&lt;/em> towards contributions as possible!
+Choose a tool that allows versioning / page history so that you can revert to a known good state if any unwanted changes are made.&lt;/p>
+&lt;h2 id="documentation-devices-for-platform-engineers">Documentation Devices for Platform Engineers&lt;/h2>
+&lt;p>I have identified a few types of technical documentation that, in my experience, are particularly valuable in the context of Platform Engineering:&lt;/p>
+&lt;ol>
+&lt;li>Runbooks
+&lt;ul>
+&lt;li>By giving step-by-step instructions you enable people to perform certain typical actions themselves.
+For an example of a very simple runbook, see the list at the end of &lt;a class="link" href="#practicing-writing" >Practicing Writing&lt;/a>.&lt;/li>
+&lt;li>If the amount of code snippets in a runbook gets too large, you might consider writing a script, putting it into a Git repo and creating an automated runbook that can be triggered by any user through a manual pipeline.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a class="link" href="https://adr.github.io" target="_blank" rel="noopener"
+>Architectural Decision Records&lt;/a> (ADRs)
+&lt;ul>
+&lt;li>This is in the spirit of HDIMSATT (see &lt;a class="link" href="#practicing-communication" >Practicing Communication&lt;/a>) and allows you to foster collaboration and structured discussion around important technical decisions.&lt;/li>
+&lt;li>It allows you to better understand the assumptions and constraints that were in place at the time.
+When you return later, you can re-evaluate whether those assumptions still hold true and revisit the decision in light of new constraints.
+(Remember to create another ADR for the new decision you take.)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a class="link" href="https://app.diagrams.net" target="_blank" rel="noopener"
+>draw.io&lt;/a> or &lt;a class="link" href="https://mermaid.js.org" target="_blank" rel="noopener"
+>Mermaid&lt;/a> for diagrams
+&lt;ul>
+&lt;li>Many documentation tools come with integrations for these.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>In addition, there are also overarching documentation frameworks such as &lt;a class="link" href="https://arc42.org/overview" target="_blank" rel="noopener"
+>arc42&lt;/a>.
+At &lt;a class="link" href="https://www.mimacom.com" target="_blank" rel="noopener"
+>Mimacom&lt;/a>, we have used arc42 in several projects and found the structure very helpful.
+To keep the momentum though, don&amp;rsquo;t think too much about which section a single page belongs to; you can always restructure later after writing your current piece of content.
+Fortunately, there are &lt;a class="link" href="https://arc42.org/download" target="_blank" rel="noopener"
+>downloads available&lt;/a> for Asciidoc, Markdown, LaTeX, and a few other formats.&lt;/p></description></item><item><title>Eine neue Psalmen-Liturgie</title><link>https://jscheytt.github.io/p/eine-neue-psalmen-liturgie/</link><pubDate>Sat, 21 Oct 2023 13:28:49 +0200</pubDate><guid>https://jscheytt.github.io/p/eine-neue-psalmen-liturgie/</guid><description>&lt;p>&lt;em>In diesem Post stelle ich eine 2-Wochen-Liturgie basierend auf den Psalmen vor.
 Dieses Stundengebet verwende ich selbst privat; es ist aber durchaus für den Gebrauch in Gemeinschaften gedacht, die das Leben im Reich Gottes einüben wollen.&lt;/em>&lt;/p>
 &lt;p>&lt;strong>Wenn du die Hintergründe überspringen willst, spule direkt vor zur &lt;a class="link" href="#die-liturgie" >eigentlichen Liturgie&lt;/a>.&lt;/strong>&lt;/p>
 &lt;p>Die Psalmen sind ein besonderer Schatz in der Bibel, sind sie doch gleichzeitig das Wort Gottes und Worte von Menschen.
