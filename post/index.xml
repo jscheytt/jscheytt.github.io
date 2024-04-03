@@ -17,8 +17,10 @@ If your documentation tools are configured as openly as possible for contributio
 &lt;p>I have witnessed some of these effects firsthand.
 Let me name this observation &lt;strong>Documentation as Scaled Communication&lt;/strong> (or DASC, if you feel like using acronyms).
 I am sure that this principle applies very broadly, but I want to keep the focus of this post on &lt;em>technical documentation&lt;/em> and on &lt;em>Platform Engineers&lt;/em> because that is my primary background.&lt;/p>
-&lt;h2 id="challenges">Challenges&lt;/h2>
-&lt;p>So why is writing docs so &lt;em>hard&lt;/em>?
+&lt;h2 id="challenges">
+&lt;a href="#challenges" class="header-anchor">#&lt;/a>
+Challenges
+&lt;/h2>&lt;p>So why is writing docs so &lt;em>hard&lt;/em>?
 From my point of view, we have several challenges to address:&lt;/p>
 &lt;ol>
 &lt;li>We need to learn &lt;strong>communication&lt;/strong> through practice, review, and feedback.&lt;/li>
@@ -26,8 +28,10 @@ From my point of view, we have several challenges to address:&lt;/p>
 &lt;li>Documentation tools need &lt;strong>extremely low friction&lt;/strong> (i.e. very good UX).&lt;/li>
 &lt;li>Tools need to be &lt;strong>configured as wide open&lt;/strong> as possible for contributions.&lt;/li>
 &lt;/ol>
-&lt;h3 id="practicing-communication">Practicing Communication&lt;/h3>
-&lt;p>How can you communicate effectively?
+&lt;h3 id="practicing-communication">
+&lt;a href="#practicing-communication" class="header-anchor">#&lt;/a>
+Practicing Communication
+&lt;/h3>&lt;p>How can you communicate effectively?
 Effectiveness is always determined by the goals of your communication.
 Let&amp;rsquo;s say we have the following goals for platform engineering:&lt;/p>
 &lt;ul>
@@ -85,8 +89,10 @@ Sometimes, you can take empathy to a more extreme level by embedding a Platform 
 You as a Platform Engineer will put on your SRE hat and work alongside the developer team in their everyday challenges.&lt;/li>
 &lt;li>Read about and learn from some of the great models of empathy, such as Jesus of Nazareth (e.g. in the first four books of the New Testament), the God who became human (this allowed Him to empathize more with us, but also us to empathize more with Him).&lt;/li>
 &lt;/ul>
-&lt;h3 id="practicing-writing">Practicing Writing&lt;/h3>
-&lt;p>Everyone at work communicates all the time.
+&lt;h3 id="practicing-writing">
+&lt;a href="#practicing-writing" class="header-anchor">#&lt;/a>
+Practicing Writing
+&lt;/h3>&lt;p>Everyone at work communicates all the time.
 Working remotely has forced us to do so in more written form than ever before &amp;mdash; and I think this is a good thing overall!
 Sure, it&amp;rsquo;s faster to work together in the office, where it&amp;rsquo;s super easy to quickly ask questions and show things, but asynchronous written communication is much more inclusive and promotes transparency.&lt;/p>
 &lt;p>There are many ways to improve your written communication (e.g. &lt;a class="link" href="https://nohello.net" target="_blank" rel="noopener"
@@ -131,8 +137,10 @@ Pick a situation and think about the following questions:
 &lt;/ol>
 &lt;/li>
 &lt;/ol>
-&lt;h3 id="low-friction-editing">Low-Friction Editing&lt;/h3>
-&lt;p>Now we turn briefly to the tool side of things:
+&lt;h3 id="low-friction-editing">
+&lt;a href="#low-friction-editing" class="header-anchor">#&lt;/a>
+Low-Friction Editing
+&lt;/h3>&lt;p>Now we turn briefly to the tool side of things:
 If you do not make editing pages and creating documents &lt;em>as fast and convenient as possible&lt;/em>, you will frustrate people and lose potential editors.
 Those editors could be people on the platform team &lt;em>and&lt;/em> on the development teams!&lt;/p>
 &lt;p>I see this as a very limiting factor when trying to choose a documentation tool.
@@ -146,8 +154,10 @@ But even if you have a template where editing any single page is just a click aw
 And that wait is (I think) still way too long, and makes the barrier to contributing way too high.&lt;/p>
 &lt;p>My current preference is Confluence Cloud (Cloud, not self-hosted!), but my experience is very limited.
 Please send suggestions!&lt;/p>
-&lt;h3 id="a-culture-of-contributing">A Culture of Contributing&lt;/h3>
-&lt;p>Whenever I see organizations talking about &lt;em>approval processes in documentation tools&lt;/em>, I get sad.
+&lt;h3 id="a-culture-of-contributing">
+&lt;a href="#a-culture-of-contributing" class="header-anchor">#&lt;/a>
+A Culture of Contributing
+&lt;/h3>&lt;p>Whenever I see organizations talking about &lt;em>approval processes in documentation tools&lt;/em>, I get sad.
 Because sure enough, they will get exactly what they asked for:
 Documentation that is picture perfect and set in stone &amp;mdash; it cannot be changed unless you explicitly ask for permission.
 But at the same time they &lt;strong>lose everything that makes documentation valuable&lt;/strong>:&lt;/p>
@@ -167,8 +177,10 @@ The only organizations I have encountered are those with typical people who are 
 &lt;p>For this reason, I believe that &lt;strong>documentation tools should be configured with maximum editability&lt;/strong> to encourage a Culture of Contributing.
 You may want to disable deletion and only allow archiving to protect content from disappearing accidentally, but otherwise everything should be as &lt;em>welcoming&lt;/em> towards contributions as possible!
 Choose a tool that allows versioning / page history so that you can revert to a known good state if any unwanted changes are made.&lt;/p>
-&lt;h2 id="documentation-devices-for-platform-engineers">Documentation Devices for Platform Engineers&lt;/h2>
-&lt;p>I have identified a few types of technical documentation that, in my experience, are particularly valuable in the context of Platform Engineering:&lt;/p>
+&lt;h2 id="documentation-devices-for-platform-engineers">
+&lt;a href="#documentation-devices-for-platform-engineers" class="header-anchor">#&lt;/a>
+Documentation Devices for Platform Engineers
+&lt;/h2>&lt;p>I have identified a few types of technical documentation that, in my experience, are particularly valuable in the context of Platform Engineering:&lt;/p>
 &lt;ol>
 &lt;li>Runbooks
 &lt;ul>
@@ -210,8 +222,10 @@ Da ich sowieso meine Beziehung zu Gott viel dadurch führe, dass ich Sein Wort v
 Ich begann mit einer fortlaufenden Lesung (&amp;ldquo;Lectio continua&amp;rdquo;), bei der ich mit Psalm 1 begann, am nächsten Tag Psalm 2 las, am nächsten Tag Psalm 3 und so weiter, bis ich nach Psalm 150 wieder von vorne anfing.&lt;/p>
 &lt;p>So ging es mehrere Jahre, bis ich merkte, dass ich einen Stopp oder eine Veränderung brauchte, um nicht betriebsblind für die Inhalte der Psalmen zu werden.
 Ich wusste nicht, wie eine gesunde Alternative zur Lectio continua aussehen könnte, aber ich pausierte mein kontinuierliches Psalmengebet und suchte nun nach neuen Möglichkeiten, mit dem ganzen Psalter in meinem Alltag zu beten.&lt;/p>
-&lt;h2 id="stundengebete">Stundengebete&lt;/h2>
-&lt;p>Durch verschiedene Ansatzpunkte und Gespräche mit Freunden traf ich auf Stundengebete.
+&lt;h2 id="stundengebete">
+&lt;a href="#stundengebete" class="header-anchor">#&lt;/a>
+Stundengebete
+&lt;/h2>&lt;p>Durch verschiedene Ansatzpunkte und Gespräche mit Freunden traf ich auf Stundengebete.
 Damit sind Gebetsformen gemeint, bei denen man (ähnlich der rituellen Gebetszeiten der Muslime) zu mehreren festgelegten Zeiten am Tag betet, oftmals mit vorformulierten Gebeten.
 Das fand ich ansprechend, da ich von meiner Persönlichkeit her sehr strukturiert bin und gleichzeitig immer mehr lernen will, in meinem &lt;em>ganzen&lt;/em> Alltag mit Gott verbunden zu sein.&lt;/p>
 &lt;p>Leider waren die ersten Gebetsbücher mit vorformulierten Gebeten, auf die ich traf, für meinen Geschmack zu einseitig und zu wenig auf Gott beziehend.
@@ -226,8 +240,10 @@ In dieser Regel sind auch &lt;a class="link" href="http://individual.utoronto.ca
 >RB 18,20&lt;/a>).
 Ebenso schreibt die Benedikts-Regel &lt;a class="link" href="https://www.intratext.com/IXT/DEU0017/_PH.HTM" target="_blank" rel="noopener"
 >sieben tägliche Gebetszeiten&lt;/a> vor (wobei die meisten heutigen Klöster nur 4 - 5 Gebetszeiten ausüben, indem sie einige der vorgeschriebenen Zeiten kombinieren).&lt;/p>
-&lt;h2 id="benediktinische-psalmenliturgie">Benediktinische Psalmenliturgie&lt;/h2>
-&lt;p>Eines der bekannteren Benediktinerklöster in Deutschland steht in Münsterschwarzach.
+&lt;h2 id="benediktinische-psalmenliturgie">
+&lt;a href="#benediktinische-psalmenliturgie" class="header-anchor">#&lt;/a>
+Benediktinische Psalmenliturgie
+&lt;/h2>&lt;p>Eines der bekannteren Benediktinerklöster in Deutschland steht in Münsterschwarzach.
 Bekannt ist es unter anderem durch den schriftstellerisch sehr aktiven und dort ansässigen Benediktinermönch Anselm Grün.
 Was ebenfalls von dort stammt, ist das &amp;ldquo;&lt;strong>&lt;a class="link" href="https://www.vier-tuerme.de/benediktinisches-antiphonale-komplettpaket-mit-baenden-i-bis-iii" target="_blank" rel="noopener"
 >Benediktinische Antiphonale&lt;/a>&lt;/strong>&amp;rdquo;, ein mehrbändiges Gebetsbuch mit fast 2.000 Seiten.
@@ -285,9 +301,13 @@ Diese Übersetzung der Psalmen, deren Redaktion in Münsterschwarzach stattfand,
 Stattdessen werden die einzelnen Strophen an bestimmten Stellen in der Liturgie als sogenanntes &amp;ldquo;Responsorium&amp;rdquo; eingebaut.
 (Ich konnte leider nicht genauer herausfinden, wo sie eingebaut wurden und ob es dabei irgendein bewusstes Muster gab.)&lt;/li>
 &lt;/ul>
-&lt;h2 id="eine-eigene-liturgie-entsteht">Eine eigene Liturgie entsteht&lt;/h2>
-&lt;h3 id="antiphonale-brevier-psalter">Antiphonale, Brevier, Psalter&lt;/h3>
-&lt;p>Dank der Unibibliothek in unserer Nähe konnte ich sowohl den Münsterschwarzacher Psalter als auch eine Kurzfassung des Antiphonale, das &amp;ldquo;&lt;a class="link" href="https://www.bookfinder.com/isbn/9783736501263/?st=sr&amp;amp;ac=qr&amp;amp;mode=basic&amp;amp;author=&amp;amp;title=&amp;amp;isbn=9783736501263&amp;amp;lang=de&amp;amp;destination=de&amp;amp;currency=EUR&amp;amp;binding=*&amp;amp;keywords=&amp;amp;publisher=&amp;amp;min_year=&amp;amp;max_year=&amp;amp;minprice=&amp;amp;maxprice=" target="_blank" rel="noopener"
+&lt;h2 id="eine-eigene-liturgie-entsteht">
+&lt;a href="#eine-eigene-liturgie-entsteht" class="header-anchor">#&lt;/a>
+Eine eigene Liturgie entsteht
+&lt;/h2>&lt;h3 id="antiphonale-brevier-psalter">
+&lt;a href="#antiphonale-brevier-psalter" class="header-anchor">#&lt;/a>
+Antiphonale, Brevier, Psalter
+&lt;/h3>&lt;p>Dank der Unibibliothek in unserer Nähe konnte ich sowohl den Münsterschwarzacher Psalter als auch eine Kurzfassung des Antiphonale, das &amp;ldquo;&lt;a class="link" href="https://www.bookfinder.com/isbn/9783736501263/?st=sr&amp;amp;ac=qr&amp;amp;mode=basic&amp;amp;author=&amp;amp;title=&amp;amp;isbn=9783736501263&amp;amp;lang=de&amp;amp;destination=de&amp;amp;currency=EUR&amp;amp;binding=*&amp;amp;keywords=&amp;amp;publisher=&amp;amp;min_year=&amp;amp;max_year=&amp;amp;minprice=&amp;amp;maxprice=" target="_blank" rel="noopener"
 >Benediktinische Brevier&lt;/a>&amp;rdquo; ausleihen.
 Das Brevier enthält alle Liturgieteile außer die Vigilien (die Vigil ist die allererste Gebetszeit).
 Die Vigilien enthalten allerdings 54 Psalmen; dadurch fehlt im Brevier mehr als ein Drittel aller Psalmen.&lt;/p>
@@ -651,8 +671,10 @@ Die Aufteilung ist wie folgt:&lt;/p>
 Erst bei einem kürzlichen Besuch in einem Kloster stellte ich meinen Irrtum fest:
 Es werden alternierend Vigil I mit Mittagshore I und in der anschließenden Woche Vigil II mit Mittagshore II gebetet, während die restlichen Elemente gleich bleiben.
 Dadurch werden doch nicht alle Psalmen in exakt einer Woche gebetet; es sind durchschnittlich 110 Psalmen pro Woche (also ungefähr 75 %).&lt;/p>
-&lt;h3 id="ziele-und-gestaltungsprinzipien">Ziele und Gestaltungsprinzipien&lt;/h3>
-&lt;p>Mit dieser obigen Tabelle hatte ich einen extrem wertvollen Startpunkt für eine eigene Liturgie.
+&lt;h3 id="ziele-und-gestaltungsprinzipien">
+&lt;a href="#ziele-und-gestaltungsprinzipien" class="header-anchor">#&lt;/a>
+Ziele und Gestaltungsprinzipien
+&lt;/h3>&lt;p>Mit dieser obigen Tabelle hatte ich einen extrem wertvollen Startpunkt für eine eigene Liturgie.
 Bei der Gestaltung dieser Psalmenliturgie waren mir folgende Dinge besonders wichtig:&lt;/p>
 &lt;ol>
 &lt;li>Der Psalter soll mit &lt;strong>vertretbarem Zeitaufwand&lt;/strong> nutzbar sein, sowohl für Einzelpersonen als auch für geistliche Gemeinschaften, die täglich gemeinsame Gebetszeiten pflegen wollen.
@@ -691,8 +713,10 @@ Damit können wir zum Start in den Vormittag und dann zum Start in den Nachmitta
 &lt;/ul>
 &lt;/li>
 &lt;/ol>
-&lt;h3 id="erste-schritte">Erste Schritte&lt;/h3>
-&lt;p>Die Umstrukturierung des Antiphonale begann anfänglich mit Fokus auf der Umverteilung der fünf bestehenden Horen auf die drei neuen Horen:&lt;/p>
+&lt;h3 id="erste-schritte">
+&lt;a href="#erste-schritte" class="header-anchor">#&lt;/a>
+Erste Schritte
+&lt;/h3>&lt;p>Die Umstrukturierung des Antiphonale begann anfänglich mit Fokus auf der Umverteilung der fünf bestehenden Horen auf die drei neuen Horen:&lt;/p>
 &lt;ul>
 &lt;li>Die &lt;em>neue Laudes&lt;/em> nimmt die originale Laudes und von den Vigilien das Invitatorium und Teil I.
 &lt;ul>
@@ -732,8 +756,10 @@ Im Judentum beginnt der neue Tag am Abend und der erste Tag der Woche ist für C
 Diese Verse aus dem Schöpfungsbericht sollen uns helfen, die neue Woche aus dem Ruhen in unserem Schöpfer zu beginnen.&lt;/li>
 &lt;/ul>
 &lt;p>Nach vielen Wochen kam ich an einer Zusammenstellung an, welche die gesteckten Ziele meiner Ansicht nach gut erfüllt.&lt;/p>
-&lt;h2 id="die-liturgie">Die Liturgie&lt;/h2>
-&lt;p>Keinesfalls ist diese Liturgie als ein sklavisch einzuhaltendes und lebloses Ritual zu verstehen.
+&lt;h2 id="die-liturgie">
+&lt;a href="#die-liturgie" class="header-anchor">#&lt;/a>
+Die Liturgie
+&lt;/h2>&lt;p>Keinesfalls ist diese Liturgie als ein sklavisch einzuhaltendes und lebloses Ritual zu verstehen.
 Sie soll vielmehr als ein hilfreicher Bezugsrahmen dienen, der uns das Hinwenden zum unsichtbaren Gott, der sich in Jesus sichtbar gemacht hat, erleichtern kann.
 Wenn sie dir oder euch dazu nicht dient, ändert sie nach Belieben ab.&lt;/p>
 &lt;p>Diese Liturgie ist grundsätzlich sehr simpel aufgebaut:&lt;/p>
@@ -1507,8 +1533,10 @@ Stattdessen sind die einzelnen Strophen über die zwei Wochen verteilt.&lt;/li>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h2 id="eine-gebrauchsanweisung">Eine Gebrauchsanweisung&lt;/h2>
-&lt;p>Wie verwende ich diese Liturgie mit Gewinn?&lt;/p>
+&lt;h2 id="eine-gebrauchsanweisung">
+&lt;a href="#eine-gebrauchsanweisung" class="header-anchor">#&lt;/a>
+Eine Gebrauchsanweisung
+&lt;/h2>&lt;p>Wie verwende ich diese Liturgie mit Gewinn?&lt;/p>
 &lt;p>Ich empfehle folgende Schritte als &lt;strong>Vorbereitung&lt;/strong>:&lt;/p>
 &lt;ol>
 &lt;li>&lt;strong>Druck dir die Tabelle aus&lt;/strong>, beispielsweise von &lt;a class="link" href="https://drive.google.com/open?id=14J46EmJiwxjxVElZVYyhl81lPT_moS1P" target="_blank" rel="noopener"
@@ -1636,8 +1664,10 @@ Instead, He has &lt;strong>an entire universe&lt;/strong> that fells &amp;ldquo;
 &lt;p>My prayer is that we would all learn to rest in the love of the Triune God, just as Jesus had learned (and apparently practiced routinely).&lt;/p></description></item><item><title>Lieder übersetzen: Warum hören wir einander nicht mehr zu?</title><link>https://jscheytt.github.io/p/lieder-%C3%BCbersetzen-warum-h%C3%B6ren-wir-einander-nicht-mehr-zu/</link><pubDate>Sun, 19 Mar 2023 10:54:57 +0100</pubDate><guid>https://jscheytt.github.io/p/lieder-%C3%BCbersetzen-warum-h%C3%B6ren-wir-einander-nicht-mehr-zu/</guid><description>&lt;p>&lt;em>Normalerweise schreibe ich meine Blogbeiträge auf Englisch, aber für dieses Thema bietet es sich deutlich mehr an, auf Deutsch zu schreiben.&lt;/em>&lt;/p>
 &lt;p>Ich möchte über zwei Lieder schreiben, die für mich in ihrer ursprünglichen englischen Fassung geistlich wertvoll sind und bei denen die offizielle deutsche Übersetzung ein paar wenige, aber entscheidende Inhalte völlig entstellt hat.
 Und ich möchte darüber schreiben, was das für mich an Mangel in unserer (auch unserer christlichen) Kultur offenbart, einander ernsthaft zuzuhören.&lt;/p>
-&lt;h2 id="1-phil-wickham--battle-belongs">1) Phil Wickham — Battle Belongs&lt;/h2>
-&lt;p>Der &lt;a class="link" href="https://youtu.be/johgSkNj3-A?t=58" target="_blank" rel="noopener"
+&lt;h2 id="1-phil-wickham--battle-belongs">
+&lt;a href="#1-phil-wickham--battle-belongs" class="header-anchor">#&lt;/a>
+1) Phil Wickham — Battle Belongs
+&lt;/h2>&lt;p>Der &lt;a class="link" href="https://youtu.be/johgSkNj3-A?t=58" target="_blank" rel="noopener"
 >Chorus&lt;/a> fängt so an:&lt;/p>
 &lt;blockquote>
 &lt;p>And when I fight I fight on my knees&lt;br>
@@ -1662,8 +1692,10 @@ Die Silbenanzahlen sollten aufeinander passen, damit keine Lücken oder Zusatzno
 Auch die Betonungen von Wörtern müssen auf den Rhythmus der Melodie passen.&lt;/p>
 &lt;p>Aber an dieser spezifischen Stelle, die noch dazu die &lt;strong>textlich zentralste Stelle des Liedes&lt;/strong> ist (ansonsten wäre sie nicht der Titel des Liedes), kann ich keinen einzigen Grund erkennen, warum man absichtlich den &lt;em>Inhalt des Liedes abändert&lt;/em>.
 Die Silbenanzahl ist identisch, es wäre kein extremer Zungenbrecher, auch mit der Betonung gäbe es keine Probleme.&lt;/p>
-&lt;h2 id="2-meredith-andrews--make-room">2) Meredith Andrews — Make Room&lt;/h2>
-&lt;p>Ein kleineres Beispiel aus der &lt;a class="link" href="https://youtu.be/QxubPpU-iIA?t=145" target="_blank" rel="noopener"
+&lt;h2 id="2-meredith-andrews--make-room">
+&lt;a href="#2-meredith-andrews--make-room" class="header-anchor">#&lt;/a>
+2) Meredith Andrews — Make Room
+&lt;/h2>&lt;p>Ein kleineres Beispiel aus der &lt;a class="link" href="https://youtu.be/QxubPpU-iIA?t=145" target="_blank" rel="noopener"
 >Bridge&lt;/a>, das für mich weniger schlimm ist, aber dennoch die gleichen Symptome aufweist:&lt;/p>
 &lt;blockquote>
 &lt;p>Shake up the ground of all my tradition&lt;br>
@@ -1681,8 +1713,10 @@ Brich alles auf, was Dich in mir eingrenzt&lt;br>
 Beinhaltet Sein Weg nicht vielmehr auch &lt;em>Seine Art zu handeln und Seinen Charakter&lt;/em>?
 Warum berauben wir den ursprünglichen Text seiner Bandbreite und Tiefe und verengen ihn auf das, was wir meinen verstanden zu haben?&lt;/p>
 &lt;p>Auch hier sehe ich keinen musikalischen Grund, wegen dem die wörtliche Übersetzung &amp;ldquo;Dein Weg ist besser&amp;rdquo; deutlich schlechter wäre.&lt;/p>
-&lt;h2 id="symptome-von-gegenseitiger-ignoranz">Symptome von gegenseitiger Ignoranz&lt;/h2>
-&lt;p>Wenn wir Lieder aus anderen Sprachen in unsere eigene übersetzen, dann legen wir den Autoren dieser Lieder &lt;em>unsere Worte in den Mund&lt;/em>.
+&lt;h2 id="symptome-von-gegenseitiger-ignoranz">
+&lt;a href="#symptome-von-gegenseitiger-ignoranz" class="header-anchor">#&lt;/a>
+Symptome von gegenseitiger Ignoranz
+&lt;/h2>&lt;p>Wenn wir Lieder aus anderen Sprachen in unsere eigene übersetzen, dann legen wir den Autoren dieser Lieder &lt;em>unsere Worte in den Mund&lt;/em>.
 Warum fällt es uns offensichtlich so leicht, einfach über das hinwegzugehen, was die Autoren klar und deutlich in ihren Texten geschrieben haben?
 Nehmen wir uns einfach nicht die Zeit den Text genau zu lesen und damit umzugehen?
 Wollen wir einfach nur möglichst schnell ein schön klingendes Lied in unser Repertoire aufnehmen und uns (ganz wortwörtlich) &amp;ldquo;aneignen&amp;rdquo; statt zuerst die Worte des Liedes in der Tiefe &lt;em>zu uns selbst&lt;/em> reden zu lassen?&lt;/p>
@@ -1692,16 +1726,20 @@ Und zwar nicht zuallererst, weil ich sehr genau bin.&lt;/p>
 &lt;p>Ich glaube, dass wir an vielen Stellen verlernt haben, einander wirklich ernsthaft zuzuhören.
 Und dieser Mangel an &amp;ldquo;geöffneten Ohren des Herzens&amp;rdquo; wird niemals nur unsere Kommunikation untereinander als Menschen betreffen, sondern immer auch unsere Bereitschaft, Gott mit offenen Ohren und Herzen zuzuhören.
 Ich bin überzeugt, dass es einen &amp;ldquo;besseren Weg&amp;rdquo; gibt.&lt;/p>
-&lt;h2 id="wie-kehren-wir-davon-um">Wie kehren wir davon um?&lt;/h2>
-&lt;p>Dieser Weg besteht nicht zuallererst darin, dass wir sklavisch jedes Anbetungslied so wortwörtlich wie nur irgend möglich übersetzen, selbst wenn man es dann nicht mehr singen kann.
+&lt;h2 id="wie-kehren-wir-davon-um">
+&lt;a href="#wie-kehren-wir-davon-um" class="header-anchor">#&lt;/a>
+Wie kehren wir davon um?
+&lt;/h2>&lt;p>Dieser Weg besteht nicht zuallererst darin, dass wir sklavisch jedes Anbetungslied so wortwörtlich wie nur irgend möglich übersetzen, selbst wenn man es dann nicht mehr singen kann.
 Stattdessen liegt meiner Ansicht nach die Lösung darin von Jesus zu lernen.
 Wie war er mit Menschen im Gespräch?
 Auf welche Weise hat Er ihnen zugehört hat, ihnen geantwortet, ihnen Fragen gestellt?&lt;/p>
 &lt;p>Wenn wir das lernen, dann lernen wir ganz generell einen anderen Umgang miteinander, einen Umgang, der dem Reich Gottes unter uns entspricht.
 Und im natürlichsten Fall befähigt uns das, wie wir uns Jesus zuwenden, Ihm zuhören und von Ihm lernen dazu, auch anderen Gehör zu schenken und ihre Worte ernst zu nehmen.&lt;/p>
 &lt;p>Lasst mich zwei Beispiele dafür aufzeigen, an denen wir von Ihm, dem Meister, lernen können:&lt;/p>
-&lt;h2 id="a-jesus-im-erbstreit">A) Jesus im Erbstreit&lt;/h2>
-&lt;p>In Lukas 12,13-15 (NGÜ):&lt;/p>
+&lt;h2 id="a-jesus-im-erbstreit">
+&lt;a href="#a-jesus-im-erbstreit" class="header-anchor">#&lt;/a>
+A) Jesus im Erbstreit
+&lt;/h2>&lt;p>In Lukas 12,13-15 (NGÜ):&lt;/p>
 &lt;blockquote>
 &lt;p>Einer aus der Menge bat Jesus: »Meister, sag doch meinem Bruder, er soll das väterliche Erbe mit mir teilen!«&lt;br>
 Jesus entgegnete ihm: »Lieber Mann, wer hat mich denn zum Richter über euch eingesetzt oder zum Vermittler in euren Erbangelegenheiten?«&lt;br>
@@ -1712,8 +1750,10 @@ Aber Er hört auch &lt;em>mehr als nur das&lt;/em>, was der Mann sagt.
 Dass Jesus direkt nach Seiner Antwort an den Mann zur Menge über Habgier spricht, ist nicht einfach ein geschickter rhetorischer Move, sondern Jesus weiß genau, dass sowohl bei dem Mann als auch bei vielen in der Menge (und auch wir sind darunter!) Habgier in den Herzen herrscht.
 Deshalb geht Er nicht einfach nur oberflächlich auf das ein, was Ihm der Mann sagt.
 Er antwortet vielmehr &lt;em>zutiefst&lt;/em> auf der Ebene, auf welcher der Mann &lt;em>wirklich&lt;/em> eine Antwort braucht, damit nicht länger der Neid sein Leben bestimmt!&lt;/p>
-&lt;h2 id="b-jesus-und-martha">B) Jesus und Martha&lt;/h2>
-&lt;p>In Lukas 10,40ff (ELB):&lt;/p>
+&lt;h2 id="b-jesus-und-martha">
+&lt;a href="#b-jesus-und-martha" class="header-anchor">#&lt;/a>
+B) Jesus und Martha
+&lt;/h2>&lt;p>In Lukas 10,40ff (ELB):&lt;/p>
 &lt;blockquote>
 &lt;p>Marta aber war sehr beschäftigt mit vielem Dienen; sie trat aber hinzu und sprach: »Herr, kümmert es dich nicht, dass meine Schwester mich allein gelassen hat zu dienen? Sage ihr doch, dass sie mir helfe!«&lt;br>
 Jesus aber antwortete und sprach zu ihr: »Marta, Marta! Du bist besorgt und beunruhigt um viele Dinge; eins aber ist nötig.
@@ -1813,8 +1853,10 @@ They ask if they should continue this practice in light of the ongoing rebuildin
 &lt;p>When you fasted and mourned in the fifth month and in the seventh, for these seventy years, &lt;strong>was it for me that you fasted&lt;/strong>?&lt;br>
  And when you eat and when you drink, &lt;strong>do you not eat for yourselves and drink for yourselves&lt;/strong>?&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="fasting-and-eating-for-whom">Fasting and Eating For Whom?&lt;/h2>
-&lt;p>There seems to be a way of fasting where you are not fasting for God.
+&lt;h2 id="fasting-and-eating-for-whom">
+&lt;a href="#fasting-and-eating-for-whom" class="header-anchor">#&lt;/a>
+Fasting and Eating For Whom?
+&lt;/h2>&lt;p>There seems to be a way of fasting where you are not fasting for God.
 (Let&amp;rsquo;s keep in mind: Fasting is not the mere outward act of abstaining from food, it&amp;rsquo;s abstinence from what normally physically satifies me so I am more receptive for God nourishing me directly.)&lt;/p>
 &lt;p>But not only is there a way of &lt;strong>fasting without God&lt;/strong>, but there is also a way of &lt;strong>eating without God&lt;/strong>.
 So you can do &lt;em>everything&lt;/em> in your daily life either with or without God — no matter if one activity seems &amp;ldquo;more holy&amp;rdquo; on the outside than another.&lt;/p>
@@ -1825,8 +1867,10 @@ What is so wonderful about doing things for God is that we are not first and for
 &lt;blockquote>
 &lt;p>And whatever you do, in word or deed, &lt;strong>do everything in the name of the Lord Jesus&lt;/strong>, giving thanks to God the Father through him.&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="redeeming-our-grief-and-contortions">Redeeming Our Grief and Contortions&lt;/h2>
-&lt;p>God could have left it there, saying &amp;ldquo;First learn living in the ways of My goodness, then we can talk about fasting&amp;rdquo; (see the rest of Zechariah 7 after the top verse).
+&lt;h2 id="redeeming-our-grief-and-contortions">
+&lt;a href="#redeeming-our-grief-and-contortions" class="header-anchor">#&lt;/a>
+Redeeming Our Grief and Contortions
+&lt;/h2>&lt;p>God could have left it there, saying &amp;ldquo;First learn living in the ways of My goodness, then we can talk about fasting&amp;rdquo; (see the rest of Zechariah 7 after the top verse).
 But he does not simply cut off the false practice!
 In &lt;a class="link" href="https://www.bibleserver.com/ESV.NIV/Zechariah8%3A19" target="_blank" rel="noopener"
 >chapter 8&lt;/a> he revisits the topic and says:&lt;/p>
@@ -1835,23 +1879,29 @@ In &lt;a class="link" href="https://www.bibleserver.com/ESV.NIV/Zechariah8%3A19"
 Therefore love truth and peace!&lt;/p>
 &lt;/blockquote>
 &lt;p>When we return to God, all our sorrow and lament and even all our mislead religious efforts of trying to please Him are redeemed.
-He takes it all — all our authentic grief and hurt but also all our perversions of what is good — and turns it into feasts of joy!&lt;/p></description></item><item><title>I Install Washing Machines (My Latest Job Metaphor)</title><link>https://jscheytt.github.io/p/i-install-washing-machines-my-latest-job-metaphor/</link><pubDate>Tue, 04 Oct 2022 14:30:29 +0100</pubDate><guid>https://jscheytt.github.io/p/i-install-washing-machines-my-latest-job-metaphor/</guid><description>&lt;h2 id="so-what-exactly-do-you-do-for-a-living">So What Exactly Do You Do For A Living?&lt;/h2>
-&lt;p>Whenever we meet new people (or good friends, it sometimes doesn&amp;rsquo;t make a big difference 😄), the above question will come up.
+He takes it all — all our authentic grief and hurt but also all our perversions of what is good — and turns it into feasts of joy!&lt;/p></description></item><item><title>I Install Washing Machines (My Latest Job Metaphor)</title><link>https://jscheytt.github.io/p/i-install-washing-machines-my-latest-job-metaphor/</link><pubDate>Tue, 04 Oct 2022 14:30:29 +0100</pubDate><guid>https://jscheytt.github.io/p/i-install-washing-machines-my-latest-job-metaphor/</guid><description>&lt;h2 id="so-what-exactly-do-you-do-for-a-living">
+&lt;a href="#so-what-exactly-do-you-do-for-a-living" class="header-anchor">#&lt;/a>
+So What Exactly Do You Do For A Living?
+&lt;/h2>&lt;p>Whenever we meet new people (or good friends, it sometimes doesn&amp;rsquo;t make a big difference 😄), the above question will come up.
 My wife (who is a doctor and has understably fewer problems explaining her job) is always excited to get yet another chance to &amp;ldquo;finally understand&amp;rdquo; what it is that I am doing at work as a &lt;strong>Cloud Automation Engineer&lt;/strong>.&lt;/p>
 &lt;p>That is the fancy title we at &lt;a class="link" href="https://flowable.wd3.myworkdayjobs.com/de-DE/mimacom/details/Cloud-Automation-Engineer--m-f-d-_JR100074?q=cloud%20automation%20engineer" target="_blank" rel="noopener"
 >mimacom&lt;/a> give to people working in &lt;em>Site Reliability Engineering&lt;/em> and &lt;em>DevOps Engineering&lt;/em>, and I have grown to really like it because it starts to convey a lot of meaning right away.
 Unfortunately, it&amp;rsquo;s also long and not particularly established (yet).&lt;/p>
 &lt;p>In this blog post I will explore one analogy that came to my mind recently.
 I have not tried it out in the wild yet, but I am fascinated by the similarities between deploying washing machines and deploying web applications.&lt;/p>
-&lt;h2 id="my-latest-metaphor">My Latest Metaphor&lt;/h2>
-&lt;p>Let&amp;rsquo;s say I work in a company that builds, delivers, and maintains washing machines for laundromats.
+&lt;h2 id="my-latest-metaphor">
+&lt;a href="#my-latest-metaphor" class="header-anchor">#&lt;/a>
+My Latest Metaphor
+&lt;/h2>&lt;p>Let&amp;rsquo;s say I work in a company that builds, delivers, and maintains washing machines for laundromats.
 The colleagues in my team whom I work most closely with design new washing machine models.
 You could say they design or &amp;ldquo;develop&amp;rdquo; the washing machines.&lt;/p>
 &lt;p>They do this very frequently — even so frequently, that they tweak the current model mostly on a daily basis.
 Whenever they change the model, we want to bring these improvements to our customers as quickly as possible.&lt;/p>
 &lt;p>And here begins my responsibility as Laundry Automation Engineer™️.&lt;/p>
-&lt;h3 id="delivering-new-washing-machines">Delivering New Washing Machines&lt;/h3>
-&lt;p>There are several steps that now need to happen in succession until the new model lands at our customers (the laundromats).
+&lt;h3 id="delivering-new-washing-machines">
+&lt;a href="#delivering-new-washing-machines" class="header-anchor">#&lt;/a>
+Delivering New Washing Machines
+&lt;/h3>&lt;p>There are several steps that now need to happen in succession until the new model lands at our customers (the laundromats).
 We also call this a &lt;strong>pipeline&lt;/strong>:&lt;/p>
 &lt;ol>
 &lt;li>The designers/developers wrote some simulations to check if the models they produce really work as they should.
@@ -1869,8 +1919,10 @@ Robots are a lot more reliable, faster, and cheaper when it comes to repetitive 
 &lt;p>And if there is an error during any of the above steps, the pipeline for the current model change will stop (so we don&amp;rsquo;t deliver broken machines).
 I will then look what caused the error and fix it.&lt;/p>
 &lt;p>Let&amp;rsquo;s zoom in on a few details around the last step when the robots install the new machines:&lt;/p>
-&lt;h3 id="zero-downtime">Zero-Downtime&lt;/h3>
-&lt;p>Our laundromats are very highly frequented, basically around the clock, even on weekends.
+&lt;h3 id="zero-downtime">
+&lt;a href="#zero-downtime" class="header-anchor">#&lt;/a>
+Zero-Downtime
+&lt;/h3>&lt;p>Our laundromats are very highly frequented, basically around the clock, even on weekends.
 People come and go all the time.
 They put their clothes into a machine, select a program, pay with coins or by card, set it off running, and return when their laundry is supposed to be ready.&lt;/p>
 &lt;p>For simplicity, I will now switch back to me as the one doing the actual work (instead of the robots).
@@ -1880,8 +1932,10 @@ They know that if they have to many interruptions, potential customers will get 
 &lt;p>So normally, I will install the new washing machine first (connect to current and water), mark the old machine as &amp;ldquo;stale&amp;rdquo; (so customers can only get their laundry from it but not start any new programs), then disconnect the old one.
 This does introduce a little bit of energy and water overhead for the laundromat, but they happily pay that price.
 And good for me that in reality I have robots managing all this for me.&lt;/p>
-&lt;h2 id="behind-the-scenes-a-glossary">Behind The Scenes: A Glossary&lt;/h2>
-&lt;dl>
+&lt;h2 id="behind-the-scenes-a-glossary">
+&lt;a href="#behind-the-scenes-a-glossary" class="header-anchor">#&lt;/a>
+Behind The Scenes: A Glossary
+&lt;/h2>&lt;dl>
 &lt;dt>Washing Machine:&lt;/dt>
 &lt;dd>A web application that communicates over HTTP.
 It receives requests (dirty laundry and some program parameters) and delivers responses (clean laundry in the happy path).&lt;/dd>
@@ -1923,8 +1977,10 @@ This part of the series will simply elaborate further on that, this time looking
 &lt;blockquote>
 &lt;p>&lt;em>Quotation blocks in this article &lt;strong>with quotes&lt;/strong> are from the Bible, quotation blocks &lt;strong>without quotes&lt;/strong> are my interpretation.&lt;/em>&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="the-setting">The Setting&lt;/h2>
-&lt;p>Before we dive into the precise commandments, let&amp;rsquo;s take a few moments to picture the scene:&lt;/p>
+&lt;h2 id="the-setting">
+&lt;a href="#the-setting" class="header-anchor">#&lt;/a>
+The Setting
+&lt;/h2>&lt;p>Before we dive into the precise commandments, let&amp;rsquo;s take a few moments to picture the scene:&lt;/p>
 &lt;p>Israel has lived many hundreds of years in Egypt, first as free people, then at the end as slaves because they thrived too much.
 God then calls His servant Moses to liberate His people.
 He leads the whole nation out among powerful signs, demonstrating His power and love for Israel.
@@ -1935,8 +1991,10 @@ Moses brings them to Mount Sinai so they can encounter God because He wants to &
 The encounter at the third day is radical and overwhelming:
 The mountain is on fire, dark clouds surround it, a trumpet blows ever louder and louder.
 They cannot see the Holy, Invisible God, but they hear His voice, saying:&lt;/p>
-&lt;h2 id="i-am-the-lord-your-god">I Am The Lord Your God&lt;/h2>
-&lt;blockquote>
+&lt;h2 id="i-am-the-lord-your-god">
+&lt;a href="#i-am-the-lord-your-god" class="header-anchor">#&lt;/a>
+I Am The Lord Your God
+&lt;/h2>&lt;blockquote>
 &lt;p>&amp;ldquo;I am the Lord your God.
 I brought you out of Egypt. That is the land where you were slaves.&amp;rdquo;&lt;/p>
 &lt;/blockquote>
@@ -1964,8 +2022,10 @@ They have committed to each other for a lifetime and everything either does will
 &lt;p>Let this sink in:
 The Eternal God who made the universe lowers Himself to talk to His creation, those shaky bones and Holy Breath which He formed into humans, and deeply desires to &lt;strong>become one&lt;/strong> with them.
 He offers up Himself to these small beings He created in His likeness, telling them &amp;ldquo;You &lt;strong>possess&lt;/strong> Me, and I possess you.&amp;rdquo;&lt;/p>
-&lt;h3 id="i-brought-you-out-of-slavery">I Brought You Out Of Slavery&lt;/h3>
-&lt;blockquote>
+&lt;h3 id="i-brought-you-out-of-slavery">
+&lt;a href="#i-brought-you-out-of-slavery" class="header-anchor">#&lt;/a>
+I Brought You Out Of Slavery
+&lt;/h3>&lt;blockquote>
 &lt;p>You were not born in freedom.
 You were living under the slavery of sin — remember this.&lt;/p>
 &lt;p>You have not liberated yourself from this slavery on your own.
@@ -1974,8 +2034,10 @@ It was I who rescued you — so you could become Mine and I could become yours!&
 &lt;p>Remember Egypt and the signs and miracles with which I lead you out from there.
 This is how much you are worth to Me!&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="you-will-have-no-other-gods-beside-me">You Will Have No Other Gods Beside Me&lt;/h2>
-&lt;blockquote>
+&lt;h2 id="you-will-have-no-other-gods-beside-me">
+&lt;a href="#you-will-have-no-other-gods-beside-me" class="header-anchor">#&lt;/a>
+You Will Have No Other Gods Beside Me
+&lt;/h2>&lt;blockquote>
 &lt;p>&amp;ldquo;You shall have no other gods beside Me.&amp;rdquo;&lt;/p>
 &lt;/blockquote>
 &lt;p>The Hebrew word for &amp;ldquo;beside Me&amp;rdquo; here means &amp;ldquo;on the same level as Me&amp;rdquo; or &amp;ldquo;next to My face&amp;rdquo;.
@@ -1991,8 +2053,10 @@ For me this makes the whole section sound not only like &lt;em>commandments&lt;/
 &lt;p>When you say &amp;ldquo;Yes&amp;rdquo; to Me and enter into this covenant relationship with Me, then this is the kind of life you will lead:
 You &lt;em>will&lt;/em> have no other Gods beside Me, you &lt;em>will&lt;/em> not abuse My name, you &lt;em>will&lt;/em> rejoice in the Sabbath, you &lt;em>will&lt;/em> honor your parents, &amp;hellip;&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="you-will-not-make-yourself-idol-images">You Will Not Make Yourself Idol Images&lt;/h2>
-&lt;blockquote>
+&lt;h2 id="you-will-not-make-yourself-idol-images">
+&lt;a href="#you-will-not-make-yourself-idol-images" class="header-anchor">#&lt;/a>
+You Will Not Make Yourself Idol Images
+&lt;/h2>&lt;blockquote>
 &lt;p>&amp;ldquo;You will not make for yourself a statue or any likeness of anything that is in the sky, on the earth or in the waters.
 You will not adore them or serve them.&lt;/p>
 &lt;p>For I, the Lord your God, am a jealous God, afflicting the guilt of the fathers on the children and grandchildren of those who despise me —
@@ -2009,8 +2073,10 @@ And I will also pour out my kindness and goodness on thousands of generations af
 When you reject me, then I will shake you so you wake up and recognize that all the good in your life which you rely upon comes only from Me.
 And you will recognize that &lt;strong>My grace is a thousand times greater&lt;/strong> than the punishment I may enact to bring you back to Me &amp;hellip;&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="you-will-not-exploit-my-name">You Will Not Exploit My Name&lt;/h2>
-&lt;blockquote>
+&lt;h2 id="you-will-not-exploit-my-name">
+&lt;a href="#you-will-not-exploit-my-name" class="header-anchor">#&lt;/a>
+You Will Not Exploit My Name
+&lt;/h2>&lt;blockquote>
 &lt;p>&amp;ldquo;You will not pronounce the name of the Lord your God in vain, for the Lord will not hold anyone guiltless who pronounces His name in vain.&amp;rdquo;&lt;/p>
 &lt;/blockquote>
 &lt;p>Let&amp;rsquo;s look at the words &amp;ldquo;pronounce&amp;rdquo; and &amp;ldquo;in vain&amp;rdquo; a bit closer:
@@ -2031,8 +2097,10 @@ If you try to simply &lt;em>have your own way&lt;/em> by abusing Me and My love,
 &lt;p>But when you live in My Kingdom, you can completely afford to openly and vulnerably speak the truth, and you have no need to say anything beyond it.
 For I am The Truth, and under My loving reign you will become more and more like Me.&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="keep-the-sabbath">Keep The Sabbath&lt;/h2>
-&lt;blockquote>
+&lt;h2 id="keep-the-sabbath">
+&lt;a href="#keep-the-sabbath" class="header-anchor">#&lt;/a>
+Keep The Sabbath
+&lt;/h2>&lt;blockquote>
 &lt;p>&amp;ldquo;Remember to keep the Sabbath day, to keep it holy.
 Six days you shall labor and do all your work, but the seventh day is a day of rest for the Lord your God.
 You shall not do any work on it, neither you nor your children, neither your male nor your female servant, not even the animals or the foreigners living in your towns.&lt;/p>
@@ -2057,8 +2125,10 @@ In His Kingdom, we are untied from our reliance upon earthly things and upon our
 By learning to place our trust in Him, we can truly start to enjoy one full day of rest every week because we have learned that &lt;strong>our lives are not in our own hands&lt;/strong>.
 There is Someone Infinitely Good providing for us and inviting us into intimacy with Him.
 This is truly the place where we find abundant life that is available nowhere else.&lt;/p>
-&lt;h2 id="honor-your-parents">Honor Your Parents&lt;/h2>
-&lt;blockquote>
+&lt;h2 id="honor-your-parents">
+&lt;a href="#honor-your-parents" class="header-anchor">#&lt;/a>
+Honor Your Parents
+&lt;/h2>&lt;blockquote>
 &lt;p>&amp;ldquo;Honor your father and your mother.
 Then you will live a long time in the land the Lord your God is giving you.&amp;rdquo;&lt;/p>
 &lt;/blockquote>
@@ -2070,8 +2140,10 @@ We can imitate Him by honoring the people who brought us into this life on a bio
 Now, you can subject yourself to your mother and father freely, knowing you are not in their hands but in My loving care first.
 In Me, you are finally able to respect them and keep your heart vulnerably open at the same time.&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="you-will-not-kill">You Will Not Kill&lt;/h2>
-&lt;blockquote>
+&lt;h2 id="you-will-not-kill">
+&lt;a href="#you-will-not-kill" class="header-anchor">#&lt;/a>
+You Will Not Kill
+&lt;/h2>&lt;blockquote>
 &lt;p>&amp;ldquo;You will not murder&amp;rdquo; —
 for I am The Life.
 You will not take life away from others to secure your own life.&lt;/p>
@@ -2079,15 +2151,19 @@ You will not take life away from others to secure your own life.&lt;/p>
 >Your life ended&lt;/a> when you entered into a covenant with Me, and what you live now, you live in and through Me.
 And through Me, &lt;strong>your life will become a place&lt;/strong> where others thrive, &lt;strong>where they come alive&lt;/strong> and their lives start to unfold and blossom.&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="you-will-not-break-marriage">You Will Not Break Marriage&lt;/h2>
-&lt;blockquote>
+&lt;h2 id="you-will-not-break-marriage">
+&lt;a href="#you-will-not-break-marriage" class="header-anchor">#&lt;/a>
+You Will Not Break Marriage
+&lt;/h2>&lt;blockquote>
 &lt;p>&amp;ldquo;You will not commit adultery&amp;rdquo; —
 for I am Faithfulness.
 &lt;strong>You will be faithful&lt;/strong> to your spose — not because he or she &lt;em>deserves&lt;/em> it but because you have learned to be faithful to Me, and because you are becoming more and more like Me.&lt;/p>
 &lt;p>The way you lead your marriage and all your relationships with the other sex &lt;em>will display My relationship with My bride&lt;/em>.&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="you-will-not-steal">You Will Not Steal&lt;/h2>
-&lt;blockquote>
+&lt;h2 id="you-will-not-steal">
+&lt;a href="#you-will-not-steal" class="header-anchor">#&lt;/a>
+You Will Not Steal
+&lt;/h2>&lt;blockquote>
 &lt;p>&amp;ldquo;You will not steal&amp;rdquo; —
 for I am your Provider.
 I give you more than enough.
@@ -2099,8 +2175,10 @@ You are no longer bound to a self-centered and ultimately self-destroying life:
 &lt;a class="link" href="https://www.bibleserver.com/ESV.NIRV/Hebrews10%3A34" target="_blank" rel="noopener"
 >Out of My riches&lt;/a> &lt;strong>you can totally afford to generously give&lt;/strong> to others around you and &lt;strong>love lavishly&lt;/strong>.&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="you-will-not-lie-against-others">You Will Not Lie Against Others&lt;/h2>
-&lt;blockquote>
+&lt;h2 id="you-will-not-lie-against-others">
+&lt;a href="#you-will-not-lie-against-others" class="header-anchor">#&lt;/a>
+You Will Not Lie Against Others
+&lt;/h2>&lt;blockquote>
 &lt;p>&amp;ldquo;You will not be a false witness against your neighbor&amp;rdquo; —
 for I am The Truth.
 You no longer have to fight against others at all.
@@ -2108,8 +2186,10 @@ You no longer have to fight against others at all.
 &lt;p>You can afford to be honest and vulnerable because when you are in Me, nobody can ultimately harm you.
 Yes, you can afford to speak the truth even about your enemies, and even if it causes you disadvantage or harm at first — because you are not living from your limited resources but from Me, Life Himself.&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="you-will-not-envy">You Will Not Envy&lt;/h2>
-&lt;blockquote>
+&lt;h2 id="you-will-not-envy">
+&lt;a href="#you-will-not-envy" class="header-anchor">#&lt;/a>
+You Will Not Envy
+&lt;/h2>&lt;blockquote>
 &lt;p>&amp;ldquo;You will not covet your neighbor&amp;rsquo;s house or wife, male or female servant, ox or donkey or anything that is your neighbor&amp;rsquo;s&amp;rdquo; —
 for I am &lt;a class="link" href="https://www.bibleserver.com/ESV.NIRV/Genesis15%3A1" target="_blank" rel="noopener"
 >your Great Reward&lt;/a> and the one who satisfies all your deepest needs.&lt;/p>
@@ -2139,8 +2219,10 @@ So when reading Scripture — any part of the Bible, even the Torah and its comm
 &lt;p>Out of this marvelling I suddenly realized that I effectively had no idea what the Law is, even after having read through the whole Bible multiple times in my life.
 So I started reading the Torah, exploring it and falling in love with it.
 Let me share some beautiful findings from my journey so far:&lt;/p>
-&lt;h2 id="god-reveals-his-character-in-the-law">God Reveals His Character In The Law&lt;/h2>
-&lt;p>Leviticus in the Old Testament and the gospel of John in the New Testament are &lt;em>the&lt;/em> books of the Bible where the phrase &lt;a class="link" href="https://www.csv-bibel.de/suche/%22ich%20bin%22" target="_blank" rel="noopener"
+&lt;h2 id="god-reveals-his-character-in-the-law">
+&lt;a href="#god-reveals-his-character-in-the-law" class="header-anchor">#&lt;/a>
+God Reveals His Character In The Law
+&lt;/h2>&lt;p>Leviticus in the Old Testament and the gospel of John in the New Testament are &lt;em>the&lt;/em> books of the Bible where the phrase &lt;a class="link" href="https://www.csv-bibel.de/suche/%22ich%20bin%22" target="_blank" rel="noopener"
 >&amp;ldquo;I am&amp;rdquo;&lt;/a> appears most often (about 50 times in each book).
 In John, these are mostly the famous &amp;ldquo;I am&amp;rdquo; sentences by Jesus like &amp;ldquo;I am the Bread of Life,&amp;rdquo; &amp;ldquo;I am the Good Shepherd,&amp;rdquo; or &amp;ldquo;I am the Resurrection and the Life.&amp;rdquo;
 In Leviticus, the most common phrase is &amp;ldquo;(For) I am the Lord (your God).&amp;rdquo;
@@ -2151,8 +2233,10 @@ This has become one of my favorite chapters in the Bible:
 We read all kinds of commandments there, and almost every second or third sentence is &amp;ldquo;(For) I am YHWH (your God)&amp;rdquo;.
 It&amp;rsquo;s almost as if these were not mere commands but that they instead reveal something about the very character of God.
 Everything in this chapter (and by extension, the whole of the Torah) therefore becomes not just a statement about &lt;strong>what we should do&lt;/strong> but also about &lt;strong>who He is&lt;/strong>.&lt;/p>
-&lt;h3 id="examples-from-leviticus-19">Examples From Leviticus 19&lt;/h3>
-&lt;p>Let&amp;rsquo;s try a few excerpts from this chapter:&lt;/p>
+&lt;h3 id="examples-from-leviticus-19">
+&lt;a href="#examples-from-leviticus-19" class="header-anchor">#&lt;/a>
+Examples From Leviticus 19
+&lt;/h3>&lt;p>Let&amp;rsquo;s try a few excerpts from this chapter:&lt;/p>
 &lt;blockquote>
 &lt;p>Every one of you shall revere his mother and his father, and you shall keep my Sabbaths: I am the Lord your God.&lt;/p>
 &lt;/blockquote>
@@ -2186,8 +2270,10 @@ He always wanted those who sacrificed an animal for Him to celebrate &lt;strong>
 By keeping some of this prepared, holy meat and eating it later — at any time of our own liking — we would treat something that was meant for communion and closeness with God and others as something we can exploit selfishly on our own.&lt;/p>
 &lt;p>That is not the way He has meant for us to live — neither in the context of sacrifices nor in basically any other part of life.
 He wants to make us into beings that can and will naturally live in loving harmony and interaction with Him every moment of each day.&lt;/p>
-&lt;h2 id="jesus-is-the-fulfillment-of-the-law">Jesus Is The Fulfillment Of The Law&lt;/h2>
-&lt;p>The initial followers of Jesus in the first century were Jews.
+&lt;h2 id="jesus-is-the-fulfillment-of-the-law">
+&lt;a href="#jesus-is-the-fulfillment-of-the-law" class="header-anchor">#&lt;/a>
+Jesus Is The Fulfillment Of The Law
+&lt;/h2>&lt;p>The initial followers of Jesus in the first century were Jews.
 They knew the Law well, from learning to read and write in the Torah schools and from the synagogue.
 It was probably in some sense easier for them than for us today to understand what Jesus meant when He said in Matthew 5:&lt;/p>
 &lt;blockquote>
@@ -2216,8 +2302,10 @@ Just because the Old Covenant was a reduced image and an imperfect projection of
 Jesus also said (see above) that He was not going to abolish them, but fulfill them.
 Rejecting the Old Testament because it was incomplete would be outright wrong, just as would be rejecting sex in marriage because it is an incomplete image of the union of Christ and His Bride.
 Everything on this planet will be an incomplete image of God&amp;rsquo;s glory until He returns.&lt;/p>
-&lt;h2 id="how-do-we-now-live-in-this-fulfillment">How Do We Now Live In This Fulfillment?&lt;/h2>
-&lt;p>Romans and Galatians show clearly:
+&lt;h2 id="how-do-we-now-live-in-this-fulfillment">
+&lt;a href="#how-do-we-now-live-in-this-fulfillment" class="header-anchor">#&lt;/a>
+How Do We Now Live In This Fulfillment?
+&lt;/h2>&lt;p>Romans and Galatians show clearly:
 If you try to justify yourself by fulfilling the laws, you have to fulfill them all.
 No person has ever managed to do that apart from Jesus.
 And He knew perfectly well that our hearts cannot be deeply transformed by merely &amp;ldquo;checking all the boxes&amp;rdquo;.&lt;/p>
@@ -2244,8 +2332,10 @@ This makes me say with the words of Psalm 119:&lt;/p>
 &lt;em>Here is &lt;a class="link" href="https://jscheytt.github.io/p/the-ten-commandments-an-invitation-into-life-itself/" >Part 2&lt;/a>.&lt;/em>&lt;/p></description></item><item><title>Ruth and Boaz are Interlocking With God's Action</title><link>https://jscheytt.github.io/p/ruth-and-boaz-are-interlocking-with-gods-action/</link><pubDate>Sun, 28 Aug 2022 16:57:34 +0200</pubDate><guid>https://jscheytt.github.io/p/ruth-and-boaz-are-interlocking-with-gods-action/</guid><description>&lt;p>As part of my journey through the &lt;a class="link" href="https://en.wikipedia.org/wiki/Hebrew_Bible" target="_blank" rel="noopener"
 >Tanakh&lt;/a>, I recently came across the book of Ruth.
 I want to share some things from this book and its surroundings that really stood out to me afresh.&lt;/p>
-&lt;h2 id="the-surrounding-context-of-scripture">The Surrounding Context of Scripture&lt;/h2>
-&lt;p>In the Tanakh order of books, Ruth is directly preceded by the book of Proverbs.
+&lt;h2 id="the-surrounding-context-of-scripture">
+&lt;a href="#the-surrounding-context-of-scripture" class="header-anchor">#&lt;/a>
+The Surrounding Context of Scripture
+&lt;/h2>&lt;p>In the Tanakh order of books, Ruth is directly preceded by the book of Proverbs.
 The last chapter, Proverbs 31, talks about the &amp;ldquo;woman of noble character&amp;rdquo;.
 And in Ruth 3, Boaz interestingly calls Ruth such an &amp;ldquo;woman of noble character&amp;rdquo; (he is using the exact same Hebrew word for &amp;ldquo;noble&amp;rdquo; as in Proverbs 31).
 This alone starts showing how it&amp;rsquo;s not about being an Israelite in the first place that gives you God&amp;rsquo;s recognition but &lt;strong>by placing your full trust in Him&lt;/strong>.
@@ -2255,8 +2345,10 @@ One of the main themes is how the woman and the man seek and chase each other.
 Ruth in this story is not chasing any human lover however — she goes after God.
 This sets the scene wonderfully to show how even the seemingly most earthly-romantic book in Scripture is not just about humans, it&amp;rsquo;s also about humans together with God:
 &lt;strong>We as Jesus&amp;rsquo; bride are to seek Him and chase after Him in all that we do.&lt;/strong>&lt;/p>
-&lt;h2 id="ruth-puts-her-trust-in-god">Ruth Puts Her Trust In God&lt;/h2>
-&lt;p>When Ruth and her sister-in-law Orpah rise to accompany their mother-in-law Naomi back to Israel, Naomi tells them to leave for a better future in their homecountry, Moab.
+&lt;h2 id="ruth-puts-her-trust-in-god">
+&lt;a href="#ruth-puts-her-trust-in-god" class="header-anchor">#&lt;/a>
+Ruth Puts Her Trust In God
+&lt;/h2>&lt;p>When Ruth and her sister-in-law Orpah rise to accompany their mother-in-law Naomi back to Israel, Naomi tells them to leave for a better future in their homecountry, Moab.
 Orpah leaves but &lt;a class="link" href="https://www.bibleserver.com/NIV/Ruth1%3A16-17" target="_blank" rel="noopener"
 >Ruth proclaims her loyalty to Naomi&lt;/a>:&lt;/p>
 &lt;blockquote>
@@ -2286,8 +2378,10 @@ May you be richly rewared by the Lord, the God of Israel, &lt;strong>under whose
 &lt;/li>
 &lt;/ul>
 &lt;p>I suspect that during the 10 years she was married to Mahlon, &lt;em>Ruth got to know the God of Israel intimately&lt;/em> when she experienced the life of a Jewish family through the course of each day, week, and year.&lt;/p>
-&lt;h2 id="clinging">Clinging&lt;/h2>
-&lt;p>We read that Orpah leaves Naomi, but Ruth &amp;ldquo;clings to her&amp;rdquo;.
+&lt;h2 id="clinging">
+&lt;a href="#clinging" class="header-anchor">#&lt;/a>
+Clinging
+&lt;/h2>&lt;p>We read that Orpah leaves Naomi, but Ruth &amp;ldquo;clings to her&amp;rdquo;.
 The Hebrew word for &amp;ldquo;clinging&amp;rdquo; here, &lt;a class="link" href="https://www.csv-bibel.de/strongs/h1692" target="_blank" rel="noopener"
 >dabaq&lt;/a>, is interesting:&lt;/p>
 &lt;ul>
@@ -2306,8 +2400,10 @@ For me, this is the kind of &amp;ldquo;glueing myself&amp;rdquo; to Jesus that I
 &lt;p>We all, as we contemplate the Lord&amp;rsquo;s glory with unveiled faces, are being transformed into His image with ever-increasing glory.
 This transformation comes from the Lord, who is the Spirit.&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="the-shortsightedness-of-all-the-others">The Shortsightedness Of All The Others&lt;/h2>
-&lt;p>Elimelech only saw a famine and tried to secure physical survival for his family by moving to Moab — tragically, he and his sons died in spite of his best intentions.&lt;/p>
+&lt;h2 id="the-shortsightedness-of-all-the-others">
+&lt;a href="#the-shortsightedness-of-all-the-others" class="header-anchor">#&lt;/a>
+The Shortsightedness Of All The Others
+&lt;/h2>&lt;p>Elimelech only saw a famine and tried to secure physical survival for his family by moving to Moab — tragically, he and his sons died in spite of his best intentions.&lt;/p>
 &lt;p>Naomi only sees her loss — although she later recognizes and praises God&amp;rsquo;s hand moving in favor of her and Ruth.&lt;/p>
 &lt;p>The nameless &amp;ldquo;closer redeemer&amp;rdquo; &lt;a class="link" href="https://www.bibleserver.com/ESV.NIV/Ruth4%3A6" target="_blank" rel="noopener"
 >only sees his own possession&lt;/a> and tries to secure his family&amp;rsquo;s inheritance and prosperity by relying on his riches.&lt;/p>
@@ -2380,16 +2476,20 @@ So when we read the Scriptures with the mindset of young Samuel in the temple, s
 >&amp;ldquo;Speak Lord, Your servant is listening,&amp;rdquo;&lt;/a> and staying on the lookout for Jesus we can surely expect to find Him anywhere in Scripture!&lt;/p>
 &lt;p>And thus, the book of Job started lighting up for me as a story about &lt;strong>how to treat one another in suffering&lt;/strong> according to Jesus&amp;rsquo; heart and the prayerful community of love (&lt;a class="link" href="https://jscheytt.github.io/p/rediscovering-our-hidden-life-in-god/" >see Chapter 7 of &amp;ldquo;The Divine Conspiracy&amp;rdquo;&lt;/a>).
 It illustrates what a Kingdom way of treating each other in bad times looks like and shows how to truly love a friend who is suffering a great loss.&lt;/p>
-&lt;h2 id="what-the-three-friends-get-right">What The Three Friends Get Right&lt;/h2>
-&lt;p>When Job&amp;rsquo;s three friends hear about their friends great misfortune, they set out to find him, &lt;em>not leaving him alone&lt;/em>.
+&lt;h2 id="what-the-three-friends-get-right">
+&lt;a href="#what-the-three-friends-get-right" class="header-anchor">#&lt;/a>
+What The Three Friends Get Right
+&lt;/h2>&lt;p>When Job&amp;rsquo;s three friends hear about their friends great misfortune, they set out to find him, &lt;em>not leaving him alone&lt;/em>.
 When they find him, they cry out in desperation.
 They sit down with him and &lt;em>share his fate&lt;/em> — down in the dust, in the solitude, in the sickness.&lt;/p>
 &lt;p>We read they even stay with him &lt;em>in silence&lt;/em> and fasting 7 days and nights.
 They don&amp;rsquo;t start by saying anything, they start by &lt;em>making themselves one with Job&lt;/em> in his suffering, experiencing and feeling the same pain.
 When the conversation starts, they don&amp;rsquo;t start giving wonderful advice on their own.
 They &lt;em>let Job begin by sharing his heart&lt;/em>.&lt;/p>
-&lt;h2 id="where-they-go-wrong">Where They Go Wrong&lt;/h2>
-&lt;p>They are &lt;em>not truthful&lt;/em>.
+&lt;h2 id="where-they-go-wrong">
+&lt;a href="#where-they-go-wrong" class="header-anchor">#&lt;/a>
+Where They Go Wrong
+&lt;/h2>&lt;p>They are &lt;em>not truthful&lt;/em>.
 Just like Job, neither of them effectively knows why the trouble and loss came.
 But the three friends act as if they knew!&lt;/p>
 &lt;p>They try to justify God&amp;rsquo;s actions, &lt;em>speaking on His behalf&lt;/em> motivated by fear.
@@ -2414,8 +2514,10 @@ Job&amp;rsquo;s speeches are partially inconsistent, even contradictory about wh
 But for God it is Job &lt;strong>in his truthfulness&lt;/strong> who speaks &lt;em>the truth&lt;/em> instead of his friends who emit &lt;em>true facts&lt;/em> &lt;strong>without truthfulness&lt;/strong>, not speaking from a place of vulnerable honesty.
 This is what we also clearly see in Psalm 51 where David remarks that God &lt;a class="link" href="https://www.bibleserver.com/ESV/Psalm51%3A6" target="_blank" rel="noopener"
 >&amp;ldquo;delights in truth in the inward being&amp;rdquo;&lt;/a>.&lt;/p>
-&lt;h2 id="its-about-where-god-is-speaking">It&amp;rsquo;s About Where God Is Speaking&lt;/h2>
-&lt;p>And then the fourth friend appears: Elihu.
+&lt;h2 id="its-about-where-god-is-speaking">
+&lt;a href="#its-about-where-god-is-speaking" class="header-anchor">#&lt;/a>
+It&amp;rsquo;s About Where God Is Speaking
+&lt;/h2>&lt;p>And then the fourth friend appears: Elihu.
 He speaks from a point outside of the spectrum of Job and his friends.
 He is not trying to position himself somewhere along the lines of &amp;ldquo;God is always just&amp;rdquo; or &amp;ldquo;Job has never done any wrong&amp;rdquo;.
 Instead He finds the &amp;ldquo;third way&amp;rdquo; beyond their perspective, which is ultimately a perspective of extreme distance to God:&lt;/p>
@@ -2504,8 +2606,10 @@ data-flex-basis="179px"
 &lt;/blockquote>
 &lt;p>What I want to talk about in this blog post is not a summary of talks or topics but just how I experienced the whole event.
 Is was the first KubeCon I have ever attended, and we came on Monday, left on Friday, so we effectively only attended Tuesday through Thursday (the middle 3 of the 5 days).&lt;/p>
-&lt;h2 id="about-kubecon">About KubeCon&lt;/h2>
-&lt;p>KubeCon is &lt;em>the&lt;/em> regular conference for all things Kubernetes and everything happening in the Cloud Native space.
+&lt;h2 id="about-kubecon">
+&lt;a href="#about-kubecon" class="header-anchor">#&lt;/a>
+About KubeCon
+&lt;/h2>&lt;p>KubeCon is &lt;em>the&lt;/em> regular conference for all things Kubernetes and everything happening in the Cloud Native space.
 Since the last few years, it has been held 2 times a year, always alternating between Europe and North America.&lt;/p>
 &lt;p>It is &lt;strong>massive&lt;/strong>.
 Really massive.
@@ -2515,8 +2619,10 @@ On the first two days it is &lt;em>a lot less crowded&lt;/em> because that is th
 These are smaller sub-conferences within KubeCon which focus on a specific topic.
 Some of these events this time were: Service Mesh Con, Cloud Native Security Con, Kubernetes on Edge Day, and GitOpsCon.
 (I think there were about 15 distinct events in total.)&lt;/p>
-&lt;h2 id="disclaimers">Disclaimers&lt;/h2>
-&lt;p>To be completely honest up-front, &lt;em>GitOpsCon was the main reason&lt;/em> I wanted to attend KubeCon at all in the first place, so my view on KubeCon as a whole is biased.&lt;/p>
+&lt;h2 id="disclaimers">
+&lt;a href="#disclaimers" class="header-anchor">#&lt;/a>
+Disclaimers
+&lt;/h2>&lt;p>To be completely honest up-front, &lt;em>GitOpsCon was the main reason&lt;/em> I wanted to attend KubeCon at all in the first place, so my view on KubeCon as a whole is biased.&lt;/p>
 &lt;p>Additionally, I am the type of person who easily gets overwhelmed when staying in very crowded places for longer periods of time.
 I can handle it, but not without proper self-care and not very well for multiple days in a row.
 This does, admittedly, not put me in a very well-equipped position for a fair like this - just wanted to mention this so you know which color the glasses have through which you now get a view unto this event 😉.&lt;/p>
@@ -2530,8 +2636,10 @@ class="gallery-image"
 data-flex-grow="133"
 data-flex-basis="320px"
 >&lt;/p>
-&lt;h2 id="gitopscon">GitOpsCon&lt;/h2>
-&lt;p>One lesson I have drawn from my first KubeCon is that &lt;strong>the Co-located Events are the real thing&lt;/strong>.
+&lt;h2 id="gitopscon">
+&lt;a href="#gitopscon" class="header-anchor">#&lt;/a>
+GitOpsCon
+&lt;/h2>&lt;p>One lesson I have drawn from my first KubeCon is that &lt;strong>the Co-located Events are the real thing&lt;/strong>.
 That, of course, only applies if there is a Co-located Event in which you have a deep interest 😉.&lt;/p>
 &lt;p>My heart beats for GitOps and its much wider adoption, so I attended GitOpsCon, which is organized by &lt;a class="link" href="https://opengitops.dev/" target="_blank" rel="noopener"
 >OpenGitOps&lt;/a> (or the GitOps Working Group (WG), which is sort of the official committee behind it).
@@ -2549,16 +2657,20 @@ I am convinced it really makes a huge difference that the barrier to asking is s
 Sometimes you can easily get clarifications on unclear points, sometimes you discover together that something is not yet known for both of you, sometimes you discuss about the industry as a whole and in which direction it evolves or should evolve.
 One speaker (Andrew Block from RedHat, he talked about Secrets Management with GitOps) even photographed my badge in order to contact me after the event because he could not yet answer a detail question I had!
 I am deeply grateful for the opportunity of diving into the community of people in the Cloud Native space.&lt;/p>
-&lt;h2 id="new-ideas">New Ideas&lt;/h2>
-&lt;p>Luckily, not only GitOpsCon exposed me to new ideas - that also happened (and happened a lot!) with the talks during the other two days:
+&lt;h2 id="new-ideas">
+&lt;a href="#new-ideas" class="header-anchor">#&lt;/a>
+New Ideas
+&lt;/h2>&lt;p>Luckily, not only GitOpsCon exposed me to new ideas - that also happened (and happened a lot!) with the talks during the other two days:
 I heard about the &lt;a class="link" href="https://kccnceu2022.sched.com/event/ytpE/reproducing-production-issues-in-your-ci-pipeline-using-ebpf-matthew-leray-speedscale-omid-azizi-new-relic" target="_blank" rel="noopener"
 >Kernel-intercepting eBPF technology&lt;/a>, something like &amp;ldquo;Serverless CloudFoundry&amp;rdquo; with Knative, and using machine learning to optimize resource requests and limits for SLOs, among many others.
 If you want to see which (few) talks I attended, see &lt;a class="link" href="https://kccnceu2022.sched.com/jscheytt?iframe=no" target="_blank" rel="noopener"
 >my schedule in Sched&lt;/a>.&lt;/p>
 &lt;p>The cool thing with something like Kubernetes and its ecosystem is that you can very quickly &lt;strong>experiment without a big setup investment&lt;/strong>.
 I e.g. heard about Tekton as a side note and decided to directly give it a go during one of the other talks, and I was directly able to walk through the Getting Started guide to verify how nicely it works!&lt;/p>
-&lt;h2 id="starting-to-see-patterns">Starting To See Patterns&lt;/h2>
-&lt;p>Let me note down a few things I found remarkable and where we as an industry can maybe find better ways of achieving things:&lt;/p>
+&lt;h2 id="starting-to-see-patterns">
+&lt;a href="#starting-to-see-patterns" class="header-anchor">#&lt;/a>
+Starting To See Patterns
+&lt;/h2>&lt;p>Let me note down a few things I found remarkable and where we as an industry can maybe find better ways of achieving things:&lt;/p>
 &lt;ul>
 &lt;li>Not only do we have many tools in the Cloud Native ecosystem (I will not make the next joke about the &lt;a class="link" href="https://landscape.cncf.io/" target="_blank" rel="noopener"
 >CNCF Landscape&lt;/a>, you can invent one yourself 😄),
@@ -2581,8 +2693,10 @@ it also seems to me that everybody starts to create another copy-paste version o
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;h2 id="meeting-maintainers">Meeting Maintainers&lt;/h2>
-&lt;p>If you go to KubeCon only for the talks, you are probably doing it wrong - watch the talks virtually, it is a lot less effort.
+&lt;h2 id="meeting-maintainers">
+&lt;a href="#meeting-maintainers" class="header-anchor">#&lt;/a>
+Meeting Maintainers
+&lt;/h2>&lt;p>If you go to KubeCon only for the talks, you are probably doing it wrong - watch the talks virtually, it is a lot less effort.
 There is a whole big area with booths from all kinds of vendors in the Cloud Native space.
 One corner of this space is reserved for maintainers of a few Open Source tools.&lt;/p>
 &lt;p>I especially enjoyed going up to these people and more than anything &lt;strong>thanking them&lt;/strong> for the tremendous work they are doing and how grateful I am for getting to work with these tools (almost) every day!
@@ -2615,8 +2729,10 @@ Btw do go and check out &lt;a class="link" href="https://docs.google.com/forms/d
 &lt;p>Some of the tools represented in the maintainers&amp;rsquo; area were still somewhat new to me.
 The great thing was that I could just walk up to them and ask them for a short demo to understand the usage and the difference to other tools.
 Special thanks to the folks at the ArgoCD, Backstage, and Buildpacks booths!&lt;/p>
-&lt;h2 id="favorite-quotes">Favorite Quotes&lt;/h2>
-&lt;p>I am going to close with some wise words people have said on this conference:&lt;/p>
+&lt;h2 id="favorite-quotes">
+&lt;a href="#favorite-quotes" class="header-anchor">#&lt;/a>
+Favorite Quotes
+&lt;/h2>&lt;p>I am going to close with some wise words people have said on this conference:&lt;/p>
 &lt;blockquote>
 &lt;p>If it&amp;rsquo;s not in Git, it&amp;rsquo;s just a rumor.&lt;/p>
 &lt;/blockquote>
@@ -2737,8 +2853,10 @@ I first considered performing it through the GitHub API, but then I decided to t
 &lt;strong>Git Aliases&lt;/strong>.
 These are Git commands you can define yourself, either via CLI or in the Gitconfig file.&lt;/p>
 &lt;p>With this article, I want to introduce what I learned about Git aliases – and in the process, you get all the aliases I defined for my cleanup 😉&lt;/p>
-&lt;h2 id="defining-shortcuts">Defining Shortcuts&lt;/h2>
-&lt;p>Many articles about Git aliases explain only the &lt;strong>shortcut side&lt;/strong>.
+&lt;h2 id="defining-shortcuts">
+&lt;a href="#defining-shortcuts" class="header-anchor">#&lt;/a>
+Defining Shortcuts
+&lt;/h2>&lt;p>Many articles about Git aliases explain only the &lt;strong>shortcut side&lt;/strong>.
 They show e.g. how you can abbreviate &lt;code>git checkout&lt;/code> to &lt;code>git co&lt;/code> by running &lt;code>git config --global alias.co checkout&lt;/code>.
 Alternatively to the CLI command, you can add this section to your &lt;code>~/.gitconfig&lt;/code> file:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ini" data-lang="ini">&lt;span class="line">&lt;span class="cl">&lt;span class="k">[alias]&lt;/span>
@@ -2746,15 +2864,19 @@ Alternatively to the CLI command, you can add this section to your &lt;code>~/.g
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nowadays, with the &lt;a class="link" href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git" target="_blank" rel="noopener"
 >Git plugin of oh-my-zsh&lt;/a>, I don&amp;rsquo;t feel there is a great need for such shortcuts.
 Let&amp;rsquo;s instead talk about &lt;strong>actual custom commands&lt;/strong>:&lt;/p>
-&lt;h2 id="with-parameters">With Parameters&lt;/h2>
-&lt;p>If you use an &lt;em>exclamation mark&lt;/em> before your command, you can run any Shell command you want, even with parameters.
+&lt;h2 id="with-parameters">
+&lt;a href="#with-parameters" class="header-anchor">#&lt;/a>
+With Parameters
+&lt;/h2>&lt;p>If you use an &lt;em>exclamation mark&lt;/em> before your command, you can run any Shell command you want, even with parameters.
 The following example will let you do e.g. &lt;code>git cat 2eea778 package.json&lt;/code> to get the file contents of a file at a certain revision:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ini" data-lang="ini">&lt;span class="line">&lt;span class="cl">&lt;span class="k">[alias]&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">; Output file contents from any revision&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">; See https://stackoverflow.com/a/54819889/6435726&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">cat&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">!git show &amp;#34;$1:$2&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="pass-it-on">Pass It On&lt;/h2>
-&lt;p>Piping output into other commands is available out of the box.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="pass-it-on">
+&lt;a href="#pass-it-on" class="header-anchor">#&lt;/a>
+Pass It On
+&lt;/h2>&lt;p>Piping output into other commands is available out of the box.
 Executing multiple commands is just a &lt;code>&amp;amp;&amp;amp;&lt;/code> away.&lt;/p>
 &lt;p>You may want to break your command into &lt;em>multiple lines&lt;/em>:
 Do so by wrapping your command into &lt;strong>quotes&lt;/strong> and prepending every new line with a &lt;strong>backslash&lt;/strong>.&lt;/p>
@@ -2767,8 +2889,10 @@ Do so by wrapping your command into &lt;strong>quotes&lt;/strong> and prepending
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can also use &lt;em>subshells&lt;/em>:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ini" data-lang="ini">&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">; Switch to the default branch.&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">switch-default&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">!git switch $(git default-branch)&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="escaping-can-be-tricky">Escaping Can Be Tricky&lt;/h2>
-&lt;p>If you want to have a &lt;em>literal backslash&lt;/em> in the resulting Shell command, you have to escape it.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="escaping-can-be-tricky">
+&lt;a href="#escaping-can-be-tricky" class="header-anchor">#&lt;/a>
+Escaping Can Be Tricky
+&lt;/h2>&lt;p>If you want to have a &lt;em>literal backslash&lt;/em> in the resulting Shell command, you have to escape it.
 Pay attention to the &lt;code>grep&lt;/code> patterns in the following aliases:
 Every double backslash of this pattern becomes a single backslash when Git passes the command to the Shell.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ini" data-lang="ini">&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">; Which branches have been merged into the default branch on the remote?&lt;/span>
@@ -2792,8 +2916,10 @@ Every double backslash of this pattern becomes a single backslash when Git passe
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I think these are the dangers of every templating language:
 You have to account for special characters - but if these special characters happen to be special in someone else&amp;rsquo;s language, things can become unexpectedly complicated.
 (Think about Makefiles and &lt;code>$(variables)&lt;/code> vs. &lt;code>$$variables&lt;/code> in rules.)&lt;/p>
-&lt;h2 id="parameters-pt-2-default-values">Parameters Pt. 2: Default Values&lt;/h2>
-&lt;p>As with any other Shell function, you can not only have positional parameters but you can also give them default values.
+&lt;h2 id="parameters-pt-2-default-values">
+&lt;a href="#parameters-pt-2-default-values" class="header-anchor">#&lt;/a>
+Parameters Pt. 2: Default Values
+&lt;/h2>&lt;p>As with any other Shell function, you can not only have positional parameters but you can also give them default values.
 The following alias has a &lt;em>delete flag&lt;/em> that defaults to the safe behavior, but you can overwrite it with &lt;code>git delete-local-branches-without-remote -D&lt;/code>:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ini" data-lang="ini">&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">; Delete local branches that are not present on the remote&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">; (safely, including warnings).&lt;/span>
@@ -2811,12 +2937,16 @@ It also demonstrates nicely how you can use &lt;em>xargs&lt;/em> to run every Sh
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> git switch-default &amp;amp;&amp;amp; \
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> git remotely-merged-branches \
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> | xargs -I {} git push origin --delete {}&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="debugging">Debugging&lt;/h2>
-&lt;p>If you encounter an error message, you can increase the verbosity with this environment variable:&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="debugging">
+&lt;a href="#debugging" class="header-anchor">#&lt;/a>
+Debugging
+&lt;/h2>&lt;p>If you encounter an error message, you can increase the verbosity with this environment variable:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">GIT_TRACE&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Deactivate it afterward by closing your terminal session or explicitly with &lt;code>unset GIT_TRACE&lt;/code>.&lt;/p>
-&lt;h2 id="bringing-it-all-together-multiple-repositories">Bringing It All Together: Multiple Repositories&lt;/h2>
-&lt;p>As a developer, chances are high you have &lt;em>more than just one&lt;/em> Git repository on your machine.
+&lt;h2 id="bringing-it-all-together-multiple-repositories">
+&lt;a href="#bringing-it-all-together-multiple-repositories" class="header-anchor">#&lt;/a>
+Bringing It All Together: Multiple Repositories
+&lt;/h2>&lt;p>As a developer, chances are high you have &lt;em>more than just one&lt;/em> Git repository on your machine.
 For many everyday use cases (like keeping all your local clones up-to-date), I have been using &lt;a class="link" href="https://github.com/earwig/git-repo-updater" target="_blank" rel="noopener"
 >git-repo-updater&lt;/a> with a lot of success and ease.&lt;/p>
 &lt;p>But now I discovered I can use it to execute arbitrary commands (and also Git aliases 😉) in multiple Git repos.
@@ -2990,8 +3120,10 @@ Soon, I was able to ensure that requests to the Service would only point to my t
 &lt;p>It does not matter for which purpose I created this CronJob, it could have been any Kubernetes Resource that creates Pods.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description></item><item><title>The Universe is Very Big</title><link>https://jscheytt.github.io/p/the-universe-is-very-big/</link><pubDate>Thu, 11 Nov 2021 08:18:44 +0100</pubDate><guid>https://jscheytt.github.io/p/the-universe-is-very-big/</guid><description>&lt;h2 id="what-can-we-compare-the-size-of-the-universe-to">What can we compare the size of the universe to?&lt;/h2>
-&lt;p>I was recently starting to wonder about the size of the universe.
+&lt;/div></description></item><item><title>The Universe is Very Big</title><link>https://jscheytt.github.io/p/the-universe-is-very-big/</link><pubDate>Thu, 11 Nov 2021 08:18:44 +0100</pubDate><guid>https://jscheytt.github.io/p/the-universe-is-very-big/</guid><description>&lt;h2 id="what-can-we-compare-the-size-of-the-universe-to">
+&lt;a href="#what-can-we-compare-the-size-of-the-universe-to" class="header-anchor">#&lt;/a>
+What can we compare the size of the universe to?
+&lt;/h2>&lt;p>I was recently starting to wonder about the size of the universe.
 It&amp;rsquo;s not like I thought I could really get down to imagining this kind of gargantuan extent.
 But I wanted to find a good analogy, so here it goes:&lt;/p>
 &lt;p>Imagine the distance furthest distance humans will soon travel: the &lt;strong>distance from Earth to Mars&lt;/strong>.
@@ -3008,8 +3140,10 @@ One meter?
 A millimeter?
 The width of a human hair?&lt;/p>
 &lt;p>It turns out, we would have only gotten as far as the size of &lt;strong>one atom&lt;/strong>.&lt;/p>
-&lt;h2 id="can-we-even-imagine-this-at-all">Can we even imagine this at all?&lt;/h2>
-&lt;p>For me this only starts to scratch the surface of trying to understand the sheer scale of the universe and the God behind it.
+&lt;h2 id="can-we-even-imagine-this-at-all">
+&lt;a href="#can-we-even-imagine-this-at-all" class="header-anchor">#&lt;/a>
+Can we even imagine this at all?
+&lt;/h2>&lt;p>For me this only starts to scratch the surface of trying to understand the sheer scale of the universe and the God behind it.
 The problem with this analogy?
 It still does not help a lot because I believe we humans cannot even really imagine the distance between Earth and Mars yet.&lt;/p>
 &lt;p>On Earth we comfortably handle thousands, sometimes maybe tens of thousands of kilometers in our brains.
@@ -3029,8 +3163,10 @@ For time, that is e.g. from 100 ms (a tenth of a second) to 100 years (about $10
 But I think beyond that we are just lost.
 If any object is outside of these ranges we need to scale it up or down and compare it to things within this $10^{12}$ scale.
 But if we try to compare things where their ratio is greater than $10^{12}$, our brains are just to tiny to fit these in.&lt;/p>
-&lt;h2 id="how-big-is-the-universe-really">How big is the universe really?&lt;/h2>
-&lt;p>Now that we start to find words and numbers to describe the limits of our imagination, I think we start to really become capable of talking about how big the universe really is.&lt;/p>
+&lt;h2 id="how-big-is-the-universe-really">
+&lt;a href="#how-big-is-the-universe-really" class="header-anchor">#&lt;/a>
+How big is the universe really?
+&lt;/h2>&lt;p>Now that we start to find words and numbers to describe the limits of our imagination, I think we start to really become capable of talking about how big the universe really is.&lt;/p>
 &lt;p>The size of the universe is estimated at multiple tens of billions ($10^{10}$) of lightyears.
 One lightyear is roughly $10^{16}$ m, so the size of our universe is in the ballpark of $10^{26}$.
 On the other hand, the smallest length that currently fits into our model of the universe is the Planck length at about $10^{-35}$ m.
@@ -3055,8 +3191,10 @@ loading="lazy"
 alt="An artistic rendition of our universe, drawn at a logarithmic scale with our Sun at the center"
 >
 &lt;em>An artistic rendition of our universe, drawn at a logarithmic scale with our Sun at the center&lt;/em>&lt;/p>
-&lt;h2 id="how-do-we-fit-into-all-this">How do we fit into all this?&lt;/h2>
-&lt;p>I have another number with me, a very simple one:
+&lt;h2 id="how-do-we-fit-into-all-this">
+&lt;a href="#how-do-we-fit-into-all-this" class="header-anchor">#&lt;/a>
+How do we fit into all this?
+&lt;/h2>&lt;p>I have another number with me, a very simple one:
 &lt;strong>5 percent&lt;/strong>.
 Or, in other words, 0.05.
 (Or $5\cdot10^{-2}$ if you like 😉.)&lt;/p>
@@ -3094,14 +3232,18 @@ Most people on the internet say an emphatic &amp;ldquo;No!&amp;rdquo;, so I am j
 I think definitely yes.
 And is it also &lt;strong>guess-safe&lt;/strong>?
 Let&amp;rsquo;s explore that question with a bit of maths:&lt;/p>
-&lt;h2 id="example-scenario">Example Scenario&lt;/h2>
-&lt;p>Let&amp;rsquo;s say you have an API and you know the records are referenced by their UUID.
+&lt;h2 id="example-scenario">
+&lt;a href="#example-scenario" class="header-anchor">#&lt;/a>
+Example Scenario
+&lt;/h2>&lt;p>Let&amp;rsquo;s say you have an API and you know the records are referenced by their UUID.
 And let&amp;rsquo;s say you wanted to guess any valid record (because &lt;a class="link" href="https://stackoverflow.com/questions/3652944/how-securely-unguessable-are-guids" target="_blank" rel="noopener"
 >💰 money&lt;/a>).&lt;/p>
 &lt;p>What is a realistic scenario, i.e. a reasonably expectable time it would take you to find a valid record?
 Let&amp;rsquo;s just naively assume you find a valid UUID after randomly iterating over half of all possible UUIDs.&lt;/p>
-&lt;h2 id="how-long-would-that-take-you">How long would that take you?&lt;/h2>
-&lt;p>Imagine you had started firing requests at your hypothetical API &lt;strong>at the beginning of the observable universe&lt;/strong>, i.e. about 1.3772e10 years (or 4.3437e17 seconds) ago.
+&lt;h2 id="how-long-would-that-take-you">
+&lt;a href="#how-long-would-that-take-you" class="header-anchor">#&lt;/a>
+How long would that take you?
+&lt;/h2>&lt;p>Imagine you had started firing requests at your hypothetical API &lt;strong>at the beginning of the observable universe&lt;/strong>, i.e. about 1.3772e10 years (or 4.3437e17 seconds) ago.
 And you send requests at a rate of &lt;strong>1 trillion (1e12) requests per second&lt;/strong> (and, of course, your target API responds at the same rate 😉).
 (You would have to be &lt;em>very&lt;/em> physically close to the API server - at a trillionth of a second, light and therefore information travels only a measly 0.3 millimeters &amp;hellip;)&lt;/p>
 &lt;p>How many UUIDs would you have covered?
@@ -3190,8 +3332,10 @@ It takes away so much work and mental effort at the beginning, and you can just 
 Honestly, I think there never will be, and that is ok.
 But what I have come to appreciate a lot recently is &lt;strong>&lt;a class="link" href="https://www.gnu.org/software/make/" target="_blank" rel="noopener"
 >Make&lt;/a>&lt;/strong> as a &lt;strong>companion&lt;/strong> for my Shell scripts.&lt;/p>
-&lt;h2 id="-make-vs--shell-in-a--nutshell">🏗 Make vs. 🐚 Shell in a 🥜 Nutshell&lt;/h2>
-&lt;ul>
+&lt;h2 id="-make-vs--shell-in-a--nutshell">
+&lt;a href="#-make-vs--shell-in-a--nutshell" class="header-anchor">#&lt;/a>
+🏗 Make vs. 🐚 Shell in a 🥜 Nutshell
+&lt;/h2>&lt;ul>
 &lt;li>Purpose: Make is good at &lt;strong>creating files&lt;/strong>, Shell is good at &lt;strong>executing scripts&lt;/strong>.&lt;/li>
 &lt;li>Portability: If your system has Bash, chances are pretty high that Make is also available.&lt;/li>
 &lt;li>Developer API: Make has a &lt;strong>clear entrypoint&lt;/strong> (namely &lt;code>make&lt;/code>), Shell can be everything you want it to be.&lt;/li>
@@ -3203,8 +3347,10 @@ Make is meant to 🏗 make (create) files.&lt;/p>
 &lt;p>&lt;strong>It&amp;rsquo;s all about target files.&lt;/strong>
 That&amp;rsquo;s why it makes sense to approach a Makefile with a mindset of &amp;ldquo;What do I want to create/build?&amp;rdquo; instead of &amp;ldquo;What do I want to perform?&amp;rdquo;
 To me this sounds very reminiscent of the distinction between &lt;em>declarative and imperative&lt;/em> programming.&lt;/p>
-&lt;h2 id="safely-versioned-secrets-management">Safely Versioned Secrets Management&lt;/h2>
-&lt;p>My concrete entrypoint into Make was the following use case I had lately, and it hopefully helps to illustrate the point of target files:&lt;/p>
+&lt;h2 id="safely-versioned-secrets-management">
+&lt;a href="#safely-versioned-secrets-management" class="header-anchor">#&lt;/a>
+Safely Versioned Secrets Management
+&lt;/h2>&lt;p>My concrete entrypoint into Make was the following use case I had lately, and it hopefully helps to illustrate the point of target files:&lt;/p>
 &lt;ul>
 &lt;li>☸️ You have 2 AWS accounts with 1 &lt;strong>Kubernetes&lt;/strong> cluster each.
 (One is for running a dev and a staging environment, the other one is running the production environment.)&lt;/li>
@@ -3260,8 +3406,10 @@ The file &lt;code>service2.sample.json&lt;/code> would e.g. look like this.&lt;/
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">secrets/**/*.json
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># ... but keep the samples&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">!secrets/*.sample.json
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="copying-the-samples">Copying the Samples&lt;/h3>
-&lt;p>Now how do you copy the files to all environment&amp;rsquo;s directories?
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="copying-the-samples">
+&lt;a href="#copying-the-samples" class="header-anchor">#&lt;/a>
+Copying the Samples
+&lt;/h3>&lt;p>Now how do you copy the files to all environment&amp;rsquo;s directories?
 And how do you make sure you copy them &lt;em>exactly once&lt;/em> (so you don&amp;rsquo;t lose the secrets you already entered)?&lt;/p>
 &lt;p>You could create a script with the following logic:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># For each environment directory:&lt;/span>
@@ -3328,8 +3476,10 @@ As long as &lt;code>secrets.copy-templates&lt;/code> is the first build defined 
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;h4 id="how-not-to-shoot-yourself-in-the-foot">How Not To Shoot Yourself in the Foot&lt;/h4>
-&lt;p>Make was made primarily for building binaries from source code.
+&lt;h4 id="how-not-to-shoot-yourself-in-the-foot">
+&lt;a href="#how-not-to-shoot-yourself-in-the-foot" class="header-anchor">#&lt;/a>
+How Not To Shoot Yourself in the Foot
+&lt;/h4>&lt;p>Make was made primarily for building binaries from source code.
 The fact that we are able to use it in the way described above comes with a warning:
 If you do the following, you will lose the secret data you already entered into the secret files:&lt;/p>
 &lt;ol>
@@ -3347,8 +3497,10 @@ Or you change the last-modified timestamp &lt;strong>via a build&lt;/strong> in 
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-make" data-lang="make">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">secrets.ensure-copy-once&lt;/span>&lt;span class="o">:&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> f in &lt;span class="k">$(&lt;/span>all_secrets&lt;span class="k">)&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">do&lt;/span> &lt;span class="o">[&lt;/span> -f &lt;span class="nv">$$&lt;/span>f &lt;span class="o">]&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> touch &lt;span class="nv">$$&lt;/span>f&lt;span class="p">;&lt;/span> &lt;span class="k">done&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now whenever you edit a sample file &lt;em>after the initial secrets.copy-templates&lt;/em> you run this build via &lt;code>make secrets.ensure-copy-once&lt;/code> and 🛡 your secrets will not be deleted.&lt;/p>
-&lt;h3 id="extension-environment-specific-sample-files">Extension: Environment-specific Sample Files&lt;/h3>
-&lt;p>One implicit assumption in my structure was that the secrets in service2 will always have the same schema &lt;strong>in every environment&lt;/strong>.
+&lt;h3 id="extension-environment-specific-sample-files">
+&lt;a href="#extension-environment-specific-sample-files" class="header-anchor">#&lt;/a>
+Extension: Environment-specific Sample Files
+&lt;/h3>&lt;p>One implicit assumption in my structure was that the secrets in service2 will always have the same schema &lt;strong>in every environment&lt;/strong>.
 One day it so happened that service2 needed to have additional keys on prod, but they &lt;strong>should not be present&lt;/strong> on dev or staging.&lt;/p>
 &lt;p>I adjusted my desired structure like this:&lt;/p>
 &lt;pre tabindex="0">&lt;code>secrets
@@ -3391,8 +3543,10 @@ One day it so happened that service2 needed to have additional keys on prod, but
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">$(&lt;/span>call copy_template,$&amp;lt;,&lt;span class="nv">$@&lt;/span>&lt;span class="k">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">secrets/prod/%.json&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>/%.&lt;span class="n">sample&lt;/span>.&lt;span class="n">json&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">$(&lt;/span>call copy_template,$&amp;lt;,&lt;span class="nv">$@&lt;/span>&lt;span class="k">)&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="-perfect-symphony-calling-scripts-from-make">🍣 Perfect Symphony: Calling Scripts From Make&lt;/h3>
-&lt;p>It&amp;rsquo;s all good and nice to have your secrets created, but how do you deploy them to AWS Secrets Manager?
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="-perfect-symphony-calling-scripts-from-make">
+&lt;a href="#-perfect-symphony-calling-scripts-from-make" class="header-anchor">#&lt;/a>
+🍣 Perfect Symphony: Calling Scripts From Make
+&lt;/h3>&lt;p>It&amp;rsquo;s all good and nice to have your secrets created, but how do you deploy them to AWS Secrets Manager?
 Of course you write a thin wrapper around the wonderfully verbose AWS CLI:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/usr/bin/env bash
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="nb">set&lt;/span> -euo pipefail
@@ -3445,8 +3599,10 @@ Of course you write a thin wrapper around the wonderfully verbose AWS CLI:&lt;/p
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nf">secrets.deploy.prod&lt;/span>&lt;span class="o">:&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secrets.deploy.all &lt;span class="nv">environment&lt;/span>&lt;span class="o">=&lt;/span>prod
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>✅ Once you are authenticated to the corresponding AWS account, you can deploy your secrets with either &lt;code>make secrets.deploy.dev&lt;/code> or &lt;code>make secrets.deploy.prod&lt;/code>.&lt;/p>
-&lt;h2 id="summarizing">Summarizing&lt;/h2>
-&lt;ul>
+&lt;h2 id="summarizing">
+&lt;a href="#summarizing" class="header-anchor">#&lt;/a>
+Summarizing
+&lt;/h2>&lt;ul>
 &lt;li>Make gives you a consistent and clean Developer API.&lt;/li>
 &lt;li>Make is almost universally installed everywhere.&lt;/li>
 &lt;li>Don&amp;rsquo;t decide between either Make &lt;strong>or&lt;/strong> Shell - use both together.
@@ -3454,8 +3610,10 @@ Refactor more complex logic into separate Shell scripts (like isolated functions
 &lt;/ul>
 &lt;p>You can check out the entire Makefile (including the secrets structure and scripts) in this &lt;a class="link" href="https://github.com/jscheytt/jscheytt.github.io.hugo/tree/main/content/post/story-first-makefile" target="_blank" rel="noopener"
 >Git repo&lt;/a>.&lt;/p>
-&lt;h2 id="credits">Credits&lt;/h2>
-&lt;p>I am indebted to the following parties in making my start into the world of Make a lot smoother than I expected:&lt;/p>
+&lt;h2 id="credits">
+&lt;a href="#credits" class="header-anchor">#&lt;/a>
+Credits
+&lt;/h2>&lt;p>I am indebted to the following parties in making my start into the world of Make a lot smoother than I expected:&lt;/p>
 &lt;ul>
 &lt;li>Isaac Z. Schlueter for his &lt;a class="link" href="https://gist.github.com/isaacs/62a2d1825d04437c6f08" target="_blank" rel="noopener"
 >interactive Gist&lt;/a>&lt;/li>
@@ -3546,7 +3704,9 @@ In the end I refactored it a bit using some &lt;code>ENV&lt;/code>s, too:&lt;/p>
 Now I can save one more character by retraining myself to use &lt;code>:xa&lt;/code>! 😄&lt;/p>
 &lt;p>I also like how &lt;code>:x&lt;/code> sort of symbolizes the close button ❌ of many window managers and their default behavior of saving when you close a file.&lt;/p>
 &lt;p>For more documentation open vim and type &lt;code>:h :x&lt;/code>.&lt;/p>
-&lt;h1 id="wait-now-that-you-mention-it-">Wait, now that you mention it &amp;hellip;&lt;/h1>
-&lt;p>Well, turns out the documentation mentions an even easier way: Just press &lt;code>ZZ&lt;/code> (without the colon) 😴&lt;/p>
+&lt;h1 id="wait-now-that-you-mention-it-">
+&lt;a href="#wait-now-that-you-mention-it-" class="header-anchor">#&lt;/a>
+Wait, now that you mention it &amp;hellip;
+&lt;/h1>&lt;p>Well, turns out the documentation mentions an even easier way: Just press &lt;code>ZZ&lt;/code> (without the colon) 😴&lt;/p>
 &lt;p>Now if only I could combine this to perform &lt;code>:wqa&lt;/code> &amp;hellip;&lt;/p>
 &lt;p>Happy vim-ing! 👋&lt;/p></description></item></channel></rss>

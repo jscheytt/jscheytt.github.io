@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>platform-engineering on Josia's Blog</title><link>https://jscheytt.github.io/tags/platform-engineering/</link><description>Recent content in platform-engineering on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Josia Scheytt</copyright><lastBuildDate>Tue, 24 Oct 2023 08:21:20 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/tags/platform-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>Documentation as Scaled Communication</title><link>https://jscheytt.github.io/p/documentation-as-scaled-communication/</link><pubDate>Tue, 24 Oct 2023 08:21:20 +0200</pubDate><guid>https://jscheytt.github.io/p/documentation-as-scaled-communication/</guid><description>&lt;p>Technical documentation is important, but almost no one enjoys writing it.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Platform-Engineering on Josia's Blog</title><link>https://jscheytt.github.io/tags/platform-engineering/</link><description>Recent content in Platform-Engineering on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Josia Scheytt</copyright><lastBuildDate>Tue, 24 Oct 2023 08:21:20 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/tags/platform-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>Documentation as Scaled Communication</title><link>https://jscheytt.github.io/p/documentation-as-scaled-communication/</link><pubDate>Tue, 24 Oct 2023 08:21:20 +0200</pubDate><guid>https://jscheytt.github.io/p/documentation-as-scaled-communication/</guid><description>&lt;p>Technical documentation is important, but almost no one enjoys writing it.
 At least, I have yet to meet anyone who shares my passion for writing docs.
 To me, documentation is not just a chore you do to check a compliance box.
 In fact, I believe it can even be a rewarding experience.&lt;/p>
@@ -17,8 +17,10 @@ If your documentation tools are configured as openly as possible for contributio
 &lt;p>I have witnessed some of these effects firsthand.
 Let me name this observation &lt;strong>Documentation as Scaled Communication&lt;/strong> (or DASC, if you feel like using acronyms).
 I am sure that this principle applies very broadly, but I want to keep the focus of this post on &lt;em>technical documentation&lt;/em> and on &lt;em>Platform Engineers&lt;/em> because that is my primary background.&lt;/p>
-&lt;h2 id="challenges">Challenges&lt;/h2>
-&lt;p>So why is writing docs so &lt;em>hard&lt;/em>?
+&lt;h2 id="challenges">
+&lt;a href="#challenges" class="header-anchor">#&lt;/a>
+Challenges
+&lt;/h2>&lt;p>So why is writing docs so &lt;em>hard&lt;/em>?
 From my point of view, we have several challenges to address:&lt;/p>
 &lt;ol>
 &lt;li>We need to learn &lt;strong>communication&lt;/strong> through practice, review, and feedback.&lt;/li>
@@ -26,8 +28,10 @@ From my point of view, we have several challenges to address:&lt;/p>
 &lt;li>Documentation tools need &lt;strong>extremely low friction&lt;/strong> (i.e. very good UX).&lt;/li>
 &lt;li>Tools need to be &lt;strong>configured as wide open&lt;/strong> as possible for contributions.&lt;/li>
 &lt;/ol>
-&lt;h3 id="practicing-communication">Practicing Communication&lt;/h3>
-&lt;p>How can you communicate effectively?
+&lt;h3 id="practicing-communication">
+&lt;a href="#practicing-communication" class="header-anchor">#&lt;/a>
+Practicing Communication
+&lt;/h3>&lt;p>How can you communicate effectively?
 Effectiveness is always determined by the goals of your communication.
 Let&amp;rsquo;s say we have the following goals for platform engineering:&lt;/p>
 &lt;ul>
@@ -85,8 +89,10 @@ Sometimes, you can take empathy to a more extreme level by embedding a Platform 
 You as a Platform Engineer will put on your SRE hat and work alongside the developer team in their everyday challenges.&lt;/li>
 &lt;li>Read about and learn from some of the great models of empathy, such as Jesus of Nazareth (e.g. in the first four books of the New Testament), the God who became human (this allowed Him to empathize more with us, but also us to empathize more with Him).&lt;/li>
 &lt;/ul>
-&lt;h3 id="practicing-writing">Practicing Writing&lt;/h3>
-&lt;p>Everyone at work communicates all the time.
+&lt;h3 id="practicing-writing">
+&lt;a href="#practicing-writing" class="header-anchor">#&lt;/a>
+Practicing Writing
+&lt;/h3>&lt;p>Everyone at work communicates all the time.
 Working remotely has forced us to do so in more written form than ever before &amp;mdash; and I think this is a good thing overall!
 Sure, it&amp;rsquo;s faster to work together in the office, where it&amp;rsquo;s super easy to quickly ask questions and show things, but asynchronous written communication is much more inclusive and promotes transparency.&lt;/p>
 &lt;p>There are many ways to improve your written communication (e.g. &lt;a class="link" href="https://nohello.net" target="_blank" rel="noopener"
@@ -131,8 +137,10 @@ Pick a situation and think about the following questions:
 &lt;/ol>
 &lt;/li>
 &lt;/ol>
-&lt;h3 id="low-friction-editing">Low-Friction Editing&lt;/h3>
-&lt;p>Now we turn briefly to the tool side of things:
+&lt;h3 id="low-friction-editing">
+&lt;a href="#low-friction-editing" class="header-anchor">#&lt;/a>
+Low-Friction Editing
+&lt;/h3>&lt;p>Now we turn briefly to the tool side of things:
 If you do not make editing pages and creating documents &lt;em>as fast and convenient as possible&lt;/em>, you will frustrate people and lose potential editors.
 Those editors could be people on the platform team &lt;em>and&lt;/em> on the development teams!&lt;/p>
 &lt;p>I see this as a very limiting factor when trying to choose a documentation tool.
@@ -146,8 +154,10 @@ But even if you have a template where editing any single page is just a click aw
 And that wait is (I think) still way too long, and makes the barrier to contributing way too high.&lt;/p>
 &lt;p>My current preference is Confluence Cloud (Cloud, not self-hosted!), but my experience is very limited.
 Please send suggestions!&lt;/p>
-&lt;h3 id="a-culture-of-contributing">A Culture of Contributing&lt;/h3>
-&lt;p>Whenever I see organizations talking about &lt;em>approval processes in documentation tools&lt;/em>, I get sad.
+&lt;h3 id="a-culture-of-contributing">
+&lt;a href="#a-culture-of-contributing" class="header-anchor">#&lt;/a>
+A Culture of Contributing
+&lt;/h3>&lt;p>Whenever I see organizations talking about &lt;em>approval processes in documentation tools&lt;/em>, I get sad.
 Because sure enough, they will get exactly what they asked for:
 Documentation that is picture perfect and set in stone &amp;mdash; it cannot be changed unless you explicitly ask for permission.
 But at the same time they &lt;strong>lose everything that makes documentation valuable&lt;/strong>:&lt;/p>
@@ -167,8 +177,10 @@ The only organizations I have encountered are those with typical people who are 
 &lt;p>For this reason, I believe that &lt;strong>documentation tools should be configured with maximum editability&lt;/strong> to encourage a Culture of Contributing.
 You may want to disable deletion and only allow archiving to protect content from disappearing accidentally, but otherwise everything should be as &lt;em>welcoming&lt;/em> towards contributions as possible!
 Choose a tool that allows versioning / page history so that you can revert to a known good state if any unwanted changes are made.&lt;/p>
-&lt;h2 id="documentation-devices-for-platform-engineers">Documentation Devices for Platform Engineers&lt;/h2>
-&lt;p>I have identified a few types of technical documentation that, in my experience, are particularly valuable in the context of Platform Engineering:&lt;/p>
+&lt;h2 id="documentation-devices-for-platform-engineers">
+&lt;a href="#documentation-devices-for-platform-engineers" class="header-anchor">#&lt;/a>
+Documentation Devices for Platform Engineers
+&lt;/h2>&lt;p>I have identified a few types of technical documentation that, in my experience, are particularly valuable in the context of Platform Engineering:&lt;/p>
 &lt;ol>
 &lt;li>Runbooks
 &lt;ul>

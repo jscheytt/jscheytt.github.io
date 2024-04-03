@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>kubernetes on Josia's Blog</title><link>https://jscheytt.github.io/tags/kubernetes/</link><description>Recent content in kubernetes on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Josia Scheytt</copyright><lastBuildDate>Thu, 25 Aug 2022 15:00:09 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml"/><item><title>ArgoCD is like the Kubernetes Dashboard but for GitOps</title><link>https://jscheytt.github.io/p/argocd-is-like-the-kubernetes-dashboard-but-for-gitops/</link><pubDate>Thu, 25 Aug 2022 15:00:09 +0200</pubDate><guid>https://jscheytt.github.io/p/argocd-is-like-the-kubernetes-dashboard-but-for-gitops/</guid><description>&lt;p>FluxCD was my first love in the GitOps space.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kubernetes on Josia's Blog</title><link>https://jscheytt.github.io/tags/kubernetes/</link><description>Recent content in Kubernetes on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Josia Scheytt</copyright><lastBuildDate>Thu, 25 Aug 2022 15:00:09 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml"/><item><title>ArgoCD is like the Kubernetes Dashboard but for GitOps</title><link>https://jscheytt.github.io/p/argocd-is-like-the-kubernetes-dashboard-but-for-gitops/</link><pubDate>Thu, 25 Aug 2022 15:00:09 +0200</pubDate><guid>https://jscheytt.github.io/p/argocd-is-like-the-kubernetes-dashboard-but-for-gitops/</guid><description>&lt;p>FluxCD was my first love in the GitOps space.
 I worked with it when it was still v1, had no chance to use, and since about a year I returned to using it in its glorious, rewritten v2.&lt;/p>
 &lt;p>I haven&amp;rsquo;t given ArgoCD a try so far until this week somebody suggested trying out &lt;a class="link" href="https://argocd-autopilot.readthedocs.io/en/stable/" target="_blank" rel="noopener"
 >ArgoCD Autopilot&lt;/a>.
@@ -56,8 +56,10 @@ data-flex-basis="179px"
 &lt;/blockquote>
 &lt;p>What I want to talk about in this blog post is not a summary of talks or topics but just how I experienced the whole event.
 Is was the first KubeCon I have ever attended, and we came on Monday, left on Friday, so we effectively only attended Tuesday through Thursday (the middle 3 of the 5 days).&lt;/p>
-&lt;h2 id="about-kubecon">About KubeCon&lt;/h2>
-&lt;p>KubeCon is &lt;em>the&lt;/em> regular conference for all things Kubernetes and everything happening in the Cloud Native space.
+&lt;h2 id="about-kubecon">
+&lt;a href="#about-kubecon" class="header-anchor">#&lt;/a>
+About KubeCon
+&lt;/h2>&lt;p>KubeCon is &lt;em>the&lt;/em> regular conference for all things Kubernetes and everything happening in the Cloud Native space.
 Since the last few years, it has been held 2 times a year, always alternating between Europe and North America.&lt;/p>
 &lt;p>It is &lt;strong>massive&lt;/strong>.
 Really massive.
@@ -67,8 +69,10 @@ On the first two days it is &lt;em>a lot less crowded&lt;/em> because that is th
 These are smaller sub-conferences within KubeCon which focus on a specific topic.
 Some of these events this time were: Service Mesh Con, Cloud Native Security Con, Kubernetes on Edge Day, and GitOpsCon.
 (I think there were about 15 distinct events in total.)&lt;/p>
-&lt;h2 id="disclaimers">Disclaimers&lt;/h2>
-&lt;p>To be completely honest up-front, &lt;em>GitOpsCon was the main reason&lt;/em> I wanted to attend KubeCon at all in the first place, so my view on KubeCon as a whole is biased.&lt;/p>
+&lt;h2 id="disclaimers">
+&lt;a href="#disclaimers" class="header-anchor">#&lt;/a>
+Disclaimers
+&lt;/h2>&lt;p>To be completely honest up-front, &lt;em>GitOpsCon was the main reason&lt;/em> I wanted to attend KubeCon at all in the first place, so my view on KubeCon as a whole is biased.&lt;/p>
 &lt;p>Additionally, I am the type of person who easily gets overwhelmed when staying in very crowded places for longer periods of time.
 I can handle it, but not without proper self-care and not very well for multiple days in a row.
 This does, admittedly, not put me in a very well-equipped position for a fair like this - just wanted to mention this so you know which color the glasses have through which you now get a view unto this event 😉.&lt;/p>
@@ -82,8 +86,10 @@ class="gallery-image"
 data-flex-grow="133"
 data-flex-basis="320px"
 >&lt;/p>
-&lt;h2 id="gitopscon">GitOpsCon&lt;/h2>
-&lt;p>One lesson I have drawn from my first KubeCon is that &lt;strong>the Co-located Events are the real thing&lt;/strong>.
+&lt;h2 id="gitopscon">
+&lt;a href="#gitopscon" class="header-anchor">#&lt;/a>
+GitOpsCon
+&lt;/h2>&lt;p>One lesson I have drawn from my first KubeCon is that &lt;strong>the Co-located Events are the real thing&lt;/strong>.
 That, of course, only applies if there is a Co-located Event in which you have a deep interest 😉.&lt;/p>
 &lt;p>My heart beats for GitOps and its much wider adoption, so I attended GitOpsCon, which is organized by &lt;a class="link" href="https://opengitops.dev/" target="_blank" rel="noopener"
 >OpenGitOps&lt;/a> (or the GitOps Working Group (WG), which is sort of the official committee behind it).
@@ -101,16 +107,20 @@ I am convinced it really makes a huge difference that the barrier to asking is s
 Sometimes you can easily get clarifications on unclear points, sometimes you discover together that something is not yet known for both of you, sometimes you discuss about the industry as a whole and in which direction it evolves or should evolve.
 One speaker (Andrew Block from RedHat, he talked about Secrets Management with GitOps) even photographed my badge in order to contact me after the event because he could not yet answer a detail question I had!
 I am deeply grateful for the opportunity of diving into the community of people in the Cloud Native space.&lt;/p>
-&lt;h2 id="new-ideas">New Ideas&lt;/h2>
-&lt;p>Luckily, not only GitOpsCon exposed me to new ideas - that also happened (and happened a lot!) with the talks during the other two days:
+&lt;h2 id="new-ideas">
+&lt;a href="#new-ideas" class="header-anchor">#&lt;/a>
+New Ideas
+&lt;/h2>&lt;p>Luckily, not only GitOpsCon exposed me to new ideas - that also happened (and happened a lot!) with the talks during the other two days:
 I heard about the &lt;a class="link" href="https://kccnceu2022.sched.com/event/ytpE/reproducing-production-issues-in-your-ci-pipeline-using-ebpf-matthew-leray-speedscale-omid-azizi-new-relic" target="_blank" rel="noopener"
 >Kernel-intercepting eBPF technology&lt;/a>, something like &amp;ldquo;Serverless CloudFoundry&amp;rdquo; with Knative, and using machine learning to optimize resource requests and limits for SLOs, among many others.
 If you want to see which (few) talks I attended, see &lt;a class="link" href="https://kccnceu2022.sched.com/jscheytt?iframe=no" target="_blank" rel="noopener"
 >my schedule in Sched&lt;/a>.&lt;/p>
 &lt;p>The cool thing with something like Kubernetes and its ecosystem is that you can very quickly &lt;strong>experiment without a big setup investment&lt;/strong>.
 I e.g. heard about Tekton as a side note and decided to directly give it a go during one of the other talks, and I was directly able to walk through the Getting Started guide to verify how nicely it works!&lt;/p>
-&lt;h2 id="starting-to-see-patterns">Starting To See Patterns&lt;/h2>
-&lt;p>Let me note down a few things I found remarkable and where we as an industry can maybe find better ways of achieving things:&lt;/p>
+&lt;h2 id="starting-to-see-patterns">
+&lt;a href="#starting-to-see-patterns" class="header-anchor">#&lt;/a>
+Starting To See Patterns
+&lt;/h2>&lt;p>Let me note down a few things I found remarkable and where we as an industry can maybe find better ways of achieving things:&lt;/p>
 &lt;ul>
 &lt;li>Not only do we have many tools in the Cloud Native ecosystem (I will not make the next joke about the &lt;a class="link" href="https://landscape.cncf.io/" target="_blank" rel="noopener"
 >CNCF Landscape&lt;/a>, you can invent one yourself 😄),
@@ -133,8 +143,10 @@ it also seems to me that everybody starts to create another copy-paste version o
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;h2 id="meeting-maintainers">Meeting Maintainers&lt;/h2>
-&lt;p>If you go to KubeCon only for the talks, you are probably doing it wrong - watch the talks virtually, it is a lot less effort.
+&lt;h2 id="meeting-maintainers">
+&lt;a href="#meeting-maintainers" class="header-anchor">#&lt;/a>
+Meeting Maintainers
+&lt;/h2>&lt;p>If you go to KubeCon only for the talks, you are probably doing it wrong - watch the talks virtually, it is a lot less effort.
 There is a whole big area with booths from all kinds of vendors in the Cloud Native space.
 One corner of this space is reserved for maintainers of a few Open Source tools.&lt;/p>
 &lt;p>I especially enjoyed going up to these people and more than anything &lt;strong>thanking them&lt;/strong> for the tremendous work they are doing and how grateful I am for getting to work with these tools (almost) every day!
@@ -167,8 +179,10 @@ Btw do go and check out &lt;a class="link" href="https://docs.google.com/forms/d
 &lt;p>Some of the tools represented in the maintainers&amp;rsquo; area were still somewhat new to me.
 The great thing was that I could just walk up to them and ask them for a short demo to understand the usage and the difference to other tools.
 Special thanks to the folks at the ArgoCD, Backstage, and Buildpacks booths!&lt;/p>
-&lt;h2 id="favorite-quotes">Favorite Quotes&lt;/h2>
-&lt;p>I am going to close with some wise words people have said on this conference:&lt;/p>
+&lt;h2 id="favorite-quotes">
+&lt;a href="#favorite-quotes" class="header-anchor">#&lt;/a>
+Favorite Quotes
+&lt;/h2>&lt;p>I am going to close with some wise words people have said on this conference:&lt;/p>
 &lt;blockquote>
 &lt;p>If it&amp;rsquo;s not in Git, it&amp;rsquo;s just a rumor.&lt;/p>
 &lt;/blockquote>

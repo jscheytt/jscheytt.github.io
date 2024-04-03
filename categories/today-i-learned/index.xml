@@ -306,7 +306,9 @@ In the end I refactored it a bit using some &lt;code>ENV&lt;/code>s, too:&lt;/p>
 Now I can save one more character by retraining myself to use &lt;code>:xa&lt;/code>! 😄&lt;/p>
 &lt;p>I also like how &lt;code>:x&lt;/code> sort of symbolizes the close button ❌ of many window managers and their default behavior of saving when you close a file.&lt;/p>
 &lt;p>For more documentation open vim and type &lt;code>:h :x&lt;/code>.&lt;/p>
-&lt;h1 id="wait-now-that-you-mention-it-">Wait, now that you mention it &amp;hellip;&lt;/h1>
-&lt;p>Well, turns out the documentation mentions an even easier way: Just press &lt;code>ZZ&lt;/code> (without the colon) 😴&lt;/p>
+&lt;h1 id="wait-now-that-you-mention-it-">
+&lt;a href="#wait-now-that-you-mention-it-" class="header-anchor">#&lt;/a>
+Wait, now that you mention it &amp;hellip;
+&lt;/h1>&lt;p>Well, turns out the documentation mentions an even easier way: Just press &lt;code>ZZ&lt;/code> (without the colon) 😴&lt;/p>
 &lt;p>Now if only I could combine this to perform &lt;code>:wqa&lt;/code> &amp;hellip;&lt;/p>
 &lt;p>Happy vim-ing! 👋&lt;/p></description></item></channel></rss>

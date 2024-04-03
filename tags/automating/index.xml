@@ -1,20 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>automating on Josia's Blog</title><link>https://jscheytt.github.io/tags/automating/</link><description>Recent content in automating on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Josia Scheytt</copyright><lastBuildDate>Tue, 04 Oct 2022 14:30:29 +0100</lastBuildDate><atom:link href="https://jscheytt.github.io/tags/automating/index.xml" rel="self" type="application/rss+xml"/><item><title>I Install Washing Machines (My Latest Job Metaphor)</title><link>https://jscheytt.github.io/p/i-install-washing-machines-my-latest-job-metaphor/</link><pubDate>Tue, 04 Oct 2022 14:30:29 +0100</pubDate><guid>https://jscheytt.github.io/p/i-install-washing-machines-my-latest-job-metaphor/</guid><description>&lt;h2 id="so-what-exactly-do-you-do-for-a-living">So What Exactly Do You Do For A Living?&lt;/h2>
-&lt;p>Whenever we meet new people (or good friends, it sometimes doesn&amp;rsquo;t make a big difference 😄), the above question will come up.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Automating on Josia's Blog</title><link>https://jscheytt.github.io/tags/automating/</link><description>Recent content in Automating on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Josia Scheytt</copyright><lastBuildDate>Tue, 04 Oct 2022 14:30:29 +0100</lastBuildDate><atom:link href="https://jscheytt.github.io/tags/automating/index.xml" rel="self" type="application/rss+xml"/><item><title>I Install Washing Machines (My Latest Job Metaphor)</title><link>https://jscheytt.github.io/p/i-install-washing-machines-my-latest-job-metaphor/</link><pubDate>Tue, 04 Oct 2022 14:30:29 +0100</pubDate><guid>https://jscheytt.github.io/p/i-install-washing-machines-my-latest-job-metaphor/</guid><description>&lt;h2 id="so-what-exactly-do-you-do-for-a-living">
+&lt;a href="#so-what-exactly-do-you-do-for-a-living" class="header-anchor">#&lt;/a>
+So What Exactly Do You Do For A Living?
+&lt;/h2>&lt;p>Whenever we meet new people (or good friends, it sometimes doesn&amp;rsquo;t make a big difference 😄), the above question will come up.
 My wife (who is a doctor and has understably fewer problems explaining her job) is always excited to get yet another chance to &amp;ldquo;finally understand&amp;rdquo; what it is that I am doing at work as a &lt;strong>Cloud Automation Engineer&lt;/strong>.&lt;/p>
 &lt;p>That is the fancy title we at &lt;a class="link" href="https://flowable.wd3.myworkdayjobs.com/de-DE/mimacom/details/Cloud-Automation-Engineer--m-f-d-_JR100074?q=cloud%20automation%20engineer" target="_blank" rel="noopener"
 >mimacom&lt;/a> give to people working in &lt;em>Site Reliability Engineering&lt;/em> and &lt;em>DevOps Engineering&lt;/em>, and I have grown to really like it because it starts to convey a lot of meaning right away.
 Unfortunately, it&amp;rsquo;s also long and not particularly established (yet).&lt;/p>
 &lt;p>In this blog post I will explore one analogy that came to my mind recently.
 I have not tried it out in the wild yet, but I am fascinated by the similarities between deploying washing machines and deploying web applications.&lt;/p>
-&lt;h2 id="my-latest-metaphor">My Latest Metaphor&lt;/h2>
-&lt;p>Let&amp;rsquo;s say I work in a company that builds, delivers, and maintains washing machines for laundromats.
+&lt;h2 id="my-latest-metaphor">
+&lt;a href="#my-latest-metaphor" class="header-anchor">#&lt;/a>
+My Latest Metaphor
+&lt;/h2>&lt;p>Let&amp;rsquo;s say I work in a company that builds, delivers, and maintains washing machines for laundromats.
 The colleagues in my team whom I work most closely with design new washing machine models.
 You could say they design or &amp;ldquo;develop&amp;rdquo; the washing machines.&lt;/p>
 &lt;p>They do this very frequently — even so frequently, that they tweak the current model mostly on a daily basis.
 Whenever they change the model, we want to bring these improvements to our customers as quickly as possible.&lt;/p>
 &lt;p>And here begins my responsibility as Laundry Automation Engineer™️.&lt;/p>
-&lt;h3 id="delivering-new-washing-machines">Delivering New Washing Machines&lt;/h3>
-&lt;p>There are several steps that now need to happen in succession until the new model lands at our customers (the laundromats).
+&lt;h3 id="delivering-new-washing-machines">
+&lt;a href="#delivering-new-washing-machines" class="header-anchor">#&lt;/a>
+Delivering New Washing Machines
+&lt;/h3>&lt;p>There are several steps that now need to happen in succession until the new model lands at our customers (the laundromats).
 We also call this a &lt;strong>pipeline&lt;/strong>:&lt;/p>
 &lt;ol>
 &lt;li>The designers/developers wrote some simulations to check if the models they produce really work as they should.
@@ -32,8 +38,10 @@ Robots are a lot more reliable, faster, and cheaper when it comes to repetitive 
 &lt;p>And if there is an error during any of the above steps, the pipeline for the current model change will stop (so we don&amp;rsquo;t deliver broken machines).
 I will then look what caused the error and fix it.&lt;/p>
 &lt;p>Let&amp;rsquo;s zoom in on a few details around the last step when the robots install the new machines:&lt;/p>
-&lt;h3 id="zero-downtime">Zero-Downtime&lt;/h3>
-&lt;p>Our laundromats are very highly frequented, basically around the clock, even on weekends.
+&lt;h3 id="zero-downtime">
+&lt;a href="#zero-downtime" class="header-anchor">#&lt;/a>
+Zero-Downtime
+&lt;/h3>&lt;p>Our laundromats are very highly frequented, basically around the clock, even on weekends.
 People come and go all the time.
 They put their clothes into a machine, select a program, pay with coins or by card, set it off running, and return when their laundry is supposed to be ready.&lt;/p>
 &lt;p>For simplicity, I will now switch back to me as the one doing the actual work (instead of the robots).
@@ -43,8 +51,10 @@ They know that if they have to many interruptions, potential customers will get 
 &lt;p>So normally, I will install the new washing machine first (connect to current and water), mark the old machine as &amp;ldquo;stale&amp;rdquo; (so customers can only get their laundry from it but not start any new programs), then disconnect the old one.
 This does introduce a little bit of energy and water overhead for the laundromat, but they happily pay that price.
 And good for me that in reality I have robots managing all this for me.&lt;/p>
-&lt;h2 id="behind-the-scenes-a-glossary">Behind The Scenes: A Glossary&lt;/h2>
-&lt;dl>
+&lt;h2 id="behind-the-scenes-a-glossary">
+&lt;a href="#behind-the-scenes-a-glossary" class="header-anchor">#&lt;/a>
+Behind The Scenes: A Glossary
+&lt;/h2>&lt;dl>
 &lt;dt>Washing Machine:&lt;/dt>
 &lt;dd>A web application that communicates over HTTP.
 It receives requests (dirty laundry and some program parameters) and delivers responses (clean laundry in the happy path).&lt;/dd>
@@ -91,8 +101,10 @@ It takes away so much work and mental effort at the beginning, and you can just 
 Honestly, I think there never will be, and that is ok.
 But what I have come to appreciate a lot recently is &lt;strong>&lt;a class="link" href="https://www.gnu.org/software/make/" target="_blank" rel="noopener"
 >Make&lt;/a>&lt;/strong> as a &lt;strong>companion&lt;/strong> for my Shell scripts.&lt;/p>
-&lt;h2 id="-make-vs--shell-in-a--nutshell">🏗 Make vs. 🐚 Shell in a 🥜 Nutshell&lt;/h2>
-&lt;ul>
+&lt;h2 id="-make-vs--shell-in-a--nutshell">
+&lt;a href="#-make-vs--shell-in-a--nutshell" class="header-anchor">#&lt;/a>
+🏗 Make vs. 🐚 Shell in a 🥜 Nutshell
+&lt;/h2>&lt;ul>
 &lt;li>Purpose: Make is good at &lt;strong>creating files&lt;/strong>, Shell is good at &lt;strong>executing scripts&lt;/strong>.&lt;/li>
 &lt;li>Portability: If your system has Bash, chances are pretty high that Make is also available.&lt;/li>
 &lt;li>Developer API: Make has a &lt;strong>clear entrypoint&lt;/strong> (namely &lt;code>make&lt;/code>), Shell can be everything you want it to be.&lt;/li>
@@ -104,8 +116,10 @@ Make is meant to 🏗 make (create) files.&lt;/p>
 &lt;p>&lt;strong>It&amp;rsquo;s all about target files.&lt;/strong>
 That&amp;rsquo;s why it makes sense to approach a Makefile with a mindset of &amp;ldquo;What do I want to create/build?&amp;rdquo; instead of &amp;ldquo;What do I want to perform?&amp;rdquo;
 To me this sounds very reminiscent of the distinction between &lt;em>declarative and imperative&lt;/em> programming.&lt;/p>
-&lt;h2 id="safely-versioned-secrets-management">Safely Versioned Secrets Management&lt;/h2>
-&lt;p>My concrete entrypoint into Make was the following use case I had lately, and it hopefully helps to illustrate the point of target files:&lt;/p>
+&lt;h2 id="safely-versioned-secrets-management">
+&lt;a href="#safely-versioned-secrets-management" class="header-anchor">#&lt;/a>
+Safely Versioned Secrets Management
+&lt;/h2>&lt;p>My concrete entrypoint into Make was the following use case I had lately, and it hopefully helps to illustrate the point of target files:&lt;/p>
 &lt;ul>
 &lt;li>☸️ You have 2 AWS accounts with 1 &lt;strong>Kubernetes&lt;/strong> cluster each.
 (One is for running a dev and a staging environment, the other one is running the production environment.)&lt;/li>
@@ -161,8 +175,10 @@ The file &lt;code>service2.sample.json&lt;/code> would e.g. look like this.&lt;/
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">secrets/**/*.json
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># ... but keep the samples&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">!secrets/*.sample.json
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="copying-the-samples">Copying the Samples&lt;/h3>
-&lt;p>Now how do you copy the files to all environment&amp;rsquo;s directories?
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="copying-the-samples">
+&lt;a href="#copying-the-samples" class="header-anchor">#&lt;/a>
+Copying the Samples
+&lt;/h3>&lt;p>Now how do you copy the files to all environment&amp;rsquo;s directories?
 And how do you make sure you copy them &lt;em>exactly once&lt;/em> (so you don&amp;rsquo;t lose the secrets you already entered)?&lt;/p>
 &lt;p>You could create a script with the following logic:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># For each environment directory:&lt;/span>
@@ -229,8 +245,10 @@ As long as &lt;code>secrets.copy-templates&lt;/code> is the first build defined 
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;h4 id="how-not-to-shoot-yourself-in-the-foot">How Not To Shoot Yourself in the Foot&lt;/h4>
-&lt;p>Make was made primarily for building binaries from source code.
+&lt;h4 id="how-not-to-shoot-yourself-in-the-foot">
+&lt;a href="#how-not-to-shoot-yourself-in-the-foot" class="header-anchor">#&lt;/a>
+How Not To Shoot Yourself in the Foot
+&lt;/h4>&lt;p>Make was made primarily for building binaries from source code.
 The fact that we are able to use it in the way described above comes with a warning:
 If you do the following, you will lose the secret data you already entered into the secret files:&lt;/p>
 &lt;ol>
@@ -248,8 +266,10 @@ Or you change the last-modified timestamp &lt;strong>via a build&lt;/strong> in 
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-make" data-lang="make">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">secrets.ensure-copy-once&lt;/span>&lt;span class="o">:&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> f in &lt;span class="k">$(&lt;/span>all_secrets&lt;span class="k">)&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">do&lt;/span> &lt;span class="o">[&lt;/span> -f &lt;span class="nv">$$&lt;/span>f &lt;span class="o">]&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> touch &lt;span class="nv">$$&lt;/span>f&lt;span class="p">;&lt;/span> &lt;span class="k">done&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now whenever you edit a sample file &lt;em>after the initial secrets.copy-templates&lt;/em> you run this build via &lt;code>make secrets.ensure-copy-once&lt;/code> and 🛡 your secrets will not be deleted.&lt;/p>
-&lt;h3 id="extension-environment-specific-sample-files">Extension: Environment-specific Sample Files&lt;/h3>
-&lt;p>One implicit assumption in my structure was that the secrets in service2 will always have the same schema &lt;strong>in every environment&lt;/strong>.
+&lt;h3 id="extension-environment-specific-sample-files">
+&lt;a href="#extension-environment-specific-sample-files" class="header-anchor">#&lt;/a>
+Extension: Environment-specific Sample Files
+&lt;/h3>&lt;p>One implicit assumption in my structure was that the secrets in service2 will always have the same schema &lt;strong>in every environment&lt;/strong>.
 One day it so happened that service2 needed to have additional keys on prod, but they &lt;strong>should not be present&lt;/strong> on dev or staging.&lt;/p>
 &lt;p>I adjusted my desired structure like this:&lt;/p>
 &lt;pre tabindex="0">&lt;code>secrets
@@ -292,8 +312,10 @@ One day it so happened that service2 needed to have additional keys on prod, but
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">$(&lt;/span>call copy_template,$&amp;lt;,&lt;span class="nv">$@&lt;/span>&lt;span class="k">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">secrets/prod/%.json&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="n">secrets&lt;/span>/%.&lt;span class="n">sample&lt;/span>.&lt;span class="n">json&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">$(&lt;/span>call copy_template,$&amp;lt;,&lt;span class="nv">$@&lt;/span>&lt;span class="k">)&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="-perfect-symphony-calling-scripts-from-make">🍣 Perfect Symphony: Calling Scripts From Make&lt;/h3>
-&lt;p>It&amp;rsquo;s all good and nice to have your secrets created, but how do you deploy them to AWS Secrets Manager?
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="-perfect-symphony-calling-scripts-from-make">
+&lt;a href="#-perfect-symphony-calling-scripts-from-make" class="header-anchor">#&lt;/a>
+🍣 Perfect Symphony: Calling Scripts From Make
+&lt;/h3>&lt;p>It&amp;rsquo;s all good and nice to have your secrets created, but how do you deploy them to AWS Secrets Manager?
 Of course you write a thin wrapper around the wonderfully verbose AWS CLI:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/usr/bin/env bash
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="nb">set&lt;/span> -euo pipefail
@@ -346,8 +368,10 @@ Of course you write a thin wrapper around the wonderfully verbose AWS CLI:&lt;/p
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nf">secrets.deploy.prod&lt;/span>&lt;span class="o">:&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">$(&lt;/span>MAKE&lt;span class="k">)&lt;/span> secrets.deploy.all &lt;span class="nv">environment&lt;/span>&lt;span class="o">=&lt;/span>prod
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>✅ Once you are authenticated to the corresponding AWS account, you can deploy your secrets with either &lt;code>make secrets.deploy.dev&lt;/code> or &lt;code>make secrets.deploy.prod&lt;/code>.&lt;/p>
-&lt;h2 id="summarizing">Summarizing&lt;/h2>
-&lt;ul>
+&lt;h2 id="summarizing">
+&lt;a href="#summarizing" class="header-anchor">#&lt;/a>
+Summarizing
+&lt;/h2>&lt;ul>
 &lt;li>Make gives you a consistent and clean Developer API.&lt;/li>
 &lt;li>Make is almost universally installed everywhere.&lt;/li>
 &lt;li>Don&amp;rsquo;t decide between either Make &lt;strong>or&lt;/strong> Shell - use both together.
@@ -355,8 +379,10 @@ Refactor more complex logic into separate Shell scripts (like isolated functions
 &lt;/ul>
 &lt;p>You can check out the entire Makefile (including the secrets structure and scripts) in this &lt;a class="link" href="https://github.com/jscheytt/jscheytt.github.io.hugo/tree/main/content/post/story-first-makefile" target="_blank" rel="noopener"
 >Git repo&lt;/a>.&lt;/p>
-&lt;h2 id="credits">Credits&lt;/h2>
-&lt;p>I am indebted to the following parties in making my start into the world of Make a lot smoother than I expected:&lt;/p>
+&lt;h2 id="credits">
+&lt;a href="#credits" class="header-anchor">#&lt;/a>
+Credits
+&lt;/h2>&lt;p>I am indebted to the following parties in making my start into the world of Make a lot smoother than I expected:&lt;/p>
 &lt;ul>
 &lt;li>Isaac Z. Schlueter for his &lt;a class="link" href="https://gist.github.com/isaacs/62a2d1825d04437c6f08" target="_blank" rel="noopener"
 >interactive Gist&lt;/a>&lt;/li>
