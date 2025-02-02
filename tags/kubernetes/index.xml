@@ -52,8 +52,7 @@ data-flex-basis="179px"
 >&lt;/p>
 &lt;p>This week I went to KubeCon/CloudNativeCon in Valencia, Spain, together with four of my colleagues, both from mimacom Germany and mimacom Spain.&lt;/p>
 &lt;blockquote>
-&lt;p>Thanks a lot to mimacom for sponsoring our attending!&lt;/p>
-&lt;/blockquote>
+&lt;p>Thanks a lot to mimacom for sponsoring our attending!&lt;/p>&lt;/blockquote>
 &lt;p>What I want to talk about in this blog post is not a summary of talks or topics but just how I experienced the whole event.
 Is was the first KubeCon I have ever attended, and we came on Monday, left on Friday, so we effectively only attended Tuesday through Thursday (the middle 3 of the 5 days).&lt;/p>
 &lt;h2 id="about-kubecon">About KubeCon
@@ -170,17 +169,14 @@ Special thanks to the folks at the ArgoCD, Backstage, and Buildpacks booths!&lt;
 &lt;h2 id="favorite-quotes">Favorite Quotes
 &lt;/h2>&lt;p>I am going to close with some wise words people have said on this conference:&lt;/p>
 &lt;blockquote>
-&lt;p>If it&amp;rsquo;s not in Git, it&amp;rsquo;s just a rumor.&lt;/p>
-&lt;/blockquote>
+&lt;p>If it&amp;rsquo;s not in Git, it&amp;rsquo;s just a rumor.&lt;/p>&lt;/blockquote>
 &lt;p>RedHat printed T-shirts for GitOpsCon with this saying - they were gone quicker than you could queue in at their booth (I did not get one unfortunately &amp;hellip;).&lt;/p>
 &lt;blockquote>
-&lt;p>What is software? Software is code while it is running, code with electricity applied to it.&lt;/p>
-&lt;/blockquote>
+&lt;p>What is software? Software is code while it is running, code with electricity applied to it.&lt;/p>&lt;/blockquote>
 &lt;p>Justin Garrison in the context of &amp;ldquo;&lt;a class="link" href="https://gitopsconeu22.sched.com/event/zrr3/infrastructure-as-software-with-gitops-justin-garrison-amazon" target="_blank" rel="noopener"
 >Infrastructure as Software&lt;/a>&amp;rdquo; and why GitOps is such a breakthrough for this.&lt;/p>
 &lt;blockquote>
-&lt;p>Kubernetes is the industrial revolution for server computing, that&amp;rsquo;s how fundamental it is.&lt;/p>
-&lt;/blockquote>
+&lt;p>Kubernetes is the industrial revolution for server computing, that&amp;rsquo;s how fundamental it is.&lt;/p>&lt;/blockquote>
 &lt;p>Lucas Käldström in his talk &amp;ldquo;&lt;a class="link" href="https://kccnceu2022.sched.com/event/ytr4/understanding-kubernetes-through-real-world-phenomena-and-analogies-lucas-kaldstrom" target="_blank" rel="noopener"
 >Understanding Kubernetes Through Real-World Penomena&lt;/a>&amp;rdquo; (very recommended!).&lt;/p></description></item><item><title>kubectl can explain all resource types in detail</title><link>https://jscheytt.github.io/p/kubectl-can-explain-all-resource-types-in-detail/</link><pubDate>Tue, 01 Feb 2022 14:53:18 +0100</pubDate><guid>https://jscheytt.github.io/p/kubectl-can-explain-all-resource-types-in-detail/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> kubectl explain statefulset
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">KIND: StatefulSet
@@ -291,8 +287,7 @@ After some scrolling I came across the &lt;strong>CronJobs&lt;/strong> I defined
 &lt;p>I should probably not have been surprised that the CronJob also had the same Labels I gave it via the kustomization.
 But now a suspicion started sneaking in:&lt;/p>
 &lt;blockquote>
-&lt;p>What if the &lt;strong>completed Pods&lt;/strong> of the CronJob received traffic from the Service because they had &lt;strong>the same Labels&lt;/strong>?&lt;/p>
-&lt;/blockquote>
+&lt;p>What if the &lt;strong>completed Pods&lt;/strong> of the CronJob received traffic from the Service because they had &lt;strong>the same Labels&lt;/strong>?&lt;/p>&lt;/blockquote>
 &lt;p>Following this idea, I refactored my configs a bit.
 Soon, I was able to ensure that requests to the Service would only point to my target Deployment (and not to any other Pods):&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl">&lt;span class="gh">diff --git a/base/kustomization.yaml b/base/kustomization.yaml
