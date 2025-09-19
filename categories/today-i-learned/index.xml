@@ -1,311 +1,311 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Today I Learned That ... on Josia's Blog</title><link>https://jscheytt.github.io/categories/today-i-learned/</link><description>Recent content in Today I Learned That ... on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Josia Scheytt</copyright><lastBuildDate>Thu, 25 Aug 2022 15:00:09 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/categories/today-i-learned/index.xml" rel="self" type="application/rss+xml"/><item><title>ArgoCD is like the Kubernetes Dashboard but for GitOps</title><link>https://jscheytt.github.io/p/argocd-is-like-the-kubernetes-dashboard-but-for-gitops/</link><pubDate>Thu, 25 Aug 2022 15:00:09 +0200</pubDate><guid>https://jscheytt.github.io/p/argocd-is-like-the-kubernetes-dashboard-but-for-gitops/</guid><description>&lt;p>FluxCD was my first love in the GitOps space.
-I worked with it when it was still v1, had no chance to use, and since about a year I returned to using it in its glorious, rewritten v2.&lt;/p>
-&lt;p>I haven&amp;rsquo;t given ArgoCD a try so far until this week somebody suggested trying out &lt;a class="link" href="https://argocd-autopilot.readthedocs.io/en/stable/" target="_blank" rel="noopener"
->ArgoCD Autopilot&lt;/a>.
-The process was super smooth and in less than 10 minutes I had a running ArgoCD dashboard in my local minikube cluster.&lt;/p>
-&lt;p>And holy moly I have to say:
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Today I Learned That ... on Josia's Blog</title><link>https://jscheytt.github.io/categories/today-i-learned/</link><description>Recent content in Today I Learned That ... on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Josia Scheytt</copyright><lastBuildDate>Thu, 25 Aug 2022 15:00:09 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/categories/today-i-learned/index.xml" rel="self" type="application/rss+xml"/><item><title>ArgoCD is like the Kubernetes Dashboard but for GitOps</title><link>https://jscheytt.github.io/p/argocd-is-like-the-kubernetes-dashboard-but-for-gitops/</link><pubDate>Thu, 25 Aug 2022 15:00:09 +0200</pubDate><guid>https://jscheytt.github.io/p/argocd-is-like-the-kubernetes-dashboard-but-for-gitops/</guid><description>&lt;p&gt;FluxCD was my first love in the GitOps space.
+I worked with it when it was still v1, had no chance to use, and since about a year I returned to using it in its glorious, rewritten v2.&lt;/p&gt;
+&lt;p&gt;I haven&amp;rsquo;t given ArgoCD a try so far until this week somebody suggested trying out &lt;a class="link" href="https://argocd-autopilot.readthedocs.io/en/stable/" target="_blank" rel="noopener"
+&gt;ArgoCD Autopilot&lt;/a&gt;.
+The process was super smooth and in less than 10 minutes I had a running ArgoCD dashboard in my local minikube cluster.&lt;/p&gt;
+&lt;p&gt;And holy moly I have to say:
 ArgoCD is awesome!
-In the less than one hour I have seen it close up now, I already see so many possibilities that are hard to do when you try to scale Flux:&lt;/p>
-&lt;ol>
-&lt;li>Having a UI at all&lt;/li>
-&lt;li>Managing applications in multiple clusters from 1 Git repo &lt;em>with explicit assignment to these clusters&lt;/em>&lt;/li>
-&lt;li>The UI is basically the better &lt;a class="link" href="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/" target="_blank" rel="noopener"
->Default Kubernetes Dashboard&lt;/a> but for GitOps:
-&lt;ul>
-&lt;li>The Kubernetes Dashboard gives you a very &amp;ldquo;relational&amp;rdquo; view of your resources, much like &lt;a class="link" href="https://k9scli.io/" target="_blank" rel="noopener"
->k9s&lt;/a> does (albeit with fewer resource types).&lt;/li>
-&lt;li>I tried &lt;a class="link" href="https://github.com/kubevious/kubevious" target="_blank" rel="noopener"
->Kubevious&lt;/a> in some projects because it allows you to view &lt;strong>related resources hierarchically together&lt;/strong>.
-&lt;ul>
-&lt;li>But it is pretty buggy (especially the mysql DB deployed with it) and has not fulfilled its promise for me.&lt;/li>
-&lt;li>Additionally, it&amp;rsquo;s read-only and does not show you a Events or container logs.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>ArgoCD however gives us the &lt;strong>best of both worlds&lt;/strong>:
-&lt;ul>
-&lt;li>Related resources are &lt;strong>shown hierarchically&lt;/strong> (e.g. Deployments create ReplicaSets create Pods).&lt;/li>
-&lt;li>You can even group them into Apps, ApplicationSets, and Projects.&lt;/li>
-&lt;li>If you open a Resource (e.g. Pod), you can see its Events and also its logs!&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;a class="link" href="https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/Generators-Pull-Request/" target="_blank" rel="noopener"
->Preview Environments&lt;/a> seem relatively straightforward.&lt;/li>
-&lt;li>I have heard many rumors that Progressive Delivery is easier with ArgoCD (or at least involves less manually scripted yaml generation pipelines).&lt;/li>
-&lt;/ol>
-&lt;p>As a Cloud Automation Engineer, one of my main missions is to &lt;strong>deliver stable apps&lt;/strong>.
-And this highly involves &lt;strong>stable processes&lt;/strong> for my team.
+In the less than one hour I have seen it close up now, I already see so many possibilities that are hard to do when you try to scale Flux:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Having a UI at all&lt;/li&gt;
+&lt;li&gt;Managing applications in multiple clusters from 1 Git repo &lt;em&gt;with explicit assignment to these clusters&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;The UI is basically the better &lt;a class="link" href="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/" target="_blank" rel="noopener"
+&gt;Default Kubernetes Dashboard&lt;/a&gt; but for GitOps:
+&lt;ul&gt;
+&lt;li&gt;The Kubernetes Dashboard gives you a very &amp;ldquo;relational&amp;rdquo; view of your resources, much like &lt;a class="link" href="https://k9scli.io/" target="_blank" rel="noopener"
+&gt;k9s&lt;/a&gt; does (albeit with fewer resource types).&lt;/li&gt;
+&lt;li&gt;I tried &lt;a class="link" href="https://github.com/kubevious/kubevious" target="_blank" rel="noopener"
+&gt;Kubevious&lt;/a&gt; in some projects because it allows you to view &lt;strong&gt;related resources hierarchically together&lt;/strong&gt;.
+&lt;ul&gt;
+&lt;li&gt;But it is pretty buggy (especially the mysql DB deployed with it) and has not fulfilled its promise for me.&lt;/li&gt;
+&lt;li&gt;Additionally, it&amp;rsquo;s read-only and does not show you a Events or container logs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ArgoCD however gives us the &lt;strong&gt;best of both worlds&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Related resources are &lt;strong&gt;shown hierarchically&lt;/strong&gt; (e.g. Deployments create ReplicaSets create Pods).&lt;/li&gt;
+&lt;li&gt;You can even group them into Apps, ApplicationSets, and Projects.&lt;/li&gt;
+&lt;li&gt;If you open a Resource (e.g. Pod), you can see its Events and also its logs!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/Generators-Pull-Request/" target="_blank" rel="noopener"
+&gt;Preview Environments&lt;/a&gt; seem relatively straightforward.&lt;/li&gt;
+&lt;li&gt;I have heard many rumors that Progressive Delivery is easier with ArgoCD (or at least involves less manually scripted yaml generation pipelines).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;As a Cloud Automation Engineer, one of my main missions is to &lt;strong&gt;deliver stable apps&lt;/strong&gt;.
+And this highly involves &lt;strong&gt;stable processes&lt;/strong&gt; for my team.
 ArgoCD feels like the perfect fit:
-I can deploy my apps with ArgoCD and everybody with access to it can debug resources, see which versions are currently deployed, and maybe even promote apps to the next environment!&lt;/p>
-&lt;p>There also seem to be use cases (probably especially in a setup with separate platform and app dev teams) where &lt;a class="link" href="https://youtu.be/QNAiIJRIVWA?t=731" target="_blank" rel="noopener"
->deploying FluxCD and ArgoCD together&lt;/a> makes sense.
-But I am definitively going to give ArgoCD a shot in some important environment soon.&lt;/p></description></item><item><title>You can Gitopsify your Ansible</title><link>https://jscheytt.github.io/p/you-can-gitopsify-your-ansible/</link><pubDate>Tue, 01 Mar 2022 08:34:20 +0100</pubDate><guid>https://jscheytt.github.io/p/you-can-gitopsify-your-ansible/</guid><description>&lt;p>I have a &lt;a class="link" href="https://github.com/jscheytt/dotfiles" target="_blank" rel="noopener"
->dotfiles repository&lt;/a> for setting up my MacOS machine easily and reproducibly.
-For this I am mostly using Ansible, just slightly wrapping it with Make and seasoning it with a pinch of Shell.&lt;/p>
-&lt;p>The core piece of this repository is a &lt;code>Brewfile&lt;/code> and a collection of &lt;a class="link" href="https://github.com/jscheytt/dotfiles/blob/main/files/dotfiles/.oh-my-zsh/custom/aliases.zsh" target="_blank" rel="noopener"
->Shell aliases&lt;/a> and &lt;a class="link" href="https://github.com/jscheytt/dotfiles/blob/main/files/dotfiles/.oh-my-zsh/custom/functions.sh" target="_blank" rel="noopener"
->functions&lt;/a>.
+I can deploy my apps with ArgoCD and everybody with access to it can debug resources, see which versions are currently deployed, and maybe even promote apps to the next environment!&lt;/p&gt;
+&lt;p&gt;There also seem to be use cases (probably especially in a setup with separate platform and app dev teams) where &lt;a class="link" href="https://youtu.be/QNAiIJRIVWA?t=731" target="_blank" rel="noopener"
+&gt;deploying FluxCD and ArgoCD together&lt;/a&gt; makes sense.
+But I am definitively going to give ArgoCD a shot in some important environment soon.&lt;/p&gt;</description></item><item><title>You can Gitopsify your Ansible</title><link>https://jscheytt.github.io/p/you-can-gitopsify-your-ansible/</link><pubDate>Tue, 01 Mar 2022 08:34:20 +0100</pubDate><guid>https://jscheytt.github.io/p/you-can-gitopsify-your-ansible/</guid><description>&lt;p&gt;I have a &lt;a class="link" href="https://github.com/jscheytt/dotfiles" target="_blank" rel="noopener"
+&gt;dotfiles repository&lt;/a&gt; for setting up my MacOS machine easily and reproducibly.
+For this I am mostly using Ansible, just slightly wrapping it with Make and seasoning it with a pinch of Shell.&lt;/p&gt;
+&lt;p&gt;The core piece of this repository is a &lt;code&gt;Brewfile&lt;/code&gt; and a collection of &lt;a class="link" href="https://github.com/jscheytt/dotfiles/blob/main/files/dotfiles/.oh-my-zsh/custom/aliases.zsh" target="_blank" rel="noopener"
+&gt;Shell aliases&lt;/a&gt; and &lt;a class="link" href="https://github.com/jscheytt/dotfiles/blob/main/files/dotfiles/.oh-my-zsh/custom/functions.sh" target="_blank" rel="noopener"
+&gt;functions&lt;/a&gt;.
 I don&amp;rsquo;t regularly run the Ansible playbook itself because I created it for initially setting up a machine.
 The only thing I run very frequently is the &lt;a class="link" href="https://github.com/jscheytt/dotfiles/blob/main/files/dotfiles/.oh-my-zsh/custom/functions.sh#L107" target="_blank" rel="noopener"
->upgrade&lt;/a> command which includes persisting new Brew formulae to the &lt;code>Brewfile&lt;/code>.&lt;/p>
-&lt;p>At the same time I have come to love applying &lt;a class="link" href="https://opengitops.dev/" target="_blank" rel="noopener"
->GitOps principles&lt;/a> to everything I work with.
+&gt;upgrade&lt;/a&gt; command which includes persisting new Brew formulae to the &lt;code&gt;Brewfile&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;At the same time I have come to love applying &lt;a class="link" href="https://opengitops.dev/" target="_blank" rel="noopener"
+&gt;GitOps principles&lt;/a&gt; to everything I work with.
 Just the other day I was &lt;a class="link" href="https://github.com/jscheytt/dotfiles/commit/c4278a0b8bbe1f4875efd56ceffc43459d919d1f" target="_blank" rel="noopener"
->moving some commands&lt;/a> (in the vein of &amp;ldquo;global Git pull&amp;rdquo;) out of said &lt;code>upgrade&lt;/code> command into a cronjob.&lt;/p>
-&lt;p>And then it hit me:
-If I create a cronjob for running my Ansible playbook &lt;em>through the playbook itself&lt;/em>, I have GitOps-like reconciliation!&lt;/p>
-&lt;p>Let&amp;rsquo;s do it in just a few lines of yaml:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Ensure dotfiles are applied&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">cron&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Ensure dotfiles are applied&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">minute&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;0&amp;#34;&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">hour&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;9&amp;#34;&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">weekday&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;1-5&amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># on workdays&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">job&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">make -f &amp;#34;{{ ansible_env.PWD }}&amp;#34;/Makefile build&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>kubectl can explain all resource types in detail</title><link>https://jscheytt.github.io/p/kubectl-can-explain-all-resource-types-in-detail/</link><pubDate>Tue, 01 Feb 2022 14:53:18 +0100</pubDate><guid>https://jscheytt.github.io/p/kubectl-can-explain-all-resource-types-in-detail/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> kubectl explain statefulset
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">KIND: StatefulSet
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">VERSION: apps/v1
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go">DESCRIPTION:
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> StatefulSet represents a set of pods with consistent identities. Identities
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> are defined as:
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> - Network: A single stable DNS and hostname.
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> - Storage: As many VolumeClaims as requested. The StatefulSet guarantees
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> that a given network identity will always map to the same storage identity.
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go">FIELDS:
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> apiVersion &amp;lt;string&amp;gt;
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> APIVersion defines the versioned schema of this representation of an
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> object. Servers should convert recognized schemas to the latest internal
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> value, and may reject unrecognized values. More info:
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> kind &amp;lt;string&amp;gt;
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> Kind is a string value representing the REST resource this object
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> represents. Servers may infer this from the endpoint the client submits
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> requests to. Cannot be updated. In CamelCase. More info:
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> metadata &amp;lt;Object&amp;gt;
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> spec &amp;lt;Object&amp;gt;
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> Spec defines the desired identities of pods in this set.
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> status &amp;lt;Object&amp;gt;
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> Status is the current status of Pods in this StatefulSet. This data may be
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> out of date by some window of time.
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I guess this will reduce a lot of my googling in future.&lt;/p>
-&lt;p>And it even works on nested fields!&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> kubectl explain deployment.spec.template.spec.containers
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">KIND: Deployment
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">VERSION: apps/v1
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go">RESOURCE: containers &amp;lt;[]Object&amp;gt;
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go">DESCRIPTION:
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> List of containers belonging to the pod. Containers cannot currently be
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> added or removed. There must be at least one container in a Pod. Cannot be
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> updated.
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> A single application container that you want to run within a pod.
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go">FIELDS:
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> args &amp;lt;[]string&amp;gt;
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> Arguments to the entrypoint. The docker image&amp;#39;s CMD is used if this is not
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> provided. Variable references $(VAR_NAME) are expanded using the
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> container&amp;#39;s environment. If a variable cannot be resolved, the reference in
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> the input string will be unchanged. The $(VAR_NAME) syntax can be escaped
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> with a double $$, ie: $$(VAR_NAME). Escaped references will never be
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> expanded, regardless of whether the variable exists or not. Cannot be
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> updated. More info:
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> command &amp;lt;[]string&amp;gt;
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> Entrypoint array. Not executed within a shell. The docker image&amp;#39;s
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME)
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> are expanded using the container&amp;#39;s environment. If a variable cannot be
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> resolved, the reference in the input string will be unchanged. The
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME).
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> Escaped references will never be expanded, regardless of whether the
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> variable exists or not. Cannot be updated. More info:
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> env &amp;lt;[]Object&amp;gt;
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> List of environment variables to set in the container. Cannot be updated.
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="go"> ...
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Trying to simplify k8s labels can be dangerous for your routing</title><link>https://jscheytt.github.io/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/</link><pubDate>Fri, 03 Dec 2021 10:43:01 +0100</pubDate><guid>https://jscheytt.github.io/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/</guid><description>&lt;p>Today I was refactoring a bigger configuration setup that is built with &lt;a class="link" href="https://kustomize.io/" target="_blank" rel="noopener"
->kustomize&lt;/a>.
-I see kustomize as a light-weight way of packaging multiple Kubernetes manifests, together with a little bit of logic.&lt;/p>
-&lt;p>The &lt;strong>base kustomization&lt;/strong> of the application config repo I was refactoring looked something like this:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">apiVersion&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">kustomize.config.k8s.io/v1beta1&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">kind&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Kustomization&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">resources&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/cronjob-backup.yaml&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/deployment.yaml&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/ingress.yaml&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/pod-disruption-budget.yaml&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">manifests/service.yaml&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">commonAnnotations&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">source&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">java&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">tenant&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">acme&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">configMapGenerator&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">acme-app-config&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">files&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">configs/10-local.properties&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">configs/30-local.properties&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">configs/40-local.properties&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I have an almost pathologic tendency to simplify and DRY everything up that I find, especially in configuration code.
-And as I saw a lot of &lt;strong>repeating Labels&lt;/strong> in the manifests, I thought &amp;ldquo;Well, let&amp;rsquo;s just unify them.&amp;rdquo;&lt;/p>
-&lt;p>So I went ahead, removed the repetitive Labels from the manifests and added the following block to the kustomization:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">commonLabels&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">app&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">acme-app&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I knew a bit about Kubernetes Services and that they &lt;em>use Labels to find the Pods to which they should direct their traffic&lt;/em>.
-That&amp;rsquo;s why I thoroughly verified that after my change the Service and the Deployment would still have &lt;strong>the same selector labels&lt;/strong>.
-🤗 Nothing seemed off &amp;hellip;&lt;/p>
-&lt;p>I committed and pushed my changes, and after the Deployment had finished restarting, I clicked through the application.
-👀 Oddly enough some of the requests succeeded as expected, but some kept failing with a 💥 &lt;code>502 Bad Gateway&lt;/code> error!
-At first I tried troubleshooting quickly, but soon I opted for just reverting my changes and pushing the revert commits to undo my changes.&lt;/p>
-&lt;p>For debugging I compared the output of &lt;code>kustomize build&lt;/code> before and after my changes.
-After some scrolling I came across the &lt;strong>CronJobs&lt;/strong> I defined for backup&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.&lt;/p>
-&lt;p>I should probably not have been surprised that the CronJob also had the same Labels I gave it via the kustomization.
-But now a suspicion started sneaking in:&lt;/p>
-&lt;blockquote>
-&lt;p>What if the &lt;strong>completed Pods&lt;/strong> of the CronJob received traffic from the Service because they had &lt;strong>the same Labels&lt;/strong>?&lt;/p>&lt;/blockquote>
-&lt;p>Following this idea, I refactored my configs a bit.
-Soon, I was able to ensure that requests to the Service would only point to my target Deployment (and not to any other Pods):&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl">&lt;span class="gh">diff --git a/base/kustomization.yaml b/base/kustomization.yaml
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">index 6c1c6f7..b77b0fc 100644
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">&lt;/span>&lt;span class="gd">--- a/base/kustomization.yaml
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">&lt;/span>&lt;span class="gi">+++ b/base/kustomization.yaml
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">&lt;/span>&lt;span class="gu">@@ -15,7 +15,6 @@ commonAnnotations:
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span> source: java
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> tenant: acme
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">-commonLabels:
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">- app: acme-app
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">&lt;/span> configMapGenerator:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: acme-app-config
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">diff --git a/base/manifests/deployment.yaml b/base/manifests/deployment.yaml
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">index 1e4aa3f..a60a798 100644
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">&lt;/span>&lt;span class="gd">--- a/base/manifests/deployment.yaml
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">&lt;/span>&lt;span class="gi">+++ b/base/manifests/deployment.yaml
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">&lt;/span>&lt;span class="gu">@@ -16,6 +16,9 @@ metadata:
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span> spec:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> replicas: 1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ selector:
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ matchLabels:
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ app: acme-app
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">&lt;/span> template:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> metadata:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> labels:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ app: acme-app
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">&lt;/span> spec:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> containers:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">diff --git a/base/manifests/service.yaml b/base/manifests/service.yaml
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">index b05d898..89af021 100644
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">&lt;/span>&lt;span class="gd">--- a/base/manifests/service.yaml
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">&lt;/span>&lt;span class="gi">+++ b/base/manifests/service.yaml
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">&lt;/span>&lt;span class="gu">@@ -10,3 +10,5 @@ spec:
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span> - name: api
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> port: 8080
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ selector:
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ app: acme-app
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>(Notice that the Deployment needs the Label both in &lt;code>.spec.selector.matchLabels&lt;/code> and &lt;code>.spec.template.metadata.labels&lt;/code>!)&lt;/p>
-&lt;p>And surely enough, after deploying this fix, the request to the application worked flawlessly 😊✅.&lt;/p>
-&lt;div class="footnotes" role="doc-endnotes">
-&lt;hr>
-&lt;ol>
-&lt;li id="fn:1">
-&lt;p>It does not matter for which purpose I created this CronJob, it could have been any Kubernetes Resource that creates Pods.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;/div></description></item><item><title>Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace</title><link>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</link><pubDate>Fri, 29 Oct 2021 12:11:47 +0200</pubDate><guid>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">kubectl api-resources --verbs&lt;span class="o">=&lt;/span>list --namespaced -o name &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="p">|&lt;/span> xargs -n &lt;span class="m">1&lt;/span> kubectl get --show-kind --ignore-not-found -n &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$NAMESPACE&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Props to &lt;a class="link" href="https://cloud.redhat.com/blog/the-hidden-dangers-of-terminating-namespaces" target="_blank" rel="noopener"
->RedHat&lt;/a>.&lt;/p></description></item><item><title>HTML limits you to a signed 32-bit int in ordered lists</title><link>https://jscheytt.github.io/p/html-limits-you-to-a-signed-32-bit-int-in-ordered-lists/</link><pubDate>Thu, 02 Sep 2021 08:55:22 +0200</pubDate><guid>https://jscheytt.github.io/p/html-limits-you-to-a-signed-32-bit-int-in-ordered-lists/</guid><description>&lt;p>HTML allows you to specify a starting number from which an ordered list (&lt;code>&amp;lt;ol&amp;gt;&lt;/code>) should start.
-I thought &amp;ldquo;Is there an upper bound?&amp;rdquo;.&lt;/p>
-&lt;p>Turns out: Yes, there is.
-It&amp;rsquo;s 2147483647 (i.e. &lt;span>2&lt;sup>31&lt;/sup>-1&lt;/span>
+&gt;moving some commands&lt;/a&gt; (in the vein of &amp;ldquo;global Git pull&amp;rdquo;) out of said &lt;code&gt;upgrade&lt;/code&gt; command into a cronjob.&lt;/p&gt;
+&lt;p&gt;And then it hit me:
+If I create a cronjob for running my Ansible playbook &lt;em&gt;through the playbook itself&lt;/em&gt;, I have GitOps-like reconciliation!&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s do it in just a few lines of yaml:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;Ensure dotfiles are applied&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;cron&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;Ensure dotfiles are applied&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;minute&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;0&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;hour&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;9&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;weekday&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;1-5&amp;#34;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c"&gt;# on workdays&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;job&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;make -f &amp;#34;{{ ansible_env.PWD }}&amp;#34;/Makefile build&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>kubectl can explain all resource types in detail</title><link>https://jscheytt.github.io/p/kubectl-can-explain-all-resource-types-in-detail/</link><pubDate>Tue, 01 Feb 2022 14:53:18 +0100</pubDate><guid>https://jscheytt.github.io/p/kubectl-can-explain-all-resource-types-in-detail/</guid><description>&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-console" data-lang="console"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gp"&gt;$&lt;/span&gt; kubectl explain statefulset
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt;KIND: StatefulSet
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt;VERSION: apps/v1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="go"&gt;DESCRIPTION:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; StatefulSet represents a set of pods with consistent identities. Identities
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; are defined as:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; - Network: A single stable DNS and hostname.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; - Storage: As many VolumeClaims as requested. The StatefulSet guarantees
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; that a given network identity will always map to the same storage identity.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="go"&gt;FIELDS:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; apiVersion &amp;lt;string&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; APIVersion defines the versioned schema of this representation of an
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; object. Servers should convert recognized schemas to the latest internal
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; value, and may reject unrecognized values. More info:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="go"&gt; kind &amp;lt;string&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; Kind is a string value representing the REST resource this object
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; represents. Servers may infer this from the endpoint the client submits
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; requests to. Cannot be updated. In CamelCase. More info:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="go"&gt; metadata &amp;lt;Object&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="go"&gt; spec &amp;lt;Object&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; Spec defines the desired identities of pods in this set.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="go"&gt; status &amp;lt;Object&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; Status is the current status of Pods in this StatefulSet. This data may be
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; out of date by some window of time.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I guess this will reduce a lot of my googling in future.&lt;/p&gt;
+&lt;p&gt;And it even works on nested fields!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-console" data-lang="console"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gp"&gt;$&lt;/span&gt; kubectl explain deployment.spec.template.spec.containers
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt;KIND: Deployment
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt;VERSION: apps/v1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="go"&gt;RESOURCE: containers &amp;lt;[]Object&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="go"&gt;DESCRIPTION:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; List of containers belonging to the pod. Containers cannot currently be
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; added or removed. There must be at least one container in a Pod. Cannot be
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; updated.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="go"&gt; A single application container that you want to run within a pod.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="go"&gt;FIELDS:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; args &amp;lt;[]string&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; Arguments to the entrypoint. The docker image&amp;#39;s CMD is used if this is not
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; provided. Variable references $(VAR_NAME) are expanded using the
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; container&amp;#39;s environment. If a variable cannot be resolved, the reference in
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; the input string will be unchanged. The $(VAR_NAME) syntax can be escaped
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; with a double $$, ie: $$(VAR_NAME). Escaped references will never be
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; expanded, regardless of whether the variable exists or not. Cannot be
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; updated. More info:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="go"&gt; command &amp;lt;[]string&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; Entrypoint array. Not executed within a shell. The docker image&amp;#39;s
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; are expanded using the container&amp;#39;s environment. If a variable cannot be
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; resolved, the reference in the input string will be unchanged. The
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME).
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; Escaped references will never be expanded, regardless of whether the
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; variable exists or not. Cannot be updated. More info:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="go"&gt; env &amp;lt;[]Object&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; List of environment variables to set in the container. Cannot be updated.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="go"&gt; ...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Trying to simplify k8s labels can be dangerous for your routing</title><link>https://jscheytt.github.io/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/</link><pubDate>Fri, 03 Dec 2021 10:43:01 +0100</pubDate><guid>https://jscheytt.github.io/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/</guid><description>&lt;p&gt;Today I was refactoring a bigger configuration setup that is built with &lt;a class="link" href="https://kustomize.io/" target="_blank" rel="noopener"
+&gt;kustomize&lt;/a&gt;.
+I see kustomize as a light-weight way of packaging multiple Kubernetes manifests, together with a little bit of logic.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;base kustomization&lt;/strong&gt; of the application config repo I was refactoring looked something like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;apiVersion&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;kustomize.config.k8s.io/v1beta1&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="nt"&gt;kind&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;Kustomization&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="nt"&gt;resources&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="l"&gt;manifests/cronjob-backup.yaml&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="l"&gt;manifests/deployment.yaml&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="l"&gt;manifests/ingress.yaml&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="l"&gt;manifests/pod-disruption-budget.yaml&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="l"&gt;manifests/service.yaml&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="nt"&gt;commonAnnotations&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;source&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;java&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;tenant&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;acme&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="nt"&gt;configMapGenerator&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;acme-app-config&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;files&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="l"&gt;configs/10-local.properties&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="l"&gt;configs/30-local.properties&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="l"&gt;configs/40-local.properties&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I have an almost pathologic tendency to simplify and DRY everything up that I find, especially in configuration code.
+And as I saw a lot of &lt;strong&gt;repeating Labels&lt;/strong&gt; in the manifests, I thought &amp;ldquo;Well, let&amp;rsquo;s just unify them.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;So I went ahead, removed the repetitive Labels from the manifests and added the following block to the kustomization:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;commonLabels&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;app&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;acme-app&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I knew a bit about Kubernetes Services and that they &lt;em&gt;use Labels to find the Pods to which they should direct their traffic&lt;/em&gt;.
+That&amp;rsquo;s why I thoroughly verified that after my change the Service and the Deployment would still have &lt;strong&gt;the same selector labels&lt;/strong&gt;.
+🤗 Nothing seemed off &amp;hellip;&lt;/p&gt;
+&lt;p&gt;I committed and pushed my changes, and after the Deployment had finished restarting, I clicked through the application.
+👀 Oddly enough some of the requests succeeded as expected, but some kept failing with a 💥 &lt;code&gt;502 Bad Gateway&lt;/code&gt; error!
+At first I tried troubleshooting quickly, but soon I opted for just reverting my changes and pushing the revert commits to undo my changes.&lt;/p&gt;
+&lt;p&gt;For debugging I compared the output of &lt;code&gt;kustomize build&lt;/code&gt; before and after my changes.
+After some scrolling I came across the &lt;strong&gt;CronJobs&lt;/strong&gt; I defined for backup&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;I should probably not have been surprised that the CronJob also had the same Labels I gave it via the kustomization.
+But now a suspicion started sneaking in:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What if the &lt;strong&gt;completed Pods&lt;/strong&gt; of the CronJob received traffic from the Service because they had &lt;strong&gt;the same Labels&lt;/strong&gt;?&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Following this idea, I refactored my configs a bit.
+Soon, I was able to ensure that requests to the Service would only point to my target Deployment (and not to any other Pods):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-diff" data-lang="diff"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gh"&gt;diff --git a/base/kustomization.yaml b/base/kustomization.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gh"&gt;index 6c1c6f7..b77b0fc 100644
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gh"&gt;&lt;/span&gt;&lt;span class="gd"&gt;--- a/base/kustomization.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gd"&gt;&lt;/span&gt;&lt;span class="gi"&gt;+++ b/base/kustomization.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gi"&gt;&lt;/span&gt;&lt;span class="gu"&gt;@@ -15,7 +15,6 @@ commonAnnotations:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gu"&gt;&lt;/span&gt; source: java
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; tenant: acme
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gd"&gt;-commonLabels:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gd"&gt;- app: acme-app
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gd"&gt;&lt;/span&gt; configMapGenerator:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - name: acme-app-config
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gh"&gt;diff --git a/base/manifests/deployment.yaml b/base/manifests/deployment.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gh"&gt;index 1e4aa3f..a60a798 100644
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gh"&gt;&lt;/span&gt;&lt;span class="gd"&gt;--- a/base/manifests/deployment.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gd"&gt;&lt;/span&gt;&lt;span class="gi"&gt;+++ b/base/manifests/deployment.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gi"&gt;&lt;/span&gt;&lt;span class="gu"&gt;@@ -16,6 +16,9 @@ metadata:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gu"&gt;&lt;/span&gt; spec:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; replicas: 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gi"&gt;+ selector:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gi"&gt;+ matchLabels:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gi"&gt;+ app: acme-app
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gi"&gt;&lt;/span&gt; template:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; metadata:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; labels:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gi"&gt;+ app: acme-app
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gi"&gt;&lt;/span&gt; spec:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; containers:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gh"&gt;diff --git a/base/manifests/service.yaml b/base/manifests/service.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gh"&gt;index b05d898..89af021 100644
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gh"&gt;&lt;/span&gt;&lt;span class="gd"&gt;--- a/base/manifests/service.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gd"&gt;&lt;/span&gt;&lt;span class="gi"&gt;+++ b/base/manifests/service.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gi"&gt;&lt;/span&gt;&lt;span class="gu"&gt;@@ -10,3 +10,5 @@ spec:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gu"&gt;&lt;/span&gt; - name: api
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; port: 8080
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gi"&gt;+ selector:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gi"&gt;+ app: acme-app
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(Notice that the Deployment needs the Label both in &lt;code&gt;.spec.selector.matchLabels&lt;/code&gt; and &lt;code&gt;.spec.template.metadata.labels&lt;/code&gt;!)&lt;/p&gt;
+&lt;p&gt;And surely enough, after deploying this fix, the request to the application worked flawlessly 😊✅.&lt;/p&gt;
+&lt;div class="footnotes" role="doc-endnotes"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;It does not matter for which purpose I created this CronJob, it could have been any Kubernetes Resource that creates Pods.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description></item><item><title>Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace</title><link>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</link><pubDate>Fri, 29 Oct 2021 12:11:47 +0200</pubDate><guid>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</guid><description>&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kubectl api-resources --verbs&lt;span class="o"&gt;=&lt;/span&gt;list --namespaced -o name &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="se"&gt;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; xargs -n &lt;span class="m"&gt;1&lt;/span&gt; kubectl get --show-kind --ignore-not-found -n &lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="nv"&gt;$NAMESPACE&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Props to &lt;a class="link" href="https://cloud.redhat.com/blog/the-hidden-dangers-of-terminating-namespaces" target="_blank" rel="noopener"
+&gt;RedHat&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>HTML limits you to a signed 32-bit int in ordered lists</title><link>https://jscheytt.github.io/p/html-limits-you-to-a-signed-32-bit-int-in-ordered-lists/</link><pubDate>Thu, 02 Sep 2021 08:55:22 +0200</pubDate><guid>https://jscheytt.github.io/p/html-limits-you-to-a-signed-32-bit-int-in-ordered-lists/</guid><description>&lt;p&gt;HTML allows you to specify a starting number from which an ordered list (&lt;code&gt;&amp;lt;ol&amp;gt;&lt;/code&gt;) should start.
+I thought &amp;ldquo;Is there an upper bound?&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Turns out: Yes, there is.
+It&amp;rsquo;s 2147483647 (i.e. &lt;span&gt;2&lt;sup&gt;31&lt;/sup&gt;-1&lt;/span&gt;
 ).
-Looks like a signed 32-bit integer to me.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ol&lt;/span> &lt;span class="na">start&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">2147483645&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>I am still in order&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>As am I&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Me too&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>💥 Limit reached&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>💥 Limit reached&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>💥 Limit reached&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">ol&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The above snippet will render as the following:&lt;/p>
-&lt;span>
-&lt;ol start=2147483645 style="margin-left: 10rem;">
-&lt;li>I am still in order&lt;/li>
-&lt;li>As am I&lt;/li>
-&lt;li>Me too&lt;/li>
-&lt;li>💥 Limit reached&lt;/li>
-&lt;li>💥 Limit reached&lt;/li>
-&lt;li>💥 Limit reached&lt;/li>
-&lt;/ol>
-&lt;/span></description></item><item><title>You can create TOTP tokens via CLI without a smartphone</title><link>https://jscheytt.github.io/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/</link><pubDate>Fri, 27 Aug 2021 08:20:41 +0200</pubDate><guid>https://jscheytt.github.io/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/</guid><description>&lt;p>All you need is the secret of your TOTP.&lt;/p>
-&lt;p>The QR code is just a representation of a &lt;code>oath://&lt;/code> URL
-That URL contains the secret as a query parameter.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Install oathtool&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">brew install oathtool
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Use your secret, e.g. as a base32-encoded string&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">oathtool --totp --base32 &lt;span class="s2">&amp;#34;MFRGCZDTMVRXEZLUBI======&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docker does not really help you a lot trying to get permissions right</title><link>https://jscheytt.github.io/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/</link><pubDate>Fri, 23 Jul 2021 14:42:07 +0200</pubDate><guid>https://jscheytt.github.io/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/</guid><description>&lt;p>I really love Docker, and I also come to like security more and more.
+Looks like a signed 32-bit integer to me.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;ol&lt;/span&gt; &lt;span class="na"&gt;start&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;2147483645&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;I am still in order&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;As am I&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Me too&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;💥 Limit reached&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;💥 Limit reached&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;💥 Limit reached&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;ol&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The above snippet will render as the following:&lt;/p&gt;
+&lt;span&gt;
+&lt;ol start=2147483645 style="margin-left: 10rem;"&gt;
+&lt;li&gt;I am still in order&lt;/li&gt;
+&lt;li&gt;As am I&lt;/li&gt;
+&lt;li&gt;Me too&lt;/li&gt;
+&lt;li&gt;💥 Limit reached&lt;/li&gt;
+&lt;li&gt;💥 Limit reached&lt;/li&gt;
+&lt;li&gt;💥 Limit reached&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/span&gt;</description></item><item><title>You can create TOTP tokens via CLI without a smartphone</title><link>https://jscheytt.github.io/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/</link><pubDate>Fri, 27 Aug 2021 08:20:41 +0200</pubDate><guid>https://jscheytt.github.io/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/</guid><description>&lt;p&gt;All you need is the secret of your TOTP.&lt;/p&gt;
+&lt;p&gt;The QR code is just a representation of a &lt;code&gt;oath://&lt;/code&gt; URL
+That URL contains the secret as a query parameter.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Install oathtool&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install oathtool
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Use your secret, e.g. as a base32-encoded string&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;oathtool --totp --base32 &lt;span class="s2"&gt;&amp;#34;MFRGCZDTMVRXEZLUBI======&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Docker does not really help you a lot trying to get permissions right</title><link>https://jscheytt.github.io/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/</link><pubDate>Fri, 23 Jul 2021 14:42:07 +0200</pubDate><guid>https://jscheytt.github.io/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/</guid><description>&lt;p&gt;I really love Docker, and I also come to like security more and more.
 One advice I have been hearing a lot (e.g. in this &lt;a class="link" href="https://snyk.io/blog/10-docker-image-security-best-practices/" target="_blank" rel="noopener"
->Container Security Cheat Sheet from Snyk&lt;/a>) is that &lt;strong>you should not run your container as a root user&lt;/strong>.&lt;/p>
-&lt;p>&amp;ldquo;Easy thing,&amp;rdquo; I thought to myself, &amp;ldquo;I am just going to put something like &lt;code>USER {app}&lt;/code>&amp;rdquo; at the top of my Dockerfile.&amp;quot;
-Well, think again, because:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-Dockerfile" data-lang="Dockerfile">&lt;span class="line">&lt;span class="cl">&lt;span class="k">FROM&lt;/span>&lt;span class="s"> node:lts&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">USER&lt;/span>&lt;span class="s"> node&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># I would have thought that after this point, every action will happen in the name of this user&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># and also that every created directory and file will belong to this user ... 😕 But:&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># ⚠️ This directory is created by root:root!&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">WORKDIR&lt;/span>&lt;span class="s"> /app&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># ⚠️ These files will be copied over to be owned by root:root!&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> package*.json ./&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># 💥 This step fails in some (not all!) environments with errors like &amp;#34;Not enough permissions on /app&amp;#34;&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> npm install &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> npm run verify&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># ⚠️ If you manage to get to this point, these files, too, will be copied over to be owned by root:root!&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> . .&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">ENTRYPOINT&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;npm&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I ended up fixing it by creating the directory and then &lt;code>chown&lt;/code>-ing it.
-Equally I executed the &lt;code>COPY&lt;/code> instructions with the &lt;code>--chown&lt;/code> flag.
-In the end I refactored it a bit using some &lt;code>ENV&lt;/code>s, too:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-Dockerfile" data-lang="Dockerfile">&lt;span class="line">&lt;span class="cl">&lt;span class="k">FROM&lt;/span>&lt;span class="s"> node:lts&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># Ensure that target WORKDIR exists and is owned by target (non-root) user&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">ENV&lt;/span> &lt;span class="nv">USERNAME&lt;/span>&lt;span class="o">=&lt;/span>node
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">ENV&lt;/span> &lt;span class="nv">USERID&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$USERNAME&lt;/span>:&lt;span class="nv">$USERNAME&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">ENV&lt;/span> &lt;span class="nv">TARGETDIR&lt;/span>&lt;span class="o">=&lt;/span>/app&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> mkdir -p &lt;span class="nv">$TARGETDIR&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> chown -R &lt;span class="nv">$USERID&lt;/span> &lt;span class="nv">$TARGETDIR&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">WORKDIR&lt;/span>&lt;span class="s"> $TARGETDIR&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">USER&lt;/span>&lt;span class="s"> $USERNAME&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> --chown&lt;span class="o">=&lt;/span>&lt;span class="nv">$USERID&lt;/span> package*.json ./&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> npm install &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> npm run verify&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> --chown&lt;span class="o">=&lt;/span>&lt;span class="nv">$USERID&lt;/span> . .&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">ENTRYPOINT&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;npm&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="err">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>You can :wq in vim with :x</title><link>https://jscheytt.github.io/p/you-can-wq-in-vim-with-x/</link><pubDate>Fri, 16 Jul 2021 00:00:00 +0000</pubDate><guid>https://jscheytt.github.io/p/you-can-wq-in-vim-with-x/</guid><description>&lt;p>I have developed quite some muscle memory in terminating vim via &lt;code>:wqa&lt;/code>.
-Now I can save one more character by retraining myself to use &lt;code>:xa&lt;/code>! 😄&lt;/p>
-&lt;p>I also like how &lt;code>:x&lt;/code> sort of symbolizes the close button ❌ of many window managers and their default behavior of saving when you close a file.&lt;/p>
-&lt;p>For more documentation open vim and type &lt;code>:h :x&lt;/code>.&lt;/p>
-&lt;h1 id="wait-now-that-you-mention-it-">Wait, now that you mention it &amp;hellip;
-&lt;/h1>&lt;p>Well, turns out the documentation mentions an even easier way: Just press &lt;code>ZZ&lt;/code> (without the colon) 😴&lt;/p>
-&lt;p>Now if only I could combine this to perform &lt;code>:wqa&lt;/code> &amp;hellip;&lt;/p>
-&lt;p>Happy vim-ing! 👋&lt;/p></description></item></channel></rss>
+&gt;Container Security Cheat Sheet from Snyk&lt;/a&gt;) is that &lt;strong&gt;you should not run your container as a root user&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;Easy thing,&amp;rdquo; I thought to myself, &amp;ldquo;I am just going to put something like &lt;code&gt;USER {app}&lt;/code&gt;&amp;rdquo; at the top of my Dockerfile.&amp;quot;
+Well, think again, because:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Dockerfile" data-lang="Dockerfile"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;FROM&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;node:lts&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="k"&gt;USER&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;node&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="c"&gt;# I would have thought that after this point, every action will happen in the name of this user&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="c"&gt;# and also that every created directory and file will belong to this user ... 😕 But:&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="c"&gt;# ⚠️ This directory is created by root:root!&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="k"&gt;WORKDIR&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;/app&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="c"&gt;# ⚠️ These files will be copied over to be owned by root:root!&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="k"&gt;COPY&lt;/span&gt; package*.json ./&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="c"&gt;# 💥 This step fails in some (not all!) environments with errors like &amp;#34;Not enough permissions on /app&amp;#34;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="k"&gt;RUN&lt;/span&gt; npm install &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="se"&gt;&lt;/span&gt; npm run verify&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="c"&gt;# ⚠️ If you manage to get to this point, these files, too, will be copied over to be owned by root:root!&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="k"&gt;COPY&lt;/span&gt; . .&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="k"&gt;ENTRYPOINT&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;npm&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I ended up fixing it by creating the directory and then &lt;code&gt;chown&lt;/code&gt;-ing it.
+Equally I executed the &lt;code&gt;COPY&lt;/code&gt; instructions with the &lt;code&gt;--chown&lt;/code&gt; flag.
+In the end I refactored it a bit using some &lt;code&gt;ENV&lt;/code&gt;s, too:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Dockerfile" data-lang="Dockerfile"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;FROM&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;node:lts&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="c"&gt;# Ensure that target WORKDIR exists and is owned by target (non-root) user&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="k"&gt;ENV&lt;/span&gt; &lt;span class="nv"&gt;USERNAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;node
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;ENV&lt;/span&gt; &lt;span class="nv"&gt;USERID&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$USERNAME&lt;/span&gt;:&lt;span class="nv"&gt;$USERNAME&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="k"&gt;ENV&lt;/span&gt; &lt;span class="nv"&gt;TARGETDIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/app&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="k"&gt;RUN&lt;/span&gt; mkdir -p &lt;span class="nv"&gt;$TARGETDIR&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; chown -R &lt;span class="nv"&gt;$USERID&lt;/span&gt; &lt;span class="nv"&gt;$TARGETDIR&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="k"&gt;WORKDIR&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;$TARGETDIR&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="k"&gt;USER&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;$USERNAME&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="k"&gt;COPY&lt;/span&gt; --chown&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$USERID&lt;/span&gt; package*.json ./&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="k"&gt;RUN&lt;/span&gt; npm install &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="se"&gt;&lt;/span&gt; npm run verify&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="k"&gt;COPY&lt;/span&gt; --chown&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$USERID&lt;/span&gt; . .&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="k"&gt;ENTRYPOINT&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;npm&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>You can :wq in vim with :x</title><link>https://jscheytt.github.io/p/you-can-wq-in-vim-with-x/</link><pubDate>Fri, 16 Jul 2021 00:00:00 +0000</pubDate><guid>https://jscheytt.github.io/p/you-can-wq-in-vim-with-x/</guid><description>&lt;p&gt;I have developed quite some muscle memory in terminating vim via &lt;code&gt;:wqa&lt;/code&gt;.
+Now I can save one more character by retraining myself to use &lt;code&gt;:xa&lt;/code&gt;! 😄&lt;/p&gt;
+&lt;p&gt;I also like how &lt;code&gt;:x&lt;/code&gt; sort of symbolizes the close button ❌ of many window managers and their default behavior of saving when you close a file.&lt;/p&gt;
+&lt;p&gt;For more documentation open vim and type &lt;code&gt;:h :x&lt;/code&gt;.&lt;/p&gt;
+&lt;h1 id="wait-now-that-you-mention-it-"&gt;Wait, now that you mention it &amp;hellip;
+&lt;/h1&gt;&lt;p&gt;Well, turns out the documentation mentions an even easier way: Just press &lt;code&gt;ZZ&lt;/code&gt; (without the colon) 😴&lt;/p&gt;
+&lt;p&gt;Now if only I could combine this to perform &lt;code&gt;:wqa&lt;/code&gt; &amp;hellip;&lt;/p&gt;
+&lt;p&gt;Happy vim-ing! 👋&lt;/p&gt;</description></item></channel></rss>
