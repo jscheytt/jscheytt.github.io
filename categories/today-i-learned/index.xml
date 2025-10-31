@@ -172,7 +172,8 @@ After some scrolling I came across the &lt;strong&gt;CronJobs&lt;/strong&gt; I d
 &lt;p&gt;I should probably not have been surprised that the CronJob also had the same Labels I gave it via the kustomization.
 But now a suspicion started sneaking in:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;What if the &lt;strong&gt;completed Pods&lt;/strong&gt; of the CronJob received traffic from the Service because they had &lt;strong&gt;the same Labels&lt;/strong&gt;?&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;What if the &lt;strong&gt;completed Pods&lt;/strong&gt; of the CronJob received traffic from the Service because they had &lt;strong&gt;the same Labels&lt;/strong&gt;?&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Following this idea, I refactored my configs a bit.
 Soon, I was able to ensure that requests to the Service would only point to my target Deployment (and not to any other Pods):&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-diff" data-lang="diff"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gh"&gt;diff --git a/base/kustomization.yaml b/base/kustomization.yaml
