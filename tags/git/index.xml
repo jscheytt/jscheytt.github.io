@@ -11,7 +11,7 @@ Alternatively to the CLI command, you can add this section to your &lt;code&gt;~
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-ini" data-lang="ini"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;[alias]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;co&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;checkout&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Nowadays, with the &lt;a class="link" href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git" target="_blank" rel="noopener"
-&gt;Git plugin of oh-my-zsh&lt;/a&gt;, I don&amp;rsquo;t feel there is a great need for such shortcuts.
+ &gt;Git plugin of oh-my-zsh&lt;/a&gt;, I don&amp;rsquo;t feel there is a great need for such shortcuts.
 Let&amp;rsquo;s instead talk about &lt;strong&gt;actual custom commands&lt;/strong&gt;:&lt;/p&gt;
 &lt;h2 id="with-parameters"&gt;With Parameters
 &lt;/h2&gt;&lt;p&gt;If you use an &lt;em&gt;exclamation mark&lt;/em&gt; before your command, you can run any Shell command you want, even with parameters.
@@ -85,7 +85,7 @@ It also demonstrates nicely how you can use &lt;em&gt;xargs&lt;/em&gt; to run ev
 &lt;h2 id="bringing-it-all-together-multiple-repositories"&gt;Bringing It All Together: Multiple Repositories
 &lt;/h2&gt;&lt;p&gt;As a developer, chances are high you have &lt;em&gt;more than just one&lt;/em&gt; Git repository on your machine.
 For many everyday use cases (like keeping all your local clones up-to-date), I have been using &lt;a class="link" href="https://github.com/earwig/git-repo-updater" target="_blank" rel="noopener"
-&gt;git-repo-updater&lt;/a&gt; with a lot of success and ease.&lt;/p&gt;
+ &gt;git-repo-updater&lt;/a&gt; with a lot of success and ease.&lt;/p&gt;
 &lt;p&gt;But now I discovered I can use it to execute arbitrary commands (and also Git aliases 😉) in multiple Git repos.
 With the following Shell function I am wrapping &lt;code&gt;gitup&lt;/code&gt; for convenience:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Execute a Git command on all Git repositories&lt;/span&gt;

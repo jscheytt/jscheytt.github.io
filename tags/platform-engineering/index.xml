@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Platform-Engineering on Josia's Blog</title><link>https://jscheytt.github.io/tags/platform-engineering/</link><description>Recent content in Platform-Engineering on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Josia Scheytt</copyright><lastBuildDate>Wed, 01 May 2024 10:26:25 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/tags/platform-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>Our GitOps book is available</title><link>https://jscheytt.github.io/p/our-gitops-book-is-available/</link><pubDate>Wed, 01 May 2024 10:26:25 +0200</pubDate><guid>https://jscheytt.github.io/p/our-gitops-book-is-available/</guid><description>&lt;p&gt;We did it:
 Our &lt;a class="link" href="https://gitops-book.dev/" target="_blank" rel="noopener"
-&gt;full-length book about GitOps in German&lt;/a&gt; is now finally out!
+ &gt;full-length book about GitOps in German&lt;/a&gt; is now finally out!
 You can order it anywhere in book stores both physical and online.&lt;/p&gt;
 &lt;p&gt;In fall 2023, Baris, Johannes, and me started writing this book with a vision for enabling German-speaking software teams to use GitOps so they can ship changes faster and with more confidence.
 It is both the first book about GitOps in German, and from our research it seems like it is also by far the longest book &lt;em&gt;in any language&lt;/em&gt; about GitOps (about 350 pages).&lt;/p&gt;
@@ -10,7 +10,7 @@ At least, I have yet to meet anyone who shares my passion for writing docs.
 To me, documentation is not just a chore you do to check a compliance box.
 In fact, I believe it can even be a rewarding experience.&lt;/p&gt;
 &lt;p&gt;I am also convinced that writing documentation is a &lt;em&gt;core skill for Platform Engineers&lt;/em&gt; running any &lt;a class="link" href="https://internaldeveloperplatform.org" target="_blank" rel="noopener"
-&gt;Internal Developer Platforms&lt;/a&gt;.
+ &gt;Internal Developer Platforms&lt;/a&gt;.
 Developer Platforms need a product mindset, and products need documentation so that users can understand usage and discover features.
 And I believe that &lt;strong&gt;technical documentation is a means to scale up your communication&lt;/strong&gt;, especially in the platform context.&lt;/p&gt;
 &lt;p&gt;Let me explain with an example:
@@ -84,10 +84,10 @@ If you scold people for trying to get things done, you will discourage them.&lt;
 &lt;p&gt;There are a few more resources I recommend for learning to communicate effectively as a Platform Engineer:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Watch this talk about &amp;ldquo;&lt;a class="link" href="https://www.infoq.com/presentations/incidents-investigation" target="_blank" rel="noopener"
-&gt;How did it make sense at the time?&lt;/a&gt;&amp;rdquo; (HDIMSATT).
+ &gt;How did it make sense at the time?&lt;/a&gt;&amp;rdquo; (HDIMSATT).
 It is focused on incidents but the same reasoning is helpful for learning empathy with your users.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;&lt;a class="link" href="https://sre.google/sre-book/operational-overload" target="_blank" rel="noopener"
-&gt;SRE Embedding&lt;/a&gt;&lt;/em&gt;:
+ &gt;SRE Embedding&lt;/a&gt;&lt;/em&gt;:
 Sometimes, you can take empathy to a more extreme level by embedding a Platform Engineer into an app dev team for a period of time.
 You as a Platform Engineer will put on your SRE hat and work alongside the developer team in their everyday challenges.&lt;/li&gt;
 &lt;li&gt;Read about and learn from some of the great models of empathy, such as Jesus of Nazareth (e.g. in the first four books of the New Testament), the God who became human (this allowed Him to empathize more with us, but also us to empathize more with Him).&lt;/li&gt;
@@ -97,7 +97,7 @@ You as a Platform Engineer will put on your SRE hat and work alongside the devel
 Working remotely has forced us to do so in more written form than ever before &amp;mdash; and I think this is a good thing overall!
 Sure, it&amp;rsquo;s faster to work together in the office, where it&amp;rsquo;s super easy to quickly ask questions and show things, but asynchronous written communication is much more inclusive and promotes transparency.&lt;/p&gt;
 &lt;p&gt;There are many ways to improve your written communication (e.g. &lt;a class="link" href="https://nohello.net" target="_blank" rel="noopener"
-&gt;don&amp;rsquo;t make people wait&lt;/a&gt;).
+ &gt;don&amp;rsquo;t make people wait&lt;/a&gt;).
 Your written communication will always be better the more you &lt;em&gt;empathize&lt;/em&gt; with the other person(s) (see previous point).
 Still, you can practice the following skills to improve your writing in chats:&lt;/p&gt;
 &lt;ol&gt;
@@ -105,7 +105,7 @@ Still, you can practice the following skills to improve your writing in chats:&l
 &lt;li&gt;Adhere to &lt;strong&gt;basic grammar and syntax&lt;/strong&gt; (just as you would when writing code).
 &lt;ul&gt;
 &lt;li&gt;You can use AI assistance for this like &lt;a class="link" href="https://www.deepl.com/de/write" target="_blank" rel="noopener"
-&gt;DeepL Write&lt;/a&gt;.
+ &gt;DeepL Write&lt;/a&gt;.
 (Hint: I refined this blog post using DeepL Write.)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -125,7 +125,7 @@ Use the &amp;ldquo;reply to&amp;rdquo; feature (or better yet, if available, sta
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;In the spirit of SRE and &lt;a class="link" href="https://www.learningfromincidents.io" target="_blank" rel="noopener"
-&gt;Learning From Incidents&lt;/a&gt;, we can also look back at past communications and learn from them.
+ &gt;Learning From Incidents&lt;/a&gt;, we can also look back at past communications and learn from them.
 Feel free to try these steps as an example:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Search through your chat history, especially group chats where there are a lot of people and a lot of communication.&lt;/li&gt;
@@ -147,7 +147,7 @@ One category of documentation tools I have specifically avoided &lt;em&gt;for in
 &lt;p&gt;Let me be clear about this:
 I am a huge fan of Git!
 &lt;a class="link" href="https://www.linkedin.com/feed/update/urn:li:activity:7120420743795892225" target="_blank" rel="noopener"
-&gt;My writing a book about GitOps&lt;/a&gt; should leave no doubt about that.
+ &gt;My writing a book about GitOps&lt;/a&gt; should leave no doubt about that.
 But even if you have a template where editing any single page is just a click away &lt;em&gt;and&lt;/em&gt; you link directly to a web IDE &lt;em&gt;and&lt;/em&gt; you can enable automerge on the instantly created feature branch, you still have to wait for a green build to pass.
 (Allowing commits directly to the default branch would be careless, because it might break the build &amp;mdash; and you will never get around waiting for the build pipeline on the default branch anyway).
 And that wait is (I think) still way too long, and makes the barrier to contributing way too high.&lt;/p&gt;
@@ -185,7 +185,7 @@ For an example of a very simple runbook, see the list at the end of &lt;a class=
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a class="link" href="https://adr.github.io" target="_blank" rel="noopener"
-&gt;Architectural Decision Records&lt;/a&gt; (ADRs)
+ &gt;Architectural Decision Records&lt;/a&gt; (ADRs)
 &lt;ul&gt;
 &lt;li&gt;This is in the spirit of HDIMSATT (see &lt;a class="link" href="#practicing-communication" &gt;Practicing Communication&lt;/a&gt;) and allows you to foster collaboration and structured discussion around important technical decisions.&lt;/li&gt;
 &lt;li&gt;It allows you to better understand the assumptions and constraints that were in place at the time.
@@ -194,17 +194,17 @@ When you return later, you can re-evaluate whether those assumptions still hold 
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a class="link" href="https://app.diagrams.net" target="_blank" rel="noopener"
-&gt;draw.io&lt;/a&gt; or &lt;a class="link" href="https://mermaid.js.org" target="_blank" rel="noopener"
-&gt;Mermaid&lt;/a&gt; for diagrams
+ &gt;draw.io&lt;/a&gt; or &lt;a class="link" href="https://mermaid.js.org" target="_blank" rel="noopener"
+ &gt;Mermaid&lt;/a&gt; for diagrams
 &lt;ul&gt;
 &lt;li&gt;Many documentation tools come with integrations for these.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;In addition, there are also overarching documentation frameworks such as &lt;a class="link" href="https://arc42.org/overview" target="_blank" rel="noopener"
-&gt;arc42&lt;/a&gt;.
+ &gt;arc42&lt;/a&gt;.
 At &lt;a class="link" href="https://www.mimacom.com" target="_blank" rel="noopener"
-&gt;Mimacom&lt;/a&gt;, we have used arc42 in several projects and found the structure very helpful.
+ &gt;Mimacom&lt;/a&gt;, we have used arc42 in several projects and found the structure very helpful.
 To keep the momentum though, don&amp;rsquo;t think too much about which section a single page belongs to; you can always restructure later after writing your current piece of content.
 Fortunately, there are &lt;a class="link" href="https://arc42.org/download" target="_blank" rel="noopener"
-&gt;downloads available&lt;/a&gt; for Asciidoc, Markdown, LaTeX, and a few other formats.&lt;/p&gt;</description></item></channel></rss>
+ &gt;downloads available&lt;/a&gt; for Asciidoc, Markdown, LaTeX, and a few other formats.&lt;/p&gt;</description></item></channel></rss>

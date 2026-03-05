@@ -1,17 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Events on Josia's Blog</title><link>https://jscheytt.github.io/tags/events/</link><description>Recent content in Events on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Josia Scheytt</copyright><lastBuildDate>Fri, 20 May 2022 12:23:53 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/tags/events/index.xml" rel="self" type="application/rss+xml"/><item><title>My First KubeCon/CloudNativeCon Experience</title><link>https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/</link><pubDate>Fri, 20 May 2022 12:23:53 +0200</pubDate><guid>https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/</guid><description>&lt;img src="https://jscheytt.github.io/" alt="Featured image of post My First KubeCon/CloudNativeCon Experience" /&gt;&lt;p&gt;&lt;img src="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/team-entry.jpg"
-width="348"
-height="465"
-srcset="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/team-entry_hu_cc4a133fde85b83a.jpg 480w, https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/team-entry_hu_dfa430e912c9e93d.jpg 1024w"
-loading="lazy"
-alt="Me and 4 colleagues standing in front of the main KubeCon entry"
-class="gallery-image"
-data-flex-grow="74"
-data-flex-basis="179px"
-&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Events on Josia's Blog</title><link>https://jscheytt.github.io/tags/events/</link><description>Recent content in Events on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Josia Scheytt</copyright><lastBuildDate>Fri, 20 May 2022 12:23:53 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/tags/events/index.xml" rel="self" type="application/rss+xml"/><item><title>My First KubeCon/CloudNativeCon Experience</title><link>https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/</link><pubDate>Fri, 20 May 2022 12:23:53 +0200</pubDate><guid>https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/</guid><description>&lt;img src="https://jscheytt.github.io/" alt="Featured image of post My First KubeCon/CloudNativeCon Experience" /&gt;&lt;p&gt;&lt;img alt="Me and 4 colleagues standing in front of the main KubeCon entry" class="gallery-image" data-flex-basis="179px" data-flex-grow="74" height="465" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/team-entry.jpg" width="348"&gt;&lt;/p&gt;
 &lt;p&gt;This week I went to KubeCon/CloudNativeCon in Valencia, Spain, together with four of my colleagues, both from mimacom Germany and mimacom Spain.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Thanks a lot to mimacom for sponsoring our attending!&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;Thanks a lot to mimacom for sponsoring our attending!&lt;/p&gt;
+
+ &lt;/blockquote&gt;
 &lt;p&gt;What I want to talk about in this blog post is not a summary of talks or topics but just how I experienced the whole event.
 Is was the first KubeCon I have ever attended, and we came on Monday, left on Friday, so we effectively only attended Tuesday through Thursday (the middle 3 of the 5 days).&lt;/p&gt;
 &lt;h2 id="about-kubecon"&gt;About KubeCon
@@ -30,25 +23,16 @@ Some of these events this time were: Service Mesh Con, Cloud Native Security Con
 &lt;p&gt;Additionally, I am the type of person who easily gets overwhelmed when staying in very crowded places for longer periods of time.
 I can handle it, but not without proper self-care and not very well for multiple days in a row.
 This does, admittedly, not put me in a very well-equipped position for a fair like this - just wanted to mention this so you know which color the glasses have through which you now get a view unto this event 😉.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/gitopscon-slide.jpg"
-width="4032"
-height="3024"
-srcset="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/gitopscon-slide_hu_12a69efc438d90f8.jpg 480w, https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/gitopscon-slide_hu_c447b17c52ea07d7.jpg 1024w"
-loading="lazy"
-alt="The first slide of GitOpsCon"
-class="gallery-image"
-data-flex-grow="133"
-data-flex-basis="320px"
-&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="The first slide of GitOpsCon" class="gallery-image" data-flex-basis="320px" data-flex-grow="133" height="3024" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/gitopscon-slide.jpg" srcset="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/gitopscon-slide_hu_7e06f371b3382c19.jpg 800w, https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/gitopscon-slide_hu_e8ec41fd5298e19.jpg 1600w, https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/gitopscon-slide_hu_6cddbb5a25d21cee.jpg 2400w, https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/gitopscon-slide.jpg 4032w" width="4032"&gt;&lt;/p&gt;
 &lt;h2 id="gitopscon"&gt;GitOpsCon
 &lt;/h2&gt;&lt;p&gt;One lesson I have drawn from my first KubeCon is that &lt;strong&gt;the Co-located Events are the real thing&lt;/strong&gt;.
 That, of course, only applies if there is a Co-located Event in which you have a deep interest 😉.&lt;/p&gt;
 &lt;p&gt;My heart beats for GitOps and its much wider adoption, so I attended GitOpsCon, which is organized by &lt;a class="link" href="https://opengitops.dev/" target="_blank" rel="noopener"
-&gt;OpenGitOps&lt;/a&gt; (or the GitOps Working Group (WG), which is sort of the official committee behind it).
+ &gt;OpenGitOps&lt;/a&gt; (or the GitOps Working Group (WG), which is sort of the official committee behind it).
 GitOpsCon was one of the bigger Co-located Events and even offered multiple talks in parallel during some slots.&lt;/p&gt;
 &lt;p&gt;One person I was very much looking forward to meeting was Chris Short from AWS EKS (formerly RedHat).
 If you have not heard of him before, do check out his newsletter &lt;a class="link" href="https://devopsish.com/" target="_blank" rel="noopener"
-&gt;DevOps&amp;rsquo;ish&lt;/a&gt;!
+ &gt;DevOps&amp;rsquo;ish&lt;/a&gt;!
 It is one of the three weekly newsletters I regularly read, and I do read very few.&lt;/p&gt;
 &lt;p&gt;And &amp;hellip; it worked out!
 He was holding the first keynote together with Dan Garfield (from Codefresh, ArgoCD maintainer) and Scott Rigby (from Weaveworks, both a Helm and a FluxCD maintainer), and I was able to just walk up to him in the time between two sessions and express my gratitude for his curating that newsletter 🤗!&lt;/p&gt;
@@ -62,32 +46,32 @@ I am deeply grateful for the opportunity of diving into the community of people 
 &lt;h2 id="new-ideas"&gt;New Ideas
 &lt;/h2&gt;&lt;p&gt;Luckily, not only GitOpsCon exposed me to new ideas - that also happened (and happened a lot!) with the talks during the other two days:
 I heard about the &lt;a class="link" href="https://kccnceu2022.sched.com/event/ytpE/reproducing-production-issues-in-your-ci-pipeline-using-ebpf-matthew-leray-speedscale-omid-azizi-new-relic" target="_blank" rel="noopener"
-&gt;Kernel-intercepting eBPF technology&lt;/a&gt;, something like &amp;ldquo;Serverless CloudFoundry&amp;rdquo; with Knative, and using machine learning to optimize resource requests and limits for SLOs, among many others.
+ &gt;Kernel-intercepting eBPF technology&lt;/a&gt;, something like &amp;ldquo;Serverless CloudFoundry&amp;rdquo; with Knative, and using machine learning to optimize resource requests and limits for SLOs, among many others.
 If you want to see which (few) talks I attended, see &lt;a class="link" href="https://kccnceu2022.sched.com/jscheytt?iframe=no" target="_blank" rel="noopener"
-&gt;my schedule in Sched&lt;/a&gt;.&lt;/p&gt;
+ &gt;my schedule in Sched&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The cool thing with something like Kubernetes and its ecosystem is that you can very quickly &lt;strong&gt;experiment without a big setup investment&lt;/strong&gt;.
 I e.g. heard about Tekton as a side note and decided to directly give it a go during one of the other talks, and I was directly able to walk through the Getting Started guide to verify how nicely it works!&lt;/p&gt;
 &lt;h2 id="starting-to-see-patterns"&gt;Starting To See Patterns
 &lt;/h2&gt;&lt;p&gt;Let me note down a few things I found remarkable and where we as an industry can maybe find better ways of achieving things:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Not only do we have many tools in the Cloud Native ecosystem (I will not make the next joke about the &lt;a class="link" href="https://landscape.cncf.io/" target="_blank" rel="noopener"
-&gt;CNCF Landscape&lt;/a&gt;, you can invent one yourself 😄),
+ &gt;CNCF Landscape&lt;/a&gt;, you can invent one yourself 😄),
 it also seems to me that everybody starts to create another copy-paste version of the &lt;a class="link" href="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/" target="_blank" rel="noopener"
-&gt;standard Kubernetes Dashboard&lt;/a&gt; but just filtered down to their CRDs.
+ &gt;standard Kubernetes Dashboard&lt;/a&gt; but just filtered down to their CRDs.
 &lt;ul&gt;
 &lt;li&gt;The &lt;a class="link" href="https://github.com/tektoncd/dashboard/blob/main/docs/dashboard-ui.jpg" target="_blank" rel="noopener"
-&gt;Tekton Dashboard&lt;/a&gt; is a prime example of this, but they are not the only ones who are either actively doing this or considering building their own UI.&lt;/li&gt;
+ &gt;Tekton Dashboard&lt;/a&gt; is a prime example of this, but they are not the only ones who are either actively doing this or considering building their own UI.&lt;/li&gt;
 &lt;li&gt;The Kubernetes Dashboard seems to have a &lt;a class="link" href="https://github.com/kubernetes/dashboard/blob/master/docs/plugins/README.md" target="_blank" rel="noopener"
-&gt;plugin system&lt;/a&gt;, so why don&amp;rsquo;t we all use more of this?&lt;/li&gt;
+ &gt;plugin system&lt;/a&gt;, so why don&amp;rsquo;t we all use more of this?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;I have never used ArgoCD because I thought &amp;ldquo;well, I have learned how to use FluxCD and use it, why should I learn another CD tool?&amp;rdquo;
 &lt;ul&gt;
 &lt;li&gt;And like many people, I have been living in a &lt;em&gt;false dichotomy&lt;/em&gt; that GitOps is &lt;em&gt;either Flux or Argo&lt;/em&gt; - but that misses the point!&lt;/li&gt;
 &lt;li&gt;&lt;a class="link" href="https://gitopsconeu22.sched.com/event/zrqT/implementing-preview-environments-with-gitops-in-kubernetes-francois-le-pape-remazing" target="_blank" rel="noopener"
-&gt;One talk at GitOpsCon&lt;/a&gt; showed pretty nicely how you can &lt;strong&gt;use both together&lt;/strong&gt;: Use FluxCD as a platform team to deploy your infrastructure, and deploy Argo for your developers to deploy and manage their applications.&lt;/li&gt;
+ &gt;One talk at GitOpsCon&lt;/a&gt; showed pretty nicely how you can &lt;strong&gt;use both together&lt;/strong&gt;: Use FluxCD as a platform team to deploy your infrastructure, and deploy Argo for your developers to deploy and manage their applications.&lt;/li&gt;
 &lt;li&gt;Just one example: I love Flux, but managing preview environments from PRs is a lot of work (mostly YAML generation), but Argo has a dedicated &lt;a class="link" href="https://argocd-applicationset.readthedocs.io/en/stable/Generators-Pull-Request/" target="_blank" rel="noopener"
-&gt;Pull Request Generator&lt;/a&gt; to solve this in just about 10 lines of code.&lt;/li&gt;
+ &gt;Pull Request Generator&lt;/a&gt; to solve this in just about 10 lines of code.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -97,47 +81,35 @@ There is a whole big area with booths from all kinds of vendors in the Cloud Nat
 One corner of this space is reserved for maintainers of a few Open Source tools.&lt;/p&gt;
 &lt;p&gt;I especially enjoyed going up to these people and more than anything &lt;strong&gt;thanking them&lt;/strong&gt; for the tremendous work they are doing and how grateful I am for getting to work with these tools (almost) every day!
 Among these there were especially &lt;a class="link" href="https://fluxcd.io/" target="_blank" rel="noopener"
-&gt;FluxCD&lt;/a&gt; and &lt;a class="link" href="https://crossplane.io/" target="_blank" rel="noopener"
-&gt;Crossplane&lt;/a&gt;, but also the often overlooked &lt;a class="link" href="https://cert-manager.io/" target="_blank" rel="noopener"
-&gt;cert-manager&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/cert-manager-booth.jpg"
-width="2016"
-height="1512"
-srcset="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/cert-manager-booth_hu_d5af7e9f7de3dc72.jpg 480w, https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/cert-manager-booth_hu_8af9a8c9d30da63d.jpg 1024w"
-loading="lazy"
-alt="At the cert-manager booth"
-class="gallery-image"
-data-flex-grow="133"
-data-flex-basis="320px"
-&gt; &lt;img src="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/certificate.jpg"
-width="1008"
-height="756"
-srcset="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/certificate_hu_3011f8d4b8f8be75.jpg 480w, https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/certificate_hu_5387dd412e05e32b.jpg 1024w"
-loading="lazy"
-alt="My certificate - so cute 🤗"
-class="gallery-image"
-data-flex-grow="133"
-data-flex-basis="320px"
-&gt;&lt;/p&gt;
+ &gt;FluxCD&lt;/a&gt; and &lt;a class="link" href="https://crossplane.io/" target="_blank" rel="noopener"
+ &gt;Crossplane&lt;/a&gt;, but also the often overlooked &lt;a class="link" href="https://cert-manager.io/" target="_blank" rel="noopener"
+ &gt;cert-manager&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="At the cert-manager booth" class="gallery-image" data-flex-basis="320px" data-flex-grow="133" height="1512" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/cert-manager-booth.jpg" srcset="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/cert-manager-booth_hu_159ee4bb0a3d8b0e.jpg 800w, https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/cert-manager-booth_hu_859654e21e925dd1.jpg 1600w, https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/cert-manager-booth.jpg 2016w" width="2016"&gt; &lt;img alt="My certificate - so cute 🤗" class="gallery-image" data-flex-basis="320px" data-flex-grow="133" height="756" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/certificate.jpg" srcset="https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/certificate_hu_4004b80b45f635.jpg 800w, https://jscheytt.github.io/p/my-first-kubecon/cloudnativecon-experience/certificate.jpg 1008w" width="1008"&gt;&lt;/p&gt;
 &lt;p&gt;The folks at the cert-manager booth were especially creative in creating an actual SSL certificate for your email address and then printing and even &lt;em&gt;stamping it with a wax seal&lt;/em&gt;!
 Btw do go and check out &lt;a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSfLX4SQEC0phxVLB2shSzv2s__IDCB6GmlnvsqQ06CD0IYOeA/viewform" target="_blank" rel="noopener"
-&gt;their short survey about usage in production clusters&lt;/a&gt; to enable them to become a graduated CNCF project.&lt;/p&gt;
+ &gt;their short survey about usage in production clusters&lt;/a&gt; to enable them to become a graduated CNCF project.&lt;/p&gt;
 &lt;p&gt;Some of the tools represented in the maintainers&amp;rsquo; area were still somewhat new to me.
 The great thing was that I could just walk up to them and ask them for a short demo to understand the usage and the difference to other tools.
 Special thanks to the folks at the ArgoCD, Backstage, and Buildpacks booths!&lt;/p&gt;
 &lt;h2 id="favorite-quotes"&gt;Favorite Quotes
 &lt;/h2&gt;&lt;p&gt;I am going to close with some wise words people have said on this conference:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;If it&amp;rsquo;s not in Git, it&amp;rsquo;s just a rumor.&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;If it&amp;rsquo;s not in Git, it&amp;rsquo;s just a rumor.&lt;/p&gt;
+
+ &lt;/blockquote&gt;
 &lt;p&gt;RedHat printed T-shirts for GitOpsCon with this saying - they were gone quicker than you could queue in at their booth (I did not get one unfortunately &amp;hellip;).&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;What is software? Software is code while it is running, code with electricity applied to it.&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;What is software? Software is code while it is running, code with electricity applied to it.&lt;/p&gt;
+
+ &lt;/blockquote&gt;
 &lt;p&gt;Justin Garrison in the context of &amp;ldquo;&lt;a class="link" href="https://gitopsconeu22.sched.com/event/zrr3/infrastructure-as-software-with-gitops-justin-garrison-amazon" target="_blank" rel="noopener"
-&gt;Infrastructure as Software&lt;/a&gt;&amp;rdquo; and why GitOps is such a breakthrough for this.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Kubernetes is the industrial revolution for server computing, that&amp;rsquo;s how fundamental it is.&lt;/p&gt;
-&lt;/blockquote&gt;
+ &gt;Infrastructure as Software&lt;/a&gt;&amp;rdquo; and why GitOps is such a breakthrough for this.&lt;/p&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;Kubernetes is the industrial revolution for server computing, that&amp;rsquo;s how fundamental it is.&lt;/p&gt;
+
+ &lt;/blockquote&gt;
 &lt;p&gt;Lucas Käldström in his talk &amp;ldquo;&lt;a class="link" href="https://kccnceu2022.sched.com/event/ytr4/understanding-kubernetes-through-real-world-phenomena-and-analogies-lucas-kaldstrom" target="_blank" rel="noopener"
-&gt;Understanding Kubernetes Through Real-World Penomena&lt;/a&gt;&amp;rdquo; (very recommended!).&lt;/p&gt;</description></item></channel></rss>
+ &gt;Understanding Kubernetes Through Real-World Penomena&lt;/a&gt;&amp;rdquo; (very recommended!).&lt;/p&gt;</description></item></channel></rss>

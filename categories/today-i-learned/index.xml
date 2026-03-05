@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Today I Learned That ... on Josia's Blog</title><link>https://jscheytt.github.io/categories/today-i-learned/</link><description>Recent content in Today I Learned That ... on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Josia Scheytt</copyright><lastBuildDate>Thu, 25 Aug 2022 15:00:09 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/categories/today-i-learned/index.xml" rel="self" type="application/rss+xml"/><item><title>ArgoCD is like the Kubernetes Dashboard but for GitOps</title><link>https://jscheytt.github.io/p/argocd-is-like-the-kubernetes-dashboard-but-for-gitops/</link><pubDate>Thu, 25 Aug 2022 15:00:09 +0200</pubDate><guid>https://jscheytt.github.io/p/argocd-is-like-the-kubernetes-dashboard-but-for-gitops/</guid><description>&lt;p&gt;FluxCD was my first love in the GitOps space.
 I worked with it when it was still v1, had no chance to use, and since about a year I returned to using it in its glorious, rewritten v2.&lt;/p&gt;
 &lt;p&gt;I haven&amp;rsquo;t given ArgoCD a try so far until this week somebody suggested trying out &lt;a class="link" href="https://argocd-autopilot.readthedocs.io/en/stable/" target="_blank" rel="noopener"
-&gt;ArgoCD Autopilot&lt;/a&gt;.
+ &gt;ArgoCD Autopilot&lt;/a&gt;.
 The process was super smooth and in less than 10 minutes I had a running ArgoCD dashboard in my local minikube cluster.&lt;/p&gt;
 &lt;p&gt;And holy moly I have to say:
 ArgoCD is awesome!
@@ -10,12 +10,12 @@ In the less than one hour I have seen it close up now, I already see so many pos
 &lt;li&gt;Having a UI at all&lt;/li&gt;
 &lt;li&gt;Managing applications in multiple clusters from 1 Git repo &lt;em&gt;with explicit assignment to these clusters&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;The UI is basically the better &lt;a class="link" href="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/" target="_blank" rel="noopener"
-&gt;Default Kubernetes Dashboard&lt;/a&gt; but for GitOps:
+ &gt;Default Kubernetes Dashboard&lt;/a&gt; but for GitOps:
 &lt;ul&gt;
 &lt;li&gt;The Kubernetes Dashboard gives you a very &amp;ldquo;relational&amp;rdquo; view of your resources, much like &lt;a class="link" href="https://k9scli.io/" target="_blank" rel="noopener"
-&gt;k9s&lt;/a&gt; does (albeit with fewer resource types).&lt;/li&gt;
+ &gt;k9s&lt;/a&gt; does (albeit with fewer resource types).&lt;/li&gt;
 &lt;li&gt;I tried &lt;a class="link" href="https://github.com/kubevious/kubevious" target="_blank" rel="noopener"
-&gt;Kubevious&lt;/a&gt; in some projects because it allows you to view &lt;strong&gt;related resources hierarchically together&lt;/strong&gt;.
+ &gt;Kubevious&lt;/a&gt; in some projects because it allows you to view &lt;strong&gt;related resources hierarchically together&lt;/strong&gt;.
 &lt;ul&gt;
 &lt;li&gt;But it is pretty buggy (especially the mysql DB deployed with it) and has not fulfilled its promise for me.&lt;/li&gt;
 &lt;li&gt;Additionally, it&amp;rsquo;s read-only and does not show you a Events or container logs.&lt;/li&gt;
@@ -31,7 +31,7 @@ In the less than one hour I have seen it close up now, I already see so many pos
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a class="link" href="https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/Generators-Pull-Request/" target="_blank" rel="noopener"
-&gt;Preview Environments&lt;/a&gt; seem relatively straightforward.&lt;/li&gt;
+ &gt;Preview Environments&lt;/a&gt; seem relatively straightforward.&lt;/li&gt;
 &lt;li&gt;I have heard many rumors that Progressive Delivery is easier with ArgoCD (or at least involves less manually scripted yaml generation pipelines).&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;As a Cloud Automation Engineer, one of my main missions is to &lt;strong&gt;deliver stable apps&lt;/strong&gt;.
@@ -39,20 +39,20 @@ And this highly involves &lt;strong&gt;stable processes&lt;/strong&gt; for my te
 ArgoCD feels like the perfect fit:
 I can deploy my apps with ArgoCD and everybody with access to it can debug resources, see which versions are currently deployed, and maybe even promote apps to the next environment!&lt;/p&gt;
 &lt;p&gt;There also seem to be use cases (probably especially in a setup with separate platform and app dev teams) where &lt;a class="link" href="https://youtu.be/QNAiIJRIVWA?t=731" target="_blank" rel="noopener"
-&gt;deploying FluxCD and ArgoCD together&lt;/a&gt; makes sense.
+ &gt;deploying FluxCD and ArgoCD together&lt;/a&gt; makes sense.
 But I am definitively going to give ArgoCD a shot in some important environment soon.&lt;/p&gt;</description></item><item><title>You can Gitopsify your Ansible</title><link>https://jscheytt.github.io/p/you-can-gitopsify-your-ansible/</link><pubDate>Tue, 01 Mar 2022 08:34:20 +0100</pubDate><guid>https://jscheytt.github.io/p/you-can-gitopsify-your-ansible/</guid><description>&lt;p&gt;I have a &lt;a class="link" href="https://github.com/jscheytt/dotfiles" target="_blank" rel="noopener"
-&gt;dotfiles repository&lt;/a&gt; for setting up my MacOS machine easily and reproducibly.
+ &gt;dotfiles repository&lt;/a&gt; for setting up my MacOS machine easily and reproducibly.
 For this I am mostly using Ansible, just slightly wrapping it with Make and seasoning it with a pinch of Shell.&lt;/p&gt;
 &lt;p&gt;The core piece of this repository is a &lt;code&gt;Brewfile&lt;/code&gt; and a collection of &lt;a class="link" href="https://github.com/jscheytt/dotfiles/blob/main/files/dotfiles/.oh-my-zsh/custom/aliases.zsh" target="_blank" rel="noopener"
-&gt;Shell aliases&lt;/a&gt; and &lt;a class="link" href="https://github.com/jscheytt/dotfiles/blob/main/files/dotfiles/.oh-my-zsh/custom/functions.sh" target="_blank" rel="noopener"
-&gt;functions&lt;/a&gt;.
+ &gt;Shell aliases&lt;/a&gt; and &lt;a class="link" href="https://github.com/jscheytt/dotfiles/blob/main/files/dotfiles/.oh-my-zsh/custom/functions.sh" target="_blank" rel="noopener"
+ &gt;functions&lt;/a&gt;.
 I don&amp;rsquo;t regularly run the Ansible playbook itself because I created it for initially setting up a machine.
 The only thing I run very frequently is the &lt;a class="link" href="https://github.com/jscheytt/dotfiles/blob/main/files/dotfiles/.oh-my-zsh/custom/functions.sh#L107" target="_blank" rel="noopener"
-&gt;upgrade&lt;/a&gt; command which includes persisting new Brew formulae to the &lt;code&gt;Brewfile&lt;/code&gt;.&lt;/p&gt;
+ &gt;upgrade&lt;/a&gt; command which includes persisting new Brew formulae to the &lt;code&gt;Brewfile&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;At the same time I have come to love applying &lt;a class="link" href="https://opengitops.dev/" target="_blank" rel="noopener"
-&gt;GitOps principles&lt;/a&gt; to everything I work with.
+ &gt;GitOps principles&lt;/a&gt; to everything I work with.
 Just the other day I was &lt;a class="link" href="https://github.com/jscheytt/dotfiles/commit/c4278a0b8bbe1f4875efd56ceffc43459d919d1f" target="_blank" rel="noopener"
-&gt;moving some commands&lt;/a&gt; (in the vein of &amp;ldquo;global Git pull&amp;rdquo;) out of said &lt;code&gt;upgrade&lt;/code&gt; command into a cronjob.&lt;/p&gt;
+ &gt;moving some commands&lt;/a&gt; (in the vein of &amp;ldquo;global Git pull&amp;rdquo;) out of said &lt;code&gt;upgrade&lt;/code&gt; command into a cronjob.&lt;/p&gt;
 &lt;p&gt;And then it hit me:
 If I create a cronjob for running my Ansible playbook &lt;em&gt;through the playbook itself&lt;/em&gt;, I have GitOps-like reconciliation!&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s do it in just a few lines of yaml:&lt;/p&gt;
@@ -75,24 +75,24 @@ If I create a cronjob for running my Ansible playbook &lt;em&gt;through the play
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; that a given network identity will always map to the same storage identity.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt;FIELDS:
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; apiVersion &amp;lt;string&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; apiVersion	&amp;lt;string&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; APIVersion defines the versioned schema of this representation of an
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; object. Servers should convert recognized schemas to the latest internal
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; value, and may reject unrecognized values. More info:
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; kind &amp;lt;string&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; kind	&amp;lt;string&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; Kind is a string value representing the REST resource this object
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; represents. Servers may infer this from the endpoint the client submits
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; requests to. Cannot be updated. In CamelCase. More info:
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; metadata &amp;lt;Object&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; metadata	&amp;lt;Object&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; spec &amp;lt;Object&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; spec	&amp;lt;Object&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; Spec defines the desired identities of pods in this set.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; status &amp;lt;Object&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; status	&amp;lt;Object&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; Status is the current status of Pods in this StatefulSet. This data may be
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; out of date by some window of time.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I guess this will reduce a lot of my googling in future.&lt;/p&gt;
@@ -111,7 +111,7 @@ If I create a cronjob for running my Ansible playbook &lt;em&gt;through the play
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; A single application container that you want to run within a pod.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt;FIELDS:
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; args &amp;lt;[]string&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; args	&amp;lt;[]string&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; Arguments to the entrypoint. The docker image&amp;#39;s CMD is used if this is not
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; provided. Variable references $(VAR_NAME) are expanded using the
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; container&amp;#39;s environment. If a variable cannot be resolved, the reference in
@@ -121,7 +121,7 @@ If I create a cronjob for running my Ansible playbook &lt;em&gt;through the play
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; updated. More info:
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; command &amp;lt;[]string&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; command	&amp;lt;[]string&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; Entrypoint array. Not executed within a shell. The docker image&amp;#39;s
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; are expanded using the container&amp;#39;s environment. If a variable cannot be
@@ -131,12 +131,12 @@ If I create a cronjob for running my Ansible playbook &lt;em&gt;through the play
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; variable exists or not. Cannot be updated. More info:
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; env &amp;lt;[]Object&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; env	&amp;lt;[]Object&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; List of environment variables to set in the container. Cannot be updated.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="go"&gt; ...
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Trying to simplify k8s labels can be dangerous for your routing</title><link>https://jscheytt.github.io/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/</link><pubDate>Fri, 03 Dec 2021 10:43:01 +0100</pubDate><guid>https://jscheytt.github.io/p/trying-to-simplify-k8s-labels-can-be-dangerous-for-your-routing/</guid><description>&lt;p&gt;Today I was refactoring a bigger configuration setup that is built with &lt;a class="link" href="https://kustomize.io/" target="_blank" rel="noopener"
-&gt;kustomize&lt;/a&gt;.
+ &gt;kustomize&lt;/a&gt;.
 I see kustomize as a light-weight way of packaging multiple Kubernetes manifests, together with a little bit of logic.&lt;/p&gt;
 &lt;p&gt;The &lt;strong&gt;base kustomization&lt;/strong&gt; of the application config repo I was refactoring looked something like this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;apiVersion&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;kustomize.config.k8s.io/v1beta1&lt;/span&gt;&lt;span class="w"&gt;
@@ -171,9 +171,11 @@ At first I tried troubleshooting quickly, but soon I opted for just reverting my
 After some scrolling I came across the &lt;strong&gt;CronJobs&lt;/strong&gt; I defined for backup&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 &lt;p&gt;I should probably not have been surprised that the CronJob also had the same Labels I gave it via the kustomization.
 But now a suspicion started sneaking in:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;What if the &lt;strong&gt;completed Pods&lt;/strong&gt; of the CronJob received traffic from the Service because they had &lt;strong&gt;the same Labels&lt;/strong&gt;?&lt;/p&gt;
-&lt;/blockquote&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;What if the &lt;strong&gt;completed Pods&lt;/strong&gt; of the CronJob received traffic from the Service because they had &lt;strong&gt;the same Labels&lt;/strong&gt;?&lt;/p&gt;
+
+ &lt;/blockquote&gt;
 &lt;p&gt;Following this idea, I refactored my configs a bit.
 Soon, I was able to ensure that requests to the Service would only point to my target Deployment (and not to any other Pods):&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-diff" data-lang="diff"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gh"&gt;diff --git a/base/kustomization.yaml b/base/kustomization.yaml
@@ -224,7 +226,7 @@ Soon, I was able to ensure that requests to the Service would only point to my t
 &lt;/div&gt;</description></item><item><title>Kubernetes is still willing to show you Dangling Resources in your Terminating Namespace</title><link>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</link><pubDate>Fri, 29 Oct 2021 12:11:47 +0200</pubDate><guid>https://jscheytt.github.io/p/kubernetes-is-still-willing-to-show-you-dangling-resources-in-your-terminating-namespace/</guid><description>&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;kubectl api-resources --verbs&lt;span class="o"&gt;=&lt;/span&gt;list --namespaced -o name &lt;span class="se"&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;|&lt;/span&gt; xargs -n &lt;span class="m"&gt;1&lt;/span&gt; kubectl get --show-kind --ignore-not-found -n &lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="nv"&gt;$NAMESPACE&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Props to &lt;a class="link" href="https://cloud.redhat.com/blog/the-hidden-dangers-of-terminating-namespaces" target="_blank" rel="noopener"
-&gt;RedHat&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>HTML limits you to a signed 32-bit int in ordered lists</title><link>https://jscheytt.github.io/p/html-limits-you-to-a-signed-32-bit-int-in-ordered-lists/</link><pubDate>Thu, 02 Sep 2021 08:55:22 +0200</pubDate><guid>https://jscheytt.github.io/p/html-limits-you-to-a-signed-32-bit-int-in-ordered-lists/</guid><description>&lt;p&gt;HTML allows you to specify a starting number from which an ordered list (&lt;code&gt;&amp;lt;ol&amp;gt;&lt;/code&gt;) should start.
+ &gt;RedHat&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>HTML limits you to a signed 32-bit int in ordered lists</title><link>https://jscheytt.github.io/p/html-limits-you-to-a-signed-32-bit-int-in-ordered-lists/</link><pubDate>Thu, 02 Sep 2021 08:55:22 +0200</pubDate><guid>https://jscheytt.github.io/p/html-limits-you-to-a-signed-32-bit-int-in-ordered-lists/</guid><description>&lt;p&gt;HTML allows you to specify a starting number from which an ordered list (&lt;code&gt;&amp;lt;ol&amp;gt;&lt;/code&gt;) should start.
 I thought &amp;ldquo;Is there an upper bound?&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;Turns out: Yes, there is.
 It&amp;rsquo;s 2147483647 (i.e. &lt;span&gt;2&lt;sup&gt;31&lt;/sup&gt;-1&lt;/span&gt;
@@ -241,14 +243,15 @@ Looks like a signed 32-bit integer to me.&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The above snippet will render as the following:&lt;/p&gt;
 &lt;span&gt;
 &lt;ol start=2147483645 style="margin-left: 10rem;"&gt;
-&lt;li&gt;I am still in order&lt;/li&gt;
-&lt;li&gt;As am I&lt;/li&gt;
-&lt;li&gt;Me too&lt;/li&gt;
-&lt;li&gt;💥 Limit reached&lt;/li&gt;
-&lt;li&gt;💥 Limit reached&lt;/li&gt;
-&lt;li&gt;💥 Limit reached&lt;/li&gt;
+ &lt;li&gt;I am still in order&lt;/li&gt;
+ &lt;li&gt;As am I&lt;/li&gt;
+ &lt;li&gt;Me too&lt;/li&gt;
+ &lt;li&gt;💥 Limit reached&lt;/li&gt;
+ &lt;li&gt;💥 Limit reached&lt;/li&gt;
+ &lt;li&gt;💥 Limit reached&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/span&gt;</description></item><item><title>You can create TOTP tokens via CLI without a smartphone</title><link>https://jscheytt.github.io/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/</link><pubDate>Fri, 27 Aug 2021 08:20:41 +0200</pubDate><guid>https://jscheytt.github.io/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/</guid><description>&lt;p&gt;All you need is the secret of your TOTP.&lt;/p&gt;
+&lt;/span&gt;
+</description></item><item><title>You can create TOTP tokens via CLI without a smartphone</title><link>https://jscheytt.github.io/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/</link><pubDate>Fri, 27 Aug 2021 08:20:41 +0200</pubDate><guid>https://jscheytt.github.io/p/you-can-create-totp-tokens-via-cli-without-a-smartphone/</guid><description>&lt;p&gt;All you need is the secret of your TOTP.&lt;/p&gt;
 &lt;p&gt;The QR code is just a representation of a &lt;code&gt;oath://&lt;/code&gt; URL
 That URL contains the secret as a query parameter.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Install oathtool&lt;/span&gt;
@@ -257,7 +260,7 @@ That URL contains the secret as a query parameter.&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;oathtool --totp --base32 &lt;span class="s2"&gt;&amp;#34;MFRGCZDTMVRXEZLUBI======&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Docker does not really help you a lot trying to get permissions right</title><link>https://jscheytt.github.io/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/</link><pubDate>Fri, 23 Jul 2021 14:42:07 +0200</pubDate><guid>https://jscheytt.github.io/p/docker-does-not-really-help-you-a-lot-trying-to-get-permissions-right/</guid><description>&lt;p&gt;I really love Docker, and I also come to like security more and more.
 One advice I have been hearing a lot (e.g. in this &lt;a class="link" href="https://snyk.io/blog/10-docker-image-security-best-practices/" target="_blank" rel="noopener"
-&gt;Container Security Cheat Sheet from Snyk&lt;/a&gt;) is that &lt;strong&gt;you should not run your container as a root user&lt;/strong&gt;.&lt;/p&gt;
+ &gt;Container Security Cheat Sheet from Snyk&lt;/a&gt;) is that &lt;strong&gt;you should not run your container as a root user&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;&amp;ldquo;Easy thing,&amp;rdquo; I thought to myself, &amp;ldquo;I am just going to put something like &lt;code&gt;USER {app}&lt;/code&gt;&amp;rdquo; at the top of my Dockerfile.&amp;quot;
 Well, think again, because:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Dockerfile" data-lang="Dockerfile"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;FROM&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;node:lts&lt;/span&gt;&lt;span class="err"&gt;

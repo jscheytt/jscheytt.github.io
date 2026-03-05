@@ -15,11 +15,12 @@ Looks like a signed 32-bit integer to me.&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The above snippet will render as the following:&lt;/p&gt;
 &lt;span&gt;
 &lt;ol start=2147483645 style="margin-left: 10rem;"&gt;
-&lt;li&gt;I am still in order&lt;/li&gt;
-&lt;li&gt;As am I&lt;/li&gt;
-&lt;li&gt;Me too&lt;/li&gt;
-&lt;li&gt;💥 Limit reached&lt;/li&gt;
-&lt;li&gt;💥 Limit reached&lt;/li&gt;
-&lt;li&gt;💥 Limit reached&lt;/li&gt;
+ &lt;li&gt;I am still in order&lt;/li&gt;
+ &lt;li&gt;As am I&lt;/li&gt;
+ &lt;li&gt;Me too&lt;/li&gt;
+ &lt;li&gt;💥 Limit reached&lt;/li&gt;
+ &lt;li&gt;💥 Limit reached&lt;/li&gt;
+ &lt;li&gt;💥 Limit reached&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/span&gt;</description></item></channel></rss>
+&lt;/span&gt;
+</description></item></channel></rss>

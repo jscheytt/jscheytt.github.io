@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gitops on Josia's Blog</title><link>https://jscheytt.github.io/tags/gitops/</link><description>Recent content in Gitops on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Josia Scheytt</copyright><lastBuildDate>Wed, 01 May 2024 10:26:25 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/tags/gitops/index.xml" rel="self" type="application/rss+xml"/><item><title>Our GitOps book is available</title><link>https://jscheytt.github.io/p/our-gitops-book-is-available/</link><pubDate>Wed, 01 May 2024 10:26:25 +0200</pubDate><guid>https://jscheytt.github.io/p/our-gitops-book-is-available/</guid><description>&lt;p&gt;We did it:
 Our &lt;a class="link" href="https://gitops-book.dev/" target="_blank" rel="noopener"
-&gt;full-length book about GitOps in German&lt;/a&gt; is now finally out!
+ &gt;full-length book about GitOps in German&lt;/a&gt; is now finally out!
 You can order it anywhere in book stores both physical and online.&lt;/p&gt;
 &lt;p&gt;In fall 2023, Baris, Johannes, and me started writing this book with a vision for enabling German-speaking software teams to use GitOps so they can ship changes faster and with more confidence.
 It is both the first book about GitOps in German, and from our research it seems like it is also by far the longest book &lt;em&gt;in any language&lt;/em&gt; about GitOps (about 350 pages).&lt;/p&gt;
@@ -8,7 +8,7 @@ It is both the first book about GitOps in German, and from our research it seems
 We sure are interested in doing so but we are still discussing how to do it in a consistent and cost-effective way.&lt;/p&gt;</description></item><item><title>ArgoCD is like the Kubernetes Dashboard but for GitOps</title><link>https://jscheytt.github.io/p/argocd-is-like-the-kubernetes-dashboard-but-for-gitops/</link><pubDate>Thu, 25 Aug 2022 15:00:09 +0200</pubDate><guid>https://jscheytt.github.io/p/argocd-is-like-the-kubernetes-dashboard-but-for-gitops/</guid><description>&lt;p&gt;FluxCD was my first love in the GitOps space.
 I worked with it when it was still v1, had no chance to use, and since about a year I returned to using it in its glorious, rewritten v2.&lt;/p&gt;
 &lt;p&gt;I haven&amp;rsquo;t given ArgoCD a try so far until this week somebody suggested trying out &lt;a class="link" href="https://argocd-autopilot.readthedocs.io/en/stable/" target="_blank" rel="noopener"
-&gt;ArgoCD Autopilot&lt;/a&gt;.
+ &gt;ArgoCD Autopilot&lt;/a&gt;.
 The process was super smooth and in less than 10 minutes I had a running ArgoCD dashboard in my local minikube cluster.&lt;/p&gt;
 &lt;p&gt;And holy moly I have to say:
 ArgoCD is awesome!
@@ -17,12 +17,12 @@ In the less than one hour I have seen it close up now, I already see so many pos
 &lt;li&gt;Having a UI at all&lt;/li&gt;
 &lt;li&gt;Managing applications in multiple clusters from 1 Git repo &lt;em&gt;with explicit assignment to these clusters&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;The UI is basically the better &lt;a class="link" href="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/" target="_blank" rel="noopener"
-&gt;Default Kubernetes Dashboard&lt;/a&gt; but for GitOps:
+ &gt;Default Kubernetes Dashboard&lt;/a&gt; but for GitOps:
 &lt;ul&gt;
 &lt;li&gt;The Kubernetes Dashboard gives you a very &amp;ldquo;relational&amp;rdquo; view of your resources, much like &lt;a class="link" href="https://k9scli.io/" target="_blank" rel="noopener"
-&gt;k9s&lt;/a&gt; does (albeit with fewer resource types).&lt;/li&gt;
+ &gt;k9s&lt;/a&gt; does (albeit with fewer resource types).&lt;/li&gt;
 &lt;li&gt;I tried &lt;a class="link" href="https://github.com/kubevious/kubevious" target="_blank" rel="noopener"
-&gt;Kubevious&lt;/a&gt; in some projects because it allows you to view &lt;strong&gt;related resources hierarchically together&lt;/strong&gt;.
+ &gt;Kubevious&lt;/a&gt; in some projects because it allows you to view &lt;strong&gt;related resources hierarchically together&lt;/strong&gt;.
 &lt;ul&gt;
 &lt;li&gt;But it is pretty buggy (especially the mysql DB deployed with it) and has not fulfilled its promise for me.&lt;/li&gt;
 &lt;li&gt;Additionally, it&amp;rsquo;s read-only and does not show you a Events or container logs.&lt;/li&gt;
@@ -38,7 +38,7 @@ In the less than one hour I have seen it close up now, I already see so many pos
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a class="link" href="https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/Generators-Pull-Request/" target="_blank" rel="noopener"
-&gt;Preview Environments&lt;/a&gt; seem relatively straightforward.&lt;/li&gt;
+ &gt;Preview Environments&lt;/a&gt; seem relatively straightforward.&lt;/li&gt;
 &lt;li&gt;I have heard many rumors that Progressive Delivery is easier with ArgoCD (or at least involves less manually scripted yaml generation pipelines).&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;As a Cloud Automation Engineer, one of my main missions is to &lt;strong&gt;deliver stable apps&lt;/strong&gt;.
@@ -46,20 +46,20 @@ And this highly involves &lt;strong&gt;stable processes&lt;/strong&gt; for my te
 ArgoCD feels like the perfect fit:
 I can deploy my apps with ArgoCD and everybody with access to it can debug resources, see which versions are currently deployed, and maybe even promote apps to the next environment!&lt;/p&gt;
 &lt;p&gt;There also seem to be use cases (probably especially in a setup with separate platform and app dev teams) where &lt;a class="link" href="https://youtu.be/QNAiIJRIVWA?t=731" target="_blank" rel="noopener"
-&gt;deploying FluxCD and ArgoCD together&lt;/a&gt; makes sense.
+ &gt;deploying FluxCD and ArgoCD together&lt;/a&gt; makes sense.
 But I am definitively going to give ArgoCD a shot in some important environment soon.&lt;/p&gt;</description></item><item><title>You can Gitopsify your Ansible</title><link>https://jscheytt.github.io/p/you-can-gitopsify-your-ansible/</link><pubDate>Tue, 01 Mar 2022 08:34:20 +0100</pubDate><guid>https://jscheytt.github.io/p/you-can-gitopsify-your-ansible/</guid><description>&lt;p&gt;I have a &lt;a class="link" href="https://github.com/jscheytt/dotfiles" target="_blank" rel="noopener"
-&gt;dotfiles repository&lt;/a&gt; for setting up my MacOS machine easily and reproducibly.
+ &gt;dotfiles repository&lt;/a&gt; for setting up my MacOS machine easily and reproducibly.
 For this I am mostly using Ansible, just slightly wrapping it with Make and seasoning it with a pinch of Shell.&lt;/p&gt;
 &lt;p&gt;The core piece of this repository is a &lt;code&gt;Brewfile&lt;/code&gt; and a collection of &lt;a class="link" href="https://github.com/jscheytt/dotfiles/blob/main/files/dotfiles/.oh-my-zsh/custom/aliases.zsh" target="_blank" rel="noopener"
-&gt;Shell aliases&lt;/a&gt; and &lt;a class="link" href="https://github.com/jscheytt/dotfiles/blob/main/files/dotfiles/.oh-my-zsh/custom/functions.sh" target="_blank" rel="noopener"
-&gt;functions&lt;/a&gt;.
+ &gt;Shell aliases&lt;/a&gt; and &lt;a class="link" href="https://github.com/jscheytt/dotfiles/blob/main/files/dotfiles/.oh-my-zsh/custom/functions.sh" target="_blank" rel="noopener"
+ &gt;functions&lt;/a&gt;.
 I don&amp;rsquo;t regularly run the Ansible playbook itself because I created it for initially setting up a machine.
 The only thing I run very frequently is the &lt;a class="link" href="https://github.com/jscheytt/dotfiles/blob/main/files/dotfiles/.oh-my-zsh/custom/functions.sh#L107" target="_blank" rel="noopener"
-&gt;upgrade&lt;/a&gt; command which includes persisting new Brew formulae to the &lt;code&gt;Brewfile&lt;/code&gt;.&lt;/p&gt;
+ &gt;upgrade&lt;/a&gt; command which includes persisting new Brew formulae to the &lt;code&gt;Brewfile&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;At the same time I have come to love applying &lt;a class="link" href="https://opengitops.dev/" target="_blank" rel="noopener"
-&gt;GitOps principles&lt;/a&gt; to everything I work with.
+ &gt;GitOps principles&lt;/a&gt; to everything I work with.
 Just the other day I was &lt;a class="link" href="https://github.com/jscheytt/dotfiles/commit/c4278a0b8bbe1f4875efd56ceffc43459d919d1f" target="_blank" rel="noopener"
-&gt;moving some commands&lt;/a&gt; (in the vein of &amp;ldquo;global Git pull&amp;rdquo;) out of said &lt;code&gt;upgrade&lt;/code&gt; command into a cronjob.&lt;/p&gt;
+ &gt;moving some commands&lt;/a&gt; (in the vein of &amp;ldquo;global Git pull&amp;rdquo;) out of said &lt;code&gt;upgrade&lt;/code&gt; command into a cronjob.&lt;/p&gt;
 &lt;p&gt;And then it hit me:
 If I create a cronjob for running my Ansible playbook &lt;em&gt;through the playbook itself&lt;/em&gt;, I have GitOps-like reconciliation!&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s do it in just a few lines of yaml:&lt;/p&gt;

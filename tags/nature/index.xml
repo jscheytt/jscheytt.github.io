@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nature on Josia's Blog</title><link>https://jscheytt.github.io/tags/nature/</link><description>Recent content in Nature on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Josia Scheytt</copyright><lastBuildDate>Mon, 26 Aug 2024 12:01:54 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/tags/nature/index.xml" rel="self" type="application/rss+xml"/><item><title>Jesus ist wie ein schwarzes Loch</title><link>https://jscheytt.github.io/p/jesus-ist-wie-ein-schwarzes-loch/</link><pubDate>Mon, 26 Aug 2024 12:01:54 +0200</pubDate><guid>https://jscheytt.github.io/p/jesus-ist-wie-ein-schwarzes-loch/</guid><description>&lt;p&gt;🚨 &lt;em&gt;Mein laienhaftes Verständnis von schwarzen Löchern basiert auf wenigen YouTube-Videos.
 Vermutlich stelle ich einige Sachverhalte zu vereinfacht oder sogar inkorrekt dar.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Vor kurzem haben wir bei einem Gebetstreffen einige Verse von &lt;a class="link" href="https://www.bibleserver.com/ELB.NG%C3%9C/Lukas15" target="_blank" rel="noopener"
-&gt;Lukas 15&lt;/a&gt; betrachtet, in denen Jesus ständig von Sündern umgeben war, die Ihm an den Lippen hingen und für die Er in Seiner Liebe total anziehend war.
+ &gt;Lukas 15&lt;/a&gt; betrachtet, in denen Jesus ständig von Sündern umgeben war, die Ihm an den Lippen hingen und für die Er in Seiner Liebe total anziehend war.
 Für mich kam dabei folgender Vergleich in den Sinn:
 Wenn Jesus ständig von Sündern umgeben war, weil sie Ihm so nahe sein wollten, dann gleicht Jesus einem schwarzen Loch.&lt;/p&gt;
 &lt;p&gt;Folgende Punkte schließt das für mich ein:&lt;/p&gt;
@@ -67,13 +67,13 @@ On our beautiful planet, this is the order of magnitude we are (gladly) confined
 But the travel from Earth to Mars (i.e. the shortest path) is in the 10s of &lt;strong&gt;millions&lt;/strong&gt; of kilometers.
 That is three orders of magnitude above what we normally deal with in daily life!
 (If all the fuss around &amp;ldquo;orders of magnitude&amp;rdquo; sounds foreign to you, maybe the well-known video &lt;a class="link" href="https://www.youtube.com/watch?v=0fKBhvDjuy0" target="_blank" rel="noopener"
-&gt;&amp;ldquo;Powers of Ten&amp;rdquo;&lt;/a&gt; can help you out.)&lt;/p&gt;
+ &gt;&amp;ldquo;Powers of Ten&amp;rdquo;&lt;/a&gt; can help you out.)&lt;/p&gt;
 &lt;p&gt;I will just state a hypothesis:
 &lt;strong&gt;I believe we humans cannot handle more than 12 orders of magnitude.&lt;/strong&gt;
 Everything beyond that will just not fit into our brains.&lt;/p&gt;
 &lt;p&gt;In everyday life we normally handle about 10 orders of magnitude in space and time.
 For space, that is e.g. from 10µm ($10^{-5}$ m) (about the width of a hair) to 10,000 km ($10^{5}$ m) (the &lt;a class="link" href="https://en.wikipedia.org/wiki/10,000_km" target="_blank" rel="noopener"
-&gt;distance between Barcelona and LA&lt;/a&gt;).
+ &gt;distance between Barcelona and LA&lt;/a&gt;).
 For time, that is e.g. from 100 ms (a tenth of a second) to 100 years (about $10^{9}$ s).&lt;/p&gt;
 &lt;p&gt;If we stretch our imaginations we can go towards tens of thousands of kilometers (now we reach 12 orders of magnitude), and maybe we can begin to imagine 1,000 years and tens of milliseconds.
 But I think beyond that we are just lost.
@@ -95,15 +95,12 @@ In analogy, 3 orders of magnitude does not mean &lt;em&gt;multiply or divide by 
 That means going from 10 orders of magnitude to 15 means &lt;strong&gt;multiplying by 10,000&lt;/strong&gt;.
 You can start to see where this is going — but I bet none of us will ever by able to fully grasp such sizes.&lt;/p&gt;
 &lt;p&gt;The above numbers are for space only, but (if I understand that correctly) time is analogous because we are basing it on the same measurements, on the same speed of light (for the upper bound), and the same &lt;a class="link" href="https://en.wikipedia.org/wiki/Planck_constant" target="_blank" rel="noopener"
-&gt;Planck constant&lt;/a&gt; (for the lower bound).
+ &gt;Planck constant&lt;/a&gt; (for the lower bound).
 At the same time, we have to keep in mind that these 60 orders of magnitude come from limited measurements:
 We were only able to discover them because of the finite speed of light and the current age of the universe, so it is likely that our universe is &lt;strong&gt;even bigger&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Our human imagination cannot even begin to nibble at these sizes.
 I think our perception is even more logarithmic than linear, so we are already pretty well equipped to perceive and compare these orders of magnitude — our range is just ever so narrow.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Observable_universe_logarithmic_illustration.png"
-loading="lazy"
-alt="An artistic rendition of our universe, drawn at a logarithmic scale with our Sun at the center"
-&gt;
+&lt;p&gt;&lt;img alt="An artistic rendition of our universe, drawn at a logarithmic scale with our Sun at the center" class="gallery-image" data-flex-basis="240px" data-flex-grow="100" height="4200" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Observable_universe_logarithmic_illustration.png" srcset="https://jscheytt.github.io/Observable_universe_logarithmic_illustration_17863963634975560074_hu_73d2a1e0f33a6334.png 800w, https://jscheytt.github.io/Observable_universe_logarithmic_illustration_17863963634975560074_hu_dbb71f7f779d3f1a.png 1600w, https://jscheytt.github.io/Observable_universe_logarithmic_illustration_17863963634975560074_hu_b3896a9bda1dd3d.png 2400w, https://upload.wikimedia.org/wikipedia/commons/e/e7/Observable_universe_logarithmic_illustration.png 4200w" width="4200"&gt;
 &lt;em&gt;An artistic rendition of our universe, drawn at a logarithmic scale with our Sun at the center&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id="how-do-we-fit-into-all-this"&gt;How do we fit into all this?
 &lt;/h2&gt;&lt;p&gt;I have another number with me, a very simple one:
@@ -116,7 +113,7 @@ When looking at the size and distribution of mass and energy in our universe, th
 You and me, animals, atoms, the planets, the stars, even all the galaxies, all these account for &lt;strong&gt;not even one twentieth&lt;/strong&gt; of the universe!
 And the rest of it is not even empty:
 The universe is said to be filled by &lt;a class="link" href="https://science.nasa.gov/astrophysics/focus-areas/what-is-dark-energy" target="_blank" rel="noopener"
-&gt;Dark Energy and Dark Matter&lt;/a&gt;.
+ &gt;Dark Energy and Dark Matter&lt;/a&gt;.
 (If I could recoin them I would choose the names &lt;em&gt;Invisible Matter&lt;/em&gt; and &lt;em&gt;Invisible Energy&lt;/em&gt;.)&lt;/p&gt;
 &lt;p&gt;Of course this makes one feel very small as a human.
 The crazy thing is:

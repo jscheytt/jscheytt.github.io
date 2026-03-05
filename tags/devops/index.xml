@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Devops on Josia's Blog</title><link>https://jscheytt.github.io/tags/devops/</link><description>Recent content in Devops on Josia's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Josia Scheytt</copyright><lastBuildDate>Wed, 01 May 2024 10:26:25 +0200</lastBuildDate><atom:link href="https://jscheytt.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml"/><item><title>Our GitOps book is available</title><link>https://jscheytt.github.io/p/our-gitops-book-is-available/</link><pubDate>Wed, 01 May 2024 10:26:25 +0200</pubDate><guid>https://jscheytt.github.io/p/our-gitops-book-is-available/</guid><description>&lt;p&gt;We did it:
 Our &lt;a class="link" href="https://gitops-book.dev/" target="_blank" rel="noopener"
-&gt;full-length book about GitOps in German&lt;/a&gt; is now finally out!
+ &gt;full-length book about GitOps in German&lt;/a&gt; is now finally out!
 You can order it anywhere in book stores both physical and online.&lt;/p&gt;
 &lt;p&gt;In fall 2023, Baris, Johannes, and me started writing this book with a vision for enabling German-speaking software teams to use GitOps so they can ship changes faster and with more confidence.
 It is both the first book about GitOps in German, and from our research it seems like it is also by far the longest book &lt;em&gt;in any language&lt;/em&gt; about GitOps (about 350 pages).&lt;/p&gt;
@@ -10,7 +10,7 @@ At least, I have yet to meet anyone who shares my passion for writing docs.
 To me, documentation is not just a chore you do to check a compliance box.
 In fact, I believe it can even be a rewarding experience.&lt;/p&gt;
 &lt;p&gt;I am also convinced that writing documentation is a &lt;em&gt;core skill for Platform Engineers&lt;/em&gt; running any &lt;a class="link" href="https://internaldeveloperplatform.org" target="_blank" rel="noopener"
-&gt;Internal Developer Platforms&lt;/a&gt;.
+ &gt;Internal Developer Platforms&lt;/a&gt;.
 Developer Platforms need a product mindset, and products need documentation so that users can understand usage and discover features.
 And I believe that &lt;strong&gt;technical documentation is a means to scale up your communication&lt;/strong&gt;, especially in the platform context.&lt;/p&gt;
 &lt;p&gt;Let me explain with an example:
@@ -84,10 +84,10 @@ If you scold people for trying to get things done, you will discourage them.&lt;
 &lt;p&gt;There are a few more resources I recommend for learning to communicate effectively as a Platform Engineer:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Watch this talk about &amp;ldquo;&lt;a class="link" href="https://www.infoq.com/presentations/incidents-investigation" target="_blank" rel="noopener"
-&gt;How did it make sense at the time?&lt;/a&gt;&amp;rdquo; (HDIMSATT).
+ &gt;How did it make sense at the time?&lt;/a&gt;&amp;rdquo; (HDIMSATT).
 It is focused on incidents but the same reasoning is helpful for learning empathy with your users.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;&lt;a class="link" href="https://sre.google/sre-book/operational-overload" target="_blank" rel="noopener"
-&gt;SRE Embedding&lt;/a&gt;&lt;/em&gt;:
+ &gt;SRE Embedding&lt;/a&gt;&lt;/em&gt;:
 Sometimes, you can take empathy to a more extreme level by embedding a Platform Engineer into an app dev team for a period of time.
 You as a Platform Engineer will put on your SRE hat and work alongside the developer team in their everyday challenges.&lt;/li&gt;
 &lt;li&gt;Read about and learn from some of the great models of empathy, such as Jesus of Nazareth (e.g. in the first four books of the New Testament), the God who became human (this allowed Him to empathize more with us, but also us to empathize more with Him).&lt;/li&gt;
@@ -97,7 +97,7 @@ You as a Platform Engineer will put on your SRE hat and work alongside the devel
 Working remotely has forced us to do so in more written form than ever before &amp;mdash; and I think this is a good thing overall!
 Sure, it&amp;rsquo;s faster to work together in the office, where it&amp;rsquo;s super easy to quickly ask questions and show things, but asynchronous written communication is much more inclusive and promotes transparency.&lt;/p&gt;
 &lt;p&gt;There are many ways to improve your written communication (e.g. &lt;a class="link" href="https://nohello.net" target="_blank" rel="noopener"
-&gt;don&amp;rsquo;t make people wait&lt;/a&gt;).
+ &gt;don&amp;rsquo;t make people wait&lt;/a&gt;).
 Your written communication will always be better the more you &lt;em&gt;empathize&lt;/em&gt; with the other person(s) (see previous point).
 Still, you can practice the following skills to improve your writing in chats:&lt;/p&gt;
 &lt;ol&gt;
@@ -105,7 +105,7 @@ Still, you can practice the following skills to improve your writing in chats:&l
 &lt;li&gt;Adhere to &lt;strong&gt;basic grammar and syntax&lt;/strong&gt; (just as you would when writing code).
 &lt;ul&gt;
 &lt;li&gt;You can use AI assistance for this like &lt;a class="link" href="https://www.deepl.com/de/write" target="_blank" rel="noopener"
-&gt;DeepL Write&lt;/a&gt;.
+ &gt;DeepL Write&lt;/a&gt;.
 (Hint: I refined this blog post using DeepL Write.)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -125,7 +125,7 @@ Use the &amp;ldquo;reply to&amp;rdquo; feature (or better yet, if available, sta
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;In the spirit of SRE and &lt;a class="link" href="https://www.learningfromincidents.io" target="_blank" rel="noopener"
-&gt;Learning From Incidents&lt;/a&gt;, we can also look back at past communications and learn from them.
+ &gt;Learning From Incidents&lt;/a&gt;, we can also look back at past communications and learn from them.
 Feel free to try these steps as an example:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Search through your chat history, especially group chats where there are a lot of people and a lot of communication.&lt;/li&gt;
@@ -147,7 +147,7 @@ One category of documentation tools I have specifically avoided &lt;em&gt;for in
 &lt;p&gt;Let me be clear about this:
 I am a huge fan of Git!
 &lt;a class="link" href="https://www.linkedin.com/feed/update/urn:li:activity:7120420743795892225" target="_blank" rel="noopener"
-&gt;My writing a book about GitOps&lt;/a&gt; should leave no doubt about that.
+ &gt;My writing a book about GitOps&lt;/a&gt; should leave no doubt about that.
 But even if you have a template where editing any single page is just a click away &lt;em&gt;and&lt;/em&gt; you link directly to a web IDE &lt;em&gt;and&lt;/em&gt; you can enable automerge on the instantly created feature branch, you still have to wait for a green build to pass.
 (Allowing commits directly to the default branch would be careless, because it might break the build &amp;mdash; and you will never get around waiting for the build pipeline on the default branch anyway).
 And that wait is (I think) still way too long, and makes the barrier to contributing way too high.&lt;/p&gt;
@@ -185,7 +185,7 @@ For an example of a very simple runbook, see the list at the end of &lt;a class=
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a class="link" href="https://adr.github.io" target="_blank" rel="noopener"
-&gt;Architectural Decision Records&lt;/a&gt; (ADRs)
+ &gt;Architectural Decision Records&lt;/a&gt; (ADRs)
 &lt;ul&gt;
 &lt;li&gt;This is in the spirit of HDIMSATT (see &lt;a class="link" href="#practicing-communication" &gt;Practicing Communication&lt;/a&gt;) and allows you to foster collaboration and structured discussion around important technical decisions.&lt;/li&gt;
 &lt;li&gt;It allows you to better understand the assumptions and constraints that were in place at the time.
@@ -194,24 +194,24 @@ When you return later, you can re-evaluate whether those assumptions still hold 
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a class="link" href="https://app.diagrams.net" target="_blank" rel="noopener"
-&gt;draw.io&lt;/a&gt; or &lt;a class="link" href="https://mermaid.js.org" target="_blank" rel="noopener"
-&gt;Mermaid&lt;/a&gt; for diagrams
+ &gt;draw.io&lt;/a&gt; or &lt;a class="link" href="https://mermaid.js.org" target="_blank" rel="noopener"
+ &gt;Mermaid&lt;/a&gt; for diagrams
 &lt;ul&gt;
 &lt;li&gt;Many documentation tools come with integrations for these.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;In addition, there are also overarching documentation frameworks such as &lt;a class="link" href="https://arc42.org/overview" target="_blank" rel="noopener"
-&gt;arc42&lt;/a&gt;.
+ &gt;arc42&lt;/a&gt;.
 At &lt;a class="link" href="https://www.mimacom.com" target="_blank" rel="noopener"
-&gt;Mimacom&lt;/a&gt;, we have used arc42 in several projects and found the structure very helpful.
+ &gt;Mimacom&lt;/a&gt;, we have used arc42 in several projects and found the structure very helpful.
 To keep the momentum though, don&amp;rsquo;t think too much about which section a single page belongs to; you can always restructure later after writing your current piece of content.
 Fortunately, there are &lt;a class="link" href="https://arc42.org/download" target="_blank" rel="noopener"
-&gt;downloads available&lt;/a&gt; for Asciidoc, Markdown, LaTeX, and a few other formats.&lt;/p&gt;</description></item><item><title>I Install Washing Machines (My Latest Job Metaphor)</title><link>https://jscheytt.github.io/p/i-install-washing-machines-my-latest-job-metaphor/</link><pubDate>Tue, 04 Oct 2022 14:30:29 +0100</pubDate><guid>https://jscheytt.github.io/p/i-install-washing-machines-my-latest-job-metaphor/</guid><description>&lt;h2 id="so-what-exactly-do-you-do-for-a-living"&gt;So What Exactly Do You Do For A Living?
+ &gt;downloads available&lt;/a&gt; for Asciidoc, Markdown, LaTeX, and a few other formats.&lt;/p&gt;</description></item><item><title>I Install Washing Machines (My Latest Job Metaphor)</title><link>https://jscheytt.github.io/p/i-install-washing-machines-my-latest-job-metaphor/</link><pubDate>Tue, 04 Oct 2022 14:30:29 +0100</pubDate><guid>https://jscheytt.github.io/p/i-install-washing-machines-my-latest-job-metaphor/</guid><description>&lt;h2 id="so-what-exactly-do-you-do-for-a-living"&gt;So What Exactly Do You Do For A Living?
 &lt;/h2&gt;&lt;p&gt;Whenever we meet new people (or good friends, it sometimes doesn&amp;rsquo;t make a big difference 😄), the above question will come up.
 My wife (who is a doctor and has understably fewer problems explaining her job) is always excited to get yet another chance to &amp;ldquo;finally understand&amp;rdquo; what it is that I am doing at work as a &lt;strong&gt;Cloud Automation Engineer&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;That is the fancy title we at &lt;a class="link" href="https://flowable.wd3.myworkdayjobs.com/de-DE/mimacom/details/Cloud-Automation-Engineer--m-f-d-_JR100074?q=cloud%20automation%20engineer" target="_blank" rel="noopener"
-&gt;mimacom&lt;/a&gt; give to people working in &lt;em&gt;Site Reliability Engineering&lt;/em&gt; and &lt;em&gt;DevOps Engineering&lt;/em&gt;, and I have grown to really like it because it starts to convey a lot of meaning right away.
+ &gt;mimacom&lt;/a&gt; give to people working in &lt;em&gt;Site Reliability Engineering&lt;/em&gt; and &lt;em&gt;DevOps Engineering&lt;/em&gt;, and I have grown to really like it because it starts to convey a lot of meaning right away.
 Unfortunately, it&amp;rsquo;s also long and not particularly established (yet).&lt;/p&gt;
 &lt;p&gt;In this blog post I will explore one analogy that came to my mind recently.
 I have not tried it out in the wild yet, but I am fascinated by the similarities between deploying washing machines and deploying web applications.&lt;/p&gt;
@@ -283,18 +283,18 @@ It receives requests (dirty laundry and some program parameters) and delivers re
 &lt;dd&gt;This is just a rough description of how I understand the default &lt;code&gt;Deployment.spec.strategy.type=RollingUpdate&lt;/code&gt;.
 I think it&amp;rsquo;s not perfect but still fits good because in both situations you have the (somewhat conflicting) unbroken, continuous streams of requests/people and electricity.&lt;/dd&gt;
 &lt;/dl&gt;</description></item><item><title>You can Gitopsify your Ansible</title><link>https://jscheytt.github.io/p/you-can-gitopsify-your-ansible/</link><pubDate>Tue, 01 Mar 2022 08:34:20 +0100</pubDate><guid>https://jscheytt.github.io/p/you-can-gitopsify-your-ansible/</guid><description>&lt;p&gt;I have a &lt;a class="link" href="https://github.com/jscheytt/dotfiles" target="_blank" rel="noopener"
-&gt;dotfiles repository&lt;/a&gt; for setting up my MacOS machine easily and reproducibly.
+ &gt;dotfiles repository&lt;/a&gt; for setting up my MacOS machine easily and reproducibly.
 For this I am mostly using Ansible, just slightly wrapping it with Make and seasoning it with a pinch of Shell.&lt;/p&gt;
 &lt;p&gt;The core piece of this repository is a &lt;code&gt;Brewfile&lt;/code&gt; and a collection of &lt;a class="link" href="https://github.com/jscheytt/dotfiles/blob/main/files/dotfiles/.oh-my-zsh/custom/aliases.zsh" target="_blank" rel="noopener"
-&gt;Shell aliases&lt;/a&gt; and &lt;a class="link" href="https://github.com/jscheytt/dotfiles/blob/main/files/dotfiles/.oh-my-zsh/custom/functions.sh" target="_blank" rel="noopener"
-&gt;functions&lt;/a&gt;.
+ &gt;Shell aliases&lt;/a&gt; and &lt;a class="link" href="https://github.com/jscheytt/dotfiles/blob/main/files/dotfiles/.oh-my-zsh/custom/functions.sh" target="_blank" rel="noopener"
+ &gt;functions&lt;/a&gt;.
 I don&amp;rsquo;t regularly run the Ansible playbook itself because I created it for initially setting up a machine.
 The only thing I run very frequently is the &lt;a class="link" href="https://github.com/jscheytt/dotfiles/blob/main/files/dotfiles/.oh-my-zsh/custom/functions.sh#L107" target="_blank" rel="noopener"
-&gt;upgrade&lt;/a&gt; command which includes persisting new Brew formulae to the &lt;code&gt;Brewfile&lt;/code&gt;.&lt;/p&gt;
+ &gt;upgrade&lt;/a&gt; command which includes persisting new Brew formulae to the &lt;code&gt;Brewfile&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;At the same time I have come to love applying &lt;a class="link" href="https://opengitops.dev/" target="_blank" rel="noopener"
-&gt;GitOps principles&lt;/a&gt; to everything I work with.
+ &gt;GitOps principles&lt;/a&gt; to everything I work with.
 Just the other day I was &lt;a class="link" href="https://github.com/jscheytt/dotfiles/commit/c4278a0b8bbe1f4875efd56ceffc43459d919d1f" target="_blank" rel="noopener"
-&gt;moving some commands&lt;/a&gt; (in the vein of &amp;ldquo;global Git pull&amp;rdquo;) out of said &lt;code&gt;upgrade&lt;/code&gt; command into a cronjob.&lt;/p&gt;
+ &gt;moving some commands&lt;/a&gt; (in the vein of &amp;ldquo;global Git pull&amp;rdquo;) out of said &lt;code&gt;upgrade&lt;/code&gt; command into a cronjob.&lt;/p&gt;
 &lt;p&gt;And then it hit me:
 If I create a cronjob for running my Ansible playbook &lt;em&gt;through the playbook itself&lt;/em&gt;, I have GitOps-like reconciliation!&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s do it in just a few lines of yaml:&lt;/p&gt;
@@ -318,11 +318,11 @@ How do you &lt;em&gt;manage your scripts&lt;/em&gt;?&lt;/p&gt;
 &lt;p&gt;Personally, I have always loved being able to enter some new place where &lt;strong&gt;conventions&lt;/strong&gt; were already in place.
 It takes away so much work and mental effort at the beginning, and you can just get to work quickly.
 (That might explain why I fell in love with ❤️ &lt;a class="link" href="https://rubyonrails.org/doctrine/#convention-over-configuration" target="_blank" rel="noopener"
-&gt;Ruby on Rails&lt;/a&gt; before I dug into 💎 Ruby.)&lt;/p&gt;
+ &gt;Ruby on Rails&lt;/a&gt; before I dug into 💎 Ruby.)&lt;/p&gt;
 &lt;p&gt;Shell scripts by their very nature do not pose any restrictions regarding e.g. naming patterns or directory structures.
 Honestly, I think there never will be, and that is ok.
 But what I have come to appreciate a lot recently is &lt;strong&gt;&lt;a class="link" href="https://www.gnu.org/software/make/" target="_blank" rel="noopener"
-&gt;Make&lt;/a&gt;&lt;/strong&gt; as a &lt;strong&gt;companion&lt;/strong&gt; for my Shell scripts.&lt;/p&gt;
+ &gt;Make&lt;/a&gt;&lt;/strong&gt; as a &lt;strong&gt;companion&lt;/strong&gt; for my Shell scripts.&lt;/p&gt;
 &lt;h2 id="-make-vs--shell-in-a--nutshell"&gt;🏗 Make vs. 🐚 Shell in a 🥜 Nutshell
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;Purpose: Make is good at &lt;strong&gt;creating files&lt;/strong&gt;, Shell is good at &lt;strong&gt;executing scripts&lt;/strong&gt;.&lt;/li&gt;
@@ -342,7 +342,7 @@ To me this sounds very reminiscent of the distinction between &lt;em&gt;declarat
 &lt;li&gt;☸️ You have 2 AWS accounts with 1 &lt;strong&gt;Kubernetes&lt;/strong&gt; cluster each.
 (One is for running a dev and a staging environment, the other one is running the production environment.)&lt;/li&gt;
 &lt;li&gt;🔑 Secrets are stored in AWS &lt;strong&gt;Secrets Manager&lt;/strong&gt; and synced into the cluster via &lt;a class="link" href="https://github.com/external-secrets/kubernetes-external-secrets" target="_blank" rel="noopener"
-&gt;ExternalSecrets&lt;/a&gt;.&lt;/li&gt;
+ &gt;ExternalSecrets&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;⛔️ You are &lt;strong&gt;not allowed&lt;/strong&gt; to store secrets in Git, not even in encrypted form.&lt;/li&gt;
 &lt;li&gt;🪣 The secrets are JSON files and the &lt;strong&gt;key names&lt;/strong&gt; are important, so you want to store them in Git.&lt;/li&gt;
 &lt;/ul&gt;
@@ -441,11 +441,11 @@ And how do you make sure you copy them &lt;em&gt;exactly once&lt;/em&gt; (so you
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# 👩‍🏫 Explanation: These 3 rules are applied when you call secrets.copy-templates
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# because it requires $(all_secrets) to be built.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;secrets/dev/%.json&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;secrets&lt;/span&gt;/%.&lt;span class="n"&gt;sample&lt;/span&gt;.&lt;span class="n"&gt;json&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; cp $&amp;lt; &lt;span class="nv"&gt;$@&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	cp $&amp;lt; &lt;span class="nv"&gt;$@&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;secrets/staging/%.json&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;secrets&lt;/span&gt;/%.&lt;span class="n"&gt;sample&lt;/span&gt;.&lt;span class="n"&gt;json&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; cp $&amp;lt; &lt;span class="nv"&gt;$@&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	cp $&amp;lt; &lt;span class="nv"&gt;$@&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;secrets/prod/%.json&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;secrets&lt;/span&gt;/%.&lt;span class="n"&gt;sample&lt;/span&gt;.&lt;span class="n"&gt;json&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; cp $&amp;lt; &lt;span class="nv"&gt;$@&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	cp $&amp;lt; &lt;span class="nv"&gt;$@&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you now execute &lt;code&gt;make secrets.copy-templates&lt;/code&gt;, the sample files will be copied to all environment directories.
 And if you run that same command again, 🙊 &lt;strong&gt;Make will not copy anything&lt;/strong&gt; because it intelligenty detected that the source files have not changed since the last execution.&lt;/p&gt;
 &lt;p&gt;The code above is certainly not optimal - I bet you could abstract away the environment names with bit of metaprogramming, but let&amp;rsquo;s not optimize prematurely.
@@ -457,7 +457,7 @@ As long as &lt;code&gt;secrets.copy-templates&lt;/code&gt; is the first build de
 &amp;ldquo;Yes, do read the README, but above all execute &lt;code&gt;make&lt;/code&gt;.&amp;rdquo;
 &lt;ul&gt;
 &lt;li&gt;⛑ This is especially true if your Makefile contains &lt;strong&gt;&lt;a class="link" href="https://marmelab.com/blog/2016/02/29/auto-documented-makefile.html" target="_blank" rel="noopener"
-&gt;good help texts&lt;/a&gt;&lt;/strong&gt; for every rule.&lt;/li&gt;
+ &gt;good help texts&lt;/a&gt;&lt;/strong&gt; for every rule.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -478,7 +478,7 @@ We sure can.
 You can either make sure that you edit each environment file after editing the sample file.
 Or you change the last-modified timestamp &lt;strong&gt;via a build&lt;/strong&gt; in the Makefile 😉:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-make" data-lang="make"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;secrets.ensure-copy-once&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;for&lt;/span&gt; f in &lt;span class="k"&gt;$(&lt;/span&gt;all_secrets&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -f &lt;span class="nv"&gt;$$&lt;/span&gt;f &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; touch &lt;span class="nv"&gt;$$&lt;/span&gt;f&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	&lt;span class="k"&gt;for&lt;/span&gt; f in &lt;span class="k"&gt;$(&lt;/span&gt;all_secrets&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -f &lt;span class="nv"&gt;$$&lt;/span&gt;f &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; touch &lt;span class="nv"&gt;$$&lt;/span&gt;f&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now whenever you edit a sample file &lt;em&gt;after the initial secrets.copy-templates&lt;/em&gt; you run this build via &lt;code&gt;make secrets.ensure-copy-once&lt;/code&gt; and 🛡 your secrets will not be deleted.&lt;/p&gt;
 &lt;h3 id="extension-environment-specific-sample-files"&gt;Extension: Environment-specific Sample Files
 &lt;/h3&gt;&lt;p&gt;One implicit assumption in my structure was that the secrets in service2 will always have the same schema &lt;strong&gt;in every environment&lt;/strong&gt;.
@@ -507,23 +507,23 @@ One day it so happened that service2 needed to have additional keys on prod, but
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And I wrote my first &lt;strong&gt;Makefile function&lt;/strong&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-make" data-lang="make"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# A Make function can take in an arbitrary number of numbered parameters.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;define&lt;/span&gt; &lt;span class="err"&gt;copy_template&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="err"&gt;cp&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;1&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;2&lt;span class="k"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="c"&gt;# Check if there is a more environment-specific sample file
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;eval&lt;/span&gt; ENVIRONMENT :&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;shell &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;2&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; sed -E &lt;span class="s1"&gt;&amp;#39;s#secrets/(.*)/.*#\1#&amp;#39;&lt;/span&gt;&lt;span class="k"&gt;))&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;eval&lt;/span&gt; ENVIRONMENT_SAMPLE_FILE :&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;patsubst %.sample.json,%.sample.&lt;span class="k"&gt;$(&lt;/span&gt;ENVIRONMENT&lt;span class="k"&gt;)&lt;/span&gt;.json,&lt;span class="k"&gt;$(&lt;/span&gt;1&lt;span class="k"&gt;)))&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; @# If environment-specific file exists, copy it to destination
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -f &lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;ENVIRONMENT_SAMPLE_FILE&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt; cp &lt;span class="k"&gt;$(&lt;/span&gt;ENVIRONMENT_SAMPLE_FILE&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;2&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	&lt;span class="err"&gt;cp&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;1&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;2&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="c"&gt;# Check if there is a more environment-specific sample file
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;eval&lt;/span&gt; ENVIRONMENT :&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;shell &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;2&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; sed -E &lt;span class="s1"&gt;&amp;#39;s#secrets/(.*)/.*#\1#&amp;#39;&lt;/span&gt;&lt;span class="k"&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;eval&lt;/span&gt; ENVIRONMENT_SAMPLE_FILE :&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;patsubst %.sample.json,%.sample.&lt;span class="k"&gt;$(&lt;/span&gt;ENVIRONMENT&lt;span class="k"&gt;)&lt;/span&gt;.json,&lt;span class="k"&gt;$(&lt;/span&gt;1&lt;span class="k"&gt;)))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	@# If environment-specific file exists, copy it to destination
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -f &lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;ENVIRONMENT_SAMPLE_FILE&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt; cp &lt;span class="k"&gt;$(&lt;/span&gt;ENVIRONMENT_SAMPLE_FILE&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;2&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;fi&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;endef&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# Calling a Make function works by executing &amp;#39;call&amp;#39;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# with the function name and all its parameters as a list.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# My previous rules now became this:
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;secrets/dev/%.json&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;secrets&lt;/span&gt;/%.&lt;span class="n"&gt;sample&lt;/span&gt;.&lt;span class="n"&gt;json&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;$(&lt;/span&gt;call copy_template,$&amp;lt;,&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	&lt;span class="k"&gt;$(&lt;/span&gt;call copy_template,$&amp;lt;,&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;secrets/staging/%.json&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;secrets&lt;/span&gt;/%.&lt;span class="n"&gt;sample&lt;/span&gt;.&lt;span class="n"&gt;json&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;$(&lt;/span&gt;call copy_template,$&amp;lt;,&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	&lt;span class="k"&gt;$(&lt;/span&gt;call copy_template,$&amp;lt;,&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;secrets/prod/%.json&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;secrets&lt;/span&gt;/%.&lt;span class="n"&gt;sample&lt;/span&gt;.&lt;span class="n"&gt;json&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;$(&lt;/span&gt;call copy_template,$&amp;lt;,&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	&lt;span class="k"&gt;$(&lt;/span&gt;call copy_template,$&amp;lt;,&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="-perfect-symphony-calling-scripts-from-make"&gt;🍣 Perfect Symphony: Calling Scripts From Make
 &lt;/h3&gt;&lt;p&gt;It&amp;rsquo;s all good and nice to have your secrets created, but how do you deploy them to AWS Secrets Manager?
 Of course you write a thin wrapper around the wonderfully verbose AWS CLI:&lt;/p&gt;
@@ -551,32 +551,32 @@ Of course you write a thin wrapper around the wonderfully verbose AWS CLI:&lt;/p
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-make" data-lang="make"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# The dependency on $(all_secrets) is to make sure that the secrets files exist
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# before deploying them.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;secret.deploy&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nv"&gt;all_secrets&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ./helpers/deploy-secret.sh &lt;span class="k"&gt;$(&lt;/span&gt;name&lt;span class="k"&gt;)&lt;/span&gt; &amp;lt; secrets/&lt;span class="k"&gt;$(&lt;/span&gt;environment&lt;span class="k"&gt;)&lt;/span&gt;/&lt;span class="k"&gt;$(&lt;/span&gt;filename&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	./helpers/deploy-secret.sh &lt;span class="k"&gt;$(&lt;/span&gt;name&lt;span class="k"&gt;)&lt;/span&gt; &amp;lt; secrets/&lt;span class="k"&gt;$(&lt;/span&gt;environment&lt;span class="k"&gt;)&lt;/span&gt;/&lt;span class="k"&gt;$(&lt;/span&gt;filename&lt;span class="k"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The call to the script that you executed above would become this:&lt;br&gt;
 &lt;code&gt;make secret.deploy name=envs/dev/config1-secrets environment=dev filename=config1&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;As we have multiple services, let&amp;rsquo;s add one rule per service:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-make" data-lang="make"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# The secret values in this one are the same across all environments
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;secret.deploy.config1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;$(&lt;/span&gt;MAKE&lt;span class="k"&gt;)&lt;/span&gt; secret.deploy &lt;span class="nv"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;envs/config1-secrets &lt;span class="nv"&gt;filename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;config1.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	&lt;span class="k"&gt;$(&lt;/span&gt;MAKE&lt;span class="k"&gt;)&lt;/span&gt; secret.deploy &lt;span class="nv"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;envs/config1-secrets &lt;span class="nv"&gt;filename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;config1.json
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# service2 has different secret values on the different environments
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;secret.deploy.service2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;$(&lt;/span&gt;MAKE&lt;span class="k"&gt;)&lt;/span&gt; secret.deploy &lt;span class="nv"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;envs/&lt;span class="k"&gt;$(&lt;/span&gt;environment&lt;span class="k"&gt;)&lt;/span&gt;/service2-secrets &lt;span class="nv"&gt;filename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;service2.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	&lt;span class="k"&gt;$(&lt;/span&gt;MAKE&lt;span class="k"&gt;)&lt;/span&gt; secret.deploy &lt;span class="nv"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;envs/&lt;span class="k"&gt;$(&lt;/span&gt;environment&lt;span class="k"&gt;)&lt;/span&gt;/service2-secrets &lt;span class="nv"&gt;filename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;service2.json
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# service 3 also has environment-specific secret values
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;secret.deploy.service3&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;$(&lt;/span&gt;MAKE&lt;span class="k"&gt;)&lt;/span&gt; secret.deploy &lt;span class="nv"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;envs/&lt;span class="k"&gt;$(&lt;/span&gt;environment&lt;span class="k"&gt;)&lt;/span&gt;/service3-secrets &lt;span class="nv"&gt;filename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;service3.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	&lt;span class="k"&gt;$(&lt;/span&gt;MAKE&lt;span class="k"&gt;)&lt;/span&gt; secret.deploy &lt;span class="nv"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;envs/&lt;span class="k"&gt;$(&lt;/span&gt;environment&lt;span class="k"&gt;)&lt;/span&gt;/service3-secrets &lt;span class="nv"&gt;filename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;service3.json
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now we can tie these together into one rule for a whole environment:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-make" data-lang="make"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# Deploy all secrets for one environment
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;secrets.deploy.all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;$(&lt;/span&gt;MAKE&lt;span class="k"&gt;)&lt;/span&gt; secret.deploy.config1
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;$(&lt;/span&gt;MAKE&lt;span class="k"&gt;)&lt;/span&gt; secret.deploy.service2
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;$(&lt;/span&gt;MAKE&lt;span class="k"&gt;)&lt;/span&gt; secret.deploy.service3
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	&lt;span class="k"&gt;$(&lt;/span&gt;MAKE&lt;span class="k"&gt;)&lt;/span&gt; secret.deploy.config1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	&lt;span class="k"&gt;$(&lt;/span&gt;MAKE&lt;span class="k"&gt;)&lt;/span&gt; secret.deploy.service2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	&lt;span class="k"&gt;$(&lt;/span&gt;MAKE&lt;span class="k"&gt;)&lt;/span&gt; secret.deploy.service3
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# Deploy all secrets for the dev cluster
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;secrets.deploy.dev&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;$(&lt;/span&gt;MAKE&lt;span class="k"&gt;)&lt;/span&gt; secrets.deploy.all &lt;span class="nv"&gt;environment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;dev
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;$(&lt;/span&gt;MAKE&lt;span class="k"&gt;)&lt;/span&gt; secrets.deploy.all &lt;span class="nv"&gt;environment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;staging
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	&lt;span class="k"&gt;$(&lt;/span&gt;MAKE&lt;span class="k"&gt;)&lt;/span&gt; secrets.deploy.all &lt;span class="nv"&gt;environment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;dev
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	&lt;span class="k"&gt;$(&lt;/span&gt;MAKE&lt;span class="k"&gt;)&lt;/span&gt; secrets.deploy.all &lt;span class="nv"&gt;environment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;staging
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# Deploy all secrets for the prod cluster
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;secrets.deploy.prod&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;$(&lt;/span&gt;MAKE&lt;span class="k"&gt;)&lt;/span&gt; secrets.deploy.all &lt;span class="nv"&gt;environment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;prod
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;	&lt;span class="k"&gt;$(&lt;/span&gt;MAKE&lt;span class="k"&gt;)&lt;/span&gt; secrets.deploy.all &lt;span class="nv"&gt;environment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;prod
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;✅ Once you are authenticated to the corresponding AWS account, you can deploy your secrets with either &lt;code&gt;make secrets.deploy.dev&lt;/code&gt; or &lt;code&gt;make secrets.deploy.prod&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="summarizing"&gt;Summarizing
 &lt;/h2&gt;&lt;ul&gt;
@@ -586,15 +586,15 @@ Of course you write a thin wrapper around the wonderfully verbose AWS CLI:&lt;/p
 Refactor more complex logic into separate Shell scripts (like isolated functions) which are called from within Make.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;You can check out the entire Makefile (including the secrets structure and scripts) in this &lt;a class="link" href="https://github.com/jscheytt/jscheytt.github.io.hugo/tree/main/content/post/story-first-makefile" target="_blank" rel="noopener"
-&gt;Git repo&lt;/a&gt;.&lt;/p&gt;
+ &gt;Git repo&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="credits"&gt;Credits
 &lt;/h2&gt;&lt;p&gt;I am indebted to the following parties in making my start into the world of Make a lot smoother than I expected:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Isaac Z. Schlueter for his &lt;a class="link" href="https://gist.github.com/isaacs/62a2d1825d04437c6f08" target="_blank" rel="noopener"
-&gt;interactive Gist&lt;/a&gt;&lt;/li&gt;
+ &gt;interactive Gist&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;The guys at &lt;a class="link" href="https://www.upbound.io/" target="_blank" rel="noopener"
-&gt;Upbound&lt;/a&gt; for creating &lt;a class="link" href="https://crossplane.io/" target="_blank" rel="noopener"
-&gt;Crossplane&lt;/a&gt; where they use Make in &lt;a class="link" href="https://github.com/crossplane/provider-aws" target="_blank" rel="noopener"
-&gt;their providers&lt;/a&gt; and even distribute &lt;a class="link" href="https://github.com/upbound/build" target="_blank" rel="noopener"
-&gt;common functionality&lt;/a&gt; as a Git submodule&lt;/li&gt;
+ &gt;Upbound&lt;/a&gt; for creating &lt;a class="link" href="https://crossplane.io/" target="_blank" rel="noopener"
+ &gt;Crossplane&lt;/a&gt; where they use Make in &lt;a class="link" href="https://github.com/crossplane/provider-aws" target="_blank" rel="noopener"
+ &gt;their providers&lt;/a&gt; and even distribute &lt;a class="link" href="https://github.com/upbound/build" target="_blank" rel="noopener"
+ &gt;common functionality&lt;/a&gt; as a Git submodule&lt;/li&gt;
 &lt;/ul&gt;</description></item></channel></rss>
